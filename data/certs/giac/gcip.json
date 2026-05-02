@@ -1,0 +1,108 @@
+{
+  "id": "giac.gcip",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Critical Infrastructure Protection",
+  "abbr": "GCIP",
+  "domain": "ot-ics-iot",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/critical-infrastructure-protection-gcip/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Web-based proctored, open-book reference (ProctorU or PearsonVUE)",
+    "duration_min": 180,
+    "questions": 75,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": [
+      {
+        "id": "giac.gicsp",
+        "source": "vendor-ladder",
+        "rationale": "GICSP で IT/OT 横断の素養を持ったうえで、NERC CIP に特化する GCIP に進むと電力系コンプライアンス職に直結する。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "NERC_CIP_REGULATORY_ALIGNMENT",
+        "weight_hint": "high",
+        "note": "北米電力 NERC CIP の遵守要員教育として明確な需要がある。"
+      },
+      {
+        "code": "BACKED_BY_SANS_ICS_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "REGION_SPECIFIC_DEMAND",
+        "weight_hint": "medium",
+        "note": "NERC CIP は北米電力規制であり、日本/EU 圏では需要が限定的。"
+      },
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/critical-infrastructure-protection-gcip/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/essentials-nerc-critical-infrastructure-protection/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,109 @@
+{
+  "id": "linux-foundation.lfcs",
+  "vendor": {
+    "slug": "linux-foundation",
+    "name": "The Linux Foundation",
+    "url": "https://training.linuxfoundation.org/"
+  },
+  "name": "Linux Foundation Certified System Administrator",
+  "abbr": "LFCS",
+  "name_ja": "Linux Foundation 認定システム管理者",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "availability": "available",
+  "official": {
+    "exam_url": "https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 445,
+    "format": "Online proctored, performance-based command-line tasks against real Linux systems",
+    "duration_min": 120,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 2,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "No formal prerequisites; LFS207 course or equivalent Linux admin background recommended"
+    ],
+    "experience_years": 1,
+    "recommended_certs": [
+      {
+        "id": "linux-foundation.lfca",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PERFORMANCE_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OPEN_BOOK_REAL_WORLD",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "DISTRIBUTION_NEUTRAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "INDUSTRY_STANDARD",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "FOCUSES_ON_GENERAL_INFRASTRUCTURE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

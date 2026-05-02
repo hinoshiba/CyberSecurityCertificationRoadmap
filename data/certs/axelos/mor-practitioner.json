@@ -1,0 +1,113 @@
+{
+  "id": "axelos.mor-practitioner",
+  "vendor": {
+    "slug": "axelos",
+    "name": "AXELOS (PeopleCert)",
+    "url": "https://www.axelos.com/"
+  },
+  "name": "Management of Risk Practitioner",
+  "abbr": "M_o_R Practitioner",
+  "name_ja": "リスクマネジメント (M_o_R) プラクティショナー",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.peoplecert.org/browse-certifications/risk-and-portfolio",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 510,
+    "format": "Open-book scenario-based objective testing exam (online proctored or testing centre)",
+    "duration_min": 180,
+    "questions": 80,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Must hold M_o_R Foundation"
+    ],
+    "experience_years": 0,
+    "required_certs": [
+      {
+        "id": "axelos.mor-foundation",
+        "url": "https://www.peoplecert.org/browse-certifications/risk-and-portfolio"
+      }
+    ],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "SCENARIO_BASED_EXAM",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "INDUSTRY_STANDARD_FRAMEWORK",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "GOVERNMENT_RECOGNISED_UK",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OPEN_BOOK_APPLIED",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REGIONAL_RECOGNITION_LIMITED",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.peoplecert.org/browse-certifications/risk-and-portfolio"
+    },
+    {
+      "type": "official",
+      "url": "https://www.axelos.com/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,115 @@
+{
+  "id": "vmware.vcix-nv",
+  "vendor": {
+    "slug": "vmware",
+    "name": "VMware (Broadcom)",
+    "url": "https://www.broadcom.com/support/education/vmware/certification"
+  },
+  "name": "VMware Certified Implementation Expert - Network Virtualization",
+  "abbr": "VCIX-NV",
+  "name_ja": "VMware認定実装エキスパート（ネットワーク仮想化／NSX）",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "network-defense",
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "availability": "available",
+  "official": {
+    "exam_url": "https://www.broadcom.com/support/education/vmware/certification/vcap-nv-deploy",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 900,
+    "format": "Awarded after passing both VCAP-NV Design and VCAP-NV Deploy proctored exams (Pearson VUE)",
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "Earn VCP-NV (active certification)",
+      "Pass VCAP-NV Design exam",
+      "Pass VCAP-NV Deploy exam"
+    ],
+    "experience_years": 5,
+    "recommended_certs": [
+      {
+        "id": "vmware.vcp-nv",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_RECOGNIZED_VENDOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PERFORMANCE_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "NSX_MICROSEGMENTATION_RELEVANCE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_ONLY_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NICHE_PRODUCT_FOCUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.broadcom.com/support/education/vmware/certification/vcap-nv-deploy"
+    },
+    {
+      "type": "official",
+      "url": "https://www.broadcom.com/support/education/vmware/certification/vcap-nv-design"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

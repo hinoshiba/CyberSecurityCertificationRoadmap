@@ -87,7 +87,7 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_at": "2026-05-02T08:04:20Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
     "rationale": "All three personas agree at this tier; rationale reflects consensus.",
     "persona_scores": {

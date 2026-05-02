@@ -1,0 +1,102 @@
+{
+  "id": "wcna.wcna",
+  "vendor": {
+    "slug": "wcna",
+    "name": "Protocol Analysis Institute (WCNA)",
+    "url": "https://www.wcnacertification.com/"
+  },
+  "name": "Wireshark Certified Network Analyst",
+  "abbr": "WCNA",
+  "domain": "network-defense",
+  "secondary_domains": [
+    "incident-forensics"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.wcnacertification.com/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 299,
+    "format": "Proctored multiple-choice exam delivered by Kryterion Webassessor",
+    "duration_min": 90,
+    "questions": 100,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_NEUTRAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INDUSTRY_STANDARD_TOOL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DFIR_PRACTICAL_RELEVANCE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LONG_STANDING_REPUTATION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NARROW_SCOPE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.wcnacertification.com/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

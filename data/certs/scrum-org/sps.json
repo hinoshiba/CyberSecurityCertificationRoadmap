@@ -1,0 +1,99 @@
+{
+  "id": "scrum-org.sps",
+  "vendor": {
+    "slug": "scrum-org",
+    "name": "Scrum.org",
+    "url": "https://www.scrum.org/"
+  },
+  "name": "Scaled Professional Scrum",
+  "abbr": "SPS",
+  "name_ja": "スケールド・プロフェッショナル・スクラム",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.scrum.org/assessments/scaled-professional-scrum-certification",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 250,
+    "format": "Online open-book multiple-choice / multiple-answer / true-false assessment on the Nexus framework; passing score 85%",
+    "duration_min": 60,
+    "questions": 40,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "Recommended: hold PSM I (not enforced)"
+    ],
+    "experience_years": 1,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "scrum-org.psm-i",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "SCALING_FOCUSED",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIFETIME_CERTIFICATION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "GLOBAL_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NICHE_AUDIENCE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.scrum.org/assessments/scaled-professional-scrum-certification"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

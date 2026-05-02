@@ -1,0 +1,87 @@
+{
+  "id": "ine-security.ecthp",
+  "vendor": {
+    "slug": "ine-security",
+    "name": "INE Security",
+    "url": "https://ine.com/security"
+  },
+  "name": "eLearnSecurity Certified Threat Hunting Professional",
+  "abbr": "eCTHP",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "threat-intel"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://ine.com/security/certifications/ecthp-certification/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 400,
+    "format": "Hands-on threat hunt in INE Virtual Labs (network + endpoint); auto-graded; 3 years validity",
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OPEN_BOOK_REAL_WORLD",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "STRONG_COMMUNITY_REPUTATION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_TRAINING_FOCUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://ine.com/security/certifications/ecthp-certification/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

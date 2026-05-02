@@ -1,0 +1,102 @@
+{
+  "id": "imi.cipa",
+  "vendor": {
+    "slug": "imi",
+    "name": "Identity Management Institute",
+    "url": "https://www.identitymanagementinstitute.org/"
+  },
+  "name": "Certified Identity Privacy Auditor",
+  "abbr": "CIPA",
+  "domain": "iam",
+  "secondary_domains": [
+    "privacy-data-protection"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.identitymanagementinstitute.org/cipa/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 295,
+    "format": "Online multiple-choice (passing score 70/100). Up to 3 attempts.",
+    "duration_min": 90,
+    "questions": 100,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 1,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Active IMI membership required"
+    ],
+    "experience_years": 0,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "iapp.cipp-e",
+        "source": "community",
+        "rationale": "IAPP の CIPP-E と組み合わせ、ID 領域 + EU プライバシ法務領域でカバレッジを広げる。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "IDENTITY_PRIVACY_NICHE",
+        "weight_hint": "medium",
+        "note": "Combines IAM auditing perspective with privacy lens."
+      },
+      {
+        "code": "AFFORDABLE_ENTRY_CRED",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MEMBERSHIP_REQUIRED",
+        "weight_hint": "low"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.identitymanagementinstitute.org/cipa/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

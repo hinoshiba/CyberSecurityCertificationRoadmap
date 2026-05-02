@@ -1,0 +1,113 @@
+{
+  "id": "giac.gxpn",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Exploit Researcher and Advanced Penetration Tester",
+  "abbr": "GXPN",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/exploit-researcher-advanced-penetration-tester-gxpn/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "CyberLive performance-based, web-based proctored (ProctorU or PearsonVUE)",
+    "duration_min": 180,
+    "questions": 60,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": [
+      {
+        "id": "giac.gpen",
+        "source": "official-recommended",
+        "rationale": "GPEN で標準的な侵入テストを習得した後、エクスプロイト開発と高度評価を扱う GXPN に進むのが SANS のアドバンスドラダー。"
+      },
+      {
+        "id": "offsec.osed",
+        "source": "community",
+        "rationale": "OSED でバイナリ脆弱性研究の素養を整えてから、GXPN の評価で第三者性を担保する流れが定石。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "CYBERLIVE_HANDS_ON",
+        "weight_hint": "high"
+      },
+      {
+        "code": "EXPLOIT_DEV_ADVANCED_DEPTH",
+        "weight_hint": "high",
+        "note": "シェルコード/エクスプロイト開発を実機評価する稀少なベンダー認証。"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "NICHE_AUDIENCE",
+        "weight_hint": "low",
+        "note": "非常に上級者向けで対象母数が小さい。"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "expert",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/exploit-researcher-advanced-penetration-tester-gxpn/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/advanced-penetration-testing-exploits-ethical-hacking/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

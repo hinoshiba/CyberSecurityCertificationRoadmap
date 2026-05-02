@@ -1,0 +1,110 @@
+{
+  "id": "pmi.capm",
+  "vendor": {
+    "slug": "pmi",
+    "name": "Project Management Institute",
+    "url": "https://www.pmi.org/"
+  },
+  "name": "Certified Associate in Project Management",
+  "abbr": "CAPM",
+  "name_ja": "プロジェクトマネジメント・アソシエイト認定",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.pmi.org/certifications/certified-associate-capm",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 300,
+    "format": "Computer-based multiple-choice exam at Pearson VUE; online proctored option available",
+    "duration_min": 180,
+    "questions": 150,
+    "languages": [
+      "en",
+      "ja",
+      "es",
+      "fr",
+      "zh-Hans",
+      "pt-BR",
+      "ar",
+      "ko"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Secondary degree (high school diploma or global equivalent)",
+      "23 contact hours of project management education completed before the exam"
+    ],
+    "experience_years": 0,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ENTRY_LEVEL_ACCESSIBILITY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "INDUSTRY_STANDARD_FRAMEWORK",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "GLOBAL_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "PMP_PATHWAY",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTRY_LEVEL_LIMITED_DEPTH",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.pmi.org/certifications/certified-associate-capm"
+    },
+    {
+      "type": "third_party",
+      "url": "https://en.wikipedia.org/wiki/Certified_Associate_in_Project_Management"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

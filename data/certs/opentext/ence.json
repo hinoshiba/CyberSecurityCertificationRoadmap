@@ -1,0 +1,85 @@
+{
+  "id": "opentext.ence",
+  "vendor": {
+    "slug": "opentext",
+    "name": "OpenText (EnCase)",
+    "url": "https://www.opentext.com/"
+  },
+  "name": "EnCase Certified Examiner",
+  "abbr": "EnCE",
+  "domain": "incident-forensics",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.opentext.com/products/encase-certifications",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 200,
+    "format": "Two-phase exam: Phase I knowledge-based written exam (~174 questions, ~2 hours), Phase II practical examination (60-day take-home forensic case requiring written report); 3 years validity",
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LONG_STANDING_REPUTATION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LAW_ENFORCEMENT_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "STRONG_COMMUNITY_REPUTATION",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_TOOL_LOCK_IN",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.opentext.com/products/encase-certifications"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

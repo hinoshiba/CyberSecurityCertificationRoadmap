@@ -1,0 +1,98 @@
+{
+  "id": "drii.dccrp",
+  "vendor": {
+    "slug": "drii",
+    "name": "DRI International",
+    "url": "https://drii.org/"
+  },
+  "name": "Certified Cyber Resilience Professional",
+  "abbr": "CCRP",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "incident-forensics"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://drii.org/certification/ccrp",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 400,
+    "format": "Cyber Resilience Examination (proctored, multiple-choice)",
+    "duration_min": 120,
+    "questions": 100,
+    "languages": [
+      "en",
+      "ja",
+      "es",
+      "pt"
+    ],
+    "renewal_years": 1,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Pass the Cyber Resilience Examination (minimum 75% score)"
+    ],
+    "experience_years": 2,
+    "required_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "CYBER_RESILIENCE_BRIDGE",
+        "weight_hint": "high",
+        "note": "Bridges cybersecurity, BCM and DR; relatively rare positioning."
+      },
+      {
+        "code": "REQUIRES_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "JAPANESE_LANGUAGE_AVAILABLE",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NICHE_INDUSTRY_FOCUS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://drii.org/certification/ccrp"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,107 @@
+{
+  "id": "scrum-org.psm-iii",
+  "vendor": {
+    "slug": "scrum-org",
+    "name": "Scrum.org",
+    "url": "https://www.scrum.org/"
+  },
+  "name": "Professional Scrum Master III",
+  "abbr": "PSM III",
+  "name_ja": "プロフェッショナル・スクラムマスター III",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.scrum.org/assessments/professional-scrum-master-iii-certification",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 500,
+    "format": "Online assessment with mix of multiple-choice and free-form essay questions on real-world scenarios; passing score 85%",
+    "duration_min": 150,
+    "questions": 30,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "Recommended: hold PSM I and PSM II; deep practical Scrum mastery required to pass"
+    ],
+    "experience_years": 5,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "scrum-org.psm-ii",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ESSAY_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PINNACLE_OF_VENDOR_PATH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RARE_HOLDERS_PRESTIGE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LIFETIME_CERTIFICATION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_DEEP_EXPERIENCE",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RARE_HOLDERS_LOW_LIQUIDITY",
+        "weight_hint": "low"
+      },
+      {
+        "code": "SUBJECTIVE_GRADING",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.scrum.org/assessments/professional-scrum-master-iii-certification"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

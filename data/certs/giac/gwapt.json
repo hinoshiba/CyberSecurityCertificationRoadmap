@@ -1,0 +1,111 @@
+{
+  "id": "giac.gwapt",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Web Application Penetration Tester",
+  "abbr": "GWAPT",
+  "domain": "application-appsec",
+  "secondary_domains": [
+    "offensive-redteam"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/web-application-penetration-tester-gwapt/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "CyberLive performance-based, web-based proctored (ProctorU or PearsonVUE)",
+    "duration_min": 180,
+    "questions": 82,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": [
+      {
+        "id": "giac.gpen",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "offsec.oswe",
+        "source": "community",
+        "rationale": "OSWE と GWAPT は Web 攻撃領域の二大権威。両資格の併取は AppSec ペネトレーションテスター職での信頼性を強化する。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "CYBERLIVE_HANDS_ON",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BACKED_BY_SANS_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OVERSHADOWED_BY_OSWE_PEER_REP",
+        "weight_hint": "medium",
+        "note": "Web ペネトレーション領域では OSWE の peer reputation が高い。"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/web-application-penetration-tester-gwapt/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/web-app-penetration-testing-ethical-hacking/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

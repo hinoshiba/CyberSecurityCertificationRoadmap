@@ -1,0 +1,113 @@
+{
+  "id": "giac.gfact",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Foundational Cybersecurity Technologies",
+  "abbr": "GFACT",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "network-defense",
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/foundational-cybersecurity-technologies-gfact/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Web-based proctored, open-book reference (ProctorU or PearsonVUE)",
+    "duration_min": 120,
+    "questions": 75,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      {
+        "id": "comptia.itf-plus",
+        "source": "community",
+        "rationale": "IT Fundamentals でコンピュータ基礎を整えたうえで GFACT のサイバー基礎へ進むと、用語や TCP/IP 周りの躓きが減る。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BACKED_BY_SANS_TRAINING",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTRY_LEVEL_BROAD_FOUNDATION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_VS_SECURITY_PLUS",
+        "weight_hint": "high",
+        "note": "GFACT 単体で約 $999、SANS SEC275 バンドルでは $8,000 超になり Security+ の数百ドルと比較して大幅に高額。"
+      },
+      {
+        "code": "OPEN_BOOK_FORMAT",
+        "weight_hint": "low"
+      },
+      {
+        "code": "RECENTLY_CREATED_LIMITED_UPTAKE",
+        "weight_hint": "medium",
+        "note": "2021 年公開でまだ求人要件としての浸透は限定的。"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "associate",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/foundational-cybersecurity-technologies-gfact/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/foundations-computers-technology-security/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

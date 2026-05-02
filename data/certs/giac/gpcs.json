@@ -1,0 +1,112 @@
+{
+  "id": "giac.gpcs",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Public Cloud Security",
+  "abbr": "GPCS",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/public-cloud-security-gpcs/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Web-based proctored, open-book reference (ProctorU or PearsonVUE)",
+    "duration_min": 120,
+    "questions": 75,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": [
+      {
+        "id": "giac.gcld",
+        "source": "vendor-ladder",
+        "rationale": "GCLD でクラウド共通の基礎セキュリティを習得した後、AWS/Azure/GCP 横断の比較知識を扱う GPCS に進むのが SANS のラダー。"
+      },
+      {
+        "id": "isc2.ccsp",
+        "source": "community"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MULTI_CLOUD_VENDOR_NEUTRAL",
+        "weight_hint": "high",
+        "note": "AWS/Azure/GCP を横断する数少ない第三者評価。"
+      },
+      {
+        "code": "BACKED_BY_SANS_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OVERSHADOWED_BY_CCSP_PEER_REP",
+        "weight_hint": "medium",
+        "note": "クラウド資格人気では CCSP / 各クラウド公式資格に比べ知名度がまだ低い。"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/public-cloud-security-gpcs/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/multicloud-security-essentials/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,104 @@
+{
+  "id": "giac.gasf",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Advanced Smartphone Forensics",
+  "abbr": "GASF",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/advanced-smartphone-forensics-gasf/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Web-based proctored, open-book reference (ProctorU or PearsonVUE)",
+    "duration_min": 120,
+    "questions": 75,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      {
+        "id": "giac.gcfe",
+        "source": "vendor-ladder",
+        "rationale": "GCFE で Windows ホスト系フォレンジックの基礎を固めてから、モバイル特化の GASF へ進むと法執行 / DFIR としての守備範囲が広がる。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MOBILE_FORENSICS_NICHE",
+        "weight_hint": "high",
+        "note": "スマートフォンフォレンジック特化の認証は少なく、法執行・eDiscovery 分野で需要がある。"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "TOOL_SPECIFIC_KNOWLEDGE_RISK",
+        "weight_hint": "medium",
+        "note": "Cellebrite/Magnet 等の商用ツール教育と紐づきがちで、ベンダー横断性に注意。"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/advanced-smartphone-forensics-gasf/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/advanced-smartphone-mobile-device-forensics/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

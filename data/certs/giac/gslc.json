@@ -1,0 +1,122 @@
+{
+  "id": "giac.gslc",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Security Leadership",
+  "abbr": "GSLC",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/security-leadership-gslc/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Web-based proctored, open-book reference (ProctorU or PearsonVUE)",
+    "duration_min": 180,
+    "questions": 115,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": [
+      {
+        "id": "giac.gsec",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "isc2.cissp",
+        "source": "community",
+        "rationale": "CISSP で広範なマネジメント素養を得た後に、SANS LDR 系の実務寄りリーダーシップ評価として GSLC を取るとセキュリティ部門長としての訴求力が増す。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BACKED_BY_SANS_LDR_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "OVERSHADOWED_BY_CISSP_PEER_REP",
+        "weight_hint": "high",
+        "note": "管理職評価としては CISSP のほうが圧倒的に求人に出現するため GSLC 単独の差別化は限定的。"
+      },
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OPEN_BOOK_FORMAT",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "professional",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/security-leadership-gslc/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

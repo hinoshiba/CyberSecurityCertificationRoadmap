@@ -1,0 +1,100 @@
+{
+  "id": "imi.ciam",
+  "vendor": {
+    "slug": "imi",
+    "name": "Identity Management Institute",
+    "url": "https://www.identitymanagementinstitute.org/"
+  },
+  "name": "Certified Identity and Access Manager",
+  "abbr": "CIAM",
+  "domain": "iam",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.identitymanagementinstitute.org/ciam/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 390,
+    "format": "Online multiple-choice (passing score 70/100). Up to 3 attempts included.",
+    "duration_min": 90,
+    "questions": 100,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 1,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Active IMI membership required"
+    ],
+    "experience_years": 0,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "idpro.cidpro",
+        "source": "community",
+        "rationale": "ベンダ中立 IAM 資格として CIDPRO と並ぶ選択肢。両方併用で IAM の語彙を厚くする。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "AFFORDABLE_ENTRY_IAM_CRED",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "JAPANESE_AFFORDABILITY",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "high",
+        "note": "IMI is not as widely recognized by hiring managers as IDPro/ISC2/Microsoft IAM credentials."
+      },
+      {
+        "code": "MEMBERSHIP_REQUIRED",
+        "weight_hint": "low"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.identitymanagementinstitute.org/ciam/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

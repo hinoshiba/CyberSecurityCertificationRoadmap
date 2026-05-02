@@ -1,0 +1,105 @@
+{
+  "id": "portswigger.bscp",
+  "vendor": {
+    "slug": "portswigger",
+    "name": "PortSwigger",
+    "url": "https://portswigger.net/"
+  },
+  "name": "Burp Suite Certified Practitioner",
+  "abbr": "BSCP",
+  "domain": "application-appsec",
+  "secondary_domains": [
+    "offensive-redteam"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://portswigger.net/web-security/certification",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 99,
+    "format": "Online practical hands-on exam against intentionally vulnerable web applications using Burp Suite Professional",
+    "duration_min": 240,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 5,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PERFORMANCE_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INDUSTRY_STANDARD_TOOL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PRODUCTION_RELEVANCE_HIRING",
+        "weight_hint": "high"
+      },
+      {
+        "code": "AFFORDABLE_PRICE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_PRODUCT_REQUIRED_BURP_PRO",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "WEB_APPSEC_NARROW_SCOPE",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://portswigger.net/web-security/certification"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

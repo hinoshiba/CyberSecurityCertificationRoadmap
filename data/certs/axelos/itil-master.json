@@ -1,0 +1,118 @@
+{
+  "id": "axelos.itil-master",
+  "vendor": {
+    "slug": "axelos",
+    "name": "AXELOS (PeopleCert)",
+    "url": "https://www.axelos.com/"
+  },
+  "name": "ITIL Master",
+  "abbr": "ITIL Master",
+  "name_ja": "ITIL マスター",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.axelos.com/certifications/itil-service-management",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 4500,
+    "format": "Submission of proposal, work package documenting application of ITIL in real assignments, plus interview with assessment panel; no traditional written exam",
+    "duration_min": 0,
+    "questions": 0,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Must hold ITIL Expert (v3) or both ITIL 4 Managing Professional and ITIL 4 Strategic Leader",
+      "Minimum 5 years of relevant ITSM leadership / managerial / advisory experience"
+    ],
+    "experience_years": 5,
+    "required_certs": [
+      {
+        "id": "axelos.itil-mp",
+        "url": "https://www.axelos.com/certifications/itil-service-management"
+      },
+      {
+        "id": "axelos.itil-sl",
+        "url": "https://www.axelos.com/certifications/itil-service-management"
+      }
+    ],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "EXECUTIVE_LEVEL_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PORTFOLIO_BASED_ASSESSMENT",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_VERIFIED_EXPERIENCE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PINNACLE_OF_VENDOR_PATH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PEER_REVIEWED",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "VERY_EXPENSIVE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RARE_HOLDERS_LOW_LIQUIDITY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LONG_PROCESS",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.axelos.com/certifications/itil-service-management"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

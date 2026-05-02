@@ -1,0 +1,107 @@
+{
+  "id": "cisco.ccde",
+  "vendor": {
+    "slug": "cisco",
+    "name": "Cisco",
+    "url": "https://www.cisco.com/"
+  },
+  "name": "Cisco Certified Design Expert",
+  "abbr": "CCDE",
+  "domain": "security-architecture",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://learningnetwork.cisco.com/s/ccde",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1600,
+    "format": "8-hour scenario-based practical exam plus written qualifier",
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 7,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "cisco.ccnp-enterprise",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "PERFORMANCE_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_RECOGNIZED_VENDOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SENIOR_SCOPE_AND_RIGOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LONG_STANDING_REPUTATION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_PRODUCT_ONLY_FOCUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "cisco",
+      "level_hint": "expert",
+      "url": "https://learningnetwork.cisco.com/s/ccde",
+      "fetched_at": "2026-05-02",
+      "summary": "Vendor expert-tier design certification; scenario-based practical exam validating architecture-level network design competency."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://learningnetwork.cisco.com/s/ccde"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

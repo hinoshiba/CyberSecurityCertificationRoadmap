@@ -1,0 +1,113 @@
+{
+  "id": "suse.sca",
+  "vendor": {
+    "slug": "suse",
+    "name": "SUSE",
+    "url": "https://www.suse.com/training/certification/"
+  },
+  "name": "SUSE Certified Administrator in SUSE Linux Enterprise Server 15",
+  "abbr": "SCA",
+  "name_ja": "SUSE認定アドミニストレーター（SLES 15）",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "availability": "available",
+  "official": {
+    "exam_url": "https://www.suse.com/training/exam/sca-sles-15/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 149,
+    "format": "Question-based proctored exam (delivered via Questionmark / Pearson VUE)",
+    "duration_min": 90,
+    "questions": 70,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "No prerequisites; SLE201v15 course recommended"
+    ],
+    "experience_years": 1,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "WIDELY_RECOGNIZED_VENDOR",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "AFFORDABLE_EXAM",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTERPRISE_LINUX_RELEVANCE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "VENDOR_ONLY_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "FOCUSES_ON_GENERAL_INFRASTRUCTURE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.suse.com/training/exam/sca-sles-15/"
+    },
+    {
+      "type": "official",
+      "url": "https://www.suse.com/training/certification/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

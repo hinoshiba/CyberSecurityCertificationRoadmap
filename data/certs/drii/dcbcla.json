@@ -1,0 +1,107 @@
+{
+  "id": "drii.dcbcla",
+  "vendor": {
+    "slug": "drii",
+    "name": "DRI International",
+    "url": "https://drii.org/"
+  },
+  "name": "Certified Business Continuity Lead Auditor",
+  "abbr": "CBCLA",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://drii.org/certification/cbcla",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 400,
+    "format": "Audit Examination (proctored, multiple-choice). ISO 22301, NFPA 1600, and CSA Z1600-17 variants available.",
+    "duration_min": 240,
+    "questions": 200,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 1,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Complete prerequisite course: Business Continuity Planning for Auditors",
+      "Provide 2+ professional references for each of 7 subject-matter areas"
+    ],
+    "experience_years": 5,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "bsi-group.iso22301-la",
+        "source": "community",
+        "rationale": "ISO 22301 LA とのダブルホールドで継続性領域の監査人として強い肩書きを持つ。"
+      },
+      {
+        "id": "drii.dcbca",
+        "source": "vendor-ladder",
+        "rationale": "CBCA (BCM Auditor) を経て、Lead Auditor の CBCLA に進むのが DRI 公式のラダー。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "BCM_LEAD_AUDITOR_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_5YR_VERIFIED_EXPERIENCE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ALIGNED_WITH_ISO_22301",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NICHE_INDUSTRY_FOCUS",
+        "weight_hint": "high",
+        "note": "BCM/audit niche; recognition outside continuity profession is limited."
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "medium",
+        "note": "Annual $225 renewal plus 80 CEAPs."
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://drii.org/certification/cbcla"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

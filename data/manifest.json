@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-02T07:35:43Z",
+  "generated_at": "2026-05-02T08:02:26Z",
   "domains_path": "domains.json",
   "tiers_path": "tiers.json",
   "agencies_path": "sources/agencies.json",
@@ -9,6 +9,26 @@
       "id": "aisp.qisp",
       "path": "certs/aisp/qisp.json",
       "sha": "8708a63752ac0ec7"
+    },
+    {
+      "id": "apple.acsp",
+      "path": "certs/apple/acsp.json",
+      "sha": "8912310db161c3c7"
+    },
+    {
+      "id": "asis.app",
+      "path": "certs/asis/app.json",
+      "sha": "16a4ccb72eceb16f"
+    },
+    {
+      "id": "asis.cpp",
+      "path": "certs/asis/cpp.json",
+      "sha": "f52b4c32c7e40e62"
+    },
+    {
+      "id": "asis.pci",
+      "path": "certs/asis/pci.json",
+      "sha": "d6e1f9f072f54674"
     },
     {
       "id": "aws.aif-c01",
@@ -66,6 +86,36 @@
       "sha": "25bfe6d4106b9f24"
     },
     {
+      "id": "axelos.itil-foundation",
+      "path": "certs/axelos/itil-foundation.json",
+      "sha": "f45bed30a7ac2b9d"
+    },
+    {
+      "id": "axelos.itil-master",
+      "path": "certs/axelos/itil-master.json",
+      "sha": "42b716b35d6b661c"
+    },
+    {
+      "id": "axelos.itil-mp",
+      "path": "certs/axelos/itil-mp.json",
+      "sha": "82f0bf0d49174af8"
+    },
+    {
+      "id": "axelos.itil-sl",
+      "path": "certs/axelos/itil-sl.json",
+      "sha": "8cfb9edabf73c5fa"
+    },
+    {
+      "id": "axelos.mor-foundation",
+      "path": "certs/axelos/mor-foundation.json",
+      "sha": "b8da9b812ffca613"
+    },
+    {
+      "id": "axelos.mor-practitioner",
+      "path": "certs/axelos/mor-practitioner.json",
+      "sha": "1d4256f04c1159a1"
+    },
+    {
       "id": "bsi-group.iso22301-la",
       "path": "certs/bsi-group/iso22301-la.json",
       "sha": "c0277005c23a5eae"
@@ -79,6 +129,21 @@
       "id": "certnexus.caip",
       "path": "certs/certnexus/caip.json",
       "sha": "91f7c03c2fbd8e11"
+    },
+    {
+      "id": "certnexus.ccsc",
+      "path": "certs/certnexus/ccsc.json",
+      "sha": "c5f9774309565a8e"
+    },
+    {
+      "id": "certnexus.cfr",
+      "path": "certs/certnexus/cfr.json",
+      "sha": "0732f283e70692d7"
+    },
+    {
+      "id": "certnexus.ciotsp",
+      "path": "certs/certnexus/ciotsp.json",
+      "sha": "950ef73b998a77ee"
     },
     {
       "id": "checkpoint.ccsa-r82",
@@ -99,6 +164,11 @@
       "id": "cisco.cbrfir-300-215",
       "path": "certs/cisco/cbrfir-300-215.json",
       "sha": "e460744c832d5dee"
+    },
+    {
+      "id": "cisco.ccde",
+      "path": "certs/cisco/ccde.json",
+      "sha": "9ffc47a132079aae"
     },
     {
       "id": "cisco.ccie-enterprise-infrastructure",
@@ -126,6 +196,11 @@
       "sha": "3bc68eb590f82c35"
     },
     {
+      "id": "cisco.cct",
+      "path": "certs/cisco/cct.json",
+      "sha": "bab952ab00744e05"
+    },
+    {
       "id": "cisco.cyberops-associate",
       "path": "certs/cisco/cyberops-associate.json",
       "sha": "92d1d88c08c56b72"
@@ -146,14 +221,49 @@
       "sha": "97576bce7c7dad53"
     },
     {
+      "id": "cncf.cka",
+      "path": "certs/cncf/cka.json",
+      "sha": "15a5e402bc6c58b0"
+    },
+    {
+      "id": "cncf.ckad",
+      "path": "certs/cncf/ckad.json",
+      "sha": "3e14615cd72c744e"
+    },
+    {
+      "id": "cncf.cks",
+      "path": "certs/cncf/cks.json",
+      "sha": "92e8ae4472747679"
+    },
+    {
+      "id": "cncf.kcna",
+      "path": "certs/cncf/kcna.json",
+      "sha": "d6652f52589b462a"
+    },
+    {
+      "id": "comptia.a-plus",
+      "path": "certs/comptia/a-plus.json",
+      "sha": "42cb9df9344d255d"
+    },
+    {
       "id": "comptia.casp-plus",
       "path": "certs/comptia/casp-plus.json",
       "sha": "88b5f4777cfc0ffc"
     },
     {
+      "id": "comptia.cloud-plus",
+      "path": "certs/comptia/cloud-plus.json",
+      "sha": "d26a76f95c8b3fe9"
+    },
+    {
       "id": "comptia.cysa-plus",
       "path": "certs/comptia/cysa-plus.json",
       "sha": "df81c5311a6d4f87"
+    },
+    {
+      "id": "comptia.linux-plus",
+      "path": "certs/comptia/linux-plus.json",
+      "sha": "5b5c607998dac9b5"
     },
     {
       "id": "comptia.network-plus",
@@ -166,9 +276,19 @@
       "sha": "a64b9570b6b69a27"
     },
     {
+      "id": "comptia.project-plus",
+      "path": "certs/comptia/project-plus.json",
+      "sha": "4789c2d7169fb47b"
+    },
+    {
       "id": "comptia.security-plus",
       "path": "certs/comptia/security-plus.json",
       "sha": "2857d68dee234ea8"
+    },
+    {
+      "id": "comptia.server-plus",
+      "path": "certs/comptia/server-plus.json",
+      "sha": "5f7b2ff4f1966c89"
     },
     {
       "id": "cqi-irca.iso27001-la",
@@ -211,9 +331,44 @@
       "sha": "8aed553f5794d69a"
     },
     {
+      "id": "cwnp.cwsp",
+      "path": "certs/cwnp/cwsp.json",
+      "sha": "0f5ca2b59e0a3330"
+    },
+    {
       "id": "cyberark.pam-def",
       "path": "certs/cyberark/pam-def.json",
       "sha": "0920c664476f1a7f"
+    },
+    {
+      "id": "cyberdefenders.ccd",
+      "path": "certs/cyberdefenders/ccd.json",
+      "sha": "0827eba42031f04d"
+    },
+    {
+      "id": "drii.dacrp",
+      "path": "certs/drii/dacrp.json",
+      "sha": "5e217262c463c696"
+    },
+    {
+      "id": "drii.dcbca",
+      "path": "certs/drii/dcbca.json",
+      "sha": "694a4ecc0b34c9fc"
+    },
+    {
+      "id": "drii.dcbcla",
+      "path": "certs/drii/dcbcla.json",
+      "sha": "7a952967a182c5fc"
+    },
+    {
+      "id": "drii.dccrp",
+      "path": "certs/drii/dccrp.json",
+      "sha": "55da18ee397c8cef"
+    },
+    {
+      "id": "drii.dcrmp",
+      "path": "certs/drii/dcrmp.json",
+      "sha": "833585a0dae8af7e"
     },
     {
       "id": "ec-council.case",
@@ -241,6 +396,26 @@
       "sha": "b585cc7fe82c0204"
     },
     {
+      "id": "f5.ca",
+      "path": "certs/f5/ca.json",
+      "sha": "74a1263f1532cea3"
+    },
+    {
+      "id": "f5.cse-security",
+      "path": "certs/f5/cse-security.json",
+      "sha": "987904e5b9ad8691"
+    },
+    {
+      "id": "f5.cts-apm",
+      "path": "certs/f5/cts-apm.json",
+      "sha": "92fe8ab2f2eae95d"
+    },
+    {
+      "id": "f5.cts-dns",
+      "path": "certs/f5/cts-dns.json",
+      "sha": "2cba668aabd1361e"
+    },
+    {
       "id": "fortinet.nse4-fortios-admin",
       "path": "certs/fortinet/nse4-fortios-admin.json",
       "sha": "c6aa9368ae94be63"
@@ -261,6 +436,11 @@
       "sha": "013c81f7720e509d"
     },
     {
+      "id": "giac.gasf",
+      "path": "certs/giac/gasf.json",
+      "sha": "d13b8b99455a95fe"
+    },
+    {
       "id": "giac.gawn",
       "path": "certs/giac/gawn.json",
       "sha": "80f77e6c8d3bb365"
@@ -269,6 +449,16 @@
       "id": "giac.gbfa",
       "path": "certs/giac/gbfa.json",
       "sha": "91e1e30e37255417"
+    },
+    {
+      "id": "giac.gccc",
+      "path": "certs/giac/gccc.json",
+      "sha": "f3abcaaa8fa43fc3"
+    },
+    {
+      "id": "giac.gcda",
+      "path": "certs/giac/gcda.json",
+      "sha": "7f5976ebf630c12d"
     },
     {
       "id": "giac.gced",
@@ -281,6 +471,16 @@
       "sha": "51e3a9516bff16c7"
     },
     {
+      "id": "giac.gcfe",
+      "path": "certs/giac/gcfe.json",
+      "sha": "3e863a8e0b195a37"
+    },
+    {
+      "id": "giac.gcfr",
+      "path": "certs/giac/gcfr.json",
+      "sha": "2cc489c07830660d"
+    },
+    {
       "id": "giac.gcia",
       "path": "certs/giac/gcia.json",
       "sha": "7485b4243df3abb6"
@@ -289,6 +489,21 @@
       "id": "giac.gcih",
       "path": "certs/giac/gcih.json",
       "sha": "2b20180110bf1c75"
+    },
+    {
+      "id": "giac.gcip",
+      "path": "certs/giac/gcip.json",
+      "sha": "db3f3e5cc7451ed0"
+    },
+    {
+      "id": "giac.gcld",
+      "path": "certs/giac/gcld.json",
+      "sha": "8e4ee6804526634b"
+    },
+    {
+      "id": "giac.gcpn",
+      "path": "certs/giac/gcpn.json",
+      "sha": "5c8ab6fed0b52942"
     },
     {
       "id": "giac.gcsa",
@@ -311,6 +526,21 @@
       "sha": "4af4c26d8bd03fef"
     },
     {
+      "id": "giac.gdsa",
+      "path": "certs/giac/gdsa.json",
+      "sha": "25fe6b9aa1a712d3"
+    },
+    {
+      "id": "giac.geir",
+      "path": "certs/giac/geir.json",
+      "sha": "7f5caec615ec2cd6"
+    },
+    {
+      "id": "giac.gfact",
+      "path": "certs/giac/gfact.json",
+      "sha": "4fdc082446216118"
+    },
+    {
       "id": "giac.gicsp",
       "path": "certs/giac/gicsp.json",
       "sha": "d5ac3e88bbaf299b"
@@ -324,6 +554,11 @@
       "id": "giac.gleg",
       "path": "certs/giac/gleg.json",
       "sha": "5e767a7acfa967a2"
+    },
+    {
+      "id": "giac.gmle",
+      "path": "certs/giac/gmle.json",
+      "sha": "d342ba2a6c7d4324"
     },
     {
       "id": "giac.gmob",
@@ -346,6 +581,11 @@
       "sha": "4dda2908188e6ade"
     },
     {
+      "id": "giac.gpcs",
+      "path": "certs/giac/gpcs.json",
+      "sha": "360a8feade856b4f"
+    },
+    {
       "id": "giac.gpen",
       "path": "certs/giac/gpen.json",
       "sha": "5e8ca63255b03727"
@@ -366,6 +606,11 @@
       "sha": "174dc9287823d66a"
     },
     {
+      "id": "giac.grtp",
+      "path": "certs/giac/grtp.json",
+      "sha": "2b146166792cc935"
+    },
+    {
       "id": "giac.gse",
       "path": "certs/giac/gse.json",
       "sha": "24b605fc028829e8"
@@ -376,14 +621,39 @@
       "sha": "97821938eda732e4"
     },
     {
+      "id": "giac.gslc",
+      "path": "certs/giac/gslc.json",
+      "sha": "91572cb08a736301"
+    },
+    {
       "id": "giac.gsna",
       "path": "certs/giac/gsna.json",
       "sha": "b7bcbfc32329879f"
     },
     {
+      "id": "giac.gsoc",
+      "path": "certs/giac/gsoc.json",
+      "sha": "68e0f2912fe0f006"
+    },
+    {
       "id": "giac.gstrt",
       "path": "certs/giac/gstrt.json",
       "sha": "b9b2c30e55890184"
+    },
+    {
+      "id": "giac.gwapt",
+      "path": "certs/giac/gwapt.json",
+      "sha": "3e10188cffd09073"
+    },
+    {
+      "id": "giac.gweb",
+      "path": "certs/giac/gweb.json",
+      "sha": "9852a355a0bfa440"
+    },
+    {
+      "id": "giac.gxpn",
+      "path": "certs/giac/gxpn.json",
+      "sha": "af371d4d941ac382"
     },
     {
       "id": "google.ace",
@@ -471,6 +741,16 @@
       "sha": "6ae9f5e05b3c701e"
     },
     {
+      "id": "iacis.cawfe",
+      "path": "certs/iacis/cawfe.json",
+      "sha": "c1aaa7c68b265010"
+    },
+    {
+      "id": "iacis.cfce",
+      "path": "certs/iacis/cfce.json",
+      "sha": "55c58c6fc84489f4"
+    },
+    {
       "id": "iapp.cipm",
       "path": "certs/iapp/cipm.json",
       "sha": "13674f4b790989c3"
@@ -496,6 +776,31 @@
       "sha": "13bf047a605b7a4f"
     },
     {
+      "id": "idpro.cidpro",
+      "path": "certs/idpro/cidpro.json",
+      "sha": "3e38d01b971be245"
+    },
+    {
+      "id": "iia.cia",
+      "path": "certs/iia/cia.json",
+      "sha": "1a288a516c87d27a"
+    },
+    {
+      "id": "imi.cdp",
+      "path": "certs/imi/cdp.json",
+      "sha": "268fce11e6636eb6"
+    },
+    {
+      "id": "imi.ciam",
+      "path": "certs/imi/ciam.json",
+      "sha": "ea67ca6ff80061a9"
+    },
+    {
+      "id": "imi.cipa",
+      "path": "certs/imi/cipa.json",
+      "sha": "70365564a57c4c99"
+    },
+    {
       "id": "ine.ecdfp",
       "path": "certs/ine-security/ecdfp.json",
       "sha": "5600645269949b5e"
@@ -511,9 +816,24 @@
       "sha": "b4b4e58599871b9d"
     },
     {
+      "id": "ine-security.ecthp",
+      "path": "certs/ine-security/ecthp.json",
+      "sha": "080ffe25b990a2cc"
+    },
+    {
       "id": "ine.ejpt",
       "path": "certs/ine-security/ejpt.json",
       "sha": "f74f73f5fd31d96c"
+    },
+    {
+      "id": "ine-security.emapt",
+      "path": "certs/ine-security/emapt.json",
+      "sha": "b60815bb25b76947"
+    },
+    {
+      "id": "ine-security.endp",
+      "path": "certs/ine-security/endp.json",
+      "sha": "0f0c08f387ebfbe7"
     },
     {
       "id": "ine.ewpt",
@@ -621,9 +941,19 @@
       "sha": "db13b775244f2278"
     },
     {
+      "id": "isaca.ccoa",
+      "path": "certs/isaca/ccoa.json",
+      "sha": "fc0820f58e3c69f6"
+    },
+    {
       "id": "isaca.cdpse",
       "path": "certs/isaca/cdpse.json",
       "sha": "4e9d31d051762f92"
+    },
+    {
+      "id": "isaca.cgeit",
+      "path": "certs/isaca/cgeit.json",
+      "sha": "47449c4b0cb8f211"
     },
     {
       "id": "isaca.cisa",
@@ -716,6 +1046,11 @@
       "sha": "952c8864e5cc3ecb"
     },
     {
+      "id": "juniper.jncia-sec",
+      "path": "certs/juniper/jncia-sec.json",
+      "sha": "e59a1461b9140bae"
+    },
+    {
       "id": "juniper.jncie-sec",
       "path": "certs/juniper/jncie-sec.json",
       "sha": "f01b462f9b8f580b"
@@ -734,6 +1069,16 @@
       "id": "kisa.isms-p-auditor",
       "path": "certs/kisa/isms-p-auditor.json",
       "sha": "c5db6225e5ff99bf"
+    },
+    {
+      "id": "linux-foundation.lfca",
+      "path": "certs/linux-foundation/lfca.json",
+      "sha": "9b99e8668d20ccb1"
+    },
+    {
+      "id": "linux-foundation.lfcs",
+      "path": "certs/linux-foundation/lfcs.json",
+      "sha": "516d61efa4e0555c"
     },
     {
       "id": "lpi.lpic3-303",
@@ -826,6 +1171,11 @@
       "sha": "d0e295ba5551f9fe"
     },
     {
+      "id": "mirantis.dca",
+      "path": "certs/mirantis/dca.json",
+      "sha": "ca7d2fbe3884c263"
+    },
+    {
       "id": "offsec.klcp",
       "path": "certs/offsec/klcp.json",
       "sha": "19406c65361128c3"
@@ -906,6 +1256,26 @@
       "sha": "553c76823eaab1af"
     },
     {
+      "id": "open-group.togaf-foundation",
+      "path": "certs/open-group/togaf-foundation.json",
+      "sha": "c3449cf07675ef14"
+    },
+    {
+      "id": "open-group.togaf",
+      "path": "certs/open-group/togaf.json",
+      "sha": "2cb0fdddd8820466"
+    },
+    {
+      "id": "opentext.cfsr",
+      "path": "certs/opentext/cfsr.json",
+      "sha": "bf823bb74504abe2"
+    },
+    {
+      "id": "opentext.ence",
+      "path": "certs/opentext/ence.json",
+      "sha": "0938ed060794a791"
+    },
+    {
       "id": "oracle.oci-architect-pro",
       "path": "certs/oracle/oci-architect-pro.json",
       "sha": "366b1bf1a1fe1bf7"
@@ -966,9 +1336,104 @@
       "sha": "80188d9796e67ecc"
     },
     {
+      "id": "pmi.capm",
+      "path": "certs/pmi/capm.json",
+      "sha": "91f3b323c315cad4"
+    },
+    {
+      "id": "pmi.pgmp",
+      "path": "certs/pmi/pgmp.json",
+      "sha": "f2e4afdc58ddafa5"
+    },
+    {
+      "id": "pmi.pmi-acp",
+      "path": "certs/pmi/pmi-acp.json",
+      "sha": "13e49e3e3c0c9800"
+    },
+    {
+      "id": "pmi.pmp",
+      "path": "certs/pmi/pmp.json",
+      "sha": "4669dd3aea0c3985"
+    },
+    {
+      "id": "portswigger.bscp",
+      "path": "certs/portswigger/bscp.json",
+      "sha": "a56159d635bbd490"
+    },
+    {
+      "id": "practical-devsecops.cde",
+      "path": "certs/practical-devsecops/cde.json",
+      "sha": "b031cc62abd614b4"
+    },
+    {
+      "id": "practical-devsecops.cdp",
+      "path": "certs/practical-devsecops/cdp.json",
+      "sha": "04648d045bd0afed"
+    },
+    {
+      "id": "red-hat.rhca",
+      "path": "certs/red-hat/rhca.json",
+      "sha": "6ce3668e7895da18"
+    },
+    {
+      "id": "red-hat.rhce",
+      "path": "certs/red-hat/rhce.json",
+      "sha": "81de4111ddb13b4e"
+    },
+    {
+      "id": "red-hat.rhcsa",
+      "path": "certs/red-hat/rhcsa.json",
+      "sha": "960c77039dbb05f7"
+    },
+    {
+      "id": "sabsa.scf",
+      "path": "certs/sabsa/scf.json",
+      "sha": "339171cad2b5dc51"
+    },
+    {
+      "id": "sabsa.scm",
+      "path": "certs/sabsa/scm.json",
+      "sha": "bee26500671e2281"
+    },
+    {
+      "id": "sabsa.scp",
+      "path": "certs/sabsa/scp.json",
+      "sha": "61f32f6c50fd975c"
+    },
+    {
       "id": "sailpoint.identityiq-engineer",
       "path": "certs/sailpoint/identityiq-engineer.json",
       "sha": "5bf8a7813347e33b"
+    },
+    {
+      "id": "scrum-org.pal",
+      "path": "certs/scrum-org/pal.json",
+      "sha": "107c19afdc7d75a9"
+    },
+    {
+      "id": "scrum-org.psd",
+      "path": "certs/scrum-org/psd.json",
+      "sha": "e6b5d72c341b7686"
+    },
+    {
+      "id": "scrum-org.psm-i",
+      "path": "certs/scrum-org/psm-i.json",
+      "sha": "889bd5dd9f21c1ba"
+    },
+    {
+      "id": "scrum-org.psm-ii",
+      "path": "certs/scrum-org/psm-ii.json",
+      "sha": "bc0d11d930309a4a"
+    },
+    {
+      "id": "scrum-org.psm-iii",
+      "path": "certs/scrum-org/psm-iii.json",
+      "sha": "46f9378076a144b2"
+    },
+    {
+      "id": "scrum-org.sps",
+      "path": "certs/scrum-org/sps.json",
+      "sha": "8766606ede64a2d8"
     },
     {
       "id": "seaj.csbm",
@@ -986,6 +1451,16 @@
       "sha": "685b18c5bf977a30"
     },
     {
+      "id": "security-blue-team.btl1",
+      "path": "certs/security-blue-team/btl1.json",
+      "sha": "c8ff3ff699029575"
+    },
+    {
+      "id": "security-blue-team.btl2",
+      "path": "certs/security-blue-team/btl2.json",
+      "sha": "784596476562eb9a"
+    },
+    {
       "id": "splunk.core-power-user",
       "path": "certs/splunk/core-power-user.json",
       "sha": "0114a9a5bbcd88b4"
@@ -994,6 +1469,16 @@
       "id": "splunk.es-cert-admin",
       "path": "certs/splunk/es-cert-admin.json",
       "sha": "a128f76849f1029d"
+    },
+    {
+      "id": "suse.sca",
+      "path": "certs/suse/sca.json",
+      "sha": "27ed4783586052c0"
+    },
+    {
+      "id": "suse.sce",
+      "path": "certs/suse/sce.json",
+      "sha": "1311f4a3bd2d2078"
     },
     {
       "id": "tcm-security.pipa",
@@ -1044,6 +1529,36 @@
       "id": "teletrust.tisp",
       "path": "certs/teletrust/tisp.json",
       "sha": "1f9bb426de64fe6b"
+    },
+    {
+      "id": "vmware.vcdx-dcv",
+      "path": "certs/vmware/vcdx-dcv.json",
+      "sha": "79f9ab461fe1c942"
+    },
+    {
+      "id": "vmware.vcix-dcv",
+      "path": "certs/vmware/vcix-dcv.json",
+      "sha": "ebd3cc900444dd92"
+    },
+    {
+      "id": "vmware.vcix-nv",
+      "path": "certs/vmware/vcix-nv.json",
+      "sha": "dae7094dfe884735"
+    },
+    {
+      "id": "vmware.vcp-dcv",
+      "path": "certs/vmware/vcp-dcv.json",
+      "sha": "7f7aa5a5ed241427"
+    },
+    {
+      "id": "vmware.vcp-nv",
+      "path": "certs/vmware/vcp-nv.json",
+      "sha": "5ef5ee005d4cb97f"
+    },
+    {
+      "id": "wcna.wcna",
+      "path": "certs/wcna/wcna.json",
+      "sha": "705359ec2767c263"
     },
     {
       "id": "zensho.jouhou-shori-1",

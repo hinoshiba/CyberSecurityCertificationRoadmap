@@ -1,0 +1,102 @@
+{
+  "id": "axelos.mor-foundation",
+  "vendor": {
+    "slug": "axelos",
+    "name": "AXELOS (PeopleCert)",
+    "url": "https://www.axelos.com/"
+  },
+  "name": "Management of Risk Foundation",
+  "abbr": "M_o_R Foundation",
+  "name_ja": "リスクマネジメント (M_o_R) ファウンデーション",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.peoplecert.org/browse-certifications/risk-and-portfolio",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 380,
+    "format": "Computer-based multiple-choice exam (online proctored or testing centre)",
+    "duration_min": 60,
+    "questions": 50,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "INDUSTRY_STANDARD_FRAMEWORK",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTRY_LEVEL_ACCESSIBILITY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "GOVERNMENT_RECOGNISED_UK",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "REGIONAL_RECOGNITION_LIMITED",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.peoplecert.org/browse-certifications/risk-and-portfolio"
+    },
+    {
+      "type": "official",
+      "url": "https://www.axelos.com/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

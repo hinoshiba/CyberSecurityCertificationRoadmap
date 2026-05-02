@@ -1,0 +1,119 @@
+{
+  "id": "iia.cia",
+  "vendor": {
+    "slug": "iia",
+    "name": "The Institute of Internal Auditors",
+    "url": "https://www.theiia.org/"
+  },
+  "name": "Certified Internal Auditor",
+  "abbr": "CIA",
+  "name_ja": "公認内部監査人",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.theiia.org/en/certifications/cia/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1485,
+    "format": "Three-part exam (Part 1: 125 questions / 150 min; Part 2: 100 questions / 120 min; Part 3: 100 questions / 120 min). Multiple-choice, Pearson VUE",
+    "duration_min": 390,
+    "questions": 325,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "ko",
+      "ar",
+      "pl",
+      "pt",
+      "ru",
+      "th",
+      "tr",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "renewal_years": 1,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Bachelor's degree (or 2 years of internal audit experience required if no degree, depending on pathway)"
+    ],
+    "experience_years": 2,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "isaca.cisa",
+        "source": "community",
+        "rationale": "CIA は内部監査全般、CISA は IT 監査特化。両方を併用する監査人は多い。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "GLOBAL_INTERNAL_AUDIT_DE_FACTO",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LONG_STANDING_REPUTATION",
+        "weight_hint": "high",
+        "note": "IIA established 1941; CIA is the only globally accepted internal-audit credential."
+      },
+      {
+        "code": "JAPANESE_LANGUAGE_AVAILABLE",
+        "weight_hint": "low"
+      },
+      {
+        "code": "REQUIRES_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "AUDIT_FOCUS_NOT_HANDS_ON",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "low"
+      },
+      {
+        "code": "NOT_SECURITY_FOCUSED",
+        "weight_hint": "medium",
+        "note": "Internal audit profession is broader than cybersecurity; security is one chapter."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.theiia.org/en/certifications/cia/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

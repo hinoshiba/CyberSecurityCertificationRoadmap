@@ -1,0 +1,99 @@
+{
+  "id": "drii.dcbca",
+  "vendor": {
+    "slug": "drii",
+    "name": "DRI International",
+    "url": "https://drii.org/"
+  },
+  "name": "Certified Business Continuity Auditor",
+  "abbr": "CBCA",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://drii.org/certification/cbca",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 400,
+    "format": "Audit Examination (proctored, multiple-choice). ISO 22301, NFPA 1600, CSA Z1600-17 variants.",
+    "duration_min": 180,
+    "questions": 150,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 1,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Pass the Audit Examination (minimum 75% score)",
+      "Complete BCM auditing prerequisite course"
+    ],
+    "experience_years": 2,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "bsi-group.iso22301-la",
+        "source": "community"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "BCM_AUDIT_FOCUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "REQUIRES_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ALIGNED_WITH_ISO_22301",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NICHE_INDUSTRY_FOCUS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://drii.org/certification/cbca"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

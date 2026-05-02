@@ -1,0 +1,104 @@
+{
+  "id": "linux-foundation.lfca",
+  "vendor": {
+    "slug": "linux-foundation",
+    "name": "The Linux Foundation",
+    "url": "https://training.linuxfoundation.org/"
+  },
+  "name": "Linux Foundation Certified IT Associate",
+  "abbr": "LFCA",
+  "name_ja": "Linux Foundation 認定 IT アソシエイト",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "availability": "available",
+  "official": {
+    "exam_url": "https://training.linuxfoundation.org/certification/certified-it-associate/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 250,
+    "format": "Online proctored, multiple-choice exam",
+    "duration_min": 90,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 2,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "No prerequisites; intended as a beginner-level IT associate credential"
+    ],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ENTRY_LEVEL_BROAD_AUDIENCE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "DISTRIBUTION_NEUTRAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "WIDELY_RECOGNIZED_VENDOR",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "FOCUSES_ON_GENERAL_INFRASTRUCTURE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RECENTLY_CREATED_LIMITED_UPTAKE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://training.linuxfoundation.org/certification/certified-it-associate/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

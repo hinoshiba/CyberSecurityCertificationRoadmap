@@ -1,0 +1,101 @@
+{
+  "id": "f5.cts-apm",
+  "vendor": {
+    "slug": "f5",
+    "name": "F5",
+    "url": "https://www.f5.com/"
+  },
+  "name": "F5 Certified Technology Specialist, BIG-IP APM",
+  "abbr": "F5-CTS APM",
+  "domain": "iam",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://education.f5.com/certifications",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 180,
+    "format": "Proctored multiple-choice exam (Pearson VUE), exam 304",
+    "duration_min": 90,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 2,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "required_certs": [
+      {
+        "id": "f5.ca"
+      }
+    ],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "WIDELY_RECOGNIZED_VENDOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SPECIALIZED_DOMAIN_AUTHENTICATION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_PRODUCT_ONLY_FOCUS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://education.f5.com/certifications"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "specialty",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

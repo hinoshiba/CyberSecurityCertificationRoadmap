@@ -1,0 +1,103 @@
+{
+  "id": "scrum-org.psm-ii",
+  "vendor": {
+    "slug": "scrum-org",
+    "name": "Scrum.org",
+    "url": "https://www.scrum.org/"
+  },
+  "name": "Professional Scrum Master II",
+  "abbr": "PSM II",
+  "name_ja": "プロフェッショナル・スクラムマスター II",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.scrum.org/assessments/professional-scrum-master-ii-certification",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 250,
+    "format": "Online open-book multiple-choice / multiple-answer / true-false assessment; passing score 85%",
+    "duration_min": 90,
+    "questions": 30,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "Recommended: hold PSM I (not enforced)"
+    ],
+    "experience_years": 1,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "scrum-org.psm-i",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "GLOBAL_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SCENARIO_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LIFETIME_CERTIFICATION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ADVANCED_TIER_RIGOR",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "REQUIRES_DEEP_EXPERIENCE",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.scrum.org/assessments/professional-scrum-master-ii-certification"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

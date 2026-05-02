@@ -1,0 +1,92 @@
+{
+  "id": "cyberdefenders.ccd",
+  "vendor": {
+    "slug": "cyberdefenders",
+    "name": "CyberDefenders",
+    "url": "https://cyberdefenders.org/"
+  },
+  "name": "Certified CyberDefender",
+  "abbr": "CCD",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://cyberdefenders.org/certifications/certified-cyberdefender-level1/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "48-hour proctored hands-on practical exam (manually evaluated); covers Network Forensics, Disk Forensics, Memory Forensics, Threat Hunting, Perimeter Defense, Incident Response; 4 months course access; mapped to NICE and DoD frameworks",
+    "duration_min": 2880,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OPEN_BOOK_REAL_WORLD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "STRONG_COMMUNITY_REPUTATION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "NICE_FRAMEWORK_ALIGNED",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "RECENT_RELEASE_LIMITED_UPTAKE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://cyberdefenders.org/certifications/certified-cyberdefender-level1/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

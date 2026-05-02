@@ -1,0 +1,115 @@
+{
+  "id": "open-group.togaf",
+  "vendor": {
+    "slug": "open-group",
+    "name": "The Open Group",
+    "url": "https://www.opengroup.org/"
+  },
+  "name": "TOGAF Enterprise Architecture Practitioner (Level 2)",
+  "abbr": "TOGAF Certified",
+  "name_ja": "TOGAF エンタープライズアーキテクチャ プラクティショナー",
+  "domain": "security-architecture",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.opengroup.org/certifications/togaf-enterprise-architecture-practitioner",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 460,
+    "format": "Computer-based scenario-based complex multiple-choice exam (Pearson VUE / online proctored), open book",
+    "duration_min": 90,
+    "questions": 8,
+    "languages": [
+      "en",
+      "ja",
+      "zh-Hans"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "Must hold TOGAF Foundation (Level 1) or pass the combined exam"
+    ],
+    "experience_years": 0,
+    "required_certs": [
+      {
+        "id": "open-group.togaf-foundation",
+        "url": "https://www.opengroup.org/certifications/togaf-enterprise-architecture-foundation"
+      }
+    ],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "INDUSTRY_STANDARD_FRAMEWORK",
+        "weight_hint": "high"
+      },
+      {
+        "code": "GLOBAL_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SCENARIO_BASED_EXAM",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXECUTIVE_LEVEL_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIFETIME_CERTIFICATION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "REQUIRES_PRECEDING_CERT",
+        "weight_hint": "low"
+      },
+      {
+        "code": "TRAINING_COSTS_HIGH",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.opengroup.org/certifications/togaf-enterprise-architecture-practitioner"
+    },
+    {
+      "type": "official",
+      "url": "https://www.opengroup.org/togaf"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

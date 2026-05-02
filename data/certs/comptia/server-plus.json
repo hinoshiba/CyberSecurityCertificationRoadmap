@@ -1,0 +1,108 @@
+{
+  "id": "comptia.server-plus",
+  "vendor": {
+    "slug": "comptia",
+    "name": "CompTIA",
+    "url": "https://www.comptia.org/"
+  },
+  "name": "CompTIA Server+ (SK0-005)",
+  "abbr": "Server+",
+  "domain": "endpoint-mobile",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.comptia.org/certifications/server",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 369,
+    "format": "Up to 90 questions (multiple-choice and performance-based). Pearson VUE.",
+    "duration_min": 90,
+    "questions": 90,
+    "languages": [
+      "en",
+      "ja"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "comptia.a-plus",
+        "source": "official-recommended",
+        "rationale": "CompTIA recommends A+ before Server+."
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_NEUTRAL_SERVER_FUNDAMENTALS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "PERFORMANCE_BASED_QUESTIONS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "JAPANESE_LANGUAGE_AVAILABLE",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_SECURITY_FOCUSED",
+        "weight_hint": "high",
+        "note": "Server administration credential; only ~10% of objectives cover security hardening."
+      },
+      {
+        "code": "FUNDAMENTALS_BREADTH_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NOT_ANSI_ACCREDITED",
+        "weight_hint": "low",
+        "note": "Server+ does not currently carry ANSI/ISO 17024 accreditation."
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "comptia",
+      "level_hint": "associate",
+      "url": "https://www.comptia.org/certifications/server",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.comptia.org/certifications/server"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

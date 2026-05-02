@@ -1,0 +1,131 @@
+{
+  "id": "certnexus.cfr",
+  "vendor": {
+    "slug": "certnexus",
+    "name": "CertNexus",
+    "url": "https://certnexus.com/"
+  },
+  "name": "CyberSec First Responder (CFR-410)",
+  "abbr": "CFR",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://certnexus.com/certification/cybersec-first-responder-cfr/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 350,
+    "format": "Multiple Choice / Multiple Response, Pearson VUE in-person or OnVUE online proctored",
+    "duration_min": 120,
+    "questions": 80,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "comptia.cysa-plus",
+        "source": "community"
+      },
+      {
+        "id": "comptia.security-plus",
+        "source": "community",
+        "rationale": "Security+ で SOC 基礎語彙、CFR で実務上のインシデント対応能力を示すラダー。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high",
+        "evidence": "ANAB ISO/IEC 17024 accredited."
+      },
+      {
+        "code": "DOD_8140_APPROVED",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "INDUSTRY_STANDARD_FRAMEWORK",
+        "weight_hint": "medium",
+        "note": "Aligned with NIST/CSIRT incident-response practice."
+      },
+      {
+        "code": "ROLE_ALIGNED_INCIDENT_RESPONDER",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "associate",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02",
+      "summary": "DoDD 8140/8570 approved for CSSP roles."
+    },
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "associate",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "certnexus",
+      "level_hint": "associate",
+      "url": "https://certnexus.com/certification/cybersec-first-responder-cfr/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://certnexus.com/certification/cybersec-first-responder-cfr/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate, associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate, associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate, associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

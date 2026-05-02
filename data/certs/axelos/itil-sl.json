@@ -1,0 +1,114 @@
+{
+  "id": "axelos.itil-sl",
+  "vendor": {
+    "slug": "axelos",
+    "name": "AXELOS (PeopleCert)",
+    "url": "https://www.axelos.com/"
+  },
+  "name": "ITIL 4 Strategic Leader",
+  "abbr": "ITIL SL",
+  "name_ja": "ITIL 4 ストラテジック・リーダー",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.axelos.com/certifications/itil-service-management",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1100,
+    "format": "Designation awarded after passing two module exams: Direct, Plan and Improve (DPI) and Digital and IT Strategy (DITS); each exam is computer-based multiple-choice",
+    "duration_min": 90,
+    "questions": 30,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Must hold ITIL 4 Foundation",
+      "Accredited training required for both module exams"
+    ],
+    "experience_years": 3,
+    "required_certs": [
+      {
+        "id": "axelos.itil-foundation",
+        "url": "https://www.peoplecert.org/browse-certifications/it-governance-and-service-management/itil-1/itil-4-foundation-3508"
+      }
+    ],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "EXECUTIVE_LEVEL_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INDUSTRY_STANDARD_FRAMEWORK",
+        "weight_hint": "high"
+      },
+      {
+        "code": "GLOBAL_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "STRATEGIC_FOCUS",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MANDATORY_TRAINING",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.axelos.com/certifications/itil-service-management"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

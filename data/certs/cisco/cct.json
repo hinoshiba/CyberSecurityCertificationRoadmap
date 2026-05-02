@@ -1,0 +1,104 @@
+{
+  "id": "cisco.cct",
+  "vendor": {
+    "slug": "cisco",
+    "name": "Cisco",
+    "url": "https://www.cisco.com/"
+  },
+  "name": "Cisco Certified Technician",
+  "abbr": "CCT",
+  "domain": "network-defense",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://learningnetwork.cisco.com/s/cct",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 165,
+    "format": "Proctored multiple-choice exam (Pearson VUE)",
+    "duration_min": 90,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "WIDELY_RECOGNIZED_VENDOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "FIELD_OPERATIONS_RELEVANCE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LOW_BARRIER_TO_ENTRY",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_PRODUCT_ONLY_FOCUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTRY_LEVEL_LIMITED_DEPTH",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "cisco",
+      "level_hint": "introductory",
+      "url": "https://learningnetwork.cisco.com/s/cct",
+      "fetched_at": "2026-05-02",
+      "summary": "Vendor entry-tier technician credential validating on-site Cisco hardware diagnostic and replacement skills (tracks: Routing & Switching, Data Center, Collaboration)."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://learningnetwork.cisco.com/s/cct"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "introductory",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

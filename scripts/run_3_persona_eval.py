@@ -433,26 +433,103 @@ def consensus_rationale(persona_scores: dict[str, dict[str, str]], tier: str) ->
 def fallback_persona_scores(data):
     """
     For certs without an explicit PERSONAS entry, derive a conservative
-    consensus from the cert's third_party_evaluations[].level_hint values.
-    Marks the rationale so reviewers can see this was auto-derived and
-    is pending differentiated human review.
+    consensus tier through a fallback chain:
+
+      1. third_party_evaluations[].level_hint mode (most reliable)
+      2. cert-name keyword pattern + scoring_factors signal modulation
+      3. default "associate" with a clear "needs review" rationale
+
+    All branches mark the rationale so reviewers can see this was
+    auto-derived and is pending differentiated human persona review.
     """
     hints = [e.get("level_hint") for e in (data.get("third_party_evaluations") or [])
              if e.get("level_hint")]
-    if not hints:
-        return None  # cannot derive
-    # Take the most-common hint (mode); ties broken by first occurrence.
-    counts = {}
-    for h in hints:
-        counts[h] = counts.get(h, 0) + 1
-    chosen = max(counts.items(), key=lambda kv: (kv[1], -hints.index(kv[0])))[0]
-    rationale = (f"Auto-derived from third-party evaluations ({', '.join(hints)}); "
+    if hints:
+        counts = {}
+        for h in hints:
+            counts[h] = counts.get(h, 0) + 1
+        chosen = max(counts.items(), key=lambda kv: (kv[1], -hints.index(kv[0])))[0]
+        rationale = (f"Auto-derived from third-party evaluations ({', '.join(hints)}); "
+                     f"pending differentiated human persona review.")
+        return _three_personas_same(chosen, rationale)
+
+    # No third-party hints — fall back to name + scoring_factors heuristic.
+    chosen = _heuristic_tier_from_name_and_factors(data)
+    rationale = (f"Auto-derived from cert name + scoring_factors heuristic "
+                 f"(no third-party level hints available); "
                  f"pending differentiated human persona review.")
+    return _three_personas_same(chosen, rationale)
+
+
+def _three_personas_same(tier, rationale):
     return {
-        "hiroshi-tanaka": {"tier": chosen, "rationale": rationale},
-        "maria-okonkwo":  {"tier": chosen, "rationale": rationale},
-        "alex-novak":     {"tier": chosen, "rationale": rationale},
+        "hiroshi-tanaka": {"tier": tier, "rationale": rationale},
+        "maria-okonkwo":  {"tier": tier, "rationale": rationale},
+        "alex-novak":     {"tier": tier, "rationale": rationale},
     }
+
+
+def _heuristic_tier_from_name_and_factors(data):
+    """
+    Estimate a tier from the cert name keywords, then adjust by
+    scoring_factors signals (plus = up, minus = down). Conservative.
+    """
+    name = (data.get("name") or "") + " " + (data.get("abbr") or "")
+    n = name.lower()
+
+    # Name-based base tier (most-specific keywords first)
+    if any(k in n for k in ["master", "distinguished", "fellow"]):
+        base = "expert"
+    elif "expert" in n:
+        base = "expert"
+    elif any(k in n for k in ["professional", "practitioner"]) and "pro " not in n:
+        base = "professional"
+    elif any(k in n for k in [" pro ", " pro)", "(pro)", " pro\n"]):
+        base = "professional"
+    elif "associate" in n:
+        base = "associate"
+    elif any(k in n for k in ["foundation", "foundational", "fundamentals", "essentials", "entry-level", "beginner", "first responder"]):
+        base = "foundational"
+    elif any(k in n for k in ["specialist", "specialty"]):
+        base = "specialty"
+    elif any(k in n for k in ["administrator", "engineer", "developer", "operator", "analyst", "implement"]):
+        base = "associate"
+    else:
+        base = "associate"
+
+    # Adjust by scoring_factors signals.
+    plus_codes  = {f.get("code", "") for f in (data.get("scoring_factors", {}).get("plus")  or [])}
+    minus_codes = {f.get("code", "") for f in (data.get("scoring_factors", {}).get("minus") or [])}
+    plus_w  = {f.get("code", ""): f.get("weight_hint", "low") for f in (data.get("scoring_factors", {}).get("plus")  or [])}
+
+    promote = {"EXECUTIVE_LEVEL_RECOGNITION", "HANDS_ON_PRACTICAL",
+               "PERFORMANCE_BASED_EXAM", "DEEP_TECHNICAL_DEPTH",
+               "ANSI_ISO_17024", "ANSI_ISO_17024_ACCREDITED",
+               "DOD_8140_APPROVED", "LONG_STANDING_REPUTATION",
+               "LAW_ENFORCEMENT_RECOGNITION"}
+    demote  = {"NOT_SECURITY_FOCUSED", "FOCUSES_ON_GENERAL_INFRASTRUCTURE",
+               "VENDOR_PRODUCT_ONLY_FOCUS", "VENDOR_ONLY_RECOGNITION",
+               "MULTIPLE_CHOICE_ONLY", "RECENTLY_CREATED_LIMITED_UPTAKE",
+               "RECENT_RELEASE_LIMITED_UPTAKE", "LIMITED_THIRD_PARTY_RECOGNITION",
+               "NICHE_PRODUCT_FOCUS", "NICHE_INDUSTRY_FOCUS",
+               "VENDOR_TRAINING_FOCUS"}
+
+    # Count high-weight signals; nudge ±1 tier when strong.
+    promote_strength = sum(1 for c in plus_codes if c in promote and plus_w.get(c) == "high")
+    demote_strength  = sum(1 for c in minus_codes if c in demote)
+
+    tier_order = ["specialty", "expert", "professional", "associate", "foundational", "introductory"]
+    # Skip specialty in nudges — keep it as base if name said specialty.
+    if base == "specialty":
+        return base
+    idx = tier_order.index(base)
+
+    if promote_strength >= 2 and idx > 1:  # don't push above expert via heuristic
+        idx -= 1
+    if demote_strength >= 2 and idx < len(tier_order) - 1:
+        idx += 1
+
+    return tier_order[idx]
 
 
 def main() -> int:

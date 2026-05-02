@@ -1,0 +1,104 @@
+{
+  "id": "pmi.pgmp",
+  "vendor": {
+    "slug": "pmi",
+    "name": "Project Management Institute",
+    "url": "https://www.pmi.org/"
+  },
+  "name": "Program Management Professional",
+  "abbr": "PgMP",
+  "name_ja": "プログラムマネジメント・プロフェッショナル",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.pmi.org/certifications/program-management-pgmp",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 800,
+    "format": "Panel review of professional experience followed by computer-based multiple-choice exam at Pearson VUE",
+    "duration_min": 240,
+    "questions": 170,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Four-year degree + 48 months project management experience + 84 months program management experience (within last 15 years), OR",
+      "Secondary degree + 48 months project management experience + 96 months program management experience"
+    ],
+    "experience_years": 11,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "pmi.pmp",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "EXECUTIVE_LEVEL_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_VERIFIED_EXPERIENCE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INDUSTRY_STANDARD_FRAMEWORK",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PANEL_REVIEW_RIGOR",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_TECHNICAL_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "NICHE_AUDIENCE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.pmi.org/certifications/program-management-pgmp"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

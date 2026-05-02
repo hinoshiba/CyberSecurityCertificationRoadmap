@@ -1,0 +1,104 @@
+{
+  "id": "giac.grtp",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Red Team Professional",
+  "abbr": "GRTP",
+  "domain": "offensive-redteam",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/red-team-professional-grtp/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "CyberLive performance-based, web-based proctored (ProctorU or PearsonVUE)",
+    "duration_min": 180,
+    "questions": 82,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      {
+        "id": "giac.gpen",
+        "source": "vendor-ladder",
+        "rationale": "GPEN で侵入テストの基礎を固めてから、敵対者エミュレーション/C2 構築に踏み込む GRTP へ進むのが SANS の正攻法。"
+      },
+      {
+        "id": "offsec.oscp",
+        "source": "community",
+        "rationale": "OSCP の手作業侵入経験を前提に、Red Team 計画~C2 運用までを評価する GRTP に進むと体系化が進む。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "CYBERLIVE_HANDS_ON",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RED_TEAM_END_TO_END_SCOPE",
+        "weight_hint": "high",
+        "note": "プランニング~C2~実行まで End-to-End Red Team を評価する数少ない上位資格。"
+      },
+      {
+        "code": "BACKED_BY_SANS_RED_TEAM_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RECENTLY_CREATED_LIMITED_UPTAKE",
+        "weight_hint": "medium",
+        "note": "2024 年公開で求人要件としての浸透はこれから。"
+      }
+    ]
+  },
+  "third_party_evaluations": [],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/red-team-professional-grtp/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/red-team-operations-adversary-emulation/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

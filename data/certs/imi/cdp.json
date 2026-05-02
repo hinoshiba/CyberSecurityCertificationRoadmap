@@ -1,0 +1,106 @@
+{
+  "id": "imi.cdp",
+  "vendor": {
+    "slug": "imi",
+    "name": "Identity Management Institute",
+    "url": "https://www.identitymanagementinstitute.org/"
+  },
+  "name": "Certified in Data Protection",
+  "abbr": "CDP",
+  "domain": "privacy-data-protection",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.identitymanagementinstitute.org/cdp/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 395,
+    "format": "Online multiple-choice (passing score 70/100). Up to 3 attempts.",
+    "duration_min": 90,
+    "questions": 100,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 1,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Active IMI membership required"
+    ],
+    "experience_years": 0,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "iapp.cipp-us",
+        "source": "community"
+      },
+      {
+        "id": "isaca.cdpse",
+        "source": "community"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DATA_PROTECTION_BREADTH",
+        "weight_hint": "medium",
+        "note": "Covers 10 critical risk domains spanning governance, access control and compliance."
+      },
+      {
+        "code": "AFFORDABLE_ENTRY_CRED",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "high",
+        "note": "Lower hiring-manager awareness vs CIPP-E/US, CDPSE."
+      },
+      {
+        "code": "MEMBERSHIP_REQUIRED",
+        "weight_hint": "low"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.identitymanagementinstitute.org/cdp/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,125 @@
+{
+  "id": "cncf.cks",
+  "vendor": {
+    "slug": "cncf",
+    "name": "Cloud Native Computing Foundation",
+    "url": "https://www.cncf.io/training/certification/"
+  },
+  "name": "Certified Kubernetes Security Specialist",
+  "abbr": "CKS",
+  "name_ja": "認定 Kubernetes セキュリティスペシャリスト",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "application-appsec",
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "availability": "available",
+  "official": {
+    "exam_url": "https://www.cncf.io/training/certification/cks/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 445,
+    "format": "Online proctored, performance-based command-line tasks against live Kubernetes clusters",
+    "duration_min": 120,
+    "languages": [
+      "en",
+      "ja",
+      "zh-Hans"
+    ],
+    "renewal_years": 2,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "Must have passed the Certified Kubernetes Administrator (CKA) exam prior to attempting CKS"
+    ],
+    "experience_years": 2,
+    "required_certs": [
+      {
+        "id": "cncf.cka",
+        "url": "https://www.cncf.io/training/certification/cka/"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PERFORMANCE_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OPEN_BOOK_REAL_WORLD",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "DIRECT_SECURITY_FOCUS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INDUSTRY_STANDARD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "JAPANESE_LANGUAGE_AVAILABLE",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "REQUIRES_PRIOR_CKA",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "FREQUENT_VERSION_CHURN",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "csa",
+      "level_hint": "specialty",
+      "url": "https://cloudsecurityalliance.org/",
+      "fetched_at": "2026-05-02",
+      "summary": "CSA cloud-native security guidance frequently cites CKS as a baseline credential for Kubernetes cluster security engineers."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.cncf.io/training/certification/cks/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "specialty",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

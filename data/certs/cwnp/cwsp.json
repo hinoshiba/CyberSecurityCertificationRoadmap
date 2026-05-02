@@ -1,0 +1,106 @@
+{
+  "id": "cwnp.cwsp",
+  "vendor": {
+    "slug": "cwnp",
+    "name": "Certified Wireless Network Professional",
+    "url": "https://www.cwnp.com/"
+  },
+  "name": "Certified Wireless Security Professional",
+  "abbr": "CWSP",
+  "domain": "network-defense",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.cwnp.com/certifications/cwsp",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 350,
+    "format": "Proctored multiple-choice exam (CWNP Remote Proctored), exam CWSP-208",
+    "duration_min": 90,
+    "questions": 60,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "required_certs": [
+      {
+        "id": "cwnp.cwna"
+      }
+    ],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_NEUTRAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INDUSTRY_STANDARD_WIRELESS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SPECIALIZED_DOMAIN_WIRELESS_SECURITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_PREREQUISITE_CERT",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NARROW_SCOPE",
+        "weight_hint": "low"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.cwnp.com/certifications/cwsp"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

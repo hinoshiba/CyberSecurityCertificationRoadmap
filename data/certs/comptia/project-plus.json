@@ -1,0 +1,104 @@
+{
+  "id": "comptia.project-plus",
+  "vendor": {
+    "slug": "comptia",
+    "name": "CompTIA",
+    "url": "https://www.comptia.org/"
+  },
+  "name": "CompTIA Project+ (PK0-005)",
+  "abbr": "Project+",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.comptia.org/certifications/project",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 369,
+    "format": "Up to 90 questions (multiple-choice and performance-based). Pearson VUE.",
+    "duration_min": 90,
+    "questions": 90,
+    "languages": [
+      "en",
+      "ja",
+      "th"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "required_certs": [],
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_NEUTRAL_PM_BASELINE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NO_RENEWAL_REQUIRED",
+        "weight_hint": "low",
+        "note": "Project+ is a non-expiring credential, unlike most CompTIA certs."
+      },
+      {
+        "code": "JAPANESE_LANGUAGE_AVAILABLE",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_SECURITY_FOCUSED",
+        "weight_hint": "high",
+        "note": "Generalist project-management cert; security relevance is incidental."
+      },
+      {
+        "code": "OVERLAPS_WITH_PMI_PMP_CAPM",
+        "weight_hint": "high",
+        "note": "PMI PMP / CAPM dominate the PM credential market and are weighted higher."
+      },
+      {
+        "code": "MULTIPLE_CHOICE_HEAVY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "comptia",
+      "level_hint": "associate",
+      "url": "https://www.comptia.org/certifications/project",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.comptia.org/certifications/project"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

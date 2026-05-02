@@ -1,0 +1,101 @@
+{
+  "id": "giac.gmle",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Machine Learning Engineer",
+  "abbr": "GMLE",
+  "domain": "application-appsec",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/machine-learning-engineer-gmle/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Web-based proctored, open-book reference (ProctorU or PearsonVUE)",
+    "duration_min": 180,
+    "questions": 82,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      {
+        "id": "giac.gsec",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "EMERGING_AI_SECURITY_NICHE",
+        "weight_hint": "high",
+        "note": "AI/ML セキュリティの認証は希少で、SANS バックの GMLE は 2024 年以降の AI ガバナンス需要に直接刺さる。"
+      },
+      {
+        "code": "BACKED_BY_SANS_AI_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "RECENTLY_CREATED_LIMITED_UPTAKE",
+        "weight_hint": "high",
+        "note": "2024 年に登場した新規資格で、求人要件としての登場頻度はまだ少ない。"
+      },
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NOT_YET_ANSI_ACCREDITED",
+        "weight_hint": "low",
+        "note": "新規のため ANSI/ISO 17024 認定リストに未掲載の可能性がある。"
+      }
+    ]
+  },
+  "third_party_evaluations": [],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/machine-learning-engineer-gmle/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/applied-data-science-machine-learning/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

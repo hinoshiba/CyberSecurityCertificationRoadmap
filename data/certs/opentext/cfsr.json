@@ -1,0 +1,87 @@
+{
+  "id": "opentext.cfsr",
+  "vendor": {
+    "slug": "opentext",
+    "name": "OpenText (EnCase)",
+    "url": "https://www.opentext.com/"
+  },
+  "name": "Certified Forensic Security Responder",
+  "abbr": "CFSR",
+  "domain": "incident-forensics",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.opentext.com/products/encase-certifications",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 200,
+    "format": "Two-phase exam: knowledge-based written exam (proctored) plus practical scenario-based incident response examination using EnCase Endpoint Investigator; 3 years validity",
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "opentext.ence",
+        "source": "community",
+        "rationale": "CFSR builds on the same EnCase tooling as EnCE; analysts often hold EnCE first."
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INCIDENT_RESPONSE_FOCUS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_TOOL_LOCK_IN",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.opentext.com/products/encase-certifications"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

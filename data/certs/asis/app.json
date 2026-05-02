@@ -1,0 +1,98 @@
+{
+  "id": "asis.app",
+  "vendor": {
+    "slug": "asis",
+    "name": "ASIS International",
+    "url": "https://www.asisonline.org/"
+  },
+  "name": "Associate Protection Professional",
+  "abbr": "APP",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.asisonline.org/certification/associate-protection-professional-app/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 300,
+    "format": "Multiple-choice, computer-based at Pearson VUE",
+    "duration_min": 150,
+    "questions": 100,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Bachelor's degree + 1 year security management experience, OR Associate's degree + 3 years, OR 4 years experience without degree"
+    ],
+    "experience_years": 1,
+    "required_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ASIS_BRAND_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTRY_LEVEL_PROTECTION_CRED",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "REQUIRES_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "low"
+      },
+      {
+        "code": "ASSOCIATE_TIER_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      },
+      {
+        "code": "PHYSICAL_SECURITY_HEAVY",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.asisonline.org/certification/associate-protection-professional-app/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

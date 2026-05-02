@@ -1,0 +1,93 @@
+{
+  "id": "ine-security.emapt",
+  "vendor": {
+    "slug": "ine-security",
+    "name": "INE Security",
+    "url": "https://ine.com/security"
+  },
+  "name": "eLearnSecurity Mobile Application Penetration Tester",
+  "abbr": "eMAPT",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://ine.com/security/certifications/emapt-certification/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 400,
+    "format": "Hands-on practical exam in INE Virtual Labs (Android/iOS targets); auto-graded; 3 years validity",
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "ine-security.ejpt",
+        "source": "official-recommended",
+        "rationale": "INE positions eMAPT after eJPT/eCPPT in the offensive learning path."
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OPEN_BOOK_REAL_WORLD",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "STRONG_COMMUNITY_REPUTATION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_TRAINING_FOCUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://ine.com/security/certifications/emapt-certification/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

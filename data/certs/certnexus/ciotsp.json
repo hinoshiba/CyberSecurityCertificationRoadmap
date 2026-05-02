@@ -1,0 +1,112 @@
+{
+  "id": "certnexus.ciotsp",
+  "vendor": {
+    "slug": "certnexus",
+    "name": "CertNexus",
+    "url": "https://certnexus.com/"
+  },
+  "name": "Certified Internet of Things Security Practitioner (ITS-110)",
+  "abbr": "CIoTSP",
+  "domain": "ot-ics-iot",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://certnexus.com/certification/certified-iot-security-practitioner/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 250,
+    "format": "Multiple Choice / Multiple Response, Pearson VUE in-person or OnVUE online proctored",
+    "duration_min": 120,
+    "questions": 100,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "giac.gicsp",
+        "source": "community"
+      },
+      {
+        "id": "isa.iec-62443-cf",
+        "source": "community",
+        "rationale": "IEC 62443 (ISA) と組み合わせて、コンシューマ IoT と産業 IoT の双方をカバーする。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_NEUTRAL_IOT_SECURITY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ROLE_ALIGNED_IOT_PRACTITIONER",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OPEN_ENTRY_NO_EXPERIENCE_PREREQ",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIMITED_THIRD_PARTY_RECOGNITION",
+        "weight_hint": "medium",
+        "note": "IoT credential market is fragmented; ISA/GIAC variants better recognized in industrial settings."
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "certnexus",
+      "level_hint": "associate",
+      "url": "https://certnexus.com/certification/certified-iot-security-practitioner/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://certnexus.com/certification/certified-iot-security-practitioner/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

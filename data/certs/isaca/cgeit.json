@@ -1,0 +1,136 @@
+{
+  "id": "isaca.cgeit",
+  "vendor": {
+    "slug": "isaca",
+    "name": "ISACA",
+    "url": "https://www.isaca.org/"
+  },
+  "name": "Certified in the Governance of Enterprise IT",
+  "abbr": "CGEIT",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isaca.org/credentialing/cgeit",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 760,
+    "format": "Multiple-choice, computer-based at PSI testing centers or remotely proctored",
+    "duration_min": 240,
+    "questions": 150,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "ko",
+      "zh-Hans"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "isaca.cisa",
+        "source": "community",
+        "rationale": "CISA で監査の語彙を、CGEIT で IT ガバナンスの語彙を持つ二段構えはエンタープライズ案件で定番。"
+      },
+      {
+        "id": "isaca.crisc",
+        "source": "community",
+        "rationale": "CRISC のリスク管理語彙の拡張として、ガバナンス側の包括資格として CGEIT を取得するパターン。"
+      },
+      {
+        "id": "isc2.cissp",
+        "source": "community",
+        "rationale": "CISSP 取得者がエグゼクティブ層に向かう際にガバナンス専用資格として追加するキャリアパス。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "EXECUTIVE_LEVEL_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "FRAMEWORK_AGNOSTIC_GOVERNANCE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_5YR_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "JAPANESE_LANGUAGE_AVAILABLE",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "AUDIT_FOCUS_NOT_HANDS_ON",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "low"
+      },
+      {
+        "code": "NICHE_EXECUTIVE_AUDIENCE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "isaca",
+      "level_hint": "expert",
+      "url": "https://www.isaca.org/credentialing/cgeit",
+      "fetched_at": "2026-05-02",
+      "summary": "Positioned as ISACA's executive-level governance credential; framework-agnostic IT governance."
+    },
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "expert",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isaca.org/credentialing/cgeit"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert, expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert, expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert, expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,142 @@
+{
+  "id": "red-hat.rhcsa",
+  "vendor": {
+    "slug": "red-hat",
+    "name": "Red Hat",
+    "url": "https://www.redhat.com/en/services/certification"
+  },
+  "name": "Red Hat Certified System Administrator",
+  "abbr": "RHCSA",
+  "name_ja": "Red Hat認定システム管理者",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "availability": "available",
+  "official": {
+    "exam_url": "https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam",
+    "blueprint_url": "https://www.redhat.com/en/services/certification/rhcsa",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 500,
+    "format": "Hands-on, performance-based proctored exam (EX200) on live RHEL systems; remote or in-person",
+    "duration_min": 180,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "it",
+      "ko",
+      "pt",
+      "zh-Hans"
+    ],
+    "renewal_years": 3,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "Recommended: RH124 (System Administration I) and RH134 (System Administration II), or equivalent RHEL admin experience"
+    ],
+    "experience_years": 1,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PERFORMANCE_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INDUSTRY_STANDARD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_RECOGNIZED_VENDOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DOD_8140_APPROVED",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "JAPANESE_LANGUAGE_AVAILABLE",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_ONLY_RECOGNITION",
+        "weight_hint": "low"
+      },
+      {
+        "code": "FOCUSES_ON_GENERAL_INFRASTRUCTURE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "associate",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02",
+      "summary": "RHCSA appears in DoD 8140 system administration work-role qualification matrix."
+    },
+    {
+      "source_id": "dod-cool",
+      "level_hint": "associate",
+      "url": "https://www.cool.osd.mil/usn/credential/index.html?cert=rhcsa5258",
+      "fetched_at": "2026-05-02",
+      "summary": "RHCSA listed in Navy COOL credential catalog."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.redhat.com/en/services/certification/rhcsa"
+    },
+    {
+      "type": "official",
+      "url": "https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

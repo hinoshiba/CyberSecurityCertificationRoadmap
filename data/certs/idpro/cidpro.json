@@ -1,0 +1,105 @@
+{
+  "id": "idpro.cidpro",
+  "vendor": {
+    "slug": "idpro",
+    "name": "IDPro",
+    "url": "https://idpro.org/"
+  },
+  "name": "Certified Identity Professional",
+  "abbr": "CIDPRO",
+  "domain": "iam",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://idpro.org/cidpro/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 750,
+    "format": "Multiple-choice (one best answer), online with virtual proctoring (Kryterion / Webassessor)",
+    "duration_min": 180,
+    "questions": 150,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "microsoft.sc-300",
+        "source": "community",
+        "rationale": "ベンダ非依存の CIDPRO に対し、Microsoft Entra 寄りの SC-300 を併用して実装側を補完するパターン。"
+      },
+      {
+        "id": "sailpoint.identityiq-engineer",
+        "source": "community",
+        "rationale": "SailPoint の実装系資格と CIDPRO のベンダ中立な体系を組み合わせる IAM エンジニアが多い。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_NEUTRAL_IAM_BODY_OF_KNOWLEDGE",
+        "weight_hint": "high",
+        "note": "IDPro Body of Knowledge is the only community-driven, vendor-neutral IAM curriculum."
+      },
+      {
+        "code": "ROLE_ALIGNED_IAM_PRACTITIONER",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NEWER_CREDENTIAL_LIMITED_MARKET_SIGNAL",
+        "weight_hint": "medium",
+        "note": "CIDPRO launched 2022; market awareness still building vs vendor IAM creds."
+      },
+      {
+        "code": "NO_CONTINUING_EDUCATION_REQUIRED",
+        "weight_hint": "medium",
+        "note": "No CPE/renewal currently required, which limits long-term currency signal."
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://idpro.org/cidpro/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

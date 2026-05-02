@@ -1,0 +1,114 @@
+{
+  "id": "vmware.vcix-dcv",
+  "vendor": {
+    "slug": "vmware",
+    "name": "VMware (Broadcom)",
+    "url": "https://www.broadcom.com/support/education/vmware/certification"
+  },
+  "name": "VMware Certified Implementation Expert - Data Center Virtualization",
+  "abbr": "VCIX-DCV",
+  "name_ja": "VMware認定実装エキスパート（データセンター仮想化）",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "availability": "available",
+  "official": {
+    "exam_url": "https://www.broadcom.com/support/education/vmware/certification/vcap-dcv-design",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 900,
+    "format": "Awarded after passing both VCAP-DCV Design and VCAP-DCV Deploy proctored exams (Pearson VUE)",
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [
+      "Earn VCP-DCV (active certification)",
+      "Pass VCAP-DCV Design exam",
+      "Pass VCAP-DCV Deploy exam"
+    ],
+    "experience_years": 5,
+    "recommended_certs": [
+      {
+        "id": "vmware.vcp-dcv",
+        "source": "vendor-ladder"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_RECOGNIZED_VENDOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PERFORMANCE_BASED_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_TWO_TRACK_PASS",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_ONLY_RECOGNITION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "FOCUSES_ON_GENERAL_INFRASTRUCTURE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.broadcom.com/support/education/vmware/certification/vcap-dcv-design"
+    },
+    {
+      "type": "official",
+      "url": "https://www.broadcom.com/support/education/vmware/certification"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,102 @@
+{
+  "id": "asis.pci",
+  "vendor": {
+    "slug": "asis",
+    "name": "ASIS International",
+    "url": "https://www.asisonline.org/"
+  },
+  "name": "Professional Certified Investigator",
+  "abbr": "PCI",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.asisonline.org/certification/professional-certified-investigator-pci/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 450,
+    "format": "Multiple-choice, computer-based at Pearson VUE",
+    "duration_min": 150,
+    "questions": 125,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "Bachelor's degree + 3 years investigations experience, OR 5 years investigations experience (2 in case management) without degree"
+    ],
+    "experience_years": 3,
+    "required_certs": [],
+    "recommended_certs": [
+      {
+        "id": "ec-council.chfi",
+        "source": "community",
+        "rationale": "PCI と CHFI を組み合わせて、物理/論理双方の調査スキルを示すパターン。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "INVESTIGATIONS_DOMAIN_AUTHORITY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NICHE_INDUSTRY_FOCUS",
+        "weight_hint": "high",
+        "note": "Investigator profession is narrow; cyber DFIR practitioners typically choose GCFA/GREM/CHFI."
+      },
+      {
+        "code": "MULTIPLE_CHOICE_ONLY",
+        "weight_hint": "low"
+      },
+      {
+        "code": "ENGLISH_ONLY",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.asisonline.org/certification/professional-certified-investigator-pci/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}
