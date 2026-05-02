@@ -1,0 +1,103 @@
+{
+  "id": "ipa.pm",
+  "vendor": {
+    "slug": "ipa",
+    "name": "IPA (Information-technology Promotion Agency, Japan)",
+    "url": "https://www.ipa.go.jp/"
+  },
+  "name": "Project Manager Examination",
+  "name_ja": "プロジェクトマネージャ試験 (PM)",
+  "abbr": "IPA PM",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www.ipa.go.jp/shiken/kubun/pm.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 7,500",
+    "format": "National statutory paper exam, once yearly (October)",
+    "duration_min": 270,
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": [
+      "ipa.ap",
+      "ipa.fe"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_NATIONAL_STATUTORY_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ENTERPRISE_PROJECT_MGMT_DEPTH",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PM_FOCUS_NOT_SECURITY",
+        "weight_hint": "high"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ipa",
+      "level_hint": "professional",
+      "url": "https://www.ipa.go.jp/shiken/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "meti-jp",
+      "level_hint": "professional",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.ipa.go.jp/shiken/kubun/pm.html"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "PM depth, not security-focused."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Project management; not security."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "PM, not security."
+      }
+    }
+  },
+  "schema_version": 1
+}

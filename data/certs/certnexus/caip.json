@@ -1,0 +1,109 @@
+{
+  "id": "certnexus.caip",
+  "vendor": {
+    "slug": "certnexus",
+    "name": "CertNexus",
+    "url": "https://certnexus.com/"
+  },
+  "name": "Certified Artificial Intelligence Practitioner (AIP-210)",
+  "abbr": "CAIP",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "application-appsec",
+    "privacy-data-protection"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://certnexus.com/certified-artificial-intelligence-practitioner-caip/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 400,
+    "format": "Multiple-choice, Pearson VUE",
+    "duration_min": 120,
+    "questions": 80,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DOD_COOL_RECOGNISED",
+        "weight_hint": "high",
+        "evidence": "https://www.cool.osd.mil/usmc/credential/index.html?cert=caip10626"
+      },
+      {
+        "code": "FIRST_NEUTRAL_AI_CRED_IN_DOD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ETHICS_AND_PRIVACY_COVERAGE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "AI_GOVERNANCE_LANDSCAPE_RAPIDLY_EVOLVING",
+        "weight_hint": "medium",
+        "note": "ISC2 and ISACA AI credentials maturing; relative position may shift."
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-cool",
+      "level_hint": "associate",
+      "url": "https://www.cool.osd.mil/usmc/credential/index.html?cert=caip10626",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "associate",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://certnexus.com/certified-artificial-intelligence-practitioner-caip/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.cool.osd.mil/usmc/credential/index.html?cert=caip10626"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "DoD COOL + ANSI; AI literacy is increasingly relevant to JP enterprise governance."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "DoD COOL + ANSI; first neutral AI cert recognised in DoD."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Multiple-choice; emerging area but credential is foundational."
+      }
+    }
+  },
+  "schema_version": 1
+}

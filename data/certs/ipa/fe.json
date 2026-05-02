@@ -1,0 +1,110 @@
+{
+  "id": "ipa.fe",
+  "vendor": {
+    "slug": "ipa",
+    "name": "IPA (Information-technology Promotion Agency, Japan)",
+    "url": "https://www.ipa.go.jp/"
+  },
+  "name": "Fundamental Information Technology Engineer Examination",
+  "name_ja": "基本情報技術者試験 (FE)",
+  "abbr": "IPA FE",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www.ipa.go.jp/shiken/kubun/fe.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 7,500",
+    "format": "National statutory CBT (year-round)",
+    "duration_min": 290,
+    "questions": 80,
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      "ipa.ip",
+      "jken.j-system"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_NATIONAL_STATUTORY_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "GATEWAY_TO_HIGHER_IPA_EXAMS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "FOUNDATIONAL_PROGRAMMING_AND_INFRA",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BROAD_IT_NOT_PURE_SECURITY",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ipa",
+      "level_hint": "foundational",
+      "url": "https://www.ipa.go.jp/shiken/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "meti-jp",
+      "level_hint": "foundational",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.ipa.go.jp/shiken/kubun/fe.html"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Gateway to higher IPA exams; broad IT fundamentals."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "JP-only IT fundamentals."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Broad IT not security-specific."
+      }
+    }
+  },
+  "schema_version": 1
+}

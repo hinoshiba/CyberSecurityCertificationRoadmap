@@ -1,0 +1,98 @@
+{
+  "id": "comptia.network-plus",
+  "vendor": {
+    "slug": "comptia",
+    "name": "CompTIA",
+    "url": "https://www.comptia.org/"
+  },
+  "name": "CompTIA Network+",
+  "abbr": "Network+",
+  "domain": "network-defense",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.comptia.org/certifications/network",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 369,
+    "format": "Multiple-choice + performance-based",
+    "duration_min": 90,
+    "questions": 90,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "pt-BR"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "VENDOR_NEUTRAL_FUNDAMENTALS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PREREQUISITE_FOR_SECURITY_TRACK",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NETWORK_FOCUS_NOT_PURE_SECURITY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NO_DOD_8140_AT_THIS_TIER",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "nist-nice",
+      "level_hint": "foundational",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.comptia.org/certifications/network"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Networking fundamentals; not a security credential proper."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "No security DoD 8140 listing; networking baseline."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Foundational networking only."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,104 @@
+{
+  "id": "offsec.oscc-sec",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec CyberCore Certified - Security (SEC-100)",
+  "abbr": "OSCC-SEC",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/sec-100/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 799,
+    "format": "Foundational cybersecurity exam covering core security concepts",
+    "duration_min": 180,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      "offsec.oscc-sjd"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog"
+      },
+      {
+        "code": "VENDOR_NEUTRAL_FOUNDATION",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OFFSEC_BRAND_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OVERSHADOWED_BY_SECURITY_PLUS_FOR_BREADTH",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "foundational",
+      "url": "https://niccs.cisa.gov/training/catalog",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "foundational",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/sec-100/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

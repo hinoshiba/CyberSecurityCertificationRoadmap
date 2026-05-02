@@ -1,0 +1,91 @@
+{
+  "id": "lpi.lpic3-303",
+  "vendor": {
+    "slug": "lpi",
+    "name": "Linux Professional Institute",
+    "url": "https://www.lpi.org/"
+  },
+  "name": "LPIC-3 Security",
+  "abbr": "LPIC-3 303",
+  "domain": "endpoint-mobile",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.lpi.org/our-certifications/lpic-3-303-overview/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 200,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_OR_ISO_17024_ACCREDITED",
+        "weight_hint": "high",
+        "evidence": "https://www.ansi.org/"
+      },
+      {
+        "code": "VENDOR_NEUTRAL_LINUX_TRACK",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "SENIOR_SCOPE_AND_RIGOR",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi",
+      "level_hint": "expert",
+      "url": "https://www.ansi.org/",
+      "fetched_at": "2026-05-02",
+      "summary": "LPI's expert Linux security certification (303-300); requires active LPIC-2."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.lpi.org/our-certifications/lpic-3-303-overview/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.ansi.org/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

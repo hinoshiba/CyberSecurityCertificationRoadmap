@@ -1,0 +1,95 @@
+{
+  "id": "google.gen-ai-leader",
+  "vendor": {
+    "slug": "google",
+    "name": "Google Cloud",
+    "url": "https://cloud.google.com/learn/certification"
+  },
+  "name": "Google Cloud Generative AI Leader",
+  "abbr": "GenAI Leader",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "privacy-data-protection"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://cloud.google.com/learn/certification/generative-ai-leader",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 99,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "PEARSON_VUE_PROCTORED",
+        "weight_hint": "medium",
+        "evidence": "https://googlecloudexamstore.pearsonvue.com/"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MODERN_ATTACK_SURFACE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "pearsonvue-google",
+      "level_hint": "foundational",
+      "url": "https://googlecloudexamstore.pearsonvue.com/",
+      "fetched_at": "2026-05-02",
+      "summary": "Foundational, business-focused validation of generative AI strategy on Google Cloud."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://cloud.google.com/learn/certification/generative-ai-leader"
+    },
+    {
+      "type": "third_party",
+      "url": "https://googlecloudexamstore.pearsonvue.com/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

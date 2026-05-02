@@ -1,0 +1,106 @@
+{
+  "id": "isaca.crisc",
+  "vendor": {
+    "slug": "isaca",
+    "name": "ISACA",
+    "url": "https://www.isaca.org/"
+  },
+  "name": "Certified in Risk and Information Systems Control",
+  "abbr": "CRISC",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isaca.org/credentialing/crisc",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 760,
+    "format": "Multiple-choice, in-person Pearson VUE or remote-proctored",
+    "duration_min": 240,
+    "questions": 150,
+    "languages": [
+      "en",
+      "ja",
+      "es",
+      "zh-Hans",
+      "ko"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "isaca.cisa"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RISK_MGMT_INDUSTRY_STANDARD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_3YR_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "RISK_FOCUS_NOT_TECHNICAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OVERLAPS_CISM",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "dod-8140",
+      "level_hint": "professional",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isaca.org/credentialing/crisc"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Risk-management focus; recognised by JP financial regulators."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Risk-management standard; 3yr experience requirement."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Risk focus, not technical."
+      }
+    }
+  },
+  "schema_version": 1
+}

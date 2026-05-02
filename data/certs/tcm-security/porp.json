@@ -1,0 +1,89 @@
+{
+  "id": "tcm-security.porp",
+  "vendor": {
+    "slug": "tcm-security",
+    "name": "TCM Security",
+    "url": "https://tcm-sec.com/"
+  },
+  "name": "Practical OSINT Research Professional",
+  "abbr": "PORP",
+  "domain": "threat-intel",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://certifications.tcm-sec.com/porp/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 299,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog"
+      },
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BLUE_TEAM_PRACTICAL_FOCUS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "professional",
+      "url": "https://niccs.cisa.gov/training/catalog",
+      "fetched_at": "2026-05-02",
+      "summary": "OSINT investigation cert. Person/org investigation + report."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://certifications.tcm-sec.com/porp/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

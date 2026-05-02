@@ -1,0 +1,107 @@
+{
+  "id": "ec-council.case",
+  "vendor": {
+    "slug": "ec-council",
+    "name": "EC-Council",
+    "url": "https://www.eccouncil.org/"
+  },
+  "name": "Certified Application Security Engineer (.NET / Java tracks)",
+  "abbr": "CASE",
+  "domain": "application-appsec",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.eccouncil.org/train-certify/certified-application-security-engineer-case-net/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 250,
+    "format": "Multiple-choice",
+    "duration_min": 120,
+    "questions": 50,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "EC-Council training OR 2 years application security experience"
+    ],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/eccouncil/certified-application-security-engineer-case"
+      },
+      {
+        "code": "LANGUAGE_SPECIFIC_FOCUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "DEVELOPER_FACING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_NOT_PRACTICAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OVERSHADOWED_BY_CSSLP_FOR_BREADTH",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "associate",
+      "url": "https://niccs.cisa.gov/training/catalog/eccouncil/certified-application-security-engineer-case",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "associate",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.eccouncil.org/train-certify/certified-application-security-engineer-case-net/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/eccouncil/certified-application-security-engineer-case"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "DHS/CISA NICCS listed; useful developer-facing credential but multiple-choice format."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "NICCS recognition; multiple-choice limits hiring signal vs CSSLP."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Language-specific is helpful; multiple-choice format is a minus."
+      }
+    }
+  },
+  "schema_version": 1
+}

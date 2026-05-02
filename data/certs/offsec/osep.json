@@ -1,0 +1,104 @@
+{
+  "id": "offsec.osep",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "Offensive Security Experienced Penetration Tester",
+  "abbr": "OSEP",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/pen-300/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 2599,
+    "format": "48-hour hands-on practical exam plus 24-hour report",
+    "duration_min": 2880,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "offsec.oscp",
+      "offsec.oswa"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ADVANCED_AV_BYPASS_AND_AD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PEER_RESPECT_RED_TEAM",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NARROW_TO_OFFSEC_TOOLING",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "crest",
+      "level_hint": "expert",
+      "url": "https://www.crest-approved.org/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "dod-8140",
+      "level_hint": "expert",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/pen-300/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Advanced AV bypass / AD content is at the senior offensive level."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Strong red-team hiring signal; long practical exam."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "48-hour practical, AV bypass, modern - peer-respected expert."
+      }
+    }
+  },
+  "schema_version": 1
+}

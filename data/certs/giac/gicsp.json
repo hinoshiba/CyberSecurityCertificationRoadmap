@@ -1,0 +1,109 @@
+{
+  "id": "giac.gicsp",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "Global Industrial Cyber Security Professional",
+  "abbr": "GICSP",
+  "domain": "ot-ics-iot",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/global-industrial-cyber-security-professional-gicsp",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 979,
+    "format": "Open-book proctored",
+    "duration_min": 180,
+    "questions": 115,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "giac.gsec"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://www.cool.osd.mil/usn/credential/index.html?cert=gicsp5957"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DEFAULT_ICS_WORKFORCE_CRED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ENERGY_OIL_GAS_DEMAND",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-cool",
+      "level_hint": "professional",
+      "url": "https://www.cool.osd.mil/usn/credential/index.html?cert=gicsp5957",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/global-industrial-cyber-security-professional-gicsp"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.cool.osd.mil/usn/credential/index.html?cert=gicsp5957"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "DoD COOL; default ICS workforce credential, valued in JP energy and manufacturing."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "DoD COOL + ANSI; default ICS hire."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Default ICS workforce credential."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,87 @@
+{
+  "id": "kisa.isms-p-auditor",
+  "vendor": {
+    "slug": "kisa",
+    "name": "Korea Internet & Security Agency",
+    "url": "https://www.kisa.or.kr/EN"
+  },
+  "name": "ISMS-P Certification Auditor",
+  "abbr": "ISMS-P",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "privacy-data-protection"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://isms.kisa.or.kr/main/intro/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 400,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "KR_GOV_RECOGNISED",
+        "weight_hint": "high",
+        "evidence": "https://www.pipc.go.kr/eng/user/lgp/bnp/certification.do"
+      },
+      {
+        "code": "INDEPENDENT_BODY_RECOGNITION",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "pipc.go.kr",
+      "level_hint": "professional",
+      "url": "https://www.pipc.go.kr/eng/user/lgp/bnp/certification.do",
+      "fetched_at": "2026-05-02",
+      "summary": "KISA-administered auditor for Korea's combined ISMS-P scheme."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://isms.kisa.or.kr/main/intro/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.pipc.go.kr/eng/user/lgp/bnp/certification.do"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,110 @@
+{
+  "id": "giac.gsec",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Security Essentials",
+  "abbr": "GSEC",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "network-defense",
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/security-essentials-gsec/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Open-book proctored, online via ProctorU or in-person",
+    "duration_min": 300,
+    "questions": 106,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": [
+      "comptia.security-plus"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BACKED_BY_SANS_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_VS_SECURITY_PLUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OPEN_BOOK_FORMAT",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "associate",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "associate",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/security-essentials-gsec/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "Consensus tier 'associate' supported by hiroshi-tanaka, alex-novak; see persona_scores for the dissenting view.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "DoD 8140 baseline; SANS-backed; expensive for JP procurement."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "DoD 8140 IAT-II / IAM-I baseline; SANS curriculum reputation lifts the hiring signal."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Open-book multiple-choice; broad essentials."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,98 @@
+{
+  "id": "jken.j-design",
+  "vendor": {
+    "slug": "jken",
+    "name": "情報検定 / J検 (一般財団法人 職業教育・キャリア教育財団)",
+    "url": "https://jken.sgec.or.jp/"
+  },
+  "name": "J-Ken Information Design Test",
+  "name_ja": "情報検定 (J検) 情報デザイン試験",
+  "abbr": "J検 情デ",
+  "domain": "application-appsec",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://jken.sgec.or.jp/information/jdesign/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 4,500 (上級/初級)",
+    "format": "CBT only (year-round)",
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      "jken.j-katsuyou"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "MEXT_SPONSORED",
+        "weight_hint": "high",
+        "evidence": "https://jken.sgec.or.jp/"
+      },
+      {
+        "code": "INFORMATION_DESIGN_NICHE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DESIGN_FOCUS_LIMITED_SECURITY_RELEVANCE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "mext-jp",
+      "level_hint": "introductory",
+      "url": "https://www.mext.go.jp/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://jken.sgec.or.jp/information/jdesign/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.mext.go.jp/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "introductory",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

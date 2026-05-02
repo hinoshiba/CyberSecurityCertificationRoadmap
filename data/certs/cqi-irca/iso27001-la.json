@@ -1,0 +1,89 @@
+{
+  "id": "cqi-irca.iso27001-la",
+  "vendor": {
+    "slug": "cqi-irca",
+    "name": "CQI / IRCA (Chartered Quality Institute)",
+    "url": "https://www.quality.org/"
+  },
+  "name": "IRCA Certified ISMS Auditor (ISO/IEC 27001:2022)",
+  "abbr": "IRCA-27001",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.quality.org/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 2500,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_OR_ISO_17024_ACCREDITED",
+        "weight_hint": "high",
+        "evidence": "https://iaf.nu/"
+      },
+      {
+        "code": "ISO_17024_ACCREDITED_PERSONNEL_SCHEME",
+        "weight_hint": "high"
+      },
+      {
+        "code": "GLOBAL_ISMS_BCMS_PIMS_AUDIT_DEMAND",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "iaf",
+      "level_hint": "professional",
+      "url": "https://iaf.nu/",
+      "fetched_at": "2026-05-02",
+      "summary": "IRCA-managed register/credential for ISMS auditors; the global benchmark register."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.quality.org/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://iaf.nu/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

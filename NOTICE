@@ -54,5 +54,48 @@ endorsement.
 License
 -------
 
-Project code, schema, JSON data, skills, and documentation in this repository
-are released under the MIT License. See LICENSE.
+This entire repository — the certification dataset under `data/**/*.json`
+(vendor / cert facts, domain taxonomy, tier rubric, source-agency
+registry, AI-computed `evaluation.*` blocks together with their
+rationales / persona scores / plus / minus factor curation) AND the
+surrounding code (HTML, CSS, JavaScript, Python scripts, JSON Schema, AI
+skill prompts, Docker config, GitHub Actions) — is released under the
+
+    Creative Commons Attribution-ShareAlike 4.0 International License
+    (CC BY-SA 4.0)
+
+See LICENSE for the full legal text, or
+https://creativecommons.org/licenses/by-sa/4.0/ for the deed.
+
+Why CC BY-SA 4.0
+----------------
+
+The core value of this project is the curated dataset and AI evaluations,
+not the thin UI layer that displays them. CC BY-SA's ShareAlike clause
+matches this project's "AI as third-party evaluator, community-improvable"
+model: anyone publishing improved evaluations is required to publish them
+back under the same terms, keeping the dataset a community resource.
+
+Note: Creative Commons does not recommend CC licenses for software in
+general (no patent grant, no source / object distinction). We accept that
+trade-off because (a) this code base contains no novel algorithms or
+patentable inventions, (b) it is a single web application where source IS
+deployment, and (c) anyone reusing this code is almost certainly building
+a comparable roadmap, which is exactly the case ShareAlike is meant to
+cover.
+
+Attribution example
+-------------------
+
+When redistributing or building upon any part of this project, please
+include a notice substantially similar to:
+
+    Contains material from "Cyber Security Certification Roadmap" by
+    hinoshiba and contributors
+    (https://github.com/hinoshiba/CyberSecurityCertificationRoadmap),
+    licensed under CC BY-SA 4.0
+    (https://creativecommons.org/licenses/by-sa/4.0/).
+
+Trademarks of the certifications themselves (CISSP, OSCP, IPA SC, SEA/J,
+etc.) belong to their respective owners — see the Trademarks section
+above.

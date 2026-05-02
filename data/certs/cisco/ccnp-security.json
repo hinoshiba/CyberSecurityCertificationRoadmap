@@ -1,0 +1,93 @@
+{
+  "id": "cisco.ccnp-security",
+  "vendor": {
+    "slug": "cisco",
+    "name": "Cisco",
+    "url": "https://www.cisco.com/"
+  },
+  "name": "Cisco Certified Network Professional Security",
+  "abbr": "CCNP Security",
+  "domain": "network-defense",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/security/ccnp-security/index.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 700,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "cisco.ccna",
+      "cisco.cyberops-associate",
+      "cisco.devnet-associate"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/intellectual-point/cisco-ccnp-security"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PRODUCTION_RELEVANCE_HIRING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "professional",
+      "url": "https://niccs.cisa.gov/training/catalog/intellectual-point/cisco-ccnp-security",
+      "fetched_at": "2026-05-02",
+      "summary": "Core 350-701 SCOR plus one concentration covering network, cloud, content, endpoint, and secure access on Cisco."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/security/ccnp-security/index.html"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/intellectual-point/cisco-ccnp-security"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

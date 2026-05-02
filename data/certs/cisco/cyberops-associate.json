@@ -1,0 +1,111 @@
+{
+  "id": "cisco.cyberops-associate",
+  "vendor": {
+    "slug": "cisco",
+    "name": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/training-certifications/"
+  },
+  "name": "Cisco Certified CyberOps Associate (200-201 CBROPS)",
+  "abbr": "CyberOps Associate",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "network-defense",
+    "threat-intel"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/cybersecurity/associate/index.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 300,
+    "format": "Multiple-choice + drag-and-drop, Pearson VUE",
+    "duration_min": 120,
+    "questions": 95,
+    "languages": [
+      "en",
+      "ja"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": [
+      "comptia.network-plus"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_ALIGNED",
+        "weight_hint": "high",
+        "evidence": "https://www.cisco.com/site/us/en/learn/training-certifications/training/dod-8140.html"
+      },
+      {
+        "code": "SOC_FUNDAMENTALS_FOCUS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_RECOGNISED_IN_HIRING",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "JA_LANGUAGE_AVAILABLE",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_LEANING_ON_CISCO_TOOLS",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "associate",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/training/dod-8140.html",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "associate",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/cybersecurity/associate/index.html"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/training/dod-8140.html"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "DoD 8140 aligned; JA exam available."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "DoD 8140 aligned; popular SOC L1 hire signal."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "SOC fundamentals; vendor-leaning."
+      }
+    }
+  },
+  "schema_version": 1
+}

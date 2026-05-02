@@ -1,0 +1,97 @@
+{
+  "id": "giac.gstrt",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Strategic Planning, Policy, and Leadership",
+  "abbr": "GSTRT",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/strategic-planning-policy-leadership-gstrt",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 7,
+    "recommended_certs": [
+      "giac.gicsp",
+      "giac.gisp",
+      "giac.gsna"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_COOL_RECOGNISED",
+        "weight_hint": "high",
+        "evidence": "https://www.cool.osd.mil/usmc/credential/index.html?cert=gstrt8233"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BACKED_BY_SANS_TRAINING",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "SENIOR_SCOPE_AND_RIGOR",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-cool",
+      "level_hint": "expert",
+      "url": "https://www.cool.osd.mil/usmc/credential/index.html?cert=gstrt8233",
+      "fetched_at": "2026-05-02",
+      "summary": "MBA-level strategic planning, policy authorship, exec-level cyber leadership."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/strategic-planning-policy-leadership-gstrt"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.cool.osd.mil/usmc/credential/index.html?cert=gstrt8233"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

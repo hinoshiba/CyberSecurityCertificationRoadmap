@@ -1,0 +1,110 @@
+{
+  "id": "offsec.osed",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec Exploit Developer (EXP-301)",
+  "abbr": "OSED",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/exp-301/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 2599,
+    "format": "48-hour hands-on Windows exploit-development practical exam plus 24-hour report",
+    "duration_min": 2880,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "offsec.oscp",
+      "offsec.oswa"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WINDOWS_USERMODE_EXPLOIT_DEV_DEPTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/offsec/windows-user-mode-exploit-development"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NARROW_TO_USERMODE_WINDOWS",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "expert",
+      "url": "https://niccs.cisa.gov/training/catalog/offsec/windows-user-mode-exploit-development",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "crest",
+      "level_hint": "expert",
+      "url": "https://www.crest-approved.org/",
+      "fetched_at": "2026-05-02",
+      "summary": "Recognised exploit-dev pathway in CREST community."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/exp-301/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/offsec/windows-user-mode-exploit-development"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "EXP-301 is OffSec 300-level expert exploit-dev."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "300-level OffSec hands-on expert tier."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "48-hour practical exploit-dev exam at the 300-level expert band."
+      }
+    }
+  },
+  "schema_version": 1
+}

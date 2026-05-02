@@ -1,0 +1,110 @@
+{
+  "id": "offsec.osai",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec AI Red Teamer (AI-300)",
+  "abbr": "OSAI+",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "application-appsec",
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/ai-300/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1849,
+    "format": "Hands-on practical exam plus report; offensive operations against AI/LLM systems",
+    "duration_min": 1440,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "offsec.oscp",
+      "offsec.oswa"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "EMERGING_AI_OFFENSIVE_DOMAIN",
+        "weight_hint": "high"
+      },
+      {
+        "code": "FIRST_MOVER_IN_AI_RED_TEAM_CRED",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VERY_NEW_LIMITED_HIRING_DATA",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "VENDOR_INTRODUCED_2024_CRED",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "expert",
+      "url": "https://niccs.cisa.gov/training/catalog",
+      "fetched_at": "2026-05-02",
+      "summary": "Listed in DHS/CISA NICCS OffSec training catalog umbrella."
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "specialty",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/ai-300/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert, specialty); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert, specialty); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert, specialty); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

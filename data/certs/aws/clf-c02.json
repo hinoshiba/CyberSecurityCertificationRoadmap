@@ -1,0 +1,95 @@
+{
+  "id": "aws.clf-c02",
+  "vendor": {
+    "slug": "aws",
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com/"
+  },
+  "name": "AWS Certified Cloud Practitioner",
+  "abbr": "CLF-C02",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 100,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/tpai/aws-certified-cloud-practitioner-training"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MODERN_ATTACK_SURFACE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "foundational",
+      "url": "https://niccs.cisa.gov/training/catalog/tpai/aws-certified-cloud-practitioner-training",
+      "fetched_at": "2026-05-02",
+      "summary": "Foundational AWS cloud literacy with security, compliance, and shared-responsibility basics."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/tpai/aws-certified-cloud-practitioner-training"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,95 @@
+{
+  "id": "cisco.ccie-security",
+  "vendor": {
+    "slug": "cisco",
+    "name": "Cisco",
+    "url": "https://www.cisco.com/"
+  },
+  "name": "Cisco Certified Internetwork Expert Security",
+  "abbr": "CCIE Security",
+  "domain": "security-architecture",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/security/ccie-security/index.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 2000,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 7,
+    "recommended_certs": [
+      "cisco.ccnp-enterprise",
+      "cisco.ccnp-security",
+      "cisco.cyberops-professional",
+      "cisco.devnet-professional"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PRODUCTION_RELEVANCE_HIRING",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "SENIOR_SCOPE_AND_RIGOR",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "cisco-dod8140",
+      "level_hint": "expert",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/training/dod-8140.html",
+      "fetched_at": "2026-05-02",
+      "summary": "8-hour hands-on lab plus 350-701 qualifier validating expert design, deployment, and operations of Cisco security solutions."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/security/ccie-security/index.html"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/training/dod-8140.html"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

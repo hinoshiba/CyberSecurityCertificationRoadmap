@@ -1,0 +1,103 @@
+{
+  "id": "offsec.osce3",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec Certified Expert 3 (OSCE3 designation)",
+  "abbr": "OSCE3",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/osce3/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "format": "Designation (no separate exam) - awarded automatically when the holder achieves OSEP, OSWE, and OSED."
+  },
+  "prerequisites": {
+    "formal": [
+      "Hold all three: OSEP (PEN-300), OSWE (WEB-300), OSED (EXP-301)"
+    ],
+    "experience_years": 5,
+    "recommended_certs": [
+      "offsec.osep",
+      "offsec.oswe",
+      "offsec.osed"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "AGGREGATE_EXPERT_DESIGNATION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_THREE_300_LEVEL_EXPERT_CERTS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PEER_RECOGNITION_TOP_OFFENSIVE",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NOT_AN_INDEPENDENT_EXAM",
+        "weight_hint": "medium",
+        "note": "OSCE3 is a designation, not a separately-proctored exam."
+      },
+      {
+        "code": "VERY_SMALL_HOLDER_POOL",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "expert",
+      "url": "https://niccs.cisa.gov/training/catalog",
+      "fetched_at": "2026-05-02",
+      "summary": "OffSec 300-level certs that compose OSCE3 are individually NICCS-listed."
+    },
+    {
+      "source_id": "crest",
+      "level_hint": "expert",
+      "url": "https://www.crest-approved.org/",
+      "fetched_at": "2026-05-02",
+      "summary": "OffSec 300-track certs are recognised in CREST-equivalent expert pathways."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/osce3/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "OffSec OSCE3 designation — earned by holding all three 300-level expert certs (OSEP+OSWE+OSED)."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Aggregate expert designation — three 300-level certs combined."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "OSCE3 is the conventional expert milestone before OSEE."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,117 @@
+{
+  "id": "isc2.ccsp",
+  "vendor": {
+    "slug": "isc2",
+    "name": "ISC2",
+    "url": "https://www.isc2.org/"
+  },
+  "name": "Certified Cloud Security Professional",
+  "abbr": "CCSP",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "governance-risk",
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isc2.org/certifications/ccsp",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 599,
+    "format": "Linear, in-person Pearson VUE",
+    "duration_min": 240,
+    "questions": 150,
+    "languages": [
+      "en",
+      "ja"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": [
+      "csa.ccsk-v5",
+      "isc2.cissp",
+      "isc2.sscp"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "VENDOR_NEUTRAL_CLOUD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "REQUIRES_5YR_EXPERIENCE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NO_HANDS_ON_LAB",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OVERLAPS_VENDOR_CERTS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "expert",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isc2.org/certifications/ccsp"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Vendor-neutral cloud governance is valued; JA exam available; not yet at IPA-equivalent statutory weight."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "5-year experience requirement, ANSI accredited; no hands-on lab keeps it below expert."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Modern cloud relevance, but no practical component."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,87 @@
+{
+  "id": "mad20.mad-soc",
+  "vendor": {
+    "slug": "mad20",
+    "name": "MAD20 Technologies (MITRE Engenuity spinout)",
+    "url": "https://mad20.com/"
+  },
+  "name": "MITRE ATT&CK Defender - SOC Assessments",
+  "abbr": "MAD SOC",
+  "domain": "network-defense",
+  "secondary_domains": [
+    "incident-forensics"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://mad20.com/individuals",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 499,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/education-training/catalog/cybrary/mitre-attck-defender-mad-attckr-soc-assessments-certification"
+      },
+      {
+        "code": "INDEPENDENT_BODY_RECOGNITION",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "professional",
+      "url": "https://niccs.cisa.gov/education-training/catalog/cybrary/mitre-attck-defender-mad-attckr-soc-assessments-certification",
+      "fetched_at": "2026-05-02",
+      "summary": "ATT&CK-based SOC capability assessment; detection coverage gap analysis."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://mad20.com/individuals"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/education-training/catalog/cybrary/mitre-attck-defender-mad-attckr-soc-assessments-certification"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

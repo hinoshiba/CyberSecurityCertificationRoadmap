@@ -1,0 +1,107 @@
+{
+  "id": "giac.gcsa",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Cloud Security Automation",
+  "abbr": "GCSA",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/cloud-security-automation-gcsa",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 979,
+    "format": "Open-book proctored",
+    "duration_min": 120,
+    "questions": 75,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_COOL_RECOGNISED",
+        "weight_hint": "high",
+        "evidence": "https://www.cool.osd.mil/dciv/credential/index.html?cert=gcsa9270"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LEADING_DEVSECOPS_CRED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "K8S_CONTAINER_IAC_FOCUS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-cool",
+      "level_hint": "professional",
+      "url": "https://www.cool.osd.mil/dciv/credential/index.html?cert=gcsa9270",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/cloud-security-automation-gcsa"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.cool.osd.mil/dciv/credential/index.html?cert=gcsa9270"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "DoD COOL; DevSecOps niche increasingly requested in JP cloud-native shops."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "DoD COOL + ANSI; leading DevSecOps credential."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Strong DevSecOps focus; modern attack surface."
+      }
+    }
+  },
+  "schema_version": 1
+}

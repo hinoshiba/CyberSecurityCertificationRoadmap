@@ -1,0 +1,101 @@
+{
+  "id": "offsec.osir",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec Incident Responder (IR-200)",
+  "abbr": "OSIR",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/ir-200/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1649,
+    "format": "Hands-on practical incident-response exam plus report",
+    "duration_min": 1440,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": [
+      "offsec.osda",
+      "offsec.oswp"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BLUE_TEAM_IR_FOCUS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NEWER_CRED_LIMITED_HIRING_DATA",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "professional",
+      "url": "https://niccs.cisa.gov/training/catalog",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/ir-200/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

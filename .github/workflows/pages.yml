@@ -22,6 +22,34 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Need full history so we can read the last commit date that
+          # touched data/ for the dataset_updated field.
+          fetch-depth: 0
+      - name: Stamp build version
+        # Writes assets/version.json with the current commit SHA, build
+        # timestamp, and the date of the most recent commit touching data/.
+        # The site loads this at runtime to show "Updated YYYY-MM-DD ·
+        # commit abc1234" in the footer and bake the same line into PNG/PDF
+        # exports.
+        run: |
+          set -e
+          SHA="${GITHUB_SHA:-dev}"
+          SHORT="${SHA:0:7}"
+          BUILD="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          DATA_DATE="$(git log -1 --format=%cd --date=short -- data/ || echo unknown)"
+          REPO="${GITHUB_REPOSITORY:-hinoshiba/CyberSecurityCertificationRoadmap}"
+          cat > assets/version.json <<EOF
+          {
+            "commit": "${SHA}",
+            "commit_short": "${SHORT}",
+            "commit_url": "https://github.com/${REPO}/commit/${SHA}",
+            "build_date": "${BUILD}",
+            "dataset_updated": "${DATA_DATE}"
+          }
+          EOF
+          echo "--- assets/version.json ---"
+          cat assets/version.json
       - uses: actions/configure-pages@v5
       - name: Upload site
         uses: actions/upload-pages-artifact@v3

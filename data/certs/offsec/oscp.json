@@ -1,0 +1,126 @@
+{
+  "id": "offsec.oscp",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "Offensive Security Certified Professional",
+  "abbr": "OSCP",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/pen-200/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1649,
+    "format": "24-hour hands-on practical exam plus 24-hour report",
+    "duration_min": 1440,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": [
+      "comptia.pentest-plus",
+      "offsec.klcp",
+      "offsec.oscc-sec",
+      "offsec.oswa"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "STRONG_PEER_REPUTATION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "CREST_RECOGNISED_PATHWAY",
+        "weight_hint": "medium",
+        "evidence": "https://www.crest-approved.org/"
+      },
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      }
+    ],
+    "minus": [
+      {
+        "code": "HIGH_TIME_INVESTMENT",
+        "weight_hint": "low"
+      },
+      {
+        "code": "EXPENSIVE_LAB_SUBSCRIPTION",
+        "weight_hint": "low"
+      },
+      {
+        "code": "NARROW_TO_NETWORK_PENTEST",
+        "weight_hint": "medium",
+        "note": "Web/AD coverage improved in PEN-200 2023+ but still narrower than red team scope."
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "professional",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "crest",
+      "level_hint": "professional",
+      "url": "https://www.crest-approved.org/",
+      "fetched_at": "2026-05-02",
+      "summary": "Recognised as a pathway towards CREST CRT/CCT progression."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/pen-200/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.crest-approved.org/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "Consensus tier 'professional' supported by hiroshi-tanaka, maria-okonkwo; see persona_scores for the dissenting view.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Hands-on respected globally; JP recognition lower than CREST or CISSP equivalents."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "DoD 8140 listing; strong hiring signal; falls short of expert because scope is still network/AD pentest."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "24-hour practical exam, peer-revered, current PEN-200 covers modern AD - clear expert signal in offensive consulting."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,90 @@
+{
+  "id": "zero2automated.zar",
+  "vendor": {
+    "slug": "zero2automated",
+    "name": "Zero2Automated",
+    "url": "https://courses.zero2auto.com/"
+  },
+  "name": "Zero2Automated Certified Reverse Engineer",
+  "abbr": "ZAR",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "threat-intel"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://courses.zero2auto.com/p/zero2automated-malware-analysis-course",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 945,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BLUE_TEAM_PRACTICAL_FOCUS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SENIOR_SCOPE_AND_RIGOR",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "vx-underground",
+      "level_hint": "expert",
+      "url": "https://vx-underground.org/",
+      "fetched_at": "2026-05-02",
+      "summary": "Practical malware reverse engineering exam: unpacking, custom packer analysis, and full report."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://courses.zero2auto.com/p/zero2automated-malware-analysis-course"
+    },
+    {
+      "type": "third_party",
+      "url": "https://vx-underground.org/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

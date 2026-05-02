@@ -1,0 +1,100 @@
+{
+  "id": "crest.crtia",
+  "vendor": {
+    "slug": "crest",
+    "name": "CREST International",
+    "url": "https://www.crest-approved.org/"
+  },
+  "name": "CREST Registered Threat Intelligence Analyst",
+  "abbr": "CRTIA",
+  "domain": "threat-intel",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.crest-approved.org/skills-certifications-careers/crest-registered-threat-intelligence-analyst/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 650,
+    "format": "Pearson VUE proctored, multiple-choice + written analysis",
+    "duration_min": 180,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "UK_NCSC_PARTNER_RECOGNITION",
+        "weight_hint": "high",
+        "evidence": "https://www.ncsc.gov.uk/organisation/crest"
+      },
+      {
+        "code": "REGULATOR_RECOGNISED_FOR_ASSURED_INTEL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WRITTEN_ANALYSIS_COMPONENT",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EU_UK_FOCUSED_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ncsc-uk",
+      "level_hint": "professional",
+      "url": "https://www.ncsc.gov.uk/organisation/crest",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "crest",
+      "level_hint": "professional",
+      "url": "https://www.crest-approved.org/skills-certifications-careers/crest-registered-threat-intelligence-analyst/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.crest-approved.org/skills-certifications-careers/crest-registered-threat-intelligence-analyst/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.ncsc.gov.uk/organisation/crest"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "UK NCSC partner-recognised; respected for assured intel work."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "UK NCSC recognition; written-analysis component lifts it above pure MCQ."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "EU/UK regulator-recognised CTI pathway; strong written component."
+      }
+    }
+  },
+  "schema_version": 1
+}

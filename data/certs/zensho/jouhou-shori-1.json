@@ -1,0 +1,110 @@
+{
+  "id": "zensho.jouhou-shori-1",
+  "vendor": {
+    "slug": "zensho",
+    "name": "全国商業高等学校協会 (Zensho)",
+    "url": "https://zensho.or.jp/"
+  },
+  "name": "Information Processing Certification Examination Grade 1",
+  "name_ja": "全商情報処理検定 1級 (ビジネス情報/プログラミング)",
+  "abbr": "全商情処1級",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://zensho.or.jp/examination/information/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 2,100 per division (Business Information / Programming)",
+    "format": "Public-interest foundation national exam; written + practical for high school students",
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      "zensho.jouhou-shori-2"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_PUBLIC_INTEREST_FOUNDATION",
+        "weight_hint": "high",
+        "evidence": "https://zensho.or.jp/"
+      },
+      {
+        "code": "MEXT_RECOGNISED_HIGH_SCHOOL_TRACK",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DIVIDED_BUSINESS_AND_PROGRAMMING_TRACKS",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_HIGH_SCHOOL_AUDIENCE_LIMITED_PRO_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "mext-jp",
+      "level_hint": "introductory",
+      "url": "https://www.mext.go.jp/",
+      "fetched_at": "2026-05-02",
+      "summary": "Operated by a MEXT-recognised public-interest foundation for high-school commerce education."
+    },
+    {
+      "source_id": "ipa",
+      "level_hint": "introductory",
+      "url": "https://www.ipa.go.jp/",
+      "fetched_at": "2026-05-02",
+      "summary": "Recognised in JP IT education ladder as a high-school entry credential below IPA's national exam track."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://zensho.or.jp/examination/information/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.mext.go.jp/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "introductory",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory, introductory); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory, introductory); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory, introductory); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,87 @@
+{
+  "id": "isaca.ccak",
+  "vendor": {
+    "slug": "isaca",
+    "name": "ISACA / Cloud Security Alliance",
+    "url": "https://www.isaca.org/"
+  },
+  "name": "Certificate of Cloud Auditing Knowledge",
+  "abbr": "CCAK",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isaca.org/credentialing/certificate-of-cloud-auditing-knowledge",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 495,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "CLOUD_SECURITY_ALLIANCE_BACKED",
+        "weight_hint": "medium",
+        "evidence": "https://cloudsecurityalliance.org/education/ccak"
+      },
+      {
+        "code": "INDEPENDENT_BODY_RECOGNITION",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VERY_NARROW_USE_CASE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "csa",
+      "level_hint": "specialty",
+      "url": "https://cloudsecurityalliance.org/education/ccak",
+      "fetched_at": "2026-05-02",
+      "summary": "First industry credential for auditing cloud computing systems; joint ISACA/CSA."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isaca.org/credentialing/certificate-of-cloud-auditing-knowledge"
+    },
+    {
+      "type": "third_party",
+      "url": "https://cloudsecurityalliance.org/education/ccak"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "specialty",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

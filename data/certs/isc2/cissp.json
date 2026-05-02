@@ -1,0 +1,142 @@
+{
+  "id": "isc2.cissp",
+  "vendor": {
+    "slug": "isc2",
+    "name": "ISC2",
+    "url": "https://www.isc2.org/"
+  },
+  "name": "Certified Information Systems Security Professional",
+  "abbr": "CISSP",
+  "name_ja": "情報システムセキュリティプロフェッショナル認定",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "security-architecture",
+    "iam"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isc2.org/certifications/cissp",
+    "blueprint_url": "https://www.isc2.org/-/media/Project/ISC2/Main/Media/documents/certifications/CISSP/CISSP-Exam-Outline.pdf",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 749,
+    "format": "Computerized Adaptive Testing (CAT), in-person Pearson VUE",
+    "duration_min": 240,
+    "questions": 150,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "pt-BR",
+      "zh-Hans",
+      "ko"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": [
+      "comptia.security-plus",
+      "isc2.cgrc",
+      "isc2.hcispp",
+      "isc2.sscp"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high",
+        "evidence": "https://www.ansica.org/"
+      },
+      {
+        "code": "GLOBAL_RECOGNITION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "REQUIRES_5YR_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "BROAD_DOMAIN_COVERAGE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "BREADTH_NOT_DEPTH",
+        "weight_hint": "low"
+      },
+      {
+        "code": "NO_PRACTICAL_COMPONENT",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "expert",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02",
+      "summary": "Listed across multiple IAT/IAM/IASAE work roles."
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "expert",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02",
+      "summary": "Maps to senior Security Provision and Securely Provision work roles."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isc2.org/certifications/cissp"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://pauljerimy.com/security-certification-roadmap/",
+      "use": "inspiration_only"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Long-recognised in JP enterprise; ANSI-accredited; JA-language exam available."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "DoD 8140 baseline across IAM/IAT/IASAE roles; widely required for senior hires."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Multiple-choice format is a minus, but breadth and global recognition place it at expert tier despite the lack of a practical."
+      }
+    }
+  },
+  "schema_version": 1
+}

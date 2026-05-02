@@ -1,0 +1,106 @@
+{
+  "id": "offsec.osee",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec Exploitation Expert (EXP-401)",
+  "abbr": "OSEE",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/exp-401/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 5499,
+    "format": "72-hour hands-on advanced exploit-development practical exam plus 24-hour report",
+    "duration_min": 4320,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "OSCE3 designation (which itself requires OSEP+OSWE+OSED) is the conventional milestone before OSEE."
+    ],
+    "experience_years": 5,
+    "recommended_certs": [
+      "offsec.osce3"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "TOP_TIER_EXPLOIT_DEV_PEER_REP",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ADVANCED_KERNEL_AND_BROWSER_EXPLOITATION",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VERY_EXPENSIVE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "NICHE_AUDIENCE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "crest",
+      "level_hint": "expert",
+      "url": "https://www.crest-approved.org/",
+      "fetched_at": "2026-05-02",
+      "summary": "Recognised in EU/UK red team and exploit-dev community."
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "expert",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/exp-401/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "specialty",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "specialty",
+        "rationale": "EXP-401 is the OffSec 400-level apex specialist track beyond OSCE3."
+      },
+      "maria-okonkwo": {
+        "tier": "specialty",
+        "rationale": "Specialist apex — small holder pool, very narrow advanced exploitation scope."
+      },
+      "alex-novak": {
+        "tier": "specialty",
+        "rationale": "Beyond the standard expert ladder; 400-level specialist."
+      }
+    }
+  },
+  "schema_version": 1
+}

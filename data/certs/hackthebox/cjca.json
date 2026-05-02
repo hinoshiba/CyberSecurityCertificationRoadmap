@@ -1,0 +1,89 @@
+{
+  "id": "hackthebox.cjca",
+  "vendor": {
+    "slug": "hackthebox",
+    "name": "Hack The Box",
+    "url": "https://www.hackthebox.com/"
+  },
+  "name": "HTB Certified Junior Cybersecurity Associate",
+  "abbr": "HTB CJCA",
+  "domain": "network-defense",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://academy.hackthebox.com/preview/certifications/htb-certified-junior-cybersecurity-associate",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 105,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/htb"
+      },
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BLUE_TEAM_PRACTICAL_FOCUS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "foundational",
+      "url": "https://niccs.cisa.gov/training/catalog/htb",
+      "fetched_at": "2026-05-02",
+      "summary": "Entry-level practical cert spanning red and blue fundamentals."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://academy.hackthebox.com/preview/certifications/htb-certified-junior-cybersecurity-associate"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/htb"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

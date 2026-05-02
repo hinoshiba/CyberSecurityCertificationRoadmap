@@ -1,0 +1,92 @@
+{
+  "id": "ibm.cloud-security-engineer",
+  "vendor": {
+    "slug": "ibm",
+    "name": "IBM",
+    "url": "https://www.ibm.com/"
+  },
+  "name": "IBM Cloud Security Engineer Specialty",
+  "abbr": "IBM-CSE",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "iam",
+    "incident-forensics"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.ibm.com/training/certification/ibm-cloud-security-engineer-v1-specialty-S0011100",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 200,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "PEARSON_VUE_PROCTORED",
+        "weight_hint": "medium",
+        "evidence": "https://www.pearsonvue.com/us/en/ibm.html"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MODERN_ATTACK_SURFACE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "pearsonvue-ibm",
+      "level_hint": "professional",
+      "url": "https://www.pearsonvue.com/us/en/ibm.html",
+      "fetched_at": "2026-05-02",
+      "summary": "IBM Cloud security: hybrid connectivity, Kubernetes/VMware hardening, IAM, and compliance config."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.ibm.com/training/certification/ibm-cloud-security-engineer-v1-specialty-S0011100"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.pearsonvue.com/us/en/ibm.html"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,85 @@
+{
+  "id": "ipa.sg",
+  "vendor": {
+    "slug": "ipa",
+    "name": "IPA (Information-technology Promotion Agency, Japan)",
+    "url": "https://www.ipa.go.jp/"
+  },
+  "name": "Information Security Management Examination",
+  "abbr": "IPA SG",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www.ipa.go.jp/shiken/kubun/sg.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 50,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      "ipa.ap",
+      "ipa.fe"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JP_NATIONAL_OR_INDUSTRY_RECOGNITION",
+        "weight_hint": "high",
+        "evidence": "https://www.meti.go.jp/policy/it_policy/jinzai/"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "meti-jp",
+      "level_hint": "associate",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/",
+      "fetched_at": "2026-05-02",
+      "summary": "METI-authorised national exam for information security managers; year-round CBT via IPA."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.ipa.go.jp/shiken/kubun/sg.html"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1,
+  "name_ja": "情報セキュリティマネジメント試験 (SG)"
+}

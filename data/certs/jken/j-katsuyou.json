@@ -1,0 +1,105 @@
+{
+  "id": "jken.j-katsuyou",
+  "vendor": {
+    "slug": "jken",
+    "name": "情報検定 / J検 (一般財団法人 職業教育・キャリア教育財団)",
+    "url": "https://jken.sgec.or.jp/"
+  },
+  "name": "J-Ken Information Utilization Test",
+  "name_ja": "情報検定 (J検) 情報活用試験",
+  "abbr": "J検 情活",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://jken.sgec.or.jp/information/juse/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 3,000 - 4,500 (varies by grade 1級/2級/3級)",
+    "format": "PBT twice yearly + CBT year-round; 1級/2級/3級 grades",
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "MEXT_SPONSORED",
+        "weight_hint": "high",
+        "evidence": "https://jken.sgec.or.jp/"
+      },
+      {
+        "code": "MILLION_PLUS_LIFETIME_TAKERS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "AFFORDABLE_AND_FLEXIBLE_CBT",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "mext-jp",
+      "level_hint": "introductory",
+      "url": "https://www.mext.go.jp/",
+      "fetched_at": "2026-05-02",
+      "summary": "Sponsored by Japanese Ministry of Education (MEXT)."
+    },
+    {
+      "source_id": "ipa",
+      "level_hint": "introductory",
+      "url": "https://www.ipa.go.jp/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://jken.sgec.or.jp/information/juse/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.mext.go.jp/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "introductory",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory, introductory); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory, introductory); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "introductory",
+        "rationale": "Auto-derived from third-party evaluations (introductory, introductory); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

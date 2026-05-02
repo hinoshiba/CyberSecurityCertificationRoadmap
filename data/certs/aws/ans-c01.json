@@ -1,0 +1,97 @@
+{
+  "id": "aws.ans-c01",
+  "vendor": {
+    "slug": "aws",
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com/"
+  },
+  "name": "AWS Certified Advanced Networking - Specialty",
+  "abbr": "ANS-C01",
+  "domain": "network-defense",
+  "secondary_domains": [
+    "cloud-security"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 300,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "aws.dea-c01",
+      "aws.dva-c02",
+      "aws.mla-c01",
+      "aws.saa-c03",
+      "aws.soa-c03"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/education-training/catalog/institute-information-technology/aws-certified-advanced-networking"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MODERN_ATTACK_SURFACE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "professional",
+      "url": "https://niccs.cisa.gov/education-training/catalog/institute-information-technology/aws-certified-advanced-networking",
+      "fetched_at": "2026-05-02",
+      "summary": "Specialty-tier AWS networking with WAF, IDS/IPS, DDoS protection, and hybrid VPN/MPLS security."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/education-training/catalog/institute-information-technology/aws-certified-advanced-networking"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,110 @@
+{
+  "id": "jken.j-system",
+  "vendor": {
+    "slug": "jken",
+    "name": "情報検定 / J検 (一般財団法人 職業教育・キャリア教育財団)",
+    "url": "https://jken.sgec.or.jp/"
+  },
+  "name": "J-Ken Information Systems Test",
+  "name_ja": "情報検定 (J検) 情報システム試験",
+  "abbr": "J検 情シ",
+  "domain": "security-architecture",
+  "secondary_domains": [
+    "application-appsec",
+    "governance-risk"
+  ],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://jken.sgec.or.jp/information/jsystem/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 4,500 - 5,500 (基本/応用/プログラマ/システムエンジニア levels)",
+    "format": "PBT twice yearly + CBT year-round; for IT professionals / system developers",
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      "jken.j-design",
+      "jken.j-katsuyou"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "MEXT_SPONSORED",
+        "weight_hint": "high",
+        "evidence": "https://jken.sgec.or.jp/"
+      },
+      {
+        "code": "SYSTEM_DEVELOPMENT_FOCUS",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "MULTI_LEVEL_LADDER",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OVERSHADOWED_BY_IPA_FE_FOR_ENGINEERS",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "mext-jp",
+      "level_hint": "foundational",
+      "url": "https://www.mext.go.jp/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "ipa",
+      "level_hint": "foundational",
+      "url": "https://www.ipa.go.jp/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://jken.sgec.or.jp/information/jsystem/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.mext.go.jp/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

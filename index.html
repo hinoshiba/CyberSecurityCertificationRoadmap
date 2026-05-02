@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cyber Security Certification Roadmap · by hinoshiba, built with Claude</title>
+  <meta name="description" content="An independently compiled, AI-evaluated security certification roadmap. Inspired by Paul Jerimy and CyberDudeKZ; data MIT-licensed." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <script>
+    // Apply theme synchronously so we don't flash light-on-dark.
+    (function () {
+      try {
+        var sp = new URLSearchParams(window.location.search);
+        var t = sp.get("theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1>Cyber Security Certification Roadmap <span class="byline">by <a href="https://x.com/hinoshiba" target="_blank" rel="noopener">hinoshiba</a>, built with <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude</a></span></h1>
+      <nav class="topbar-nav">
+        <button id="vendor-filter-toggle" type="button" class="icon-btn" title="Filter by vendor">
+          🏷 Vendor
+        </button>
+        <button id="png-export-btn" type="button" class="icon-btn" title="Export matrix as PNG">
+          📷 PNG export
+        </button>
+        <button id="jp-toggle-btn" type="button" class="icon-btn" aria-pressed="false" title="Toggle Japan-only certs">
+          🇯🇵 JP
+        </button>
+        <button id="lang-toggle-btn" type="button" class="icon-btn" aria-pressed="false" title="Toggle Japanese labels">
+          あ Lang
+        </button>
+        <button id="theme-toggle" type="button" class="icon-btn" aria-label="Toggle theme" title="Toggle dark/light">
+          <span class="theme-label"></span>
+        </button>
+        <a href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/issues/new/choose" target="_blank" rel="noopener">Issue</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+    <!-- Vendor filter floating panel, anchored to the top-right toggle -->
+    <div id="vendor-panel" class="vendor-panel" aria-hidden="true"></div>
+  </header>
+
+  <section class="controls" aria-label="Status">
+    <span class="meta" id="cert-count" aria-live="polite"></span>
+    <span class="legend">
+      <span id="lg-prereq" class="lg-prereq"></span>
+      <span id="lg-next"   class="lg-next"></span>
+      <span id="lg-depth"  class="lg-depth"></span>
+      <span id="lg-hint"   class="lg-hint"></span>
+    </span>
+  </section>
+
+  <main class="matrix-wrap" id="matrix-wrap" aria-busy="true">
+    <div class="grid-and-arrows">
+      <div id="grid" class="roadmap-grid">
+        <p class="loading">Loading roadmap…</p>
+      </div>
+      <svg id="arrows-overlay" aria-hidden="true"></svg>
+    </div>
+  </main>
+
+  <aside id="detail-panel" class="detail-panel" aria-hidden="true"></aside>
+
+  <!-- Floating CTA: surfaces only when a cert is selected but the panel is
+       dismissed. Click to re-open the panel (selection + arrows persist). -->
+  <button id="show-details-btn" type="button" class="show-details-cta" aria-label="Show details">
+    📋 <span class="show-details-label">Show details</span>
+  </button>
+
+  <footer id="about" class="about" role="contentinfo">
+    <span class="about-block"><strong>by <a href="https://x.com/hinoshiba" target="_blank" rel="noopener">hinoshiba</a>, built with <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude</a>.</strong> Independently compiled; tiers AI-evaluated from JSON facts.</span>
+    <span class="about-sep">·</span>
+    <span class="about-block">Inspired by
+      <a href="https://pauljerimy.com/security-certification-roadmap/" target="_blank" rel="noopener">Paul Jerimy</a>
+      &amp;
+      <a href="https://cyberdudekz.github.io/security-cert-roadmap/" target="_blank" rel="noopener">CyberDudeKZ</a>
+    </span>
+    <span class="about-sep">·</span>
+    <span class="about-block">
+      <a href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/blob/main/NOTICE" target="_blank" rel="noopener">NOTICE</a>
+      ·
+      <a href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/blob/main/README.md" target="_blank" rel="noopener">README</a>
+      ·
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" title="License: CC BY-SA 4.0">CC BY-SA 4.0</a>
+    </span>
+    <span class="about-sep">·</span>
+    <span class="about-block about-version" id="about-version">
+      <span class="muted">loading…</span>
+    </span>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

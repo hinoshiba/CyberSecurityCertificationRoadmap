@@ -1,0 +1,95 @@
+{
+  "id": "google.pcse",
+  "vendor": {
+    "slug": "google",
+    "name": "Google Cloud",
+    "url": "https://cloud.google.com/certification"
+  },
+  "name": "Google Professional Cloud Security Engineer",
+  "abbr": "PCSE",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "iam"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://cloud.google.com/learn/certification/cloud-security-engineer",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 200,
+    "format": "Multiple-choice + multiple-response, Kryterion proctored",
+    "duration_min": 120,
+    "questions": 60,
+    "languages": [
+      "en",
+      "ja"
+    ],
+    "renewal_years": 2,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "google.ace"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH_GCP",
+        "weight_hint": "high"
+      },
+      {
+        "code": "STRONG_IAM_AND_VPC_COVERAGE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "GCP_SHARE_LOWER_THAN_AWS_AZURE",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://cloud.google.com/learn/certification/cloud-security-engineer"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Vendor-specific; GCP share lower in JP than AWS."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Vendor-specific; lower demand than AWS but still a cloud security signal."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Cloud security; vendor-specific."
+      }
+    }
+  },
+  "schema_version": 1
+}

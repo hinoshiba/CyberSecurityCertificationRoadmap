@@ -1,0 +1,91 @@
+{
+  "id": "cisco.ccna",
+  "vendor": {
+    "slug": "cisco",
+    "name": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/training-certifications/"
+  },
+  "name": "Cisco Certified Network Associate (CCNA)",
+  "abbr": "CCNA",
+  "domain": "network-defense",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 300,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/tace/ccna"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PRODUCTION_RELEVANCE_HIRING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "associate",
+      "url": "https://niccs.cisa.gov/training/catalog/tace/ccna",
+      "fetched_at": "2026-05-02",
+      "summary": "Foundational networking, IP services, security and automation (200-301 v1.1)."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/tace/ccna"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

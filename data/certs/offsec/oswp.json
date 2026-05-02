@@ -1,0 +1,109 @@
+{
+  "id": "offsec.oswp",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec Wireless Professional (PEN-210)",
+  "abbr": "OSWP",
+  "domain": "network-defense",
+  "secondary_domains": [
+    "offensive-redteam"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/pen-210/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 449,
+    "format": "Hands-on practical exam against wireless lab targets",
+    "duration_min": 240,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": [
+      "offsec.oscc-sec",
+      "offsec.oscp"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/offsec/foundational-wireless-network-attacks"
+      },
+      {
+        "code": "AFFORDABLE_PRACTICAL",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VERY_NARROW_USE_CASE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIRELESS_PENTEST_DEMAND_LIMITED",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "associate",
+      "url": "https://niccs.cisa.gov/training/catalog/offsec/foundational-wireless-network-attacks",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "associate",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/pen-210/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/offsec/foundational-wireless-network-attacks"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Per OffSec course-code convention 200=professional. Narrow wireless scope but hands-on practical."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "200-level OffSec hands-on; aligns with the OSCP/OSDA professional tier band."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "PEN-210 is at the OffSec 200 professional band, just narrowly scoped to wireless."
+      }
+    }
+  },
+  "schema_version": 1
+}

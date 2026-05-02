@@ -1,0 +1,105 @@
+{
+  "id": "isa.iec-62443-res",
+  "vendor": {
+    "slug": "isa",
+    "name": "International Society of Automation (ISA)",
+    "url": "https://www.isa.org/"
+  },
+  "name": "ISA/IEC 62443 Design Implementation Specialist (Certificate 3)",
+  "abbr": "ISA 62443 RES",
+  "domain": "ot-ics-iot",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isa.org/certification/certificate-programs/isa-iec-62443-cybersecurity-design-implementation-specialist-certificate",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1295,
+    "format": "Course incl. exam (training-bundled); IACS technical security design per IEC 62443-3-3 / 4-1 / 4-2",
+    "duration_min": 180,
+    "questions": 100,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "isa.iec-62443-rds"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "GLOBAL_IACS_STANDARD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ISAGCA_REGISTRY_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://isagca.org/training-education"
+      },
+      {
+        "code": "DEEP_IACS_DESIGN_DEPTH",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "TRAINING_BUNDLED_NOT_INDEPENDENT_EXAM",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "isagca",
+      "level_hint": "professional",
+      "url": "https://isagca.org/training-education",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "isa-org",
+      "level_hint": "professional",
+      "url": "https://www.isa.org/certification/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isa.org/certification/certificate-programs/isa-iec-62443-cybersecurity-design-implementation-specialist-certificate"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

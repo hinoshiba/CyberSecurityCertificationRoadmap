@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "domains": [
+    { "id": "governance-risk",         "label_en": "Governance, Risk & Compliance", "label_ja": "ガバナンス・リスク・コンプライアンス", "color": "#5b6cff", "description_en": "Audit, policy, regulation, ISO/NIST frameworks." },
+    { "id": "security-architecture",   "label_en": "Security Architecture",         "label_ja": "セキュリティアーキテクチャ",       "color": "#4a90e2", "description_en": "Enterprise, zero-trust, secure-by-design." },
+    { "id": "iam",                     "label_en": "Identity & Access Management",  "label_ja": "アイデンティティ管理",             "color": "#3aa5b4", "description_en": "Identity, federation, PAM, MFA." },
+    { "id": "network-defense",         "label_en": "Network Defense",               "label_ja": "ネットワーク防御",                 "color": "#2eaf7d", "description_en": "Perimeter, NDR, SASE, segmentation." },
+    { "id": "endpoint-mobile",         "label_en": "Endpoint & Mobile",             "label_ja": "エンドポイント・モバイル",         "color": "#5cb85c", "description_en": "EDR, MDM, OS hardening." },
+    { "id": "cloud-security",          "label_en": "Cloud Security",                "label_ja": "クラウドセキュリティ",             "color": "#9c27b0", "description_en": "AWS / Azure / GCP, CNAPP, CSPM." },
+    { "id": "application-appsec",      "label_en": "Application Security",          "label_ja": "アプリケーションセキュリティ",     "color": "#e91e63", "description_en": "SDLC, SAST/DAST, API security." },
+    { "id": "offensive-redteam",       "label_en": "Offensive & Red Team",          "label_ja": "オフェンシブ・レッドチーム",       "color": "#d32f2f", "description_en": "Pentest, red team, exploit dev." },
+    { "id": "incident-forensics",      "label_en": "Incident Response & Forensics", "label_ja": "インシデント対応・フォレンジック", "color": "#f57c00", "description_en": "DFIR, malware analysis, threat hunting." },
+    { "id": "threat-intel",            "label_en": "Threat Intelligence",           "label_ja": "脅威インテリジェンス",             "color": "#fbc02d", "description_en": "CTI, OSINT, attribution." },
+    { "id": "ot-ics-iot",              "label_en": "OT / ICS / IoT",                "label_ja": "OT / ICS / IoT",                   "color": "#795548", "description_en": "Industrial, embedded, SCADA." },
+    { "id": "privacy-data-protection", "label_en": "Privacy & Data Protection",     "label_ja": "プライバシー・データ保護",         "color": "#607d8b", "description_en": "GDPR, APPI, HIPAA, data governance." }
+  ]
+}

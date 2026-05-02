@@ -1,0 +1,91 @@
+{
+  "id": "crest.crt",
+  "vendor": {
+    "slug": "crest",
+    "name": "CREST International",
+    "url": "https://www.crest-approved.org/"
+  },
+  "name": "CREST Registered Penetration Tester",
+  "abbr": "CRT",
+  "domain": "offensive-redteam",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.crest-approved.org/skills-certifications-careers/crest-registered-penetration-tester/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 700,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "crest.cpsa"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "UK_REGULATOR_RECOGNISED",
+        "weight_hint": "high",
+        "evidence": "https://www.ncsc.gov.uk/information/check-penetration-testing"
+      },
+      {
+        "code": "CREST_REGISTERED_SCHEME",
+        "weight_hint": "high"
+      },
+      {
+        "code": "UK_NCSC_PARTNER_RECOGNITION",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ncsc-uk",
+      "level_hint": "professional",
+      "url": "https://www.ncsc.gov.uk/information/check-penetration-testing",
+      "fetched_at": "2026-05-02",
+      "summary": "Intermediate hands-on infra & web pentest exam, NCSC CHECK Team Member equivalent."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.crest-approved.org/skills-certifications-careers/crest-registered-penetration-tester/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.ncsc.gov.uk/information/check-penetration-testing"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

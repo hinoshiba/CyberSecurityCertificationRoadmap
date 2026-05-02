@@ -1,0 +1,111 @@
+{
+  "id": "csa.ccsk-v5",
+  "vendor": {
+    "slug": "csa",
+    "name": "Cloud Security Alliance",
+    "url": "https://cloudsecurityalliance.org/"
+  },
+  "name": "Certificate of Cloud Security Knowledge v5",
+  "abbr": "CCSK v5",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://cloudsecurityalliance.org/education/ccsk",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 445,
+    "format": "Open-book online, two attempts per token",
+    "duration_min": 120,
+    "questions": 60,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/cloud-security-alliance/ccsk-foundation-v5-course-exam-bundle-certificate-cloud-security-knowledge"
+      },
+      {
+        "code": "VENDOR_NEUTRAL_CLOUD_FOUNDATION",
+        "weight_hint": "high"
+      },
+      {
+        "code": "V5_ADDS_ZERO_TRUST_AND_AI",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LIFETIME_CREDENTIAL_NO_RENEWAL",
+        "weight_hint": "low"
+      }
+    ],
+    "minus": [
+      {
+        "code": "OPEN_BOOK_FORMAT",
+        "weight_hint": "low"
+      },
+      {
+        "code": "OVERSHADOWED_BY_CCSP_FOR_HIRING",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "foundational",
+      "url": "https://niccs.cisa.gov/training/catalog/cloud-security-alliance/ccsk-foundation-v5-course-exam-bundle-certificate-cloud-security-knowledge",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "csa",
+      "level_hint": "foundational",
+      "url": "https://cloudsecurityalliance.org/education/ccsk",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://cloudsecurityalliance.org/education/ccsk"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/cloud-security-alliance/ccsk-foundation-v5-course-exam-bundle-certificate-cloud-security-knowledge"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "NICCS listed; vendor-neutral cloud foundation."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "NICCS listed; open-book lowers hiring weight."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Open-book foundation; useful priming for CCSP."
+      }
+    }
+  },
+  "schema_version": 1
+}

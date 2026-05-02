@@ -1,0 +1,122 @@
+{
+  "id": "comptia.security-plus",
+  "vendor": {
+    "slug": "comptia",
+    "name": "CompTIA",
+    "url": "https://www.comptia.org/"
+  },
+  "name": "CompTIA Security+",
+  "abbr": "Security+",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "network-defense",
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.comptia.org/certifications/security",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 404,
+    "format": "Multiple-choice + performance-based, in-person Pearson VUE or online proctored",
+    "duration_min": 90,
+    "questions": 90,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "pt-BR",
+      "th",
+      "vi"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": [
+      "comptia.network-plus",
+      "isc2.cc"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "VENDOR_NEUTRAL_BASELINE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PERFORMANCE_BASED_QUESTIONS",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "FUNDAMENTALS_BREADTH_ONLY",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "FREQUENT_VERSION_CHURN",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "associate",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "associate",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.comptia.org/certifications/security"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Vendor-neutral baseline; JA exam available; entry credential rather than depth signal."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "DoD 8140 baseline IAT-II; the most common hiring filter for SOC L1; PBQs add some hands-on credibility."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Multiple-choice with PBQs; baseline only."
+      }
+    }
+  },
+  "schema_version": 1
+}

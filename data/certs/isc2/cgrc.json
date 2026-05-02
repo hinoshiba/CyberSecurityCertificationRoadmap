@@ -1,0 +1,105 @@
+{
+  "id": "isc2.cgrc",
+  "vendor": {
+    "slug": "isc2",
+    "name": "ISC2",
+    "url": "https://www.isc2.org/"
+  },
+  "name": "Certified in Governance, Risk and Compliance (formerly CAP)",
+  "abbr": "CGRC",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isc2.org/certifications/cgrc",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 599,
+    "format": "Linear, in-person Pearson VUE",
+    "duration_min": 240,
+    "questions": 125,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "NIST_RMF_FOCUSED",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "OVERLAPS_CRISC",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "RECENT_REBRAND_FROM_CAP",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "professional",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isc2.org/certifications/cgrc"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "DoD 8140; aligned with NIST RMF widely used in JP enterprise compliance work."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "DoD 8140 baseline; NIST RMF focus is hire-relevant for federal-adjacent work."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "RMF-focused; not practical but ANSI-accredited."
+      }
+    }
+  },
+  "schema_version": 1
+}

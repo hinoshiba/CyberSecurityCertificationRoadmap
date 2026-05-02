@@ -1,0 +1,117 @@
+{
+  "id": "comptia.casp-plus",
+  "vendor": {
+    "slug": "comptia",
+    "name": "CompTIA",
+    "url": "https://www.comptia.org/"
+  },
+  "name": "CompTIA SecurityX (formerly CASP+)",
+  "abbr": "SecurityX",
+  "domain": "security-architecture",
+  "secondary_domains": [
+    "governance-risk",
+    "incident-forensics"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.comptia.org/certifications/securityx",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 509,
+    "format": "Multiple-choice + extensive performance-based",
+    "duration_min": 165,
+    "questions": 90,
+    "languages": [
+      "en",
+      "ja"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 10,
+    "recommended_certs": [
+      "comptia.security-plus",
+      "comptia.cysa-plus"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "EXTENSIVE_PBQ_HANDS_ON",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ARCHITECT_LEVEL_SCENARIOS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "RECENT_REBRAND_RISK",
+        "weight_hint": "low",
+        "note": "Renamed from CASP+ to SecurityX in 2024 release; market recognition may lag."
+      },
+      {
+        "code": "VENDOR_NEUTRAL_DEPTH_LIMITS",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "expert",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "expert",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.comptia.org/certifications/securityx"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "Consensus tier 'professional' supported by hiroshi-tanaka, alex-novak; see persona_scores for the dissenting view.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Multi-domain architecture coverage; PBQ-heavy."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "DoD 8140 IAT-III and IASAE; extensive PBQs; recent SecurityX rebrand."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Heavy PBQs but multiple-choice base; rebrand creates short-term recognition risk."
+      }
+    }
+  },
+  "schema_version": 1
+}

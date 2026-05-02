@@ -131,4 +131,6 @@ docker/                  # Dockerfile + entrypoint
 
 ## License
 
-MIT &mdash; see [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+**[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)** &mdash; covers the entire repository: the curated dataset (`data/**/*.json`, vendor & cert facts, domain taxonomy, tier rubric, source-agency registry, AI-computed evaluations and rationales) AND the surrounding code (JS / Python / schema / skills / Docker / Actions / HTML / CSS).
+
+You are free to share and adapt the work, including for commercial use, as long as you (1) **attribute** the project and (2) license your derivative under the **same terms** (ShareAlike). See [LICENSE](./LICENSE) for the full legal text and [NOTICE](./NOTICE) for the rationale, attribution example, and trademark statements.

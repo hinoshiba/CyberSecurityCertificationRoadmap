@@ -1,0 +1,103 @@
+{
+  "id": "seaj.csbm",
+  "vendor": {
+    "slug": "seaj",
+    "name": "SEA/J (Security Education Alliance / Japan)",
+    "url": "https://www.sea-j.net/"
+  },
+  "name": "Certification of Security Basic Management",
+  "name_ja": "SEA/J 基礎コース (CSBM)",
+  "abbr": "CSBM",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www.sea-j.net/csbm",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 16,500 (tax inc.)",
+    "format": "Pearson VUE proctored multiple-choice (exam SJ0-110 / SJ0-111 2025 revision)",
+    "duration_min": 60,
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_INDUSTRY_BACKED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PEARSON_VUE_PROCTORED",
+        "weight_hint": "medium",
+        "evidence": "https://www.sea-j.net/csbm"
+      },
+      {
+        "code": "FOUNDATION_FOR_CSPM_LADDER",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "jpcert-cc",
+      "level_hint": "foundational",
+      "url": "https://www.jpcert.or.jp/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "ipa",
+      "level_hint": "foundational",
+      "url": "https://www.ipa.go.jp/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.sea-j.net/csbm"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

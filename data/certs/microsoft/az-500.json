@@ -1,0 +1,116 @@
+{
+  "id": "microsoft.az-500",
+  "vendor": {
+    "slug": "microsoft",
+    "name": "Microsoft",
+    "url": "https://learn.microsoft.com/credentials/"
+  },
+  "name": "Microsoft Azure Security Engineer Associate (AZ-500)",
+  "abbr": "AZ-500",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "iam",
+    "incident-forensics"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 165,
+    "format": "Multiple-choice + case studies, Pearson VUE",
+    "duration_min": 120,
+    "questions": 50,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "ko",
+      "zh-Hans",
+      "pt-BR"
+    ],
+    "renewal_years": 1,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": [
+      "microsoft.az-900",
+      "microsoft.dp-900",
+      "microsoft.sc-900"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH_AZURE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_REQUESTED_IN_HIRING",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DHS_CISA_NICCS_LISTED_VIA_CHAIN",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/cybrary/sc-100-microsoft-cybersecurity-architect"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXAM_RETIRES_AUG_2026",
+        "weight_hint": "medium",
+        "note": "Microsoft has announced AZ-500 retirement; flag for successor when available."
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "associate",
+      "url": "https://niccs.cisa.gov/training/catalog/cybrary/sc-100-microsoft-cybersecurity-architect",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "associate",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Vendor-specific Azure security; JA exam."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Widely requested Azure-specific operational security cert."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Vendor-specific multiple-choice."
+      }
+    }
+  },
+  "schema_version": 1
+}

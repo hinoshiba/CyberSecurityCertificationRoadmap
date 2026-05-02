@@ -1,0 +1,96 @@
+{
+  "id": "microsoft.az-305",
+  "vendor": {
+    "slug": "microsoft",
+    "name": "Microsoft",
+    "url": "https://learn.microsoft.com/credentials/"
+  },
+  "name": "Microsoft Azure Solutions Architect Expert (AZ-305)",
+  "abbr": "AZ-305",
+  "domain": "security-architecture",
+  "secondary_domains": [
+    "cloud-security",
+    "iam"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 165,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/education-training/catalog/training-camp/microsoft-azure-solutions-architect-expert-certification"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MODERN_ATTACK_SURFACE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "SENIOR_SCOPE_AND_RIGOR",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "expert",
+      "url": "https://niccs.cisa.gov/education-training/catalog/training-camp/microsoft-azure-solutions-architect-expert-certification",
+      "fetched_at": "2026-05-02",
+      "summary": "Expert Azure infrastructure design with identity, governance, and zero-trust architecture."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/education-training/catalog/training-camp/microsoft-azure-solutions-architect-expert-certification"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

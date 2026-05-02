@@ -1,0 +1,96 @@
+{
+  "id": "microsoft.sc-900",
+  "vendor": {
+    "slug": "microsoft",
+    "name": "Microsoft",
+    "url": "https://learn.microsoft.com/credentials/"
+  },
+  "name": "Microsoft Security, Compliance, and Identity Fundamentals (SC-900)",
+  "abbr": "SC-900",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "iam",
+    "cloud-security"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://learn.microsoft.com/en-us/credentials/certifications/security-compliance-and-identity-fundamentals/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 99,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/education-training/catalog/techsherpas-365/sc-900-microsoft-security-compliance-identity"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MODERN_ATTACK_SURFACE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "foundational",
+      "url": "https://niccs.cisa.gov/education-training/catalog/techsherpas-365/sc-900-microsoft-security-compliance-identity",
+      "fetched_at": "2026-05-02",
+      "summary": "Entry-level Microsoft security/compliance/identity literacy across Azure, Entra, Purview, Defender."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/security-compliance-and-identity-fundamentals/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/education-training/catalog/techsherpas-365/sc-900-microsoft-security-compliance-identity"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

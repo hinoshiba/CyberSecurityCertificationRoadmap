@@ -1,0 +1,93 @@
+{
+  "id": "giac.gcwn",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Certified Windows Security Administrator",
+  "abbr": "GCWN",
+  "domain": "endpoint-mobile",
+  "secondary_domains": [
+    "iam"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/certified-windows-security-administrator-gcwn",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "giac.gsec"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_COOL_RECOGNISED",
+        "weight_hint": "high",
+        "evidence": "https://www.cool.osd.mil/army/credential/index.html?cert=gcwn3240"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BACKED_BY_SANS_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-cool",
+      "level_hint": "professional",
+      "url": "https://www.cool.osd.mil/army/credential/index.html?cert=gcwn3240",
+      "fetched_at": "2026-05-02",
+      "summary": "Windows hardening: PKI, IPSec, GPO, AppLocker, DNSSEC, PowerShell."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/certified-windows-security-administrator-gcwn"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.cool.osd.mil/army/credential/index.html?cert=gcwn3240"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

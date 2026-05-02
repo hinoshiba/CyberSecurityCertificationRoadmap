@@ -1,0 +1,106 @@
+{
+  "id": "isc2.csslp",
+  "vendor": {
+    "slug": "isc2",
+    "name": "ISC2",
+    "url": "https://www.isc2.org/"
+  },
+  "name": "Certified Secure Software Lifecycle Professional",
+  "abbr": "CSSLP",
+  "domain": "application-appsec",
+  "secondary_domains": [
+    "security-architecture"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isc2.org/certifications/csslp",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 599,
+    "format": "Linear, in-person Pearson VUE",
+    "duration_min": 240,
+    "questions": 125,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 4,
+    "recommended_certs": [
+      "isc2.cissp",
+      "isc2.sscp"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high",
+        "evidence": "https://anabpd.ansi.org/accreditation/credentialing/personnel-certification"
+      },
+      {
+        "code": "VENDOR_NEUTRAL_SDLC_BREADTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "CISSP_FAMILY_RECOGNITION",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "NO_PRACTICAL_COMPONENT",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "LESS_HIRING_DEMAND_THAN_CISSP",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://anabpd.ansi.org/accreditation/credentialing/personnel-certification",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isc2.org/certifications/csslp"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Vendor-neutral SDLC credential carries CISSP-family recognition in JP enterprise."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "ANSI accredited; widely requested for AppSec leads."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Broad SDLC coverage; no practical component caps it below expert."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,102 @@
+{
+  "id": "offsec.oscc-sjd",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec CyberCore Certified - Secure Software Development (SJD-100)",
+  "abbr": "OSCC-SJD",
+  "domain": "security-architecture",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/sjd-100/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 499,
+    "format": "Entry-level secure software development / secure-coding exam",
+    "duration_min": 120,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog"
+      },
+      {
+        "code": "ENTRY_POINT_INTO_OFFSEC_LADDER",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "AFFORDABLE_FOUNDATIONAL",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "VERY_NEW_2024_CRED",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "introductory",
+      "url": "https://niccs.cisa.gov/training/catalog",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "introductory",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/sjd-100/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "foundational",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "foundational",
+        "rationale": "SJD-100 is the OffSec 100-level secure software development entry."
+      },
+      "maria-okonkwo": {
+        "tier": "foundational",
+        "rationale": "100-level secure-coding fundamentals."
+      },
+      "alex-novak": {
+        "tier": "foundational",
+        "rationale": "100-level secure software development fundamentals."
+      }
+    }
+  },
+  "schema_version": 1
+}

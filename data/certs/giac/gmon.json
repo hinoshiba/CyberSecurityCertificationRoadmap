@@ -1,0 +1,93 @@
+{
+  "id": "giac.gmon",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Continuous Monitoring",
+  "abbr": "GMON",
+  "domain": "network-defense",
+  "secondary_domains": [
+    "incident-forensics"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/continuous-monitoring-gmon",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "giac.gsec"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_COOL_RECOGNISED",
+        "weight_hint": "high",
+        "evidence": "https://cool.osd.mil/dciv/search/CERT_GMON6479.htm"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BACKED_BY_SANS_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-cool",
+      "level_hint": "professional",
+      "url": "https://cool.osd.mil/dciv/search/CERT_GMON6479.htm",
+      "fetched_at": "2026-05-02",
+      "summary": "Continuous Diagnostics & Mitigation; SOC architecture and detection engineering."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/continuous-monitoring-gmon"
+    },
+    {
+      "type": "third_party",
+      "url": "https://cool.osd.mil/dciv/search/CERT_GMON6479.htm"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

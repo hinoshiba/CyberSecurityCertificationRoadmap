@@ -1,0 +1,114 @@
+{
+  "id": "microsoft.sc-300",
+  "vendor": {
+    "slug": "microsoft",
+    "name": "Microsoft",
+    "url": "https://learn.microsoft.com/credentials/"
+  },
+  "name": "Microsoft Identity and Access Administrator Associate (SC-300)",
+  "abbr": "SC-300",
+  "domain": "iam",
+  "secondary_domains": [
+    "cloud-security"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 165,
+    "format": "Multiple-choice + case studies, Pearson VUE",
+    "duration_min": 100,
+    "questions": 50,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "ko",
+      "zh-Hans",
+      "pt-BR"
+    ],
+    "renewal_years": 1,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": [
+      "microsoft.az-900",
+      "microsoft.dp-900",
+      "microsoft.sc-900"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ENTRA_ID_DOMINANT_IDP",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_REQUESTED_IN_HIRING",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DHS_CISA_NICCS_LISTED_VIA_CHAIN",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/cybrary/sc-100-microsoft-cybersecurity-architect"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ANNUAL_RENEWAL_BURDEN",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "associate",
+      "url": "https://niccs.cisa.gov/training/catalog/cybrary/sc-100-microsoft-cybersecurity-architect",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "associate",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Vendor-specific Entra ID; JA exam available; Entra dominant in JP enterprise."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Most-requested IAM operations cert in 2026 hiring."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Vendor-specific IAM operations; multiple-choice."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pauljerimy.com)",
+      "WebFetch(domain:cyberdudekz.github.io)",
+      "Bash(python3 scripts/build_manifest.py)",
+      "Bash(npm install *)",
+      "Bash(/tmp/ajv-cli/node_modules/.bin/ajv validate *)",
+      "Bash(python3 scripts/run_3_persona_eval.py)",
+      "Bash(python3 scripts/check_evaluations_fresh.py)",
+      "Bash(python3 -c \"import json,pathlib; m=json.loads\\(pathlib.Path\\('data/manifest.json'\\).read_text\\(\\)\\); print\\('\\\\n'.join\\(c['id'] for c in m['certs']\\)\\)\")",
+      "WebSearch",
+      "Bash(grep -v ' valid$')",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:niccs.cisa.gov)",
+      "Bash(python3 scripts/seed_round_2.py)"
+    ]
+  }
+}

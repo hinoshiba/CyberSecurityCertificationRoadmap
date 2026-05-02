@@ -1,0 +1,105 @@
+{
+  "id": "ipa.ip",
+  "vendor": {
+    "slug": "ipa",
+    "name": "IPA (Information-technology Promotion Agency, Japan)",
+    "url": "https://www.ipa.go.jp/"
+  },
+  "name": "IT Passport Examination",
+  "name_ja": "ITパスポート試験 (IP)",
+  "abbr": "IPA IP",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www3.jitec.ipa.go.jp/JitesCbt/index.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 7,500",
+    "format": "National statutory CBT (year-round)",
+    "duration_min": 120,
+    "questions": 100,
+    "languages": [
+      "ja",
+      "en"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      "jken.j-katsuyou",
+      "zensho.jouhou-shori-1"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_NATIONAL_STATUTORY_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ENTRY_LEVEL_BROAD_IT_LITERACY",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "NOT_SECURITY_FOCUSED",
+        "weight_hint": "high"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ipa",
+      "level_hint": "foundational",
+      "url": "https://www.ipa.go.jp/shiken/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "meti-jp",
+      "level_hint": "foundational",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www3.jitec.ipa.go.jp/JitesCbt/index.html"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "introductory",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "introductory",
+        "rationale": "Pre-engineer IT literacy. JP corporate onboarding tool, not an IT engineer credential."
+      },
+      "maria-okonkwo": {
+        "tier": "introductory",
+        "rationale": "JP-only IT-literacy exam; below FE foundational engineer tier."
+      },
+      "alex-novak": {
+        "tier": "introductory",
+        "rationale": "Pre-engineer literacy; not security."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,91 @@
+{
+  "id": "tcm-security.psaa",
+  "vendor": {
+    "slug": "tcm-security",
+    "name": "TCM Security",
+    "url": "https://tcm-sec.com/"
+  },
+  "name": "Practical SOC Analyst Associate",
+  "abbr": "PSAA",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://certifications.tcm-sec.com/psaa/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 249,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog"
+      },
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BLUE_TEAM_PRACTICAL_FOCUS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "associate",
+      "url": "https://niccs.cisa.gov/training/catalog",
+      "fetched_at": "2026-05-02",
+      "summary": "Tier-1 SOC analyst practical: SIEM triage, alert investigation, IR write-up."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://certifications.tcm-sec.com/psaa/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

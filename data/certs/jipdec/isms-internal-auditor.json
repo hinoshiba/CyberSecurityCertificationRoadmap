@@ -1,0 +1,88 @@
+{
+  "id": "jipdec.isms-internal-auditor",
+  "vendor": {
+    "slug": "jipdec",
+    "name": "JIPDEC (Japan Institute for Promotion of Digital Economy and Community)",
+    "url": "https://www.jipdec.or.jp/eng/"
+  },
+  "name": "ISMS Internal Auditor (JIS Q 27001)",
+  "abbr": "ISMS-IA-JP",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "privacy-data-protection"
+  ],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://isms.jp/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 600,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAB_RECOGNISED_AUDITOR_SCHEME",
+        "weight_hint": "high",
+        "evidence": "https://isms.jp/aboutus.html"
+      },
+      {
+        "code": "JP_NATIONAL_OR_INDUSTRY_RECOGNITION",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "isms-ac",
+      "level_hint": "associate",
+      "url": "https://isms.jp/aboutus.html",
+      "fetched_at": "2026-05-02",
+      "summary": "JIS Q 27001:2023 internal auditor under ISMS-AC (JAB-accredited) scheme."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://isms.jp/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://isms.jp/aboutus.html"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1,
+  "name_ja": "ISMS内部監査員"
+}

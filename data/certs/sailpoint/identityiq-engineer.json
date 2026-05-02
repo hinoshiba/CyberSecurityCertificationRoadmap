@@ -1,0 +1,91 @@
+{
+  "id": "sailpoint.identityiq-engineer",
+  "vendor": {
+    "slug": "sailpoint",
+    "name": "SailPoint",
+    "url": "https://university.sailpoint.com/"
+  },
+  "name": "SailPoint Certified IdentityIQ Engineer",
+  "abbr": "SailPoint IIQ Eng",
+  "domain": "iam",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://university.sailpoint.com/sailpoint-certified-identityiq-engineer",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 400,
+    "format": "Proctored, vendor-administered",
+    "duration_min": 120,
+    "questions": 60,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 2,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "IGA_MARKET_LEADER_VENDOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_REQUESTED_IN_HIRING_ENTERPRISE_IGA",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SAILPOINT_REGISTRY_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://community.sailpoint.com/t5/SailPoint-Certifications/ct-p/product-certification-program"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "sailpoint",
+      "level_hint": "professional",
+      "url": "https://community.sailpoint.com/t5/SailPoint-Certifications/ct-p/product-certification-program",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://university.sailpoint.com/sailpoint-certified-identityiq-engineer"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "IGA market leader; SailPoint widely deployed in JP enterprises."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Widely required for IGA engineer hires."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Vendor-specific IGA engineer credential."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,91 @@
+{
+  "id": "splunk.es-cert-admin",
+  "vendor": {
+    "slug": "splunk",
+    "name": "Splunk",
+    "url": "https://www.splunk.com/"
+  },
+  "name": "Splunk Enterprise Security Certified Admin",
+  "abbr": "SPLK-3001",
+  "domain": "incident-forensics",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.splunk.com/en_us/training/certification-track/splunk-enterprise-security-certified-admin.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 130,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "splunk.core-power-user"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/education-training/catalog/cybrary/splunk-enterprise-certified-administrator"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH_SIEM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SOC_PRODUCTION_RELEVANCE",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "professional",
+      "url": "https://niccs.cisa.gov/education-training/catalog/cybrary/splunk-enterprise-certified-administrator",
+      "fetched_at": "2026-05-02",
+      "summary": "Splunk ES install, tuning, notable events, asset/identity correlation, RBA."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.splunk.com/en_us/training/certification-track/splunk-enterprise-security-certified-admin.html"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/education-training/catalog/cybrary/splunk-enterprise-certified-administrator"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

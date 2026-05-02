@@ -1,0 +1,105 @@
+{
+  "id": "seaj.cspm-management",
+  "vendor": {
+    "slug": "seaj",
+    "name": "SEA/J (Security Education Alliance / Japan)",
+    "url": "https://www.sea-j.net/"
+  },
+  "name": "Certification of Security Professional in Management",
+  "name_ja": "SEA/J 応用コース・マネジメント編 (CSPM of Management)",
+  "abbr": "CSPM-M",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "incident-forensics"
+  ],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www.sea-j.net/cspm",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 16,500 (tax inc.)",
+    "format": "Pearson VUE proctored exam covering security management practice",
+    "duration_min": 90,
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": [
+      "seaj.csbm"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_INDUSTRY_BACKED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PEARSON_VUE_PROCTORED",
+        "weight_hint": "medium",
+        "evidence": "https://www.sea-j.net/cspm"
+      },
+      {
+        "code": "MGMT_FOCUS_FOR_SECURITY_LEADS",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "OVERLAPS_CISM_FOR_INTL_CAREERS",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "jpcert-cc",
+      "level_hint": "associate",
+      "url": "https://www.jpcert.or.jp/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "ipa",
+      "level_hint": "associate",
+      "url": "https://www.ipa.go.jp/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.sea-j.net/cspm"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

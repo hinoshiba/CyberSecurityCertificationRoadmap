@@ -1,0 +1,86 @@
+{
+  "id": "cisco.cbrfir-300-215",
+  "vendor": {
+    "slug": "cisco",
+    "name": "Cisco",
+    "url": "https://www.cisco.com/"
+  },
+  "name": "Conducting Forensic Analysis and Incident Response Using Cisco Technologies for CyberOps",
+  "abbr": "CBRFIR 300-215",
+  "domain": "incident-forensics",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.cisco.com/site/us/en/learn/training-certifications/exams/cbrfir.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 300,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "cisco.cyberops-associate"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PRODUCTION_RELEVANCE_HIRING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "cisco-dod8140",
+      "level_hint": "professional",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/training/dod-8140.html",
+      "fetched_at": "2026-05-02",
+      "summary": "Concentration exam validating digital forensics, evidence handling, and incident response on Cisco platforms."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/exams/cbrfir.html"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.cisco.com/site/us/en/learn/training-certifications/training/dod-8140.html"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

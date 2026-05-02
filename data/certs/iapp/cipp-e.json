@@ -1,0 +1,106 @@
+{
+  "id": "iapp.cipp-e",
+  "vendor": {
+    "slug": "iapp",
+    "name": "IAPP",
+    "url": "https://iapp.org/"
+  },
+  "name": "Certified Information Privacy Professional / Europe",
+  "abbr": "CIPP/E",
+  "domain": "privacy-data-protection",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://iapp.org/certify/cippe/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 550,
+    "format": "Multiple-choice, Pearson VUE",
+    "duration_min": 150,
+    "questions": 90,
+    "languages": [
+      "en",
+      "fr",
+      "de",
+      "es",
+      "it"
+    ],
+    "renewal_years": 1,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "GDPR_DE_FACTO_STANDARD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RECOGNISED_BY_EU_REGULATORS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "LAW_FOCUS_NOT_TECHNICAL",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "ANNUAL_RENEWAL_BURDEN",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "enisa",
+      "level_hint": "professional",
+      "url": "https://www.enisa.europa.eu/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://iapp.org/certify/cippe/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "GDPR de-facto standard, useful for EU-facing JP corporations."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "ANSI accredited; widely recognised privacy law credential."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "GDPR de-facto for EU advisory work."
+      }
+    }
+  },
+  "schema_version": 1
+}

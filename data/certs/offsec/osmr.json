@@ -1,0 +1,110 @@
+{
+  "id": "offsec.osmr",
+  "vendor": {
+    "slug": "offsec",
+    "name": "OffSec",
+    "url": "https://www.offsec.com/"
+  },
+  "name": "OffSec macOS Researcher (EXP-312)",
+  "abbr": "OSMR",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "availability": "paused",
+  "availability_note": "Exam delivery is currently paused; OffSec has not announced a resumption date as of 2026-05.",
+  "official": {
+    "exam_url": "https://www.offsec.com/courses/exp-312/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 2599,
+    "format": "48-hour hands-on macOS exploit-research practical exam plus 24-hour report",
+    "duration_min": 2880,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 4,
+    "recommended_certs": [
+      "offsec.osed"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "FULLY_HANDS_ON_PRACTICAL",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MACOS_DEPTH_RARE_IN_MARKET",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/training/catalog/offsec/macos-control-bypasses"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VERY_NARROW_USE_CASE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "specialty",
+      "url": "https://niccs.cisa.gov/training/catalog/offsec/macos-control-bypasses",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "specialty",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.offsec.com/courses/exp-312/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/training/catalog/offsec/macos-control-bypasses"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Per OffSec course-code convention 300=expert. EXP-312 follows OSED in the exploit-dev ladder."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "300-level OffSec exploit-research; same band as OSED/OSEP."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "EXP-312 is expert-tier hands-on exploit research; macOS focus is the specialization, not a tier-down."
+      }
+    }
+  },
+  "schema_version": 1
+}

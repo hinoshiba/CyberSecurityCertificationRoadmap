@@ -1,0 +1,104 @@
+{
+  "id": "isc2.cc",
+  "vendor": {
+    "slug": "isc2",
+    "name": "ISC2",
+    "url": "https://www.isc2.org/"
+  },
+  "name": "Certified in Cybersecurity",
+  "abbr": "CC",
+  "domain": "governance-risk",
+  "secondary_domains": [
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isc2.org/certifications/cc",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 50,
+    "format": "Multiple-choice",
+    "duration_min": 120,
+    "questions": 100,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "zh-Hans",
+      "ko"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "ENTRY_TIER_FROM_TRUSTED_BODY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "FREE_TRAINING_VIA_ONE_MILLION_PROGRAM",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "ENTRY_LEVEL_LIMITED_HIRING_SIGNAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "foundational",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "foundational",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isc2.org/certifications/cc"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "introductory",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "introductory",
+        "rationale": "ANSI accredited but designed as cybersecurity literacy for new entrants; below the foundational engineer threshold."
+      },
+      "maria-okonkwo": {
+        "tier": "introductory",
+        "rationale": "Entry-level literacy credential; ISC2 One Million programme makes it explicitly an introductory step."
+      },
+      "alex-novak": {
+        "tier": "introductory",
+        "rationale": "Cybersecurity literacy, not yet an engineer-tier credential."
+      }
+    }
+  },
+  "schema_version": 1
+}

@@ -101,4 +101,6 @@ make evaluate   # 3 ペルソナ評価スキルを実行
 
 ## ライセンス
 
-MIT &mdash; [LICENSE](./LICENSE) および [NOTICE](./NOTICE) を参照。
+**[Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)** &mdash; リポジトリ全体に適用されます。すなわち、キュレーションされたデータセット (`data/**/*.json` &mdash; ベンダ・資格情報、ドメイン分類、ティア ルーブリック、ソース機関レジストリ、AI による評価とその根拠) と、周辺のコード (JS / Python / スキーマ / スキル / Docker / Actions / HTML / CSS) の両方を含みます。
+
+商用利用を含め、共有・改変は自由に行えますが、(1) **帰属表示**を行い、(2) 派生物を**同一ライセンス** (ShareAlike) の下で公開する必要があります。ライセンス全文は [LICENSE](./LICENSE) を、選定理由・帰属表示の例・商標の取り扱いについては [NOTICE](./NOTICE) を参照してください。

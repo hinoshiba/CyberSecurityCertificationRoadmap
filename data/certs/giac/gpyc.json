@@ -1,0 +1,93 @@
+{
+  "id": "giac.gpyc",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Python Coder",
+  "abbr": "GPYC",
+  "domain": "security-architecture",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/python-coder-gpyc",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_COOL_RECOGNISED",
+        "weight_hint": "high",
+        "evidence": "https://www.cool.osd.mil/usmc/credential/index.html?cert=gpyc7611"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BACKED_BY_SANS_TRAINING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "EXPENSIVE_BUNDLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "VERY_NARROW_USE_CASE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-cool",
+      "level_hint": "specialty",
+      "url": "https://www.cool.osd.mil/usmc/credential/index.html?cert=gpyc7611",
+      "fetched_at": "2026-05-02",
+      "summary": "Python for security automation, parsing, network/forensic tooling."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/python-coder-gpyc"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.cool.osd.mil/usmc/credential/index.html?cert=gpyc7611"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "specialty",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "specialty",
+        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

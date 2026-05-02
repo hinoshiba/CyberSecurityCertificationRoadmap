@@ -1,0 +1,115 @@
+{
+  "id": "isaca.cisa",
+  "vendor": {
+    "slug": "isaca",
+    "name": "ISACA",
+    "url": "https://www.isaca.org/"
+  },
+  "name": "Certified Information Systems Auditor",
+  "abbr": "CISA",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isaca.org/credentialing/cisa",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 760,
+    "format": "Multiple-choice, in-person Pearson VUE or remote-proctored",
+    "duration_min": 240,
+    "questions": 150,
+    "languages": [
+      "en",
+      "ja",
+      "de",
+      "es",
+      "fr",
+      "zh-Hans",
+      "ko"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "AUDIT_DE_FACTO_STANDARD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "REQUIRES_5YR_VERIFIED_EXPERIENCE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "AUDIT_FOCUS_NOT_HANDS_ON",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_RENEWAL",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "expert",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "expert",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isaca.org/credentialing/cisa"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "Consensus tier 'expert' supported by hiroshi-tanaka, maria-okonkwo; see persona_scores for the dissenting view.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "De-facto audit standard at JP enterprises; 5yr verified experience requirement."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "DoD 8140 baseline; widely required for IT-audit hires."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Audit focus is broad but not technical depth at the offensive level."
+      }
+    }
+  },
+  "schema_version": 1
+}

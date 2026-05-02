@@ -1,0 +1,116 @@
+{
+  "id": "comptia.cysa-plus",
+  "vendor": {
+    "slug": "comptia",
+    "name": "CompTIA",
+    "url": "https://www.comptia.org/"
+  },
+  "name": "CompTIA Cybersecurity Analyst",
+  "abbr": "CySA+",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "threat-intel",
+    "network-defense"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.comptia.org/certifications/cybersecurity-analyst",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 404,
+    "format": "Multiple-choice + performance-based",
+    "duration_min": 165,
+    "questions": 85,
+    "languages": [
+      "en",
+      "ja"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 4,
+    "recommended_certs": [
+      "comptia.security-plus",
+      "comptia.network-plus"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BLUE_TEAM_FOCUSED",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "PERFORMANCE_BASED_QUESTIONS",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_NEUTRAL_TOOLING_BREADTH",
+        "weight_hint": "low"
+      },
+      {
+        "code": "OVERLAPS_GIAC_GCIH_BUT_LIGHTER",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "associate",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.comptia.org/certifications/cybersecurity-analyst"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "Consensus tier 'associate' supported by hiroshi-tanaka, alex-novak; see persona_scores for the dissenting view.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Blue team focus; DoD 8140 listing at associate-level."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Strong SOC-analyst hire signal; PBQs provide hands-on credibility."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Multiple-choice base; PBQs limited."
+      }
+    }
+  },
+  "schema_version": 1
+}

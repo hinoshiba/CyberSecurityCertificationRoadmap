@@ -1,0 +1,98 @@
+{
+  "id": "isc2.hcispp",
+  "vendor": {
+    "slug": "isc2",
+    "name": "ISC2",
+    "url": "https://www.isc2.org/"
+  },
+  "name": "HealthCare Information Security and Privacy Practitioner",
+  "abbr": "HCISPP",
+  "domain": "privacy-data-protection",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isc2.org/certifications/hcispp",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 599,
+    "format": "Linear, in-person Pearson VUE",
+    "duration_min": 180,
+    "questions": 125,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 2,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "HIPAA_HEALTHCARE_FOCUS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VERTICAL_SPECIFIC_HEALTHCARE",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LOWER_HIRING_VOLUME",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isc2.org/certifications/hcispp"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "ANSI accredited; healthcare-vertical depth."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "ANSI accredited; vertical-specific but a real hiring signal in US healthcare."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Vertical-specific privacy and security; ANSI accredited."
+      }
+    }
+  },
+  "schema_version": 1
+}

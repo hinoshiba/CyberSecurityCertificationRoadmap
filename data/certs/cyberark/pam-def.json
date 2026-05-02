@@ -1,0 +1,93 @@
+{
+  "id": "cyberark.pam-def",
+  "vendor": {
+    "slug": "cyberark",
+    "name": "CyberArk",
+    "url": "https://www.cyberark.com/"
+  },
+  "name": "CyberArk Defender - PAM",
+  "abbr": "PAM-DEF",
+  "domain": "iam",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.cyberark.com/services-support/certification/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 200,
+    "format": "Multiple-choice, Pearson VUE proctored",
+    "duration_min": 90,
+    "questions": 65,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 2,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "PEARSON_VUE_PROCTORED",
+        "weight_hint": "medium",
+        "evidence": "https://www.pearsonvue.com/us/en/cyberark.html"
+      },
+      {
+        "code": "PAM_MARKET_LEADER_VENDOR",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_REQUESTED_IN_HIRING",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "cyberark",
+      "level_hint": "associate",
+      "url": "https://www.pearsonvue.com/us/en/cyberark.html",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.cyberark.com/services-support/certification/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Pearson VUE proctored vendor exam; PAM market leader."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Most-requested vendor cert for PAM operators in US enterprise."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Vendor-specific operator credential."
+      }
+    }
+  },
+  "schema_version": 1
+}

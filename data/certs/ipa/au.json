@@ -1,0 +1,111 @@
+{
+  "id": "ipa.au",
+  "vendor": {
+    "slug": "ipa",
+    "name": "IPA (Information-technology Promotion Agency, Japan)",
+    "url": "https://www.ipa.go.jp/"
+  },
+  "name": "Systems Auditor Examination",
+  "name_ja": "システム監査技術者試験 (AU)",
+  "abbr": "IPA AU",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www.ipa.go.jp/shiken/kubun/au.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 7,500",
+    "format": "National statutory paper exam, once yearly (Spring)",
+    "duration_min": 270,
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 7,
+    "recommended_certs": [
+      "ipa.ap",
+      "ipa.riss",
+      "ipa.sa",
+      "ipa.sc",
+      "ipa.sm",
+      "ipa.st"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_NATIONAL_STATUTORY_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MOST_SENIOR_IPA_AUDIT_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "RECOGNISED_BY_FSA_AND_REGULATORS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "AUDIT_FOCUS_NOT_HANDS_ON",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ipa",
+      "level_hint": "expert",
+      "url": "https://www.ipa.go.jp/shiken/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "meti-jp",
+      "level_hint": "expert",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.ipa.go.jp/shiken/kubun/au.html"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Most senior IPA audit exam; recognised by JP financial regulators."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Top-tier JP audit credential."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Senior audit credential; analogous to CISA in JP context."
+      }
+    }
+  },
+  "schema_version": 1
+}

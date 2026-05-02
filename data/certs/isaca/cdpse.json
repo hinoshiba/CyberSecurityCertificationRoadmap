@@ -1,0 +1,101 @@
+{
+  "id": "isaca.cdpse",
+  "vendor": {
+    "slug": "isaca",
+    "name": "ISACA",
+    "url": "https://www.isaca.org/"
+  },
+  "name": "Certified Data Privacy Solutions Engineer",
+  "abbr": "CDPSE",
+  "domain": "privacy-data-protection",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.isaca.org/credentialing/certified-data-privacy-solutions-engineer",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 760,
+    "format": "Multiple-choice, in-person Pearson VUE or remote-proctored",
+    "duration_min": 210,
+    "questions": 120,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "isaca.cisa",
+      "iapp.cipp-e"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PRIVACY_TECHNICAL_FOCUS",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "RELATIVELY_NEW_2020",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "OVERSHADOWED_BY_IAPP_FOR_LEGAL",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.isaca.org/credentialing/certified-data-privacy-solutions-engineer"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Privacy-technical focus useful in JP under APPI."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "ANSI accredited; technical privacy engineer focus."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Newer credential; technical privacy depth."
+      }
+    }
+  },
+  "schema_version": 1
+}

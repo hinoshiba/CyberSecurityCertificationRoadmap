@@ -1,0 +1,106 @@
+{
+  "id": "aws.security-specialty",
+  "vendor": {
+    "slug": "aws",
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com/certification/"
+  },
+  "name": "AWS Certified Security - Specialty",
+  "abbr": "AWS Sec",
+  "domain": "cloud-security",
+  "secondary_domains": [
+    "iam",
+    "incident-forensics"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://aws.amazon.com/certification/certified-security-specialty/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 300,
+    "format": "Multiple-choice + multiple-response, Pearson VUE / online proctored",
+    "duration_min": 170,
+    "questions": 65,
+    "languages": [
+      "en",
+      "ja",
+      "ko",
+      "zh-Hans"
+    ],
+    "renewal_years": 3,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      "aws.dea-c01",
+      "aws.dva-c02",
+      "aws.mla-c01",
+      "aws.saa-c03",
+      "aws.soa-c03"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH_AWS",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PRODUCTION_RELEVANCE_LARGE_CLOUD",
+        "weight_hint": "high"
+      },
+      {
+        "code": "WIDELY_REQUESTED_IN_HIRING",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "NO_PRACTICAL_LAB_COMPONENT",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "nist-nice",
+      "level_hint": "professional",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://aws.amazon.com/certification/certified-security-specialty/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "AWS share large in JP cloud; JA exam available; hiring-relevant."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Vendor-specific; high hiring demand for cloud security engineers."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Vendor-specific cloud focus is modern attack surface."
+      }
+    }
+  },
+  "schema_version": 1
+}

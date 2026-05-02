@@ -1,0 +1,89 @@
+{
+  "id": "checkpoint.ccsa-r82",
+  "vendor": {
+    "slug": "checkpoint",
+    "name": "Check Point Software Technologies",
+    "url": "https://www.checkpoint.com/"
+  },
+  "name": "Check Point Certified Security Administrator R82",
+  "abbr": "CCSA R82",
+  "domain": "network-defense",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://training-certifications.checkpoint.com/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 300,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "PEARSON_VUE_PROCTORED",
+        "weight_hint": "medium",
+        "evidence": "https://www.pearsonvue.com/us/en/checkpoint.html"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "PRODUCTION_RELEVANCE_HIRING",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "pearsonvue-checkpoint",
+      "level_hint": "associate",
+      "url": "https://www.pearsonvue.com/us/en/checkpoint.html",
+      "fetched_at": "2026-05-02",
+      "summary": "Daily admin of Check Point Quantum gateways and SmartConsole."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://training-certifications.checkpoint.com/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.pearsonvue.com/us/en/checkpoint.html"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

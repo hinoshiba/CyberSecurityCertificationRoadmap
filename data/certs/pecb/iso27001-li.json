@@ -1,0 +1,89 @@
+{
+  "id": "pecb.iso27001-li",
+  "vendor": {
+    "slug": "pecb",
+    "name": "PECB (Professional Evaluation and Certification Board)",
+    "url": "https://pecb.com/"
+  },
+  "name": "ISO/IEC 27001 Lead Implementer (PECB)",
+  "abbr": "PECB-27001LI",
+  "domain": "governance-risk",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://pecb.com/en/education-and-certification-for-individuals/iso-iec-27001/iso-iec-27001-lead-implementer",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1200,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": []
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "ANSI_OR_ISO_17024_ACCREDITED",
+        "weight_hint": "high",
+        "evidence": "https://www.ukas.com/"
+      },
+      {
+        "code": "ISO_17024_ACCREDITED_PERSONNEL_SCHEME",
+        "weight_hint": "high"
+      },
+      {
+        "code": "GLOBAL_ISMS_BCMS_PIMS_AUDIT_DEMAND",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "GENERAL_LIMITATIONS",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ukas",
+      "level_hint": "professional",
+      "url": "https://www.ukas.com/",
+      "fetched_at": "2026-05-02",
+      "summary": "PECB credential for implementing ISMS per ISO/IEC 27001:2022."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://pecb.com/en/education-and-certification-for-individuals/iso-iec-27001/iso-iec-27001-lead-implementer"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.ukas.com/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

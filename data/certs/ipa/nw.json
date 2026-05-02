@@ -1,0 +1,103 @@
+{
+  "id": "ipa.nw",
+  "vendor": {
+    "slug": "ipa",
+    "name": "IPA (Information-technology Promotion Agency, Japan)",
+    "url": "https://www.ipa.go.jp/"
+  },
+  "name": "Network Specialist Examination",
+  "name_ja": "ネットワークスペシャリスト試験 (NW)",
+  "abbr": "IPA NW",
+  "domain": "network-defense",
+  "secondary_domains": [],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www.ipa.go.jp/shiken/kubun/nw.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 50,
+    "cost_local": "JPY 7,500",
+    "format": "National statutory paper exam, once yearly (April)",
+    "duration_min": 270,
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 0,
+    "recommended_certs": [
+      "ipa.ap"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_NATIONAL_STATUTORY_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "DEEP_NETWORK_DESIGN_FOCUS",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "NETWORK_FOCUS_NOT_PURE_SECURITY",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ipa",
+      "level_hint": "professional",
+      "url": "https://www.ipa.go.jp/shiken/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "meti-jp",
+      "level_hint": "professional",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.ipa.go.jp/shiken/kubun/nw.html"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "Consensus tier 'associate' supported by maria-okonkwo, alex-novak; see persona_scores for the dissenting view.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Senior network design national exam in JP."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "JP-only; networking focus rather than pure security."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Network design focus; not a security credential proper."
+      }
+    }
+  },
+  "schema_version": 1
+}

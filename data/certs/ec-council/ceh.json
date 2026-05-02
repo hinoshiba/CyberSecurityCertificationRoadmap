@@ -1,0 +1,116 @@
+{
+  "id": "ec-council.ceh",
+  "vendor": {
+    "slug": "ec-council",
+    "name": "EC-Council",
+    "url": "https://www.eccouncil.org/"
+  },
+  "name": "Certified Ethical Hacker",
+  "abbr": "CEH",
+  "domain": "offensive-redteam",
+  "secondary_domains": [],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 1199,
+    "format": "Multiple-choice (CEH) plus optional 6-hour CEH Practical lab",
+    "duration_min": 240,
+    "questions": 125,
+    "languages": [
+      "en",
+      "ja",
+      "es"
+    ],
+    "renewal_years": 3,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [
+      "EC-Council training OR 2 years documented infosec experience"
+    ],
+    "experience_years": 2,
+    "recommended_certs": [
+      "comptia.security-plus"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DOD_8140_BASELINE",
+        "weight_hint": "high",
+        "evidence": "https://public.cyber.mil/wid/dod8140/"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BROAD_TOOL_COVERAGE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "MULTIPLE_CHOICE_NOT_PRACTICAL",
+        "weight_hint": "high",
+        "note": "Base CEH is multiple-choice; only the optional CEH Practical is hands-on."
+      },
+      {
+        "code": "PEER_REPUTATION_MIXED_VS_OSCP",
+        "weight_hint": "medium"
+      },
+      {
+        "code": "EXPENSIVE_TRAINING_BUNDLE",
+        "weight_hint": "low"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "dod-8140",
+      "level_hint": "associate",
+      "url": "https://public.cyber.mil/wid/dod8140/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "nist-nice",
+      "level_hint": "associate",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/"
+    },
+    {
+      "type": "regulator",
+      "url": "https://public.cyber.mil/wid/dod8140/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "DoD 8140 baseline; JA exam; familiar in JP procurement."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "DoD 8140 baseline CSSP-Analyst; multiple-choice format limits the hiring signal."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Multiple-choice base, optional Practical add-on; mixed peer reputation in offensive circles."
+      }
+    }
+  },
+  "schema_version": 1
+}

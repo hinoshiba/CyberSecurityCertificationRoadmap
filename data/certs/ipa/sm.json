@@ -1,0 +1,106 @@
+{
+  "id": "ipa.sm",
+  "vendor": {
+    "slug": "ipa",
+    "name": "IPA (Information-technology Promotion Agency, Japan)",
+    "url": "https://www.ipa.go.jp/"
+  },
+  "name": "IT Service Manager Examination",
+  "name_ja": "ITサービスマネージャ試験 (SM)",
+  "abbr": "IPA SM",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "governance-risk"
+  ],
+  "japan_only": true,
+  "official": {
+    "exam_url": "https://www.ipa.go.jp/shiken/kubun/sm.html",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_local": "JPY 7,500",
+    "format": "National statutory paper exam, once yearly (October)",
+    "duration_min": 270,
+    "languages": [
+      "ja"
+    ],
+    "renewal_years": 0,
+    "ce_required": false
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": [
+      "ipa.ap",
+      "ipa.pm",
+      "ipa.sg"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "JAPAN_NATIONAL_STATUTORY_EXAM",
+        "weight_hint": "high"
+      },
+      {
+        "code": "IT_OPERATIONS_INCIDENT_DEPTH",
+        "weight_hint": "high"
+      }
+    ],
+    "minus": [
+      {
+        "code": "JAPAN_LOCAL_RECOGNITION_ONLY",
+        "weight_hint": "high"
+      },
+      {
+        "code": "SERVICE_MGMT_FOCUS_PARTLY_SECURITY",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ipa",
+      "level_hint": "professional",
+      "url": "https://www.ipa.go.jp/shiken/",
+      "fetched_at": "2026-05-02"
+    },
+    {
+      "source_id": "meti-jp",
+      "level_hint": "professional",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.ipa.go.jp/shiken/kubun/sm.html"
+    },
+    {
+      "type": "regulator",
+      "url": "https://www.meti.go.jp/policy/it_policy/jinzai/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "IT operations and incident management depth."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Service management with incident depth."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Service management; partial security."
+      }
+    }
+  },
+  "schema_version": 1
+}

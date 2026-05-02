@@ -1,0 +1,94 @@
+{
+  "id": "aws.saa-c03",
+  "vendor": {
+    "slug": "aws",
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com/certification/"
+  },
+  "name": "AWS Certified Solutions Architect - Associate",
+  "abbr": "SAA-C03",
+  "domain": "security-architecture",
+  "secondary_domains": [
+    "cloud-security"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 150,
+    "format": "Proctored exam"
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 1,
+    "recommended_certs": [
+      "aws.aif-c01",
+      "aws.clf-c02"
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "DHS_CISA_NICCS_LISTED",
+        "weight_hint": "medium",
+        "evidence": "https://niccs.cisa.gov/education-training/catalog/intellectual-point/amazon-aws-certified-solutions-architect-associate"
+      },
+      {
+        "code": "VENDOR_SOURCE_OF_TRUTH",
+        "weight_hint": "high"
+      },
+      {
+        "code": "MODERN_ATTACK_SURFACE",
+        "weight_hint": "medium"
+      }
+    ],
+    "minus": [
+      {
+        "code": "VENDOR_SPECIFIC_NOT_PORTABLE",
+        "weight_hint": "medium"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "niccs",
+      "level_hint": "associate",
+      "url": "https://niccs.cisa.gov/education-training/catalog/intellectual-point/amazon-aws-certified-solutions-architect-associate",
+      "fetched_at": "2026-05-02",
+      "summary": "Designs distributed, resilient, cost-optimized AWS architectures."
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://niccs.cisa.gov/education-training/catalog/intellectual-point/amazon-aws-certified-solutions-architect-associate"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "associate",
+    "computed_at": "2026-05-02T06:09:52Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "associate",
+        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}
