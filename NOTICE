@@ -1,0 +1,58 @@
+Cyber Security Certification Roadmap
+====================================
+
+Inspiration & Acknowledgements
+------------------------------
+
+This project was inspired by, and pays respect to, the following public works:
+
+  * Paul Jerimy's Security Certification Roadmap
+    https://pauljerimy.com/security-certification-roadmap/
+
+  * CyberDudeKZ's Security Cert Roadmap
+    https://cyberdudekz.github.io/security-cert-roadmap/
+
+We are grateful to both authors for advancing public knowledge in this space.
+
+Independent Compilation
+-----------------------
+
+The certification list, domain taxonomy, tier rubric, JSON schema, JavaScript,
+HTML, CSS, and evaluation skills in this repository were authored
+independently by the contributors of this project. No data, layout, code, or
+images were copied from the inspiration sources above.
+
+Where the inspiration sources are referenced from a per-certification
+`sources[]` entry, the entry is tagged `"use": "inspiration_only"` to make
+the relationship machine-readable: the link is acknowledgement, not data
+provenance.
+
+Authoritative Source Agencies
+-----------------------------
+
+For Japanese certifications (mode toggle), authoritative information is
+sourced from:
+
+  * IPA (Information-technology Promotion Agency, Japan) - https://www.ipa.go.jp/
+  * METI (Ministry of Economy, Trade and Industry) - https://www.meti.go.jp/
+  * JPCERT/CC - https://www.jpcert.or.jp/
+  * NISC - https://www.nisc.go.jp/
+
+A complete list of approved source agencies (US DoD 8140, NIST NICE, ANSI,
+ENISA, NCSC-UK, CREST, IPA, JPCERT, NISC, ...) is maintained in
+`data/sources/agencies.json` and is itself an interface that contributors may
+extend through the `add-source-agency` issue template.
+
+Trademarks
+----------
+
+CISSP, OSCP, Security+, CEH, CISA, CISM, GIAC, CIPP/E, IPA, SEA/J and other
+certification names are trademarks of their respective owners. Their use here
+is nominative and identifies the certifications described; it does not imply
+endorsement.
+
+License
+-------
+
+Project code, schema, JSON data, skills, and documentation in this repository
+are released under the MIT License. See LICENSE.
