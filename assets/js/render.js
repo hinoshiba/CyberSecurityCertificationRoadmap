@@ -27,14 +27,32 @@ export function renderGrid(root, domains, tiers, certs, ui) {
   root.innerHTML = "";
   const lang = ui.labelLang === "ja" ? "ja" : "en";
 
-  // Responsive 100% width:
-  //   80px tier-label + 12 equal-fraction columns at minmax(70px, 1fr).
-  // 70px floor accommodates one 60px card per row plus padding, so cards
-  // wrap onto multiple rows in dense cells rather than pushing the matrix
-  // wider than the viewport. Total min: 80 + 12×70 = 920px (fits standard
-  // laptops); on FHD/2K each column expands to fit 2-3 cards per row.
-  root.style.gridTemplateColumns =
-    `80px repeat(${domains.length}, minmax(70px, 1fr))`;
+  // Per-domain cert counts → sqrt-weighted column fractions.
+  // Domains with many certs (governance-risk has 76) get more horizontal
+  // space than sparse domains (threat-intel has 7) without dominating —
+  // sqrt softens the spread so the densest column is ~3× the sparsest
+  // rather than ~10× under linear weighting. Each column still has a
+  // minmax floor so single-card cells stay readable.
+  const countsByDomain = new Map(domains.map(d => [d.id, 0]));
+  for (const c of certs) {
+    if (countsByDomain.has(c.domain)) {
+      countsByDomain.set(c.domain, countsByDomain.get(c.domain) + 1);
+    }
+  }
+  const fractions = domains.map(d => {
+    const n = countsByDomain.get(d.id) || 0;
+    // sqrt with a floor of 4 so a 0-cert domain doesn't collapse and a
+    // 1-cert domain still gets a sane minimum width. Multiplied so the
+    // numbers are >1 (CSS rounds 0.x fr unpredictably across browsers).
+    return Math.max(2, Math.sqrt(Math.max(n, 4)) * 1.4);
+  });
+  const colTemplate = fractions
+    .map(f => `minmax(56px, ${f.toFixed(2)}fr)`)
+    .join(" ");
+  // 70px tier-label column + N proportional domain columns. 70 leaves
+  // enough room for the longest tier label "プロフェッショナル" without
+  // ugly wrapping at the new smaller tier-head font size.
+  root.style.gridTemplateColumns = `70px ${colTemplate}`;
 
   // Header row
   const corner = document.createElement("div");
@@ -87,6 +105,13 @@ export function renderGrid(root, domains, tiers, certs, ui) {
 
       const list = buckets.get(`${t.id}|${d.id}`) || [];
       if (list.length === 0) cell.classList.add("empty");
+      // Density-adaptive sizing: thresholds tuned from the actual data
+      // distribution where the densest cell holds ~26 certs and most
+      // populated cells hold 5–13. The classes shrink card width / height
+      // / font-size proportionally in CSS.
+      else if (list.length >= 18) cell.classList.add("cell-very-dense");
+      else if (list.length >= 10) cell.classList.add("cell-dense");
+      else if (list.length >= 5)  cell.classList.add("cell-medium");
 
       for (const c of list) {
         const card = document.createElement("a");
