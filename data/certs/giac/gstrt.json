@@ -23,11 +23,27 @@
     "experience_years": 7,
     "recommended_certs": [
       {
+        "id": "giac.gccc",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gcip",
+        "source": "vendor-ladder"
+      },
+      {
         "id": "giac.gicsp",
         "source": "vendor-ladder"
       },
       {
         "id": "giac.gisp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gpcs",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gslc",
         "source": "vendor-ladder"
       },
       {
@@ -84,7 +100,7 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_at": "2026-05-02T14:04:04Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
     "rationale": "All three personas agree at this tier; rationale reflects consensus.",
     "persona_scores": {

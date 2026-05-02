@@ -39,6 +39,18 @@
       {
         "id": "giac.gcih",
         "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gcld",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.geir",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gsoc",
+        "source": "vendor-ladder"
       }
     ]
   },
@@ -89,7 +101,7 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_at": "2026-05-02T14:04:04Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
     "rationale": "All three personas agree at this tier; rationale reflects consensus.",
     "persona_scores": {

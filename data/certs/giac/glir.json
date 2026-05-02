@@ -1,0 +1,126 @@
+{
+  "id": "giac.glir",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Linux Incident Responder",
+  "abbr": "GLIR",
+  "name_ja": "GIAC リナックス・インシデント・レスポンダー",
+  "domain": "incident-forensics",
+  "secondary_domains": [
+    "endpoint-mobile"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/linux-incident-responder-glir/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "CyberLive performance-based, web-based proctored (ProctorU or PearsonVUE)",
+    "duration_min": 180,
+    "questions": 82,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 3,
+    "recommended_certs": [
+      {
+        "id": "comptia.linux-plus",
+        "source": "community",
+        "rationale": "Linux 運用基礎が浅い受験者は、CompTIA Linux+ などで OS 観点を整えてから GLIR の DFIR 文脈に入ると消化しやすい。"
+      },
+      {
+        "id": "giac.gcfa",
+        "source": "vendor-ladder",
+        "rationale": "GCFA(FOR508) でホスト DFIR 全般の素養を持った受験者が、Linux 専門の脅威ハンティング/IR を扱う FOR577/GLIR で深堀りする流れが SANS DFIR ラダーで自然。"
+      },
+      {
+        "id": "giac.gcih",
+        "source": "vendor-ladder",
+        "rationale": "GCIH のインシデントハンドリング基礎の上に、Linux に特化したコマンドライン/トリアージ実技として GLIR を積み上げるのが定石。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high",
+        "note": "CyberLive 実機環境で Linux ライブ調査・トリアージを評価する実技重視認証。"
+      },
+      {
+        "code": "DEEP_TECHNICAL_DEPTH",
+        "weight_hint": "high",
+        "note": "FOR577 を裏付けとし、Linux カーネル/プロセス/ファイルシステム/コンテナまで含む DFIR 専門深度。"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "LINUX_DFIR_NICHE",
+        "weight_hint": "medium",
+        "note": "Windows 偏重の DFIR 認証群の中で Linux 専門の IR を独立評価する数少ない上位認証。"
+      }
+    ],
+    "minus": [
+      {
+        "code": "RECENTLY_CREATED_LIMITED_UPTAKE",
+        "weight_hint": "medium",
+        "note": "2024 年前後に登場した新設認証で、求人要件への浸透はこれから。"
+      },
+      {
+        "code": "EXPENSIVE_TRAINING_BUNDLE",
+        "weight_hint": "high",
+        "note": "FOR577 の SANS 受講で総額 $8,000 級。独学合格には Linux DFIR の実務経験が前提。"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "professional",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/linux-incident-responder-glir/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/linux-threat-hunting-incident-response/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "professional",
+    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "professional",
+        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}

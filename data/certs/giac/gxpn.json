@@ -32,9 +32,33 @@
     "experience_years": 5,
     "recommended_certs": [
       {
+        "id": "giac.gcpn",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gcsa",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gmob",
+        "source": "vendor-ladder"
+      },
+      {
         "id": "giac.gpen",
         "source": "official-recommended",
         "rationale": "GPEN で標準的な侵入テストを習得した後、エクスプロイト開発と高度評価を扱う GXPN に進むのが SANS のアドバンスドラダー。"
+      },
+      {
+        "id": "giac.grtp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gwapt",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gweb",
+        "source": "vendor-ladder"
       },
       {
         "id": "offsec.osed",
@@ -91,7 +115,7 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_at": "2026-05-02T14:04:04Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
     "rationale": "All three personas agree at this tier; rationale reflects consensus.",
     "persona_scores": {

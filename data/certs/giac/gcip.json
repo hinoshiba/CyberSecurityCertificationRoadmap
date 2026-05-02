@@ -32,9 +32,21 @@
     "experience_years": 2,
     "recommended_certs": [
       {
+        "id": "giac.gcld",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gfact",
+        "source": "vendor-ladder"
+      },
+      {
         "id": "giac.gicsp",
         "source": "vendor-ladder",
         "rationale": "GICSP で IT/OT 横断の素養を持ったうえで、NERC CIP に特化する GCIP に進むと電力系コンプライアンス職に直結する。"
+      },
+      {
+        "id": "giac.gmle",
+        "source": "vendor-ladder"
       }
     ]
   },
@@ -86,7 +98,7 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T08:04:20Z",
+    "computed_at": "2026-05-02T14:04:04Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
     "rationale": "All three personas agree at this tier; rationale reflects consensus.",
     "persona_scores": {

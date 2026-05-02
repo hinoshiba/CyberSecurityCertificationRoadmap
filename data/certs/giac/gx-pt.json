@@ -1,0 +1,127 @@
+{
+  "id": "giac.gx-pt",
+  "vendor": {
+    "slug": "giac",
+    "name": "GIAC",
+    "url": "https://www.giac.org/"
+  },
+  "name": "GIAC Experienced Penetration Tester",
+  "abbr": "GX-PT",
+  "name_ja": "GIAC エクスペリエンスド・ペネトレーションテスター",
+  "domain": "offensive-redteam",
+  "secondary_domains": [
+    "application-appsec"
+  ],
+  "japan_only": false,
+  "official": {
+    "exam_url": "https://www.giac.org/certifications/experienced-penetration-tester-gxpt/",
+    "fetched_at": "2026-05-02"
+  },
+  "logistics": {
+    "cost_usd": 999,
+    "format": "Applied Knowledge tier; 1 proctored open-book CyberLive exam (hands-on, real-world practical testing)",
+    "duration_min": 240,
+    "questions": 25,
+    "languages": [
+      "en"
+    ],
+    "renewal_years": 4,
+    "ce_required": true
+  },
+  "prerequisites": {
+    "formal": [],
+    "experience_years": 5,
+    "recommended_certs": [
+      {
+        "id": "giac.gpen",
+        "source": "official-recommended",
+        "url": "https://www.giac.org/certifications/experienced-penetration-tester-gxpt/",
+        "rationale": "GIAC は本認証を 'GPEN certification holders who have gained additional experience in penetration testing' を主たる対象として明示。GPEN の標準ペネトレーション基礎の上に Applied Knowledge 層として GX-PT が積まれる構造。"
+      },
+      {
+        "id": "giac.gxpn",
+        "source": "vendor-ladder",
+        "rationale": "GPEN→GXPN(エクスプロイト開発) の SANS 攻撃側ラダーを通った受験者が、CyberLive 主体の総合実技として GX-PT を選ぶ流れも成立する。"
+      },
+      {
+        "id": "offsec.oscp",
+        "source": "community",
+        "rationale": "OSCP の実技基礎(攻撃工程の手数)を持った状態で、GX-PT の GIAC 系シナリオで第三者性を強化する組み合わせは実務でも一般的。"
+      }
+    ]
+  },
+  "scoring_factors": {
+    "plus": [
+      {
+        "code": "HANDS_ON_PRACTICAL",
+        "weight_hint": "high",
+        "note": "25 問 4 時間が全て CyberLive 実機課題で構成される Applied Knowledge 層。"
+      },
+      {
+        "code": "DEEP_TECHNICAL_DEPTH",
+        "weight_hint": "high",
+        "note": "SEC560 を主軸に 11 のペネトレーション関連 SANS コースから横断的に出題される上位評価。"
+      },
+      {
+        "code": "ANSI_ISO_17024_ACCREDITED",
+        "weight_hint": "high"
+      },
+      {
+        "code": "BUILDS_ON_PROVEN_BASE_CERT",
+        "weight_hint": "medium",
+        "note": "GPEN 経験者を主対象に設計された GIAC Applied Knowledge / Experienced 層。"
+      }
+    ],
+    "minus": [
+      {
+        "code": "RECENTLY_CREATED_LIMITED_UPTAKE",
+        "weight_hint": "medium",
+        "note": "2023-2024 年に始まった Applied Knowledge シリーズで、求人要件としての浸透はこれから。"
+      },
+      {
+        "code": "EXPENSIVE_TRAINING_BUNDLE",
+        "weight_hint": "high",
+        "note": "前提となる SANS SEC560 等の受講で総額 $8,000 級になりやすい。"
+      }
+    ]
+  },
+  "third_party_evaluations": [
+    {
+      "source_id": "ansi-iso-17024",
+      "level_hint": "expert",
+      "url": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+      "fetched_at": "2026-05-02"
+    }
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "url": "https://www.giac.org/certifications/experienced-penetration-tester-gxpt/"
+    },
+    {
+      "type": "third_party",
+      "url": "https://www.sans.org/cyber-security-courses/network-penetration-testing-ethical-hacking/"
+    }
+  ],
+  "evaluation": {
+    "computed_tier": "expert",
+    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_by_skill": "evaluate-roadmap-3-personas@1",
+    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "persona_scores": {
+      "hiroshi-tanaka": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "maria-okonkwo": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      },
+      "alex-novak": {
+        "tier": "expert",
+        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+      }
+    }
+  },
+  "schema_version": 1
+}
