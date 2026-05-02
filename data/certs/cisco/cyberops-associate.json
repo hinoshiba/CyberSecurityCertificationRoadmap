@@ -33,7 +33,10 @@
     "formal": [],
     "experience_years": 1,
     "recommended_certs": [
-      "comptia.network-plus"
+      {
+        "id": "comptia.network-plus",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

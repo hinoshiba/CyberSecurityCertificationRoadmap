@@ -32,7 +32,10 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "seaj.csbm"
+      {
+        "id": "seaj.csbm",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

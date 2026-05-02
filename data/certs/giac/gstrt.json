@@ -22,9 +22,18 @@
     "formal": [],
     "experience_years": 7,
     "recommended_certs": [
-      "giac.gicsp",
-      "giac.gisp",
-      "giac.gsna"
+      {
+        "id": "giac.gicsp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gisp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gsna",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

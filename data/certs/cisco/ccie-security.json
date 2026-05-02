@@ -24,10 +24,22 @@
     "formal": [],
     "experience_years": 7,
     "recommended_certs": [
-      "cisco.ccnp-enterprise",
-      "cisco.ccnp-security",
-      "cisco.cyberops-professional",
-      "cisco.devnet-professional"
+      {
+        "id": "cisco.ccnp-enterprise",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "cisco.ccnp-security",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "cisco.cyberops-professional",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "cisco.devnet-professional",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

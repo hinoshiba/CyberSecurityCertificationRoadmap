@@ -32,7 +32,11 @@
     "formal": [],
     "experience_years": 4,
     "recommended_certs": [
-      "offsec.osed"
+      {
+        "id": "offsec.osed",
+        "source": "official-recommended",
+        "url": "https://www.offsec.com/courses/exp-312/"
+      }
     ]
   },
   "scoring_factors": {

@@ -35,11 +35,46 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "aws.dea-c01",
-      "aws.dva-c02",
-      "aws.mla-c01",
-      "aws.saa-c03",
-      "aws.soa-c03"
+      {
+        "id": "aws.clf-c02",
+        "source": "community",
+        "rationale": "クラウド入門 → セキュリティ深掘りは AWS 公式ロードマップ上の典型ルート。Specialty 学習者の多くは CLF を経由。"
+      },
+      {
+        "id": "aws.dea-c01",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.dva-c02",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.mla-c01",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.saa-c03",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.soa-c03",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "csa.ccsk-v5",
+        "source": "community",
+        "rationale": "ベンダ中立 CCSK で得たクラウドセキュリティ原則を AWS 固有実装にマッピングするのは王道学習順序。"
+      },
+      {
+        "id": "ipa.sc",
+        "source": "community",
+        "rationale": "セキュリティ専門知識をクラウド実装側に拡張するパスとして広く採用される。"
+      },
+      {
+        "id": "isc2.ccsp",
+        "source": "community",
+        "rationale": "CCSP のクラウドセキュリティ理論基盤を、AWS 固有の実装知識に展開するパス。"
+      }
     ]
   },
   "scoring_factors": {

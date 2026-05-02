@@ -25,11 +25,26 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "aws.dea-c01",
-      "aws.dva-c02",
-      "aws.mla-c01",
-      "aws.saa-c03",
-      "aws.soa-c03"
+      {
+        "id": "aws.dea-c01",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.dva-c02",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.mla-c01",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.saa-c03",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.soa-c03",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

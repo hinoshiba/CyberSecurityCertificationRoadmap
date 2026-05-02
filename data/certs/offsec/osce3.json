@@ -24,10 +24,19 @@
       "Hold all three: OSEP (PEN-300), OSWE (WEB-300), OSED (EXP-301)"
     ],
     "experience_years": 5,
-    "recommended_certs": [
-      "offsec.osep",
-      "offsec.oswe",
-      "offsec.osed"
+    "required_certs": [
+      {
+        "id": "offsec.osep",
+        "url": "https://www.offsec.com/courses-and-certifications/osce3/"
+      },
+      {
+        "id": "offsec.oswe",
+        "url": "https://www.offsec.com/courses-and-certifications/osce3/"
+      },
+      {
+        "id": "offsec.osed",
+        "url": "https://www.offsec.com/courses-and-certifications/osce3/"
+      }
     ]
   },
   "scoring_factors": {

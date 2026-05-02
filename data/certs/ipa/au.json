@@ -29,12 +29,30 @@
     "formal": [],
     "experience_years": 7,
     "recommended_certs": [
-      "ipa.ap",
-      "ipa.riss",
-      "ipa.sa",
-      "ipa.sc",
-      "ipa.sm",
-      "ipa.st"
+      {
+        "id": "ipa.ap",
+        "source": "official-recommended"
+      },
+      {
+        "id": "ipa.riss",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.sa",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.sc",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.sm",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.st",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

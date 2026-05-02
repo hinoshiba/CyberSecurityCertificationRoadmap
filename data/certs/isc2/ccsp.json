@@ -33,9 +33,20 @@
     "formal": [],
     "experience_years": 5,
     "recommended_certs": [
-      "csa.ccsk-v5",
-      "isc2.cissp",
-      "isc2.sscp"
+      {
+        "id": "csa.ccsk-v5",
+        "source": "official-recommended",
+        "url": "https://cloudsecurityalliance.org/education/ccsk"
+      },
+      {
+        "id": "isc2.cissp",
+        "source": "official-recommended",
+        "url": "https://www.isc2.org/Certifications/CCSP"
+      },
+      {
+        "id": "isc2.sscp",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

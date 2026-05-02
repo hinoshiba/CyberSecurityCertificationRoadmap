@@ -30,7 +30,10 @@
     "formal": [],
     "experience_years": 0,
     "recommended_certs": [
-      "zensho.jouhou-shori-2"
+      {
+        "id": "zensho.jouhou-shori-2",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

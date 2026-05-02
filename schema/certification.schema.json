@@ -53,9 +53,41 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "formal":              { "type": "array", "items": { "type": "string" } },
-        "experience_years":    { "type": "number", "minimum": 0 },
-        "recommended_certs":   { "type": "array", "items": { "type": "string" } }
+        "formal":           { "type": "array", "items": { "type": "string" } },
+        "experience_years": { "type": "number", "minimum": 0 },
+        "required_certs": {
+          "description": "HARD prerequisites — certs the candidate MUST hold to register for / sit this exam. Always backed by an official vendor source.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "additionalProperties": false,
+            "properties": {
+              "id":   { "type": "string", "pattern": "^[a-z0-9_-]+\\.[a-z0-9_-]+$" },
+              "url":  { "type": "string", "format": "uri" },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "recommended_certs": {
+          "description": "SOFT prior path — certs commonly taken before this one. Each entry carries provenance via `source` so renderers can prioritize official > inferred when capping the displayed graph.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "source"],
+            "additionalProperties": false,
+            "properties": {
+              "id":        { "type": "string", "pattern": "^[a-z0-9_-]+\\.[a-z0-9_-]+$" },
+              "source":    {
+                "type": "string",
+                "enum": ["official-recommended", "vendor-ladder", "community"],
+                "description": "official-recommended = vendor explicitly recommends this prior cert in their docs; vendor-ladder = implied by the same-vendor tier ladder; community = third-party / industry reputation only."
+              },
+              "rationale": { "type": "string" },
+              "url":       { "type": "string", "format": "uri" }
+            }
+          }
+        }
       }
     },
     "scoring_factors": {

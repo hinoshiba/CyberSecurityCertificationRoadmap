@@ -641,13 +641,63 @@ body.has-selection.panel-dismissed .show-details-cta { display: inline-flex; }
 .detail-grid .small { font-size: 0.72rem; }
 .weight { color: var(--muted); font-size: 0.7rem; }
 .rel-block { margin-bottom: 0.6rem; }
+.rel-list { display: flex; flex-direction: column; gap: 0.35rem !important; }
+.rel-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 4px 8px;
+  border-left: 3px solid var(--border);
+  background: var(--panel-2, transparent);
+  border-radius: 0 4px 4px 0;
+}
 .rel-list a {
   display: inline-flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 0.4rem;
   padding: 2px 0;
 }
 .rel-list .missing { color: var(--muted); }
+.rel-rationale { font-size: 0.74rem; line-height: 1.35; padding-left: 0; }
+
+/* Required prerequisites — strong red accent (these are HARD prereqs). */
+.rel-list.required li {
+  border-left-color: var(--tier-expert, #ff5252);
+  background: color-mix(in srgb, var(--tier-expert, #ff5252) 6%, transparent);
+}
+
+/* Recommended prior certs — muted neutral; per-entry source badge supplies
+   the visual distinction between official / vendor-ladder / community. */
+.rel-list.recommended li { border-left-color: var(--tier-associate, #4caf50); }
+
+/* Source provenance badges */
+.src-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-right: 0.35rem;
+  vertical-align: 1px;
+  text-transform: uppercase;
+}
+.src-official-recommended { background: rgba(88, 166, 255, 0.18); color: #58a6ff; border: 1px solid rgba(88, 166, 255, 0.4); }
+.src-vendor-ladder        { background: rgba(180, 180, 180, 0.15); color: var(--muted); border: 1px solid rgba(180, 180, 180, 0.3); }
+.src-community            { background: rgba(255, 178, 102, 0.15); color: #ffb266;     border: 1px solid rgba(255, 178, 102, 0.35); }
+
+[data-theme="light"] .src-official-recommended { background: rgba(8, 87, 175, 0.12); color: #0857af; border-color: rgba(8, 87, 175, 0.3); }
+[data-theme="light"] .src-vendor-ladder        { background: rgba(80, 80, 80, 0.08);  color: #555;    border-color: rgba(80, 80, 80, 0.25); }
+[data-theme="light"] .src-community            { background: rgba(189, 99, 0, 0.12);  color: #bd6300; border-color: rgba(189, 99, 0, 0.3); }
+
+.src-evidence {
+  margin-left: 0.2rem;
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: var(--muted);
+}
+.src-evidence:hover { color: var(--accent, #58a6ff); }
 
 /* ----------------------- About footer (fixed, always visible) ----------------------- */
 .about {

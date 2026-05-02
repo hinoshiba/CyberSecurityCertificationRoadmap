@@ -31,7 +31,10 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "giac.gcih"
+      {
+        "id": "giac.gcih",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

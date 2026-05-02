@@ -31,8 +31,14 @@
     "formal": [],
     "experience_years": 0,
     "recommended_certs": [
-      "jken.j-design",
-      "jken.j-katsuyou"
+      {
+        "id": "jken.j-design",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "jken.j-katsuyou",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

@@ -36,7 +36,13 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 0,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "microsoft.sc-900",
+        "source": "community",
+        "rationale": "ベンダ寄り入門 SC-900 から、ベンダ中立な ISC2 CC へ — 入門学習者の進級ルート。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

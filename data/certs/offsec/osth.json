@@ -31,8 +31,14 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "offsec.osda",
-      "offsec.oswp"
+      {
+        "id": "offsec.osda",
+        "source": "official-recommended"
+      },
+      {
+        "id": "offsec.oswp",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

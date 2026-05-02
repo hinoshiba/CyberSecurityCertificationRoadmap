@@ -31,7 +31,11 @@
     "formal": [],
     "experience_years": 4,
     "recommended_certs": [
-      "giac.gcfa"
+      {
+        "id": "giac.gcfa",
+        "source": "official-recommended",
+        "url": "https://www.giac.org/certifications/reverse-engineering-malware-grem/"
+      }
     ]
   },
   "scoring_factors": {

@@ -25,13 +25,34 @@
     "formal": [],
     "experience_years": 7,
     "recommended_certs": [
-      "giac.gcia",
-      "giac.gcih",
-      "giac.gcti",
-      "giac.gmon",
-      "giac.gnfa",
-      "giac.gpen",
-      "giac.grid"
+      {
+        "id": "giac.gcia",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gcih",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gcti",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gmon",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gnfa",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gpen",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.grid",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

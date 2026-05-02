@@ -24,8 +24,14 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "giac.gcia",
-      "giac.gsec"
+      {
+        "id": "giac.gcia",
+        "source": "official-recommended"
+      },
+      {
+        "id": "giac.gsec",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

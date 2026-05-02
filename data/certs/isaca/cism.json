@@ -36,9 +36,24 @@
     "formal": [],
     "experience_years": 5,
     "recommended_certs": [
-      "isaca.cdpse",
-      "isaca.cisa",
-      "isaca.crisc"
+      {
+        "id": "isaca.cdpse",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "isaca.cisa",
+        "source": "official-recommended",
+        "url": "https://www.isaca.org/credentialing/cism"
+      },
+      {
+        "id": "isaca.crisc",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "isc2.cissp",
+        "source": "community",
+        "rationale": "技術寄りの CISSP から、管理職向けの CISM へ横展開するのはセキュリティリーダー候補の定番。"
+      }
     ]
   },
   "scoring_factors": {

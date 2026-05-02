@@ -31,8 +31,14 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "isaca.cisa",
-      "iapp.cipp-e"
+      {
+        "id": "iapp.cipp-e",
+        "source": "community"
+      },
+      {
+        "id": "isaca.cisa",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

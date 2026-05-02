@@ -39,8 +39,25 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "comptia.network-plus",
-      "isc2.cc"
+      {
+        "id": "comptia.network-plus",
+        "source": "official-recommended",
+        "url": "https://www.comptia.org/certifications/security"
+      },
+      {
+        "id": "ipa.sc",
+        "source": "community",
+        "rationale": "Security+ は SC 取得者が国際的な英語ベースの基礎資格として追加することが多い。"
+      },
+      {
+        "id": "isc2.cc",
+        "source": "official-recommended"
+      },
+      {
+        "id": "microsoft.sc-900",
+        "source": "community",
+        "rationale": "Microsoft 入門で語彙を得た後に業界標準ベンチマークの Security+ で深化させるパターン。"
+      }
     ]
   },
   "scoring_factors": {

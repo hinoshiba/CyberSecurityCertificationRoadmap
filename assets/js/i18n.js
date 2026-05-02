@@ -14,8 +14,18 @@ const STRINGS = {
   third_party_evals:    { en: "Third-party evaluations",      ja: "第三者評価" },
   sources:              { en: "Sources",                      ja: "ソース" },
   persona_eval:         { en: "3-persona evaluation",         ja: "3ペルソナ評価" },
-  recommended_prereqs:  { en: "Recommended prerequisites",    ja: "推奨される前提資格" },
+  required_prereqs:     { en: "Required prerequisites",       ja: "必須の前提資格" },
+  recommended_prereqs:  { en: "Recommended prior certs",      ja: "事前に取得することが多い資格" },
   commonly_followed_by: { en: "Commonly followed by",         ja: "次に取得されやすい資格" },
+
+  // recommended_certs source provenance badges + tooltips
+  src_official_recommended:         { en: "OFFICIAL",  ja: "公式" },
+  src_official_recommended_tooltip: { en: "Vendor / authority explicitly recommends this prior cert.", ja: "ベンダ・権威機関が公式に事前取得を推奨している。" },
+  src_vendor_ladder:                { en: "LADDER",    ja: "段階" },
+  src_vendor_ladder_tooltip:        { en: "Implied by the same-vendor tier ladder.",                    ja: "同一ベンダのティアラダーに沿った推測。" },
+  src_community:                    { en: "COMMUNITY", ja: "通説" },
+  src_community_tooltip:            { en: "Community / industry-reputation pattern, not vendor-documented.", ja: "コミュニティ / 業界通説によるもの。ベンダ非公式。" },
+  src_evidence:                     { en: "Evidence link", ja: "根拠リンク" },
 
   // logistics keys
   cost_usd:        { en: "Cost USD",       ja: "費用 (USD)" },
@@ -53,9 +63,9 @@ const STRINGS = {
   ctx_show_details: { en: "Show details",   ja: "詳細を表示" },
 
   // legend
-  legend_prereq: { en: "→ Prerequisite",                  ja: "→ 前提資格" },
-  legend_next:   { en: "⇢ Commonly followed by",          ja: "⇢ 次に取得されやすい資格" },
-  legend_depth:  { en: "(up to 3 hops; fainter = farther)", ja: "(最大3ホップ、薄いほど遠い)" },
+  legend_prereq: { en: "→ Prereq (▬ required ┊ ━ recommended ┄ community)",  ja: "→ 前提 (▬ 必須 ┊ ━ 推奨 ┄ 通説)" },
+  legend_next:   { en: "⇢ Commonly followed by",                              ja: "⇢ 次に取得されやすい資格" },
+  legend_depth:  { en: "(up to 3 hops, max 20 edges; fainter = farther)",     ja: "(最大3ホップ・最大20本、薄いほど遠い)" },
   legend_hint:   { en: "Click a cert. ESC to deselect. URL is bookmarkable.", ja: "資格をクリック。ESC で選択解除。URL はブックマーク可能。" },
 
   // availability

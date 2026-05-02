@@ -30,7 +30,10 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "ec-council.ceh"
+      {
+        "id": "ec-council.ceh",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

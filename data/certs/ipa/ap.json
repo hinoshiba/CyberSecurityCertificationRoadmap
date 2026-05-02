@@ -31,7 +31,11 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "ipa.fe"
+      {
+        "id": "ipa.fe",
+        "source": "official-recommended",
+        "url": "https://www.ipa.go.jp/shiken/kubun/ap.html"
+      }
     ]
   },
   "scoring_factors": {

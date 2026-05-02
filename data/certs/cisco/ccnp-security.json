@@ -22,9 +22,18 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "cisco.ccna",
-      "cisco.cyberops-associate",
-      "cisco.devnet-associate"
+      {
+        "id": "cisco.ccna",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "cisco.cyberops-associate",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "cisco.devnet-associate",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

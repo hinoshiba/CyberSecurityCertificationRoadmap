@@ -22,7 +22,10 @@
     "formal": [],
     "experience_years": 4,
     "recommended_certs": [
-      "ine.ewpt"
+      {
+        "id": "ine.ewpt",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

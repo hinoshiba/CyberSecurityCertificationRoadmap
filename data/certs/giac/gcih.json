@@ -32,7 +32,21 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "giac.gsec"
+      {
+        "id": "comptia.cysa-plus",
+        "source": "community",
+        "rationale": "CySA+ で SOC アナリストの素養を得てから GCIH で SANS グレードのインシデントハンドリング深度へ。"
+      },
+      {
+        "id": "giac.gsec",
+        "source": "official-recommended",
+        "url": "https://www.giac.org/certifications/certified-incident-handler-gcih/"
+      },
+      {
+        "id": "hackthebox.cdsa",
+        "source": "community",
+        "rationale": "ブルーチームアナリスト CDSA → SANS グレードのインシデントハンドリング深度 GCIH へ — 防御側深掘りの定番。"
+      }
     ]
   },
   "scoring_factors": {

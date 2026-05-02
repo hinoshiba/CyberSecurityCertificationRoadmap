@@ -30,7 +30,18 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 0,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "ipa.fe",
+        "source": "community",
+        "rationale": "FE 取得後にセキュリティ実務寄りの知識を補完する追加学習として日本企業内で広く採用されている。"
+      },
+      {
+        "id": "ipa.sg",
+        "source": "community",
+        "rationale": "情報セキュリティマネジメント (SG) で得た一般リテラシーから、CSBM で運用実務へ拡張する社会人定番ルート。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

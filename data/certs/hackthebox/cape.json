@@ -22,7 +22,10 @@
     "formal": [],
     "experience_years": 4,
     "recommended_certs": [
-      "hackthebox.cpts"
+      {
+        "id": "hackthebox.cpts",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

@@ -31,7 +31,10 @@
     "formal": [],
     "experience_years": 1,
     "recommended_certs": [
-      "offsec.oscc-sec"
+      {
+        "id": "offsec.oscc-sec",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

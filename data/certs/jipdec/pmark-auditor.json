@@ -22,7 +22,10 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "jipdec.isms-internal-auditor"
+      {
+        "id": "jipdec.isms-internal-auditor",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

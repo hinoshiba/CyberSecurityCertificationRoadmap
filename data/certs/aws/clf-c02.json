@@ -23,7 +23,13 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 0,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "microsoft.az-900",
+        "source": "community",
+        "rationale": "クロスクラウド・リテラシー獲得を目的に、両主要パブリッククラウドの入門資格を併取するのは技術リーダーの定番。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

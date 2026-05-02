@@ -30,10 +30,52 @@
     "formal": [],
     "experience_years": 1,
     "recommended_certs": [
-      "comptia.pentest-plus",
-      "offsec.klcp",
-      "offsec.oscc-sec",
-      "offsec.oswa"
+      {
+        "id": "comptia.pentest-plus",
+        "source": "community"
+      },
+      {
+        "id": "ec-council.ceh",
+        "source": "community",
+        "rationale": "理論寄り CEH から実技中心 OSCP への進級は、攻撃側エンジニアキャリアの最も典型的な「理論→実践」ステップ。"
+      },
+      {
+        "id": "hackthebox.cpts",
+        "source": "community",
+        "rationale": "CPTS は実技ベースで OSCP に近い評価を持つが、業界標準 / 米国 DoD 8140 認定の OSCP を追加する人は多い。"
+      },
+      {
+        "id": "ine.ecppt",
+        "source": "community",
+        "rationale": "INE 系の実技ペンテスト学習からの自然な「業界標準への昇格」。"
+      },
+      {
+        "id": "ine.ejpt",
+        "source": "community",
+        "rationale": "ジュニア向け eJPT を経て、業界標準 OSCP に進むのは予算・時間が限られた学習者の定番ルート。"
+      },
+      {
+        "id": "offsec.klcp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "offsec.oscc-sec",
+        "source": "official-recommended"
+      },
+      {
+        "id": "offsec.oswa",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "tcm-security.pjpt",
+        "source": "community",
+        "rationale": "低コスト実技 PJPT で実技の感覚を掴んでから、業界標準 OSCP に挑む経済的な進級パス。"
+      },
+      {
+        "id": "tcm-security.pnpt",
+        "source": "community",
+        "rationale": "ネットワークペンテスト PNPT で AD 攻撃を体験した後、業界標準資格として OSCP を追加する流れ。"
+      }
     ]
   },
   "scoring_factors": {

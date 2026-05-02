@@ -32,7 +32,13 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 1,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "ipa.nw",
+        "source": "community",
+        "rationale": "国際的に通用するネットワーク基礎の英語ベンチマークとして、NW 取得者が追加するパターン。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

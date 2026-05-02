@@ -30,7 +30,13 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 3,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "isc2.csslp",
+        "source": "community",
+        "rationale": "セキュア SDLC の CSSLP から、クラウドセキュリティオートメーションの GCSA へ — DevSecOps エンジニアの組み合わせ。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

@@ -33,8 +33,15 @@
     "formal": [],
     "experience_years": 4,
     "recommended_certs": [
-      "comptia.security-plus",
-      "comptia.network-plus"
+      {
+        "id": "comptia.network-plus",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "comptia.security-plus",
+        "source": "official-recommended",
+        "url": "https://www.comptia.org/certifications/cybersecurity-analyst"
+      }
     ]
   },
   "scoring_factors": {

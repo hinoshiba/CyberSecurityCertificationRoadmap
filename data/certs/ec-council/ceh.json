@@ -33,7 +33,10 @@
     ],
     "experience_years": 2,
     "recommended_certs": [
-      "comptia.security-plus"
+      {
+        "id": "comptia.security-plus",
+        "source": "community"
+      }
     ]
   },
   "scoring_factors": {

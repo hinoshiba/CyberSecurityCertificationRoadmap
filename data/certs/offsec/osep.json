@@ -30,8 +30,15 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "offsec.oscp",
-      "offsec.oswa"
+      {
+        "id": "offsec.oscp",
+        "source": "official-recommended",
+        "url": "https://www.offsec.com/courses/pen-300/"
+      },
+      {
+        "id": "offsec.oswa",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

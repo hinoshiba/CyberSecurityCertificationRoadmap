@@ -31,9 +31,18 @@
     "formal": [],
     "experience_years": 5,
     "recommended_certs": [
-      "ipa.ap",
-      "ipa.pm",
-      "ipa.sg"
+      {
+        "id": "ipa.ap",
+        "source": "official-recommended"
+      },
+      {
+        "id": "ipa.pm",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.sg",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

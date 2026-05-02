@@ -40,10 +40,30 @@
     ],
     "experience_years": 5,
     "recommended_certs": [
-      "microsoft.az-500",
-      "microsoft.sc-200",
-      "microsoft.sc-300",
-      "microsoft.sc-401"
+      {
+        "id": "isc2.ccsp",
+        "source": "community",
+        "rationale": "ベンダ中立クラウド設計の知見を、Microsoft 環境のセキュリティアーキテクト視点へ展開。"
+      },
+      {
+        "id": "microsoft.az-500",
+        "source": "official-recommended",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/"
+      },
+      {
+        "id": "microsoft.sc-200",
+        "source": "official-recommended",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/"
+      },
+      {
+        "id": "microsoft.sc-300",
+        "source": "official-recommended",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/"
+      },
+      {
+        "id": "microsoft.sc-401",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

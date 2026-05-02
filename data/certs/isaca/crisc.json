@@ -33,7 +33,11 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "isaca.cisa"
+      {
+        "id": "isaca.cisa",
+        "source": "official-recommended",
+        "url": "https://www.isaca.org/credentialing/crisc"
+      }
     ]
   },
   "scoring_factors": {

@@ -32,7 +32,11 @@
     ],
     "experience_years": 5,
     "recommended_certs": [
-      "offsec.osce3"
+      {
+        "id": "offsec.osce3",
+        "source": "official-recommended",
+        "url": "https://www.offsec.com/courses/exp-401/"
+      }
     ]
   },
   "scoring_factors": {

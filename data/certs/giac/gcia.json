@@ -32,8 +32,14 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "comptia.network-plus",
-      "giac.gsec"
+      {
+        "id": "comptia.network-plus",
+        "source": "community"
+      },
+      {
+        "id": "giac.gsec",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

@@ -31,9 +31,18 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "iapp.cipp-e",
-      "iapp.cipp-us",
-      "iapp.cipt"
+      {
+        "id": "iapp.cipp-e",
+        "source": "official-recommended"
+      },
+      {
+        "id": "iapp.cipp-us",
+        "source": "official-recommended"
+      },
+      {
+        "id": "iapp.cipt",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

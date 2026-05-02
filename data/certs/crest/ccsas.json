@@ -22,7 +22,10 @@
     "formal": [],
     "experience_years": 6,
     "recommended_certs": [
-      "crest.crt"
+      {
+        "id": "crest.crt",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

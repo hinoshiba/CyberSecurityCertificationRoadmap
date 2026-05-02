@@ -25,8 +25,14 @@
     "formal": [],
     "experience_years": 1,
     "recommended_certs": [
-      "aws.aif-c01",
-      "aws.clf-c02"
+      {
+        "id": "aws.aif-c01",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.clf-c02",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

@@ -24,7 +24,10 @@
     "formal": [],
     "experience_years": 6,
     "recommended_certs": [
-      "juniper.jncip-sec"
+      {
+        "id": "juniper.jncip-sec",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

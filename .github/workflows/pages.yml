@@ -30,7 +30,7 @@ jobs:
         # Writes assets/version.json with the current commit SHA, build
         # timestamp, and the date of the most recent commit touching data/.
         # The site loads this at runtime to show "Updated YYYY-MM-DD ·
-        # commit abc1234" in the footer and bake the same line into PNG/PDF
+        # commit abc1234" in the footer and bake the same line into PNG
         # exports.
         run: |
           set -e
@@ -51,6 +51,10 @@ jobs:
           echo "--- assets/version.json ---"
           cat assets/version.json
       - uses: actions/configure-pages@v5
+        with:
+          # Auto-enable Pages on first run if the repo doesn't have it set up
+          # yet. Avoids the "Get Pages site failed - Not Found" error.
+          enablement: true
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:

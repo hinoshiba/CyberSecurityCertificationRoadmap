@@ -32,8 +32,15 @@
     "formal": [],
     "experience_years": 0,
     "recommended_certs": [
-      "ipa.ip",
-      "jken.j-system"
+      {
+        "id": "ipa.ip",
+        "source": "official-recommended",
+        "url": "https://www.ipa.go.jp/shiken/kubun/fe.html"
+      },
+      {
+        "id": "jken.j-system",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

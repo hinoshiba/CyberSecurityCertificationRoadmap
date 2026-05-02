@@ -31,8 +31,14 @@
     "formal": [],
     "experience_years": 0,
     "recommended_certs": [
-      "jken.j-katsuyou",
-      "zensho.jouhou-shori-1"
+      {
+        "id": "jken.j-katsuyou",
+        "source": "official-recommended"
+      },
+      {
+        "id": "zensho.jouhou-shori-1",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

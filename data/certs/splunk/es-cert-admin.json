@@ -22,7 +22,10 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "splunk.core-power-user"
+      {
+        "id": "splunk.core-power-user",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

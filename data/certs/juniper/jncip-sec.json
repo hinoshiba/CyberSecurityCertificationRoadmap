@@ -22,7 +22,10 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "juniper.jncis-sec"
+      {
+        "id": "juniper.jncis-sec",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

@@ -30,8 +30,14 @@
     "formal": [],
     "experience_years": 1,
     "recommended_certs": [
-      "offsec.klcp",
-      "offsec.oswp"
+      {
+        "id": "offsec.klcp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "offsec.oswp",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

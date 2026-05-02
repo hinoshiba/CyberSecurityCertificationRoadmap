@@ -24,8 +24,19 @@
     "formal": [],
     "experience_years": 1,
     "recommended_certs": [
-      "aws.aif-c01",
-      "aws.clf-c02"
+      {
+        "id": "aws.aif-c01",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "aws.clf-c02",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.ap",
+        "source": "community",
+        "rationale": "国家資格 AP ＋ AWS SAA は日本の SI 企業で「国内基礎 + クラウド実装」の標準的なペアリングとして定着。"
+      }
     ]
   },
   "scoring_factors": {

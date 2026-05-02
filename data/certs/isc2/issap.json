@@ -32,11 +32,27 @@
     "formal": [],
     "experience_years": 5,
     "recommended_certs": [
-      "isc2.ccsp",
-      "isc2.cgrc",
-      "isc2.cissp",
-      "isc2.csslp",
-      "isc2.hcispp"
+      {
+        "id": "isc2.ccsp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "isc2.cgrc",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "isc2.cissp",
+        "source": "official-recommended",
+        "url": "https://www.isc2.org/Certifications/ISSAP"
+      },
+      {
+        "id": "isc2.csslp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "isc2.hcispp",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

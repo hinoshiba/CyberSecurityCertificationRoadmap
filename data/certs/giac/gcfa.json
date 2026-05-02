@@ -29,12 +29,41 @@
     "formal": [],
     "experience_years": 4,
     "recommended_certs": [
-      "giac.gcia",
-      "giac.gcih",
-      "giac.gcti",
-      "giac.gmon",
-      "giac.gnfa",
-      "giac.grid"
+      {
+        "id": "comptia.cysa-plus",
+        "source": "community",
+        "rationale": "アナリストからフォレンジック専門領域へ展開する自然なステップアップ。"
+      },
+      {
+        "id": "ec-council.chfi",
+        "source": "community",
+        "rationale": "ベンダニュートラル CHFI のフォレンジック理論を、SANS グレードの GCFA で実務深度に拡張。"
+      },
+      {
+        "id": "giac.gcia",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gcih",
+        "source": "official-recommended",
+        "url": "https://www.giac.org/certifications/certified-forensic-analyst-gcfa/"
+      },
+      {
+        "id": "giac.gcti",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gmon",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.gnfa",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "giac.grid",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

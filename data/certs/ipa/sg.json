@@ -22,8 +22,14 @@
     "formal": [],
     "experience_years": 0,
     "recommended_certs": [
-      "ipa.ap",
-      "ipa.fe"
+      {
+        "id": "ipa.ap",
+        "source": "official-recommended"
+      },
+      {
+        "id": "ipa.fe",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

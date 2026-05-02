@@ -22,7 +22,10 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "checkpoint.ccsa-r82"
+      {
+        "id": "checkpoint.ccsa-r82",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

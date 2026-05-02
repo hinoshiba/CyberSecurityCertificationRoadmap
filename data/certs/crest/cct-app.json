@@ -24,7 +24,11 @@
     "formal": [],
     "experience_years": 5,
     "recommended_certs": [
-      "crest.crt"
+      {
+        "id": "crest.crt",
+        "source": "official-recommended",
+        "url": "https://www.crest-approved.org/skills-certifications-careers/crest-certified-web-application-tester/"
+      }
     ]
   },
   "scoring_factors": {

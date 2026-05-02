@@ -34,7 +34,13 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 5,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "isc2.cissp",
+        "source": "community",
+        "rationale": "セキュリティ全般の CISSP から、監査領域への横展開として CISA を取得するキャリアパス。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

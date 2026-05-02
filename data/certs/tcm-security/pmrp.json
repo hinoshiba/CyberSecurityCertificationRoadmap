@@ -22,7 +22,10 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "tcm-security.psaa"
+      {
+        "id": "tcm-security.psaa",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

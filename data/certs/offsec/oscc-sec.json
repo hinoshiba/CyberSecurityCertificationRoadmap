@@ -30,7 +30,10 @@
     "formal": [],
     "experience_years": 0,
     "recommended_certs": [
-      "offsec.oscc-sjd"
+      {
+        "id": "offsec.oscc-sjd",
+        "source": "official-recommended"
+      }
     ]
   },
   "scoring_factors": {

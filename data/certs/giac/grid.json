@@ -31,7 +31,11 @@
     "formal": [],
     "experience_years": 4,
     "recommended_certs": [
-      "giac.gicsp"
+      {
+        "id": "giac.gicsp",
+        "source": "official-recommended",
+        "url": "https://www.giac.org/certifications/response-and-industrial-defense-grid/"
+      }
     ]
   },
   "scoring_factors": {

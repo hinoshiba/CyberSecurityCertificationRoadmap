@@ -28,7 +28,13 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 2,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "isaca.cisa",
+        "source": "community",
+        "rationale": "監査の CISA から、ガバナンス・リスク・コンプライアンス特化の CGRC への横展開。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

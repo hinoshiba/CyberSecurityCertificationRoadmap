@@ -35,11 +35,32 @@
     ],
     "experience_years": 0,
     "recommended_certs": [
-      "ipa.ap",
-      "ipa.db",
-      "ipa.pm",
-      "ipa.sc",
-      "ipa.sg"
+      {
+        "id": "ipa.ap",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.db",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.pm",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.sc",
+        "source": "official-recommended",
+        "url": "https://www.ipa.go.jp/jinzai/riss/"
+      },
+      {
+        "id": "ipa.sg",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "seaj.cspm-management",
+        "source": "community",
+        "rationale": "CSPM Management の運用統制内容が、情報処理安全確保支援士 (RISS) の業務遂行領域と直接重なる。"
+      }
     ]
   },
   "scoring_factors": {

@@ -23,7 +23,18 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 1,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "comptia.network-plus",
+        "source": "community",
+        "rationale": "ベンダ中立基礎から Cisco 実装中心の同領域資格へ、と進むのは入門ネットワークエンジニアの定番。"
+      },
+      {
+        "id": "ipa.nw",
+        "source": "community",
+        "rationale": "ベンダ中立な NW (ネットワークスペシャリスト) に対し、CCNA は Cisco 機器中心の実装知識を補う組み合わせとして人気。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

@@ -33,10 +33,33 @@
     "formal": [],
     "experience_years": 0,
     "recommended_certs": [
-      "ipa.ap",
-      "ipa.db",
-      "ipa.pm",
-      "ipa.sg"
+      {
+        "id": "ipa.ap",
+        "source": "official-recommended",
+        "url": "https://www.ipa.go.jp/shiken/kubun/sc.html"
+      },
+      {
+        "id": "ipa.db",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.pm",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "ipa.sg",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "seaj.csbm",
+        "source": "community",
+        "rationale": "SEA/J CSBM のセキュリティ運用管理知識は、IPA 情報処理安全確保支援士 (SC) の午前II〜午後の管理系設問の前提知識と重複範囲が広い。"
+      },
+      {
+        "id": "seaj.cspm-technical",
+        "source": "community",
+        "rationale": "TLS / 鍵管理 / セキュア実装といった CSPM 技術コースの内容は、SC 午後 I/II の技術系出題に直結する定番ルート。"
+      }
     ]
   },
   "scoring_factors": {

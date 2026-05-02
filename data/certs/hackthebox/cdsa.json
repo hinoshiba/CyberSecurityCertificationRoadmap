@@ -23,7 +23,13 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 2,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "comptia.cysa-plus",
+        "source": "community",
+        "rationale": "理論寄り CySA+ から、HackTheBox の実技ベース CDSA で SOC 実務感覚を養うパス。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [

@@ -33,8 +33,15 @@
     "formal": [],
     "experience_years": 10,
     "recommended_certs": [
-      "comptia.security-plus",
-      "comptia.cysa-plus"
+      {
+        "id": "comptia.cysa-plus",
+        "source": "official-recommended",
+        "url": "https://www.comptia.org/certifications/comptia-advanced-security-practitioner"
+      },
+      {
+        "id": "comptia.security-plus",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

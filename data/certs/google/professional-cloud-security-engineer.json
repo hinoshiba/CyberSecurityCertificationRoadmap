@@ -32,7 +32,10 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "google.ace"
+      {
+        "id": "google.ace",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

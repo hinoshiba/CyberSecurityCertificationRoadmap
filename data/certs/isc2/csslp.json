@@ -31,8 +31,15 @@
     "formal": [],
     "experience_years": 4,
     "recommended_certs": [
-      "isc2.cissp",
-      "isc2.sscp"
+      {
+        "id": "isc2.cissp",
+        "source": "official-recommended",
+        "url": "https://www.isc2.org/Certifications/CSSLP"
+      },
+      {
+        "id": "isc2.sscp",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

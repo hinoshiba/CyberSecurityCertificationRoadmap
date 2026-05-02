@@ -22,7 +22,11 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "crest.cpsa"
+      {
+        "id": "crest.cpsa",
+        "source": "official-recommended",
+        "url": "https://www.crest-approved.org/skills-certifications-careers/crest-registered-tester/"
+      }
     ]
   },
   "scoring_factors": {

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-02T06:09:53Z",
+  "generated_at": "2026-05-02T07:35:43Z",
   "domains_path": "domains.json",
   "tiers_path": "tiers.json",
   "agencies_path": "sources/agencies.json",
@@ -18,52 +18,52 @@
     {
       "id": "aws.ans-c01",
       "path": "certs/aws/ans-c01.json",
-      "sha": "b90bae074ed93b7a"
+      "sha": "1cadb960d0017a69"
     },
     {
       "id": "aws.clf-c02",
       "path": "certs/aws/clf-c02.json",
-      "sha": "71a8831eeeb2a018"
+      "sha": "3b78303e119a4898"
     },
     {
       "id": "aws.dea-c01",
       "path": "certs/aws/dea-c01.json",
-      "sha": "fdff8f723166dc5b"
+      "sha": "a36d9c5551f2af1f"
     },
     {
       "id": "aws.dop-c02",
       "path": "certs/aws/dop-c02.json",
-      "sha": "a445743528a6213d"
+      "sha": "75def07ea2bf1061"
     },
     {
       "id": "aws.dva-c02",
       "path": "certs/aws/dva-c02.json",
-      "sha": "598a49eaf8650542"
+      "sha": "eb692cfe14134de5"
     },
     {
       "id": "aws.mla-c01",
       "path": "certs/aws/mla-c01.json",
-      "sha": "0a556a398b8b0492"
+      "sha": "d5c0059c497d1637"
     },
     {
       "id": "aws.saa-c03",
       "path": "certs/aws/saa-c03.json",
-      "sha": "f3b9e80164d57273"
+      "sha": "0e4776895d8d9198"
     },
     {
       "id": "aws.sap-c02",
       "path": "certs/aws/sap-c02.json",
-      "sha": "49f69d764dceaec9"
+      "sha": "37a4e67f46eaa19d"
     },
     {
       "id": "aws.security-specialty",
       "path": "certs/aws/security-specialty.json",
-      "sha": "a166f1338c99640b"
+      "sha": "031952d2914129b2"
     },
     {
       "id": "aws.soa-c03",
       "path": "certs/aws/soa-c03.json",
-      "sha": "e69ddd299d837840"
+      "sha": "25bfe6d4106b9f24"
     },
     {
       "id": "bsi-group.iso22301-la",
@@ -88,52 +88,52 @@
     {
       "id": "checkpoint.ccse-r82",
       "path": "certs/checkpoint/ccse-r82.json",
-      "sha": "889924d7d01e8efe"
+      "sha": "27cfe86dbc81c8c5"
     },
     {
       "id": "checkpoint.ccsm-elite",
       "path": "certs/checkpoint/ccsm-elite.json",
-      "sha": "8629765d256ce0d8"
+      "sha": "2cfbb79bc59ba5be"
     },
     {
       "id": "cisco.cbrfir-300-215",
       "path": "certs/cisco/cbrfir-300-215.json",
-      "sha": "f73f44a0c9e5f58f"
+      "sha": "e460744c832d5dee"
     },
     {
       "id": "cisco.ccie-enterprise-infrastructure",
       "path": "certs/cisco/ccie-enterprise-infrastructure.json",
-      "sha": "dfe8694821d7fc83"
+      "sha": "979cb17090b051a2"
     },
     {
       "id": "cisco.ccie-security",
       "path": "certs/cisco/ccie-security.json",
-      "sha": "3c3d8e59713edcc2"
+      "sha": "cc5bca342a4cc204"
     },
     {
       "id": "cisco.ccna",
       "path": "certs/cisco/ccna.json",
-      "sha": "545cc24782acc1a6"
+      "sha": "b76a2d68dc77c534"
     },
     {
       "id": "cisco.ccnp-enterprise",
       "path": "certs/cisco/ccnp-enterprise.json",
-      "sha": "aff08d5288d81e7d"
+      "sha": "433244ee503387fd"
     },
     {
       "id": "cisco.ccnp-security",
       "path": "certs/cisco/ccnp-security.json",
-      "sha": "c6e61c9b35fc3d8f"
+      "sha": "3bc68eb590f82c35"
     },
     {
       "id": "cisco.cyberops-associate",
       "path": "certs/cisco/cyberops-associate.json",
-      "sha": "96211af23e0fdefa"
+      "sha": "92d1d88c08c56b72"
     },
     {
       "id": "cisco.cyberops-professional",
       "path": "certs/cisco/cyberops-professional.json",
-      "sha": "dd16e9372f454a5d"
+      "sha": "ac98ba8472f4d224"
     },
     {
       "id": "cisco.devnet-associate",
@@ -143,32 +143,32 @@
     {
       "id": "cisco.devnet-professional",
       "path": "certs/cisco/devnet-professional.json",
-      "sha": "10206027db4b9f93"
+      "sha": "97576bce7c7dad53"
     },
     {
       "id": "comptia.casp-plus",
       "path": "certs/comptia/casp-plus.json",
-      "sha": "416fac5c4f99ea8a"
+      "sha": "88b5f4777cfc0ffc"
     },
     {
       "id": "comptia.cysa-plus",
       "path": "certs/comptia/cysa-plus.json",
-      "sha": "fa1578cac3a6dd8b"
+      "sha": "df81c5311a6d4f87"
     },
     {
       "id": "comptia.network-plus",
       "path": "certs/comptia/network-plus.json",
-      "sha": "41ec3c8240b7168f"
+      "sha": "3c68062a3687cfab"
     },
     {
       "id": "comptia.pentest-plus",
       "path": "certs/comptia/pentest-plus.json",
-      "sha": "c89501890e81596c"
+      "sha": "a64b9570b6b69a27"
     },
     {
       "id": "comptia.security-plus",
       "path": "certs/comptia/security-plus.json",
-      "sha": "16cf477d05f77538"
+      "sha": "2857d68dee234ea8"
     },
     {
       "id": "cqi-irca.iso27001-la",
@@ -178,17 +178,17 @@
     {
       "id": "crest.ccsas",
       "path": "certs/crest/ccsas.json",
-      "sha": "d9448a447d9211a0"
+      "sha": "fd95a04ae29fdeae"
     },
     {
       "id": "crest.cct-app",
       "path": "certs/crest/cct-app.json",
-      "sha": "e50678e8249d6c53"
+      "sha": "9d95cec68694631f"
     },
     {
       "id": "crest.cct-inf",
       "path": "certs/crest/cct-inf.json",
-      "sha": "21c4bbbec0a991b5"
+      "sha": "ba1f1fdb3e368963"
     },
     {
       "id": "crest.cpsa",
@@ -198,7 +198,7 @@
     {
       "id": "crest.crt",
       "path": "certs/crest/crt.json",
-      "sha": "cfbb627b292e5c72"
+      "sha": "2dfc7f4df4c48446"
     },
     {
       "id": "crest.crtia",
@@ -223,12 +223,12 @@
     {
       "id": "ec-council.ceh",
       "path": "certs/ec-council/ceh.json",
-      "sha": "1323ad52b10a93ef"
+      "sha": "ddb62b6c0ebc044a"
     },
     {
       "id": "ec-council.chfi",
       "path": "certs/ec-council/chfi.json",
-      "sha": "269a829440b625a3"
+      "sha": "d795dda132b6f10d"
     },
     {
       "id": "ec-council.ctia",
@@ -253,7 +253,7 @@
     {
       "id": "fortinet.nse7-secops",
       "path": "certs/fortinet/nse7-secops.json",
-      "sha": "342352a55a45047e"
+      "sha": "2ea0751615150061"
     },
     {
       "id": "fortinet.nse8",
@@ -273,52 +273,52 @@
     {
       "id": "giac.gced",
       "path": "certs/giac/gced.json",
-      "sha": "146cc6e2d70909df"
+      "sha": "47e2c5330a71c4e0"
     },
     {
       "id": "giac.gcfa",
       "path": "certs/giac/gcfa.json",
-      "sha": "eddab04c4e81e1bb"
+      "sha": "51e3a9516bff16c7"
     },
     {
       "id": "giac.gcia",
       "path": "certs/giac/gcia.json",
-      "sha": "bb92539f5aa2bff0"
+      "sha": "7485b4243df3abb6"
     },
     {
       "id": "giac.gcih",
       "path": "certs/giac/gcih.json",
-      "sha": "86417ab3bece9d66"
+      "sha": "2b20180110bf1c75"
     },
     {
       "id": "giac.gcsa",
       "path": "certs/giac/gcsa.json",
-      "sha": "61b07e723e9b8fad"
+      "sha": "4578ba6c3e4a80af"
     },
     {
       "id": "giac.gcti",
       "path": "certs/giac/gcti.json",
-      "sha": "68cac884143c8b9f"
+      "sha": "973cb8e75b5017b9"
     },
     {
       "id": "giac.gcwn",
       "path": "certs/giac/gcwn.json",
-      "sha": "6018a280f9b81d3e"
+      "sha": "acaea752c2b04a16"
     },
     {
       "id": "giac.gdat",
       "path": "certs/giac/gdat.json",
-      "sha": "02de6070a17d5c98"
+      "sha": "4af4c26d8bd03fef"
     },
     {
       "id": "giac.gicsp",
       "path": "certs/giac/gicsp.json",
-      "sha": "f3b41494c85ba3ab"
+      "sha": "d5ac3e88bbaf299b"
     },
     {
       "id": "giac.gisp",
       "path": "certs/giac/gisp.json",
-      "sha": "8673921233abeb07"
+      "sha": "3a1162d2acdeea2f"
     },
     {
       "id": "giac.gleg",
@@ -328,17 +328,17 @@
     {
       "id": "giac.gmob",
       "path": "certs/giac/gmob.json",
-      "sha": "cf6df9e820cee24c"
+      "sha": "e98416f6435e64e9"
     },
     {
       "id": "giac.gmon",
       "path": "certs/giac/gmon.json",
-      "sha": "cc98aa7e57d0a5be"
+      "sha": "5eb6d1c151d3f763"
     },
     {
       "id": "giac.gnfa",
       "path": "certs/giac/gnfa.json",
-      "sha": "92cff0cbe56b2454"
+      "sha": "6d461a11baa649e2"
     },
     {
       "id": "giac.gosi",
@@ -348,7 +348,7 @@
     {
       "id": "giac.gpen",
       "path": "certs/giac/gpen.json",
-      "sha": "2306441818cc118e"
+      "sha": "5e8ca63255b03727"
     },
     {
       "id": "giac.gpyc",
@@ -358,37 +358,37 @@
     {
       "id": "giac.grem",
       "path": "certs/giac/grem.json",
-      "sha": "fce1fb36edc02da5"
+      "sha": "3170d02e9ddf6ece"
     },
     {
       "id": "giac.grid",
       "path": "certs/giac/grid.json",
-      "sha": "d3ec61067bf96707"
+      "sha": "174dc9287823d66a"
     },
     {
       "id": "giac.gse",
       "path": "certs/giac/gse.json",
-      "sha": "6653e90f3065bacf"
+      "sha": "24b605fc028829e8"
     },
     {
       "id": "giac.gsec",
       "path": "certs/giac/gsec.json",
-      "sha": "d2083ce16720b31f"
+      "sha": "97821938eda732e4"
     },
     {
       "id": "giac.gsna",
       "path": "certs/giac/gsna.json",
-      "sha": "cb9222e6e10cc9ef"
+      "sha": "b7bcbfc32329879f"
     },
     {
       "id": "giac.gstrt",
       "path": "certs/giac/gstrt.json",
-      "sha": "a173cf88a6cd3815"
+      "sha": "b9b2c30e55890184"
     },
     {
       "id": "google.ace",
       "path": "certs/google/ace.json",
-      "sha": "30f536c9d85e62ca"
+      "sha": "fd40de12c16d65a0"
     },
     {
       "id": "google.cdl",
@@ -403,47 +403,47 @@
     {
       "id": "google.pca",
       "path": "certs/google/pca.json",
-      "sha": "b073f6ed61249a4c"
+      "sha": "b49c640a15795ede"
     },
     {
       "id": "google.pcd",
       "path": "certs/google/pcd.json",
-      "sha": "1452a9dddaa40c2c"
+      "sha": "bfb4d1df6f2c9aba"
     },
     {
       "id": "google.pcdb",
       "path": "certs/google/pcdb.json",
-      "sha": "9402688bb02d51a9"
+      "sha": "08aedc8794c07457"
     },
     {
       "id": "google.pcdo",
       "path": "certs/google/pcdo.json",
-      "sha": "b7e9cdaafaada25a"
+      "sha": "40818da25adc23da"
     },
     {
       "id": "google.pcne",
       "path": "certs/google/pcne.json",
-      "sha": "92a5c156f0b3e55f"
+      "sha": "642e6be6ce667eb5"
     },
     {
       "id": "google.pde",
       "path": "certs/google/pde.json",
-      "sha": "affc74fb8cd8644b"
+      "sha": "f5408d920010e805"
     },
     {
       "id": "google.pmle",
       "path": "certs/google/pmle.json",
-      "sha": "d19a71cc4ba7719b"
+      "sha": "ee88a50617efad4b"
     },
     {
       "id": "google.pcse",
       "path": "certs/google/professional-cloud-security-engineer.json",
-      "sha": "6b07d7346956c417"
+      "sha": "59ccf6a88d72beeb"
     },
     {
       "id": "hackthebox.cape",
       "path": "certs/hackthebox/cape.json",
-      "sha": "5078dc2ad079e87a"
+      "sha": "e457f5a339591b9f"
     },
     {
       "id": "hackthebox.cbbh",
@@ -453,7 +453,7 @@
     {
       "id": "hackthebox.cdsa",
       "path": "certs/hackthebox/cdsa.json",
-      "sha": "439e6fb705942cf7"
+      "sha": "65e6de5892c085fa"
     },
     {
       "id": "hackthebox.cjca",
@@ -473,7 +473,7 @@
     {
       "id": "iapp.cipm",
       "path": "certs/iapp/cipm.json",
-      "sha": "36cdd6fd2187c45a"
+      "sha": "13674f4b790989c3"
     },
     {
       "id": "iapp.cipp-e",
@@ -523,97 +523,97 @@
     {
       "id": "ine.ewptx",
       "path": "certs/ine-security/ewptx.json",
-      "sha": "3d590b3a22880b4c"
+      "sha": "ea89a5565e814916"
     },
     {
       "id": "ipa.ap",
       "path": "certs/ipa/ap.json",
-      "sha": "9dcda0bf147208b3"
+      "sha": "c7b7fdd013297baa"
     },
     {
       "id": "ipa.au",
       "path": "certs/ipa/au.json",
-      "sha": "0fbba95e5a1141df"
+      "sha": "a471b318ef71a43d"
     },
     {
       "id": "ipa.db",
       "path": "certs/ipa/db.json",
-      "sha": "1af0d7e243e1bd10"
+      "sha": "6479af658adb91a4"
     },
     {
       "id": "ipa.es",
       "path": "certs/ipa/es.json",
-      "sha": "0a32290715ab9060"
+      "sha": "9909f083d59fbaf1"
     },
     {
       "id": "ipa.fe",
       "path": "certs/ipa/fe.json",
-      "sha": "c987ea02f1903406"
+      "sha": "00158365b269015f"
     },
     {
       "id": "ipa.ip",
       "path": "certs/ipa/ip.json",
-      "sha": "b82f225cb67e8377"
+      "sha": "54a4523837298087"
     },
     {
       "id": "ipa.nw",
       "path": "certs/ipa/nw.json",
-      "sha": "aaf9b1257fdb870c"
+      "sha": "38731724ed9c1fd8"
     },
     {
       "id": "ipa.pm",
       "path": "certs/ipa/pm.json",
-      "sha": "2b93202dc11f2994"
+      "sha": "1f1c2e9ee45ae07e"
     },
     {
       "id": "ipa.riss",
       "path": "certs/ipa/registered-info-security-specialist.json",
-      "sha": "b682cc042279da76"
+      "sha": "45ca88e74af0f59e"
     },
     {
       "id": "ipa.sa",
       "path": "certs/ipa/sa.json",
-      "sha": "2e324c295d69c14d"
+      "sha": "599c7c0aa0be4370"
     },
     {
       "id": "ipa.sc",
       "path": "certs/ipa/sc.json",
-      "sha": "ca65919db49b01fa"
+      "sha": "fdefbe04bad9ed3e"
     },
     {
       "id": "ipa.sg",
       "path": "certs/ipa/sg.json",
-      "sha": "77d99879e83da7cf"
+      "sha": "12d485476f3c1174"
     },
     {
       "id": "ipa.sm",
       "path": "certs/ipa/sm.json",
-      "sha": "5982cf933830540e"
+      "sha": "481d09dce3128d7d"
     },
     {
       "id": "ipa.st",
       "path": "certs/ipa/st.json",
-      "sha": "ffbc62cbb27898b9"
+      "sha": "59177a15cf11f3fb"
     },
     {
       "id": "isa.iec-62443-cf",
       "path": "certs/isa/iec-62443-cf.json",
-      "sha": "736dc7a6ab8c3aeb"
+      "sha": "6f3a956ddafb18fa"
     },
     {
       "id": "isa.iec-62443-rds",
       "path": "certs/isa/iec-62443-rds.json",
-      "sha": "5fa7dfcaea5e5491"
+      "sha": "5df31b89ae50c75b"
     },
     {
       "id": "isa.iec-62443-res",
       "path": "certs/isa/iec-62443-res.json",
-      "sha": "094a99b0b2d17493"
+      "sha": "92cde2adb7fc3129"
     },
     {
       "id": "isa.iec-62443-rse",
       "path": "certs/isa/iec-62443-rse.json",
-      "sha": "74bed3b4fa0c2334"
+      "sha": "304451a087bd0165"
     },
     {
       "id": "isaca.ccak",
@@ -623,47 +623,47 @@
     {
       "id": "isaca.cdpse",
       "path": "certs/isaca/cdpse.json",
-      "sha": "e2c976a4059ce5a5"
+      "sha": "4e9d31d051762f92"
     },
     {
       "id": "isaca.cisa",
       "path": "certs/isaca/cisa.json",
-      "sha": "7c9323867ddb97ba"
+      "sha": "130f032bba8de61f"
     },
     {
       "id": "isaca.cism",
       "path": "certs/isaca/cism.json",
-      "sha": "bc7b6b466c209f1a"
+      "sha": "65548430792366ca"
     },
     {
       "id": "isaca.crisc",
       "path": "certs/isaca/crisc.json",
-      "sha": "428b4a7e851dc738"
+      "sha": "10f8ca28388b3ced"
     },
     {
       "id": "isc2.cc",
       "path": "certs/isc2/cc.json",
-      "sha": "9f4eb7b3d527b3c1"
+      "sha": "1635eed1fb9a8f29"
     },
     {
       "id": "isc2.ccsp",
       "path": "certs/isc2/ccsp.json",
-      "sha": "23e5451d1724114f"
+      "sha": "e153fbeba1fd6f07"
     },
     {
       "id": "isc2.cgrc",
       "path": "certs/isc2/cgrc.json",
-      "sha": "ee928ef5b26d1236"
+      "sha": "4a91e8f0c3ef85a1"
     },
     {
       "id": "isc2.cissp",
       "path": "certs/isc2/cissp.json",
-      "sha": "7c7319ff13ed192d"
+      "sha": "20b51f5aeb18bd45"
     },
     {
       "id": "isc2.csslp",
       "path": "certs/isc2/csslp.json",
-      "sha": "895d4850052782a0"
+      "sha": "bc29d2ffbded22a1"
     },
     {
       "id": "isc2.hcispp",
@@ -673,22 +673,22 @@
     {
       "id": "isc2.issap",
       "path": "certs/isc2/issap.json",
-      "sha": "5061f0118c25d438"
+      "sha": "7f72d3e9473145d2"
     },
     {
       "id": "isc2.issep",
       "path": "certs/isc2/issep.json",
-      "sha": "30245ee8e9cba114"
+      "sha": "e17542f270b8eb39"
     },
     {
       "id": "isc2.issmp",
       "path": "certs/isc2/issmp.json",
-      "sha": "581758cacaed2c79"
+      "sha": "f4f865551a38f3b5"
     },
     {
       "id": "isc2.sscp",
       "path": "certs/isc2/sscp.json",
-      "sha": "ce638e2467301381"
+      "sha": "a24dd669f4cf24d6"
     },
     {
       "id": "jipdec.isms-internal-auditor",
@@ -698,12 +698,12 @@
     {
       "id": "jipdec.pmark-auditor",
       "path": "certs/jipdec/pmark-auditor.json",
-      "sha": "ba44ee844871cddf"
+      "sha": "7a7f588542a34c03"
     },
     {
       "id": "jken.j-design",
       "path": "certs/jken/j-design.json",
-      "sha": "b2b1726755416145"
+      "sha": "9415125f616cb99b"
     },
     {
       "id": "jken.j-katsuyou",
@@ -713,17 +713,17 @@
     {
       "id": "jken.j-system",
       "path": "certs/jken/j-system.json",
-      "sha": "ddef919b11f9b904"
+      "sha": "952c8864e5cc3ecb"
     },
     {
       "id": "juniper.jncie-sec",
       "path": "certs/juniper/jncie-sec.json",
-      "sha": "e30ab835aa71b44e"
+      "sha": "f01b462f9b8f580b"
     },
     {
       "id": "juniper.jncip-sec",
       "path": "certs/juniper/jncip-sec.json",
-      "sha": "4c37fabe243a455b"
+      "sha": "b17893b07889bc22"
     },
     {
       "id": "juniper.jncis-sec",
@@ -763,12 +763,12 @@
     {
       "id": "microsoft.az-104",
       "path": "certs/microsoft/az-104.json",
-      "sha": "21f301bcb69d2407"
+      "sha": "54c07f3e587090a3"
     },
     {
       "id": "microsoft.az-204",
       "path": "certs/microsoft/az-204.json",
-      "sha": "3b7d4d1c9406e900"
+      "sha": "9fa86065c08c33c3"
     },
     {
       "id": "microsoft.az-305",
@@ -778,12 +778,12 @@
     {
       "id": "microsoft.az-500",
       "path": "certs/microsoft/az-500.json",
-      "sha": "70a1f1dca4059e59"
+      "sha": "f51ff2a690ee775c"
     },
     {
       "id": "microsoft.az-700",
       "path": "certs/microsoft/az-700.json",
-      "sha": "40ff0113f8b8d891"
+      "sha": "4cbf7f34f4c1e3c1"
     },
     {
       "id": "microsoft.az-900",
@@ -803,22 +803,22 @@
     {
       "id": "microsoft.sc-100",
       "path": "certs/microsoft/sc-100.json",
-      "sha": "e9c6833ba164706c"
+      "sha": "bfa9212802ba3304"
     },
     {
       "id": "microsoft.sc-200",
       "path": "certs/microsoft/sc-200.json",
-      "sha": "cf85682ac51a2bdc"
+      "sha": "2e245ee8eb16b9a4"
     },
     {
       "id": "microsoft.sc-300",
       "path": "certs/microsoft/sc-300.json",
-      "sha": "33f5b530d090cde6"
+      "sha": "078386e4aeac55bd"
     },
     {
       "id": "microsoft.sc-401",
       "path": "certs/microsoft/sc-401.json",
-      "sha": "7c25bae0ead7b77f"
+      "sha": "771d50b46281192c"
     },
     {
       "id": "microsoft.sc-900",
@@ -833,12 +833,12 @@
     {
       "id": "offsec.osai",
       "path": "certs/offsec/osai.json",
-      "sha": "fb5c3840edf9950f"
+      "sha": "b040a4691869e62b"
     },
     {
       "id": "offsec.oscc-sec",
       "path": "certs/offsec/oscc-sec.json",
-      "sha": "e9db2dcff1a2caa3"
+      "sha": "782db9ea17286b79"
     },
     {
       "id": "offsec.oscc-sjd",
@@ -848,62 +848,62 @@
     {
       "id": "offsec.osce3",
       "path": "certs/offsec/osce3.json",
-      "sha": "7bba18c4fae65d5e"
+      "sha": "cd5638aa09266ab8"
     },
     {
       "id": "offsec.oscp",
       "path": "certs/offsec/oscp.json",
-      "sha": "5ef2cd6364e81c44"
+      "sha": "8ae4adc321983092"
     },
     {
       "id": "offsec.osda",
       "path": "certs/offsec/osda.json",
-      "sha": "7b1f70366f2769d7"
+      "sha": "3f1b60a3c47a31fc"
     },
     {
       "id": "offsec.osed",
       "path": "certs/offsec/osed.json",
-      "sha": "f47efea3fb636505"
+      "sha": "17f1551ac4120332"
     },
     {
       "id": "offsec.osee",
       "path": "certs/offsec/osee.json",
-      "sha": "bb69e6496ef4f501"
+      "sha": "bce1eab9b59d8692"
     },
     {
       "id": "offsec.osep",
       "path": "certs/offsec/osep.json",
-      "sha": "84f5f780cd40f087"
+      "sha": "2ca71e134aa30a0e"
     },
     {
       "id": "offsec.osir",
       "path": "certs/offsec/osir.json",
-      "sha": "a54b2b4549ef8218"
+      "sha": "f85499b486635dd8"
     },
     {
       "id": "offsec.osmr",
       "path": "certs/offsec/osmr.json",
-      "sha": "1e06618a25084780"
+      "sha": "14ffa6fbda47a028"
     },
     {
       "id": "offsec.osth",
       "path": "certs/offsec/osth.json",
-      "sha": "4186ea740f5094c5"
+      "sha": "3437198cf8679915"
     },
     {
       "id": "offsec.oswa",
       "path": "certs/offsec/oswa.json",
-      "sha": "e6c7921132c03f1e"
+      "sha": "ca9713fb11927a3e"
     },
     {
       "id": "offsec.oswe",
       "path": "certs/offsec/oswe.json",
-      "sha": "5536f83c06296cb2"
+      "sha": "c3768d704f23a8ab"
     },
     {
       "id": "offsec.oswp",
       "path": "certs/offsec/oswp.json",
-      "sha": "f489563b96eccdf8"
+      "sha": "553c76823eaab1af"
     },
     {
       "id": "oracle.oci-architect-pro",
@@ -973,17 +973,17 @@
     {
       "id": "seaj.csbm",
       "path": "certs/seaj/csbm.json",
-      "sha": "697807fe8307c5d3"
+      "sha": "04f026f278ea961e"
     },
     {
       "id": "seaj.cspm-management",
       "path": "certs/seaj/cspm-management.json",
-      "sha": "60b96342546074c1"
+      "sha": "da24cc06f5ee2c75"
     },
     {
       "id": "seaj.cspm-technical",
       "path": "certs/seaj/cspm-technical.json",
-      "sha": "a5c5000910101305"
+      "sha": "685b18c5bf977a30"
     },
     {
       "id": "splunk.core-power-user",
@@ -993,7 +993,7 @@
     {
       "id": "splunk.es-cert-admin",
       "path": "certs/splunk/es-cert-admin.json",
-      "sha": "d3e389240832c257"
+      "sha": "a128f76849f1029d"
     },
     {
       "id": "tcm-security.pipa",
@@ -1013,7 +1013,7 @@
     {
       "id": "tcm-security.pmrp",
       "path": "certs/tcm-security/pmrp.json",
-      "sha": "6c5536e086753fe0"
+      "sha": "e966fdbe3969e045"
     },
     {
       "id": "tcm-security.pnpt",
@@ -1038,7 +1038,7 @@
     {
       "id": "tcm-security.pwpp",
       "path": "certs/tcm-security/pwpp.json",
-      "sha": "c7cf45ef4f8ec175"
+      "sha": "7ed5223d62ddc8f7"
     },
     {
       "id": "teletrust.tisp",
@@ -1048,7 +1048,7 @@
     {
       "id": "zensho.jouhou-shori-1",
       "path": "certs/zensho/jouhou-shori-1.json",
-      "sha": "a4c0dd89063dd90d"
+      "sha": "01f976d4301b9867"
     },
     {
       "id": "zensho.jouhou-shori-2",

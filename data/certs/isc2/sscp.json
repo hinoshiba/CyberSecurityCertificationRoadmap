@@ -32,7 +32,11 @@
     "formal": [],
     "experience_years": 1,
     "recommended_certs": [
-      "comptia.security-plus"
+      {
+        "id": "comptia.security-plus",
+        "source": "official-recommended",
+        "url": "https://www.isc2.org/Certifications/SSCP"
+      }
     ]
   },
   "scoring_factors": {

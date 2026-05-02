@@ -2,16 +2,35 @@
  * SVG overlay drawing arrows from the selected cert outwards through its
  * prerequisite and successor graphs, up to MAX_DEPTH hops.
  *
- * Modern visual style: thinner strokes, subtle glow filter, soft saturated
- * colors that read on both dark and light themes.
+ * Edge priority (used for the MAX_VISIBLE_EDGES cap):
+ *   1. required        — prereq.required_certs[] entries (hard requirement)
+ *   2. official        — recommended_certs[].source == "official-recommended"
+ *   3. vendor-ladder   — recommended_certs[].source == "vendor-ladder"
+ *   4. community       — recommended_certs[].source == "community"
+ *
+ * When more than MAX_VISIBLE_EDGES candidate edges exist, lower-priority
+ * edges are dropped FIRST. Required edges are never dropped (they are
+ * sacred — the user must know about them). Within the same priority,
+ * shallower depth wins.
+ *
+ * Required edges render as a solid, full-opacity, thicker stroke; the
+ * three "recommended" sources share the existing depth-based style so
+ * the eye can group them together.
  */
 
 const SVG_NS = "http://www.w3.org/2000/svg";
 const MAX_DEPTH = 3;
+const MAX_VISIBLE_EDGES = 20;
 
-/** Read arrow palette from CSS variables so it tracks the active theme.
- *  Recomputed on every drawArrows() call so theme switches show up
- *  without needing a manual subscriber. */
+// Lower number = higher priority. Required is the floor; capping never
+// touches it.
+const SOURCE_RANK = {
+  required:               0,
+  "official-recommended": 1,
+  "vendor-ladder":        2,
+  community:              3,
+};
+
 function arrowColors() {
   const root = getComputedStyle(document.documentElement);
   return {
@@ -37,8 +56,13 @@ function buildDefs(colors) {
         </marker>
       `);
     }
+    // Required-edge marker: full-opacity, slightly larger.
+    markers.push(`
+      <marker id="arr-${kind}-required" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 0 L 12 6 L 0 12 L 3 6 Z" fill="${color}" opacity="1" />
+      </marker>
+    `);
   }
-  // Subtle glow filter so arrows lift off dim cards.
   markers.push(`
     <filter id="arr-glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="1.4" result="b" />
@@ -82,6 +106,38 @@ function smoothPath(from, to) {
   return `M ${from.x} ${from.y} Q ${cx} ${cy} ${to.x} ${to.y}`;
 }
 
+/** Extract id from either a string (legacy) or {id, source?} object. */
+function entryId(e) { return typeof e === "string" ? e : e.id; }
+
+/** Return [{id, source}, …] for the cert's prereq neighbors. Required
+ *  certs come first, tagged source: "required". */
+function prereqNeighbors(cert) {
+  const required = (cert.prerequisites?.required_certs || []).map(e => ({
+    id: entryId(e), source: "required",
+  }));
+  const recommended = (cert.prerequisites?.recommended_certs || []).map(e => {
+    if (typeof e === "string") return { id: e, source: "vendor-ladder" };  // legacy fallback
+    return { id: e.id, source: e.source || "vendor-ladder" };
+  });
+  return [...required, ...recommended];
+}
+
+/** Inverse map: for each cert id, list of {id, source} that point AT it.
+ *  This is the successor graph. Source carries the *upstream* relation's
+ *  source so the cap can prioritize symmetrically. */
+export function buildInverseMap(byId) {
+  const inv = new Map();
+  for (const id of byId.keys()) inv.set(id, []);
+  for (const [downstreamId, c] of byId) {
+    for (const n of prereqNeighbors(c)) {
+      if (inv.has(n.id)) {
+        inv.get(n.id).push({ id: downstreamId, source: n.source });
+      }
+    }
+  }
+  return inv;
+}
+
 function bfs(startId, byId, inverseMap, kind) {
   const edges = [];
   const visited = new Set([startId]);
@@ -92,14 +148,16 @@ function bfs(startId, byId, inverseMap, kind) {
       const f = byId.get(fid);
       if (!f) continue;
       const neighbors = (kind === "prereq")
-        ? (f.prerequisites?.recommended_certs || [])
+        ? prereqNeighbors(f)
         : (inverseMap.get(fid) || []);
-      for (const nid of neighbors) {
-        if (visited.has(nid)) continue;
-        visited.add(nid);
-        if (kind === "prereq") edges.push({ fromId: nid, toId: fid, depth, kind });
-        else                   edges.push({ fromId: fid, toId: nid, depth, kind });
-        next.push(nid);
+      for (const n of neighbors) {
+        if (visited.has(n.id)) continue;
+        visited.add(n.id);
+        const edge = { depth, kind, source: n.source };
+        if (kind === "prereq") { edge.fromId = n.id; edge.toId = fid; }
+        else                   { edge.fromId = fid;  edge.toId = n.id; }
+        edges.push(edge);
+        next.push(n.id);
       }
     }
     frontier = next;
@@ -107,15 +165,12 @@ function bfs(startId, byId, inverseMap, kind) {
   return edges;
 }
 
-export function buildInverseMap(byId) {
-  const inv = new Map();
-  for (const id of byId.keys()) inv.set(id, []);
-  for (const [id, c] of byId) {
-    for (const pid of (c.prerequisites?.recommended_certs || [])) {
-      if (inv.has(pid)) inv.get(pid).push(id);
-    }
-  }
-  return inv;
+/** Compose a sortable priority key — lower = drawn first / kept when capping.
+ *    primary  : source rank (required = 0, community = 3)
+ *    secondary: depth (shallower = preferred)                              */
+function priorityKey(edge) {
+  const s = SOURCE_RANK[edge.source] ?? 9;
+  return s * 10 + edge.depth;
 }
 
 export function drawArrows(svg, gridEl, selectedId, byId, inverseMap) {
@@ -140,10 +195,21 @@ export function drawArrows(svg, gridEl, selectedId, byId, inverseMap) {
 
   const origin = gridEl.getBoundingClientRect();
 
-  const edges = [
+  let edges = [
     ...bfs(selectedId, byId, inverseMap, "prereq"),
     ...bfs(selectedId, byId, inverseMap, "next"),
   ];
+
+  // Cap to MAX_VISIBLE_EDGES, dropping lower-priority edges first.
+  // Required edges (priority 0) are always retained because they sit at
+  // the top of the sorted list and the cap is set well above the typical
+  // required-cert count for any single cert.
+  edges.sort((a, b) => priorityKey(a) - priorityKey(b));
+  if (edges.length > MAX_VISIBLE_EDGES) {
+    edges = edges.slice(0, MAX_VISIBLE_EDGES);
+  }
+  // Now reverse for drawing order: deeper edges drawn first so shallow
+  // ones land on top of them.
   edges.sort((a, b) => b.depth - a.depth);
 
   for (const e of edges) {
@@ -158,13 +224,24 @@ export function drawArrows(svg, gridEl, selectedId, byId, inverseMap) {
     path.setAttribute("d", smoothPath(a, b));
     path.setAttribute("fill", "none");
     path.setAttribute("stroke", color);
-    path.setAttribute("stroke-width", String(depthStrokeWidth(e.depth)));
     path.setAttribute("stroke-linecap", "round");
     path.setAttribute("stroke-linejoin", "round");
-    path.setAttribute("stroke-opacity", String(depthOpacity(e.depth)));
-    if (e.kind === "next") path.setAttribute("stroke-dasharray", "4 5");
     path.setAttribute("filter", "url(#arr-glow)");
-    path.setAttribute("marker-end", `url(#arr-${e.kind}-${e.depth})`);
+
+    if (e.source === "required") {
+      // Hard prereq — solid, full opacity, thicker.
+      path.setAttribute("stroke-width", "2.4");
+      path.setAttribute("stroke-opacity", "1");
+      path.setAttribute("marker-end", `url(#arr-${e.kind}-required)`);
+    } else {
+      path.setAttribute("stroke-width",   String(depthStrokeWidth(e.depth)));
+      path.setAttribute("stroke-opacity", String(depthOpacity(e.depth)));
+      // Successor direction stays dashed; community-source edges get an
+      // extra-faint dash so the eye can spot them as "soft" suggestions.
+      if (e.kind === "next")             path.setAttribute("stroke-dasharray", "4 5");
+      else if (e.source === "community") path.setAttribute("stroke-dasharray", "2 4");
+      path.setAttribute("marker-end", `url(#arr-${e.kind}-${e.depth})`);
+    }
     svg.appendChild(path);
 
     const otherId = e.kind === "prereq" ? e.fromId : e.toId;

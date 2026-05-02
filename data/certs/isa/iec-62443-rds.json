@@ -31,8 +31,15 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "giac.gicsp",
-      "isa.iec-62443-cf"
+      {
+        "id": "giac.gicsp",
+        "source": "official-recommended"
+      },
+      {
+        "id": "isa.iec-62443-cf",
+        "source": "official-recommended",
+        "url": "https://www.isa.org/certification/certificate-programs/isa-iec-62443-cybersecurity-certificate-program"
+      }
     ]
   },
   "scoring_factors": {

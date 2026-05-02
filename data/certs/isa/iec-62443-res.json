@@ -31,7 +31,11 @@
     "formal": [],
     "experience_years": 3,
     "recommended_certs": [
-      "isa.iec-62443-rds"
+      {
+        "id": "isa.iec-62443-rds",
+        "source": "official-recommended",
+        "url": "https://www.isa.org/certification/certificate-programs/isa-iec-62443-cybersecurity-certificate-program"
+      }
     ]
   },
   "scoring_factors": {

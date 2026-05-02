@@ -41,10 +41,42 @@
     "formal": [],
     "experience_years": 5,
     "recommended_certs": [
-      "comptia.security-plus",
-      "isc2.cgrc",
-      "isc2.hcispp",
-      "isc2.sscp"
+      {
+        "id": "comptia.security-plus",
+        "source": "community"
+      },
+      {
+        "id": "ipa.ap",
+        "source": "community",
+        "rationale": "応用情報技術者 (AP) の出題範囲は CISSP 8 ドメインの相当部分を国内向けに先取り。CISSP の下地として国内エンジニアが選ぶ定番。"
+      },
+      {
+        "id": "ipa.riss",
+        "source": "community",
+        "rationale": "RISS 保有のコンサルタントが、国際案件向けの肩書として CISSP を併用するケースが多い。"
+      },
+      {
+        "id": "ipa.sc",
+        "source": "community",
+        "rationale": "SC ホルダーが英語圏業務 / グローバル案件を視野に入れる際の自然な次段。脅威モデル・セキュア設計の語彙が共通する。"
+      },
+      {
+        "id": "isaca.crisc",
+        "source": "community",
+        "rationale": "リスク管理 CRISC ホルダーが、より広範な技術 + 設計の語彙を得るために CISSP を追加するパターン。"
+      },
+      {
+        "id": "isc2.cgrc",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "isc2.hcispp",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "isc2.sscp",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

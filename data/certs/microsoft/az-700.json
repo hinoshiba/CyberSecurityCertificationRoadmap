@@ -25,9 +25,18 @@
     "formal": [],
     "experience_years": 2,
     "recommended_certs": [
-      "microsoft.az-900",
-      "microsoft.dp-900",
-      "microsoft.sc-900"
+      {
+        "id": "microsoft.az-900",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "microsoft.dp-900",
+        "source": "vendor-ladder"
+      },
+      {
+        "id": "microsoft.sc-900",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

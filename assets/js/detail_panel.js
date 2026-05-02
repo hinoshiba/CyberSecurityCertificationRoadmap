@@ -15,20 +15,51 @@ function tierBadge(tier) {
   return `<span class="tier-pill" data-tier="${escapeHtml(tier)}">${escapeHtml(tier)}</span>`;
 }
 
-function relatedCertList(label, ids, byId, ui) {
-  if (!ids || ids.length === 0) return "";
+/** Render a list of {id, source?, rationale?, url?} cert references.
+ *  `entries` items may be plain strings (legacy successor list) or objects
+ *  (new prerequisites form). `extraClass` is appended to the wrapper ul
+ *  for source-specific styling (`required` vs `recommended`).               */
+function relatedCertList(label, entries, byId, ui, extraClass = "") {
+  if (!entries || entries.length === 0) return "";
   const lang = ui.labelLang === "ja" ? "ja" : "en";
-  const items = ids.map(id => {
+  const items = entries.map(entry => {
+    const id = typeof entry === "string" ? entry : entry.id;
+    const source = typeof entry === "object" ? entry.source : null;
+    const rationale = typeof entry === "object" ? entry.rationale : null;
+    const sourceUrl = typeof entry === "object" ? entry.url : null;
+
+    const sourceBadge = source
+      ? `<span class="src-badge src-${escapeHtml(source)}" title="${escapeHtml(t(`src_${source.replace(/-/g, "_")}_tooltip`, lang))}">${escapeHtml(t(`src_${source.replace(/-/g, "_")}`, lang))}</span>`
+      : "";
+    const sourceUrlSuffix = sourceUrl
+      ? ` <a class="src-evidence" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener" title="${escapeHtml(t("src_evidence", lang))}">↗</a>`
+      : "";
+    const rationaleHtml = rationale
+      ? `<div class="rel-rationale muted">${escapeHtml(rationale)}</div>`
+      : "";
+
     const c = byId.get(id);
-    if (!c) return `<li class="missing"><code>${escapeHtml(id)}</code> ${t("not_in_roadmap", lang)}</li>`;
+    if (!c) {
+      return `<li class="missing">
+        ${sourceBadge}
+        <code>${escapeHtml(id)}</code> ${t("not_in_roadmap", lang)}
+        ${sourceUrlSuffix}
+        ${rationaleHtml}
+      </li>`;
+    }
     const name = lang === "ja" ? (c.name_ja || c.name) : c.name;
-    return `<li><a href="?cert=${encodeURIComponent(id)}" data-cert-link="${escapeHtml(id)}">
-      <strong>${escapeHtml(c.abbr)}</strong>
-      <span class="muted">${escapeHtml(c.vendor?.name || "")}</span>
-      <span class="muted">— ${escapeHtml(name)}</span>
-    </a></li>`;
+    return `<li>
+      ${sourceBadge}
+      <a href="?cert=${encodeURIComponent(id)}" data-cert-link="${escapeHtml(id)}">
+        <strong>${escapeHtml(c.abbr)}</strong>
+        <span class="muted">${escapeHtml(c.vendor?.name || "")}</span>
+        <span class="muted">— ${escapeHtml(name)}</span>
+      </a>${sourceUrlSuffix}
+      ${rationaleHtml}
+    </li>`;
   }).join("");
-  return `<div class="rel-block"><h4>${escapeHtml(label)}</h4><ul class="rel-list">${items}</ul></div>`;
+  const cls = extraClass ? `rel-list ${extraClass}` : "rel-list";
+  return `<div class="rel-block"><h4>${escapeHtml(label)}</h4><ul class="${cls}">${items}</ul></div>`;
 }
 
 export function renderDetailPanel(panel, cert, byId, ui) {
@@ -44,14 +75,22 @@ export function renderDetailPanel(panel, cert, byId, ui) {
   const log = cert.logistics || {};
   const eval_ = cert.evaluation || {};
 
-  const prereqIds = cert.prerequisites?.recommended_certs || [];
-  const successorIds = [];
+  // New schema: required_certs (hard, always shown) + recommended_certs
+  // (object array with source provenance).
+  const requiredEntries = cert.prerequisites?.required_certs || [];
+  const recommendedEntries = cert.prerequisites?.recommended_certs || [];
+
+  // Successor search: walk all certs whose required_certs OR recommended_certs
+  // reference this cert.id (object form).
+  const successorEntries = [];
   for (const [id, c] of byId) {
-    if ((c.prerequisites?.recommended_certs || []).includes(cert.id)) {
-      successorIds.push(id);
+    const reqs = (c.prerequisites?.required_certs || []).map(e => e.id || e);
+    const recs = (c.prerequisites?.recommended_certs || []).map(e => e.id || e);
+    if (reqs.includes(cert.id) || recs.includes(cert.id)) {
+      successorEntries.push(id);
     }
   }
-  successorIds.sort();
+  successorEntries.sort();
 
   const factorPlus = (cert.scoring_factors?.plus || []).map(f =>
     `<li><code>${escapeHtml(f.code)}</code> <span class="weight">[${escapeHtml(f.weight_hint)}]</span>${
@@ -148,8 +187,9 @@ export function renderDetailPanel(panel, cert, byId, ui) {
         <p class="muted small">${t("computed_at", lang)}: ${escapeHtml(eval_.computed_at || "—")} (${escapeHtml(eval_.computed_by_skill || "—")})</p>
       </section>
       <section class="rel">
-        ${relatedCertList(t("recommended_prereqs", lang), prereqIds, byId, ui)}
-        ${relatedCertList(t("commonly_followed_by", lang), successorIds, byId, ui)}
+        ${relatedCertList(t("required_prereqs", lang), requiredEntries, byId, ui, "required")}
+        ${relatedCertList(t("recommended_prereqs", lang), recommendedEntries, byId, ui, "recommended")}
+        ${relatedCertList(t("commonly_followed_by", lang), successorEntries, byId, ui)}
       </section>
     </div>
   `;

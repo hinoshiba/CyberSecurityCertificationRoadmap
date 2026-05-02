@@ -24,7 +24,10 @@
     "formal": [],
     "experience_years": 1,
     "recommended_certs": [
-      "google.cdl"
+      {
+        "id": "google.cdl",
+        "source": "vendor-ladder"
+      }
     ]
   },
   "scoring_factors": {

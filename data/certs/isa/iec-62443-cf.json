@@ -30,7 +30,13 @@
   "prerequisites": {
     "formal": [],
     "experience_years": 0,
-    "recommended_certs": []
+    "recommended_certs": [
+      {
+        "id": "giac.gicsp",
+        "source": "community",
+        "rationale": "GICSP で得た ICS セキュリティの基礎を、IEC 62443 の体系的な国際規格知識で補強する OT 専門家の定番。"
+      }
+    ]
   },
   "scoring_factors": {
     "plus": [
