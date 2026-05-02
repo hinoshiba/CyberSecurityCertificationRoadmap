@@ -1,0 +1,50 @@
+name: Add a source agency
+description: Propose a new authoritative source agency for `data/sources/agencies.json`.
+title: "[add-source] <agency name>"
+labels: ["add-source"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Acceptable agencies are governmental, non-profit standards bodies, or
+        ISO/IEC 17024 accreditors. Vendor blogs and consultancy whitepapers
+        are not source agencies; they belong on individual certs as
+        `third_party_evaluations[].url` entries.
+
+  - type: input
+    id: agency_name
+    attributes:
+      label: Official agency name
+      placeholder: European Union Agency for Cybersecurity
+    validations: { required: true }
+
+  - type: input
+    id: agency_url
+    attributes:
+      label: Official agency URL
+      placeholder: https://www.enisa.europa.eu/
+    validations: { required: true }
+
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction (ISO 3166-1 alpha-2 code, "EU", "INTL")
+      placeholder: EU
+    validations: { required: true }
+
+  - type: dropdown
+    id: trust_tier
+    attributes:
+      label: Trust tier
+      options:
+        - high
+        - medium
+        - vendor
+    validations: { required: true }
+
+  - type: textarea
+    id: use
+    attributes:
+      label: How will this agency be used as a source?
+      placeholder: e.g. EU framework alignment, accreditation evidence, JP national exam authority
+    validations: { required: true }

@@ -1,0 +1,57 @@
+name: Validate data
+
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "schema/**"
+      - "scripts/**"
+      - ".github/workflows/validate-data.yml"
+  push:
+    branches: [main]
+
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install -g ajv-cli ajv-formats
+      - name: ajv validate
+        run: |
+          if compgen -G "data/certs/*/*.json" >/dev/null; then
+            ajv validate \
+              --spec=draft2020 \
+              -c ajv-formats \
+              -s schema/certification.schema.json \
+              -d "data/certs/**/*.json" \
+              --all-errors --errors=text
+          else
+            echo "No cert files yet; skipping schema check."
+          fi
+
+  manifest-fresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Rebuild manifest and diff
+        run: |
+          python3 scripts/build_manifest.py
+          if ! git diff --quiet -- data/manifest.json; then
+            echo "::error::data/manifest.json is stale. Run 'make manifest' and commit the result."
+            git --no-pager diff -- data/manifest.json
+            exit 1
+          fi
+
+  evaluations-fresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Check every cert has a fresh evaluation
+        run: python3 scripts/check_evaluations_fresh.py

@@ -1,0 +1,93 @@
+name: Add a certification
+description: Propose a certification not yet in the roadmap.
+title: "[add-cert] <Vendor> <Cert name or abbreviation>"
+labels: ["add-cert"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new certification.
+
+        The `respond-to-issue` skill will use the answers below to draft a
+        new file at `data/certs/<vendor>/<cert>.json`. The maintainer
+        reviews the draft PR before merge.
+
+  - type: input
+    id: vendor
+    attributes:
+      label: Vendor / issuing body
+      description: Official name (e.g. "ISC2", "OffSec", "IPA").
+      placeholder: ISC2
+    validations: { required: true }
+
+  - type: input
+    id: name
+    attributes:
+      label: Certification name
+      description: Full official name and acronym.
+      placeholder: Certified Information Systems Security Professional (CISSP)
+    validations: { required: true }
+
+  - type: input
+    id: official_url
+    attributes:
+      label: Official certification URL
+      description: Link to the vendor's authoritative page for this cert.
+      placeholder: https://www.isc2.org/Certifications/CISSP
+    validations: { required: true }
+
+  - type: textarea
+    id: third_party
+    attributes:
+      label: Third-party evaluation URLs
+      description: At least one independent evaluation (NIST NICE mapping, DoD 8140 listing, IPA registry, ENISA report, ANSI directory, etc.). Vendor self-assessment does not count.
+      placeholder: |
+        - https://public.cyber.mil/wid/dod8140/
+        - https://www.nist.gov/itl/applied-cybersecurity/nice/...
+    validations: { required: true }
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Suggested primary domain
+      options:
+        - governance-risk
+        - security-architecture
+        - iam
+        - network-defense
+        - endpoint-mobile
+        - cloud-security
+        - application-appsec
+        - offensive-redteam
+        - incident-forensics
+        - threat-intel
+        - ot-ics-iot
+        - privacy-data-protection
+    validations: { required: true }
+
+  - type: checkboxes
+    id: japan_only
+    attributes:
+      label: Japan-only
+      description: Check this only if the cert is primarily issued by a Japanese authority and unlikely to be relevant outside Japan (e.g. SEA/J, IPA national exams).
+      options:
+        - label: This is a Japan-only certification (will be hidden by default in the JP-mode toggle)
+          required: false
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Recommended prerequisite certs (optional)
+      description: |
+        IDs (as they appear in data/manifest.json) of certs the vendor
+        names as prerequisites or strongly recommends. The UI uses this
+        list to draw roadmap arrows. One per line.
+      placeholder: |
+        isc2.cissp
+        comptia.security-plus
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything else the AI evaluator should know (cost, format, why this matters).

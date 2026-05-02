@@ -1,0 +1,52 @@
+name: Report an evaluation issue
+description: Disagree with the tier the AI assigned a certification, or with how a persona reasoned about it.
+title: "[eval] <cert id>: <one-line summary>"
+labels: ["evaluation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Per the [core principle](../../README.md#core-principle-ai-as-third-party-evaluator),
+        the right way to fix a tier is to either change the cert's
+        `scoring_factors` (with new evidence) or to change the rubric in
+        `.claude/skills/evaluate-roadmap-3-personas/SKILL.md`. We do **not**
+        hand-edit the `evaluation.computed_tier` field.
+
+  - type: input
+    id: cert_id
+    attributes:
+      label: Cert ID
+      placeholder: isc2.cissp
+    validations: { required: true }
+
+  - type: input
+    id: current_tier
+    attributes:
+      label: Current tier (as displayed)
+      placeholder: expert
+    validations: { required: true }
+
+  - type: dropdown
+    id: expected
+    attributes:
+      label: What tier do you think it should be?
+      options: [foundational, associate, professional, expert, specialty]
+    validations: { required: true }
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why? Cite evidence.
+      description: Link official sources, third-party evaluations, or hiring-market data. Vibes are insufficient.
+    validations: { required: true }
+
+  - type: dropdown
+    id: which_change
+    attributes:
+      label: Which change do you think is needed?
+      options:
+        - Change the cert's plus / minus scoring_factors
+        - Change the rubric in .claude/skills/evaluate-roadmap-3-personas
+        - One of the personas needs adjustment
+        - Not sure
+    validations: { required: true }

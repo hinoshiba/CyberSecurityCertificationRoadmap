@@ -1,0 +1,38 @@
+name: Update a certification
+description: Refresh facts on an existing certification (cost change, blueprint refresh, retired, renamed).
+title: "[update-cert] <cert id>: <what changed>"
+labels: ["update-cert"]
+body:
+  - type: input
+    id: cert_id
+    attributes:
+      label: Cert ID
+      description: The id from the JSON file (e.g. "isc2.cissp").
+      placeholder: isc2.cissp
+    validations: { required: true }
+
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: What changed?
+      options:
+        - cost / logistics (price, duration, format)
+        - blueprint / domain coverage refresh
+        - prerequisite change
+        - retired / replaced / renamed
+        - new third-party evaluation available
+        - scoring factor (plus / minus) needs revision
+        - other
+    validations: { required: true }
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence URLs
+      description: Link to the official page or third-party evaluation showing the change.
+    validations: { required: true }
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
