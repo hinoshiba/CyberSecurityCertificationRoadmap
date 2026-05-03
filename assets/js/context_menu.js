@@ -35,11 +35,13 @@ function hide() {
 
 function buildItems(cert, lang, currentlySelectedId) {
   const isSelected = currentlySelectedId === cert.id;
+  const officialUrl = cert.official?.exam_url || cert.vendor?.url;
   // Each item: {label, action, disabled?}
   return [
-    { label: t("ctx_deselect",     lang), action: "deselect",     disabled: !isSelected },
-    { label: t("ctx_copy_abbr",    lang), action: "copy-abbr" },
-    { label: t("ctx_show_details", lang), action: "show-details" },
+    { label: t("ctx_deselect",      lang), action: "deselect",      disabled: !isSelected },
+    { label: t("ctx_copy_abbr",     lang), action: "copy-abbr" },
+    { label: t("ctx_show_details",  lang), action: "show-details" },
+    { label: t("ctx_open_official", lang), action: "open-official", disabled: !officialUrl },
   ];
 }
 

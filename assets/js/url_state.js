@@ -7,12 +7,13 @@
  *   ?jp=1                       (show Japan-only certs)
  *   ?v=isc2,offsec,giac         (vendor filter; absent param = no filter; empty = show none)
  *   ?cert=isc2.cissp            (selected cert id)
+ *   ?q=GIAC                     (live header search query; matches abbr / name / vendor)
  *
  * Updates use history.replaceState so the back/forward stack isn't polluted
  * with every keystroke; the URL still bookmarks correctly.
  */
 
-const KEYS = ["theme", "lang", "jp", "v", "cert"];
+const KEYS = ["theme", "lang", "jp", "v", "cert", "q"];
 
 function readParams() {
   const sp = new URLSearchParams(window.location.search);
@@ -26,6 +27,7 @@ function readParams() {
     jp:      sp.get("jp") === "1",
     vendors,
     cert:    sp.get("cert") || null,
+    q:       sp.get("q") || "",
   };
 }
 
@@ -39,6 +41,7 @@ function writeParams(state) {
     sp.set("v", state.vendors.join(","));
   }
   if (state.cert)              sp.set("cert", state.cert);
+  if (state.q)                 sp.set("q", state.q);
   const qs = sp.toString();
   const url = window.location.pathname + (qs ? "?" + qs : "") + window.location.hash;
   window.history.replaceState(null, "", url);

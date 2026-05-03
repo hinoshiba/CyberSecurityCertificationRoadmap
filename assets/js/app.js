@@ -8,6 +8,7 @@ import { getState, setState, subscribe } from "./url_state.js";
 import { exportMatrixPNG } from "./export.js";
 import { loadVersion, versionLabel } from "./version.js";
 import { attachContextMenu } from "./context_menu.js";
+import { matchCertIds } from "./search.js";
 import { t } from "./i18n.js";
 
 const state = {
@@ -25,6 +26,8 @@ const state = {
     // arrows; the panel is opt-in via the "Show details" button so the
     // arrow state is preserved while the user navigates between certs.
     panelDismissed: true,
+    // Live header search query (URL ?q=). Empty string = no search active.
+    searchQuery: "",
   }
 };
 
@@ -39,6 +42,12 @@ function rerender() {
   const visible = applyFilters(state.certs, state.ui);
   renderGrid(grid, state.domains, state.tiers, visible, state.ui);
   counter.textContent = `${visible.length} of ${state.certs.length} certs`;
+
+  // Apply live search highlight. The matched set is computed against
+  // the FULL cert list so a search match still surfaces certs that
+  // happen to be JP-filtered or vendor-filtered out (the user can then
+  // adjust those filters to see them).
+  applySearchHighlight();
 
   const isSelected = !!state.ui.selectedId && state.byId.has(state.ui.selectedId);
   const showPanel  = isSelected && !state.ui.panelDismissed;
@@ -167,6 +176,25 @@ document.addEventListener("dismiss-panel", () => {
   rerender();
 });
 
+/** Re-apply `.search-match` classes on cards based on current query.
+ *  Toggles `body.has-search` so CSS can dim non-matches. Recomputed
+ *  in rerender() and on every keystroke (URL state subscriber). */
+function applySearchHighlight() {
+  const q = state.ui.searchQuery || "";
+  const matched = matchCertIds(state.certs, q);
+  document.body.classList.toggle("has-search", !!matched && matched.size > 0);
+  // Stamp matching cards. matched===null means no active search.
+  for (const card of grid.querySelectorAll(".cert-card")) {
+    const id = card.dataset.certId;
+    card.classList.toggle("search-match", !!matched && matched.has(id));
+  }
+  // Update the count badge to show match count when a search is active.
+  if (matched !== null) {
+    const total = state.certs.length;
+    counter.textContent = `${matched.size} match · ${total} certs`;
+  }
+}
+
 /** Helper passed to export functions so they can re-run drawArrows after
  *  forcing the matrix to its fixed export width. Captured here because
  *  export.js shouldn't import directly from app state. */
@@ -200,17 +228,60 @@ attachContextMenu({
         if (state.ui.selectedId !== cert.id) setState({ cert: cert.id });
         else rerender();
         break;
+      case "open-official": {
+        const url = cert.official?.exam_url || cert.vendor?.url;
+        if (url) window.open(url, "_blank", "noopener,noreferrer");
+        break;
+      }
     }
   },
 });
 
-// ESC fully clears selection (arrows + highlight + reset panel preference).
+// ESC clears search first (if focused/active), then selection.
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape" && state.ui.selectedId) {
+  if (e.key !== "Escape") return;
+  const searchInput = document.getElementById("search-input");
+  if (state.ui.searchQuery) {
+    if (searchInput) searchInput.value = "";
+    setState({ q: "" });
+    return;
+  }
+  if (state.ui.selectedId) {
     state.ui.panelDismissed = true;
     setState({ cert: null });
   }
 });
+
+// Header search input — debounced URL state update so the cache-busted
+// shareable URL is always in sync. Match highlight applies on every
+// keystroke immediately (no debounce) so feedback feels live.
+const searchInput = document.getElementById("search-input");
+const searchClear = document.getElementById("search-clear");
+if (searchInput) {
+  let debounce = 0;
+  searchInput.addEventListener("input", () => {
+    state.ui.searchQuery = searchInput.value;
+    applySearchHighlight();
+    clearTimeout(debounce);
+    debounce = setTimeout(() => setState({ q: searchInput.value }, { silent: true }), 200);
+  });
+  // Submitting a search (Enter) auto-selects the single match if any.
+  searchInput.addEventListener("keydown", e => {
+    if (e.key !== "Enter") return;
+    const matched = matchCertIds(state.certs, state.ui.searchQuery);
+    if (matched && matched.size === 1) {
+      const onlyId = matched.values().next().value;
+      setState({ cert: onlyId });
+    }
+  });
+}
+if (searchClear) {
+  searchClear.addEventListener("click", () => {
+    if (searchInput) searchInput.value = "";
+    setState({ q: "" });
+    if (searchInput) searchInput.focus();
+  });
+}
 
 // Vendor filter dropdown open/close
 document.addEventListener("click", e => {
@@ -269,10 +340,15 @@ window.addEventListener("resize", () => {
 // open the detail panel.
 subscribe(() => {
   const s = getState();
-  state.ui.showJp     = !!s.jp;
-  state.ui.labelLang  = s.lang === "ja" ? "ja" : "en";
-  state.ui.vendors    = s.vendors;
-  state.ui.selectedId = s.cert || null;
+  state.ui.showJp      = !!s.jp;
+  state.ui.labelLang   = s.lang === "ja" ? "ja" : "en";
+  state.ui.vendors     = s.vendors;
+  state.ui.selectedId  = s.cert || null;
+  state.ui.searchQuery = s.q || "";
+  // Keep input field in sync (e.g., when state arrives from URL on load
+  // or back/forward).
+  const si = document.getElementById("search-input");
+  if (si && si.value !== state.ui.searchQuery) si.value = state.ui.searchQuery;
   updateChromeLabels();
   rerender();
 });

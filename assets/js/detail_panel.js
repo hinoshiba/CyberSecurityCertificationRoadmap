@@ -131,6 +131,39 @@ export function renderDetailPanel(panel, cert, byId, ui) {
          ${cert.availability_note ? `<span class="muted"> ${escapeHtml(cert.availability_note)}</span>` : ""}
        </div>`;
 
+  // ----- New layout: 4 distinct zones ordered by user-relevance -----
+  // Zone 1 (zone-quick): vendor / domain / official-link CTA / logistics —
+  //         the "at a glance" info someone planning to take this cert
+  //         actually needs.
+  // Zone 2 (zone-relations): prereq / recommended-prior / followed-by
+  //         lists — the roadmap context.
+  // Zone 3 (zone-ai): AI's tier rationale + per-persona scores, clearly
+  //         labeled as AI judgment so the user can weight it accordingly.
+  // Zone 4 (zone-evidence): the curated facts (plus/minus factors,
+  //         third-party evals, sources) that the AI used as input.
+  //         De-emphasized visually because most users don't need it.
+
+  const officialUrl = cert.official?.exam_url || cert.vendor?.url || "";
+  const blueprintUrl = cert.official?.blueprint_url || "";
+  const domainBadges = [cert.domain, ...(cert.secondary_domains || [])]
+    .map(d => `<span class="domain-pill">${escapeHtml(d)}</span>`)
+    .join(" ");
+
+  const logisticsRow = (label, value) =>
+    value && value !== "—"
+      ? `<li><span class="kv-key">${label}</span><span class="kv-val">${value}</span></li>`
+      : "";
+  const logisticsItems = [
+    logisticsRow(t("cost_usd",   lang), log.cost_usd != null ? `${log.cost_usd}${t("unit_usd", lang)}` : ""),
+    logisticsRow(t("cost_local", lang), escapeHtml(log.cost_local || "")),
+    logisticsRow(t("format",     lang), escapeHtml(log.format || "")),
+    logisticsRow(t("duration",   lang), log.duration_min != null ? `${log.duration_min}${t("unit_minutes", lang)}` : ""),
+    logisticsRow(t("questions",  lang), log.questions != null ? String(log.questions) : ""),
+    logisticsRow(t("languages",  lang), escapeHtml((log.languages || []).join(", ") || "")),
+    logisticsRow(t("renewal",    lang), log.renewal_years != null ? `${log.renewal_years}${t("unit_yrs", lang)}${log.ce_required ? " (CE)" : ""}` : ""),
+    logisticsRow(t("prerequisites", lang), expYrs ? `${expYrs}${t("unit_yrs", lang).trim()} ${t("experience_yrs", lang)}` : ""),
+  ].filter(Boolean).join("");
+
   panel.innerHTML = `
     <div class="detail-head">
       <div class="detail-title">
@@ -141,57 +174,74 @@ export function renderDetailPanel(panel, cert, byId, ui) {
         <span class="detail-name">${escapeHtml(name)}</span>
       </div>
       <div class="detail-actions">
-        <a class="detail-link" href="${escapeHtml(cert.official?.exam_url || cert.vendor?.url || "#")}" target="_blank" rel="noopener">${t("open_official", lang)}</a>
         <button type="button" class="icon-btn" data-action="close" title="${t("hide_details_tooltip", lang)}">${t("hide_details", lang)} ✕</button>
       </div>
     </div>
     ${availBanner}
-    <div class="detail-grid">
-      <section>
-        <h4>${t("vendor", lang)}</h4>
-        <p><a href="${escapeHtml(cert.vendor?.url || "#")}" target="_blank" rel="noopener">${escapeHtml(cert.vendor?.name || "")}</a> <span class="muted">(${escapeHtml(cert.vendor?.slug || "")})</span></p>
-        <h4>${t("domain", lang)}</h4>
-        <p>${escapeHtml(cert.domain)}${
-          (cert.secondary_domains || []).length
-            ? ` <span class="muted">+ ${(cert.secondary_domains || []).map(escapeHtml).join(", ")}</span>` : ""
-        }</p>
-        <h4>${t("logistics", lang)}</h4>
-        <ul class="kv">
-          <li><span>${t("cost_usd", lang)}</span><span>${log.cost_usd != null ? log.cost_usd + t("unit_usd", lang) : "—"}</span></li>
-          <li><span>${t("cost_local", lang)}</span><span>${escapeHtml(log.cost_local || "—")}</span></li>
-          <li><span>${t("format", lang)}</span><span>${escapeHtml(log.format || "—")}</span></li>
-          <li><span>${t("duration", lang)}</span><span>${log.duration_min != null ? log.duration_min + t("unit_minutes", lang) : "—"}</span></li>
-          <li><span>${t("questions", lang)}</span><span>${fmtNum(log.questions)}</span></li>
-          <li><span>${t("languages", lang)}</span><span>${escapeHtml((log.languages || []).join(", ") || "—")}</span></li>
-          <li><span>${t("renewal", lang)}</span><span>${log.renewal_years != null ? log.renewal_years + t("unit_yrs", lang) : "—"}</span></li>
-        </ul>
-        <h4>${t("prerequisites", lang)}</h4>
-        <p>${expYrs ? `${expYrs}${t("unit_yrs", lang).trim()} ${t("experience_yrs", lang)}` : "—"}</p>
-      </section>
-      <section>
-        <h4>${t("plus_factors", lang)}</h4>
-        <ul class="factors">${factorPlus || "<li class='muted'>—</li>"}</ul>
-        <h4>${t("minus_factors", lang)}</h4>
-        <ul class="factors">${factorMinus || "<li class='muted'>—</li>"}</ul>
-      </section>
-      <section>
-        <h4>${t("third_party_evals", lang)}</h4>
-        <ul class="sources">${thirdParty || "<li class='muted'>—</li>"}</ul>
-        <h4>${t("sources", lang)}</h4>
-        <ul class="sources">${sources || "<li class='muted'>—</li>"}</ul>
-      </section>
-      <section>
-        <h4>${t("persona_eval", lang)}</h4>
-        <p class="muted">${escapeHtml(eval_.rationale || "")}</p>
-        <ul class="personas">${personasHtml || "<li class='muted'>—</li>"}</ul>
-        <p class="muted small">${t("computed_at", lang)}: ${escapeHtml(eval_.computed_at || "—")} (${escapeHtml(eval_.computed_by_skill || "—")})</p>
-      </section>
-      <section class="rel">
-        ${relatedCertList(t("required_prereqs", lang), requiredEntries, byId, ui, "required")}
-        ${relatedCertList(t("recommended_prereqs", lang), recommendedEntries, byId, ui, "recommended")}
-        ${relatedCertList(t("commonly_followed_by", lang), successorEntries, byId, ui)}
-      </section>
-    </div>
+
+    <!-- Zone 1: At-a-glance -->
+    <section class="zone zone-quick">
+      <header class="zone-head">${t("zone_quick", lang)}</header>
+      <div class="quick-grid">
+        <div class="quick-meta">
+          <div class="meta-row">
+            <span class="meta-label">${t("vendor", lang)}</span>
+            <a class="meta-vendor" href="${escapeHtml(cert.vendor?.url || "#")}" target="_blank" rel="noopener">${escapeHtml(cert.vendor?.name || "")}</a>
+            <span class="muted">(${escapeHtml(cert.vendor?.slug || "")})</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">${t("domain", lang)}</span>
+            ${domainBadges}
+          </div>
+          <div class="meta-row meta-cta">
+            <a class="cta-primary" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener">${t("open_official", lang)}</a>
+            ${blueprintUrl ? `<a class="cta-secondary" href="${escapeHtml(blueprintUrl)}" target="_blank" rel="noopener">Blueprint ↗</a>` : ""}
+          </div>
+        </div>
+        <ul class="kv quick-logistics">${logisticsItems || `<li class="muted">—</li>`}</ul>
+      </div>
+    </section>
+
+    <!-- Zone 2: Roadmap context -->
+    <section class="zone zone-relations">
+      <header class="zone-head">${t("zone_relations", lang)}</header>
+      <div class="rel-grid">
+        ${relatedCertList(t("required_prereqs",     lang), requiredEntries,    byId, ui, "required")}
+        ${relatedCertList(t("recommended_prereqs",  lang), recommendedEntries, byId, ui, "recommended")}
+        ${relatedCertList(t("commonly_followed_by", lang), successorEntries,   byId, ui)}
+      </div>
+    </section>
+
+    <!-- Zone 3: AI evaluation (clearly demarcated) -->
+    <section class="zone zone-ai">
+      <header class="zone-head zone-head-ai">🤖 ${t("zone_ai", lang)}</header>
+      <p class="ai-rationale">${escapeHtml(eval_.rationale || "—")}</p>
+      <ul class="personas">${personasHtml || `<li class="muted">—</li>`}</ul>
+      <p class="muted small ai-meta">${t("computed_at", lang)}: ${escapeHtml(eval_.computed_at || "—")} (${escapeHtml(eval_.computed_by_skill || "—")})</p>
+    </section>
+
+    <!-- Zone 4: Supporting evidence -->
+    <section class="zone zone-evidence">
+      <header class="zone-head zone-head-evidence">${t("zone_evidence", lang)}</header>
+      <div class="evidence-grid">
+        <div>
+          <h5>${t("plus_factors", lang)}</h5>
+          <ul class="factors">${factorPlus  || `<li class="muted">—</li>`}</ul>
+        </div>
+        <div>
+          <h5>${t("minus_factors", lang)}</h5>
+          <ul class="factors">${factorMinus || `<li class="muted">—</li>`}</ul>
+        </div>
+        <div>
+          <h5>${t("third_party_evals", lang)}</h5>
+          <ul class="sources">${thirdParty  || `<li class="muted">—</li>`}</ul>
+        </div>
+        <div>
+          <h5>${t("sources", lang)}</h5>
+          <ul class="sources">${sources     || `<li class="muted">—</li>`}</ul>
+        </div>
+      </div>
+    </section>
   `;
 
   // IMPORTANT: panel-internal handlers MUST stopPropagation on the click.

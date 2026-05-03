@@ -14,6 +14,12 @@ const STRINGS = {
   third_party_evals:    { en: "Third-party evaluations",      ja: "第三者評価" },
   sources:              { en: "Sources",                      ja: "ソース" },
   persona_eval:         { en: "3-persona evaluation",         ja: "3ペルソナ評価" },
+
+  // zone headers (new layout)
+  zone_quick:           { en: "At a glance",                  ja: "概要" },
+  zone_relations:       { en: "Roadmap context",              ja: "ロードマップ上の関連資格" },
+  zone_ai:              { en: "AI evaluation — why this tier?", ja: "AI による評価 — なぜこのティアか" },
+  zone_evidence:        { en: "Supporting evidence (curated facts the AI used)", ja: "根拠データ (AI が参照したキュレーション情報)" },
   required_prereqs:     { en: "Required prerequisites",       ja: "必須の前提資格" },
   recommended_prereqs:  { en: "Recommended prior certs",      ja: "事前に取得することが多い資格" },
   commonly_followed_by: { en: "Commonly followed by",         ja: "次に取得されやすい資格" },
@@ -58,9 +64,10 @@ const STRINGS = {
   preparing:         { en: "Preparing…",                  ja: "準備中…" },
 
   // context menu
-  ctx_deselect:     { en: "Deselect",       ja: "選択を解除" },
-  ctx_copy_abbr:    { en: "Copy abbr",      ja: "略称をコピー" },
-  ctx_show_details: { en: "Show details",   ja: "詳細を表示" },
+  ctx_deselect:      { en: "Deselect",            ja: "選択を解除" },
+  ctx_copy_abbr:     { en: "Copy abbr",           ja: "略称をコピー" },
+  ctx_show_details:  { en: "Show details",        ja: "詳細を表示" },
+  ctx_open_official: { en: "Open official page ↗", ja: "公式ページを開く ↗" },
 
   // legend
   legend_prereq: { en: "→ Prereq (▬ required ┊ ━ recommended ┄ community)",  ja: "→ 前提 (▬ 必須 ┊ ━ 推奨 ┄ 通説)" },

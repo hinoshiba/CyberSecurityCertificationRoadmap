@@ -116,6 +116,64 @@ a:hover { text-decoration: underline; }
 .theme-label::before { content: "🌙 Dark"; }
 [data-theme="light"] .theme-label::before { content: "☀️ Light"; }
 
+/* ----------------------- Header search ----------------------- */
+.search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#search-input {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.25rem 1.6rem 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.83rem;
+  font-family: inherit;
+  width: 200px;
+  outline: none;
+  transition: border-color 0.1s, width 0.15s;
+}
+#search-input:focus { border-color: var(--accent); width: 240px; }
+#search-input::-webkit-search-cancel-button { display: none; }
+.search-clear {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: none;
+}
+.search-clear:hover { background: var(--panel-3); color: var(--text); }
+body.has-search .search-clear { display: inline-block; }
+
+/* ----------------------- Search match highlight + non-match dim ----------------------- */
+/* Matched cards get a warm-yellow border + soft glow + slight scale, on
+   top of any selection / relationship state. */
+.cert-card.search-match {
+  border-color: #ffb84d;
+  box-shadow: 0 0 0 2px rgba(255, 184, 77, 0.55), 0 0 8px rgba(255, 184, 77, 0.5);
+  z-index: 3;
+}
+[data-theme="light"] .cert-card.search-match {
+  border-color: #d97706;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.45), 0 0 8px rgba(217, 119, 6, 0.4);
+}
+/* Dim everything that isn't a match (only when a search is actively
+   running — empty query removes the body class). Selection still wins
+   visually because .selected gets its own bright outline above. */
+body.has-search .cert-card:not(.search-match):not(.selected) {
+  opacity: 0.28;
+  filter: grayscale(0.4);
+}
+
 /* ----------------------- Vendor filter panel ----------------------- */
 .vendor-panel {
   position: absolute;
@@ -612,48 +670,154 @@ body.has-selection.panel-dismissed .show-details-cta { display: inline-flex; }
 .avail-banner.avail-coming-soon { background: rgba(47,120,182,0.14);  border-left-color: #2f78b6; }
 .avail-banner strong { color: var(--text); }
 
-.detail-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 0.8rem 1.4rem;
+/* ----------------------- Detail panel: 4-zone layout ----------------------- */
+/* Zones flow vertically with prominent / de-emphasized weighting:
+   1. zone-quick     — at-a-glance facts (most prominent)
+   2. zone-relations — roadmap context
+   3. zone-ai        — AI evaluation (clearly demarcated)
+   4. zone-evidence  — supporting facts (smallest, muted)                  */
+.detail-panel .zone {
+  margin-top: 0.6rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
 }
-.detail-grid section h4 {
-  margin: 0.4rem 0 0.2rem;
+.detail-panel .zone-head {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+/* Zone 1: At-a-glance — give it the strongest emphasis (slight tier-blue
+   left accent, larger font in vendor/cta) */
+.detail-panel .zone-quick {
+  background: var(--panel-3);
+  border-left: 3px solid var(--accent);
+}
+.quick-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(280px, 1.2fr);
+  gap: 0.8rem 1.6rem;
+}
+.quick-meta { display: flex; flex-direction: column; gap: 0.45rem; }
+.meta-row { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.meta-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  min-width: 60px;
+}
+.meta-vendor {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.meta-vendor:hover { color: var(--accent); }
+.meta-cta { margin-top: 0.3rem; gap: 0.5rem; }
+.cta-primary {
+  background: var(--accent);
+  color: white !important;
+  padding: 0.35rem 0.85rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+.cta-primary:hover { opacity: 0.9; text-decoration: none; }
+.cta-secondary {
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 0.3rem 0.4rem;
+}
+.cta-secondary:hover { text-decoration: underline; }
+.domain-pill {
+  display: inline-block;
+  font-size: 0.74rem;
+  padding: 1px 7px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+}
+.detail-panel .zone-quick .domain-pill { background: var(--panel); }
+.quick-logistics { font-size: 0.82rem; }
+.quick-logistics li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.quick-logistics .kv-key { color: var(--muted); flex-shrink: 0; }
+.quick-logistics .kv-val { text-align: right; }
+
+/* Zone 2: Roadmap context */
+.rel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.6rem 1.4rem;
+}
+
+/* Zone 3: AI evaluation (clearly marked as AI judgment) */
+.detail-panel .zone-ai {
+  background: color-mix(in srgb, var(--accent) 6%, var(--panel-2));
+  border-left: 3px solid var(--accent);
+}
+.zone-head-ai { color: var(--accent); }
+.ai-rationale {
+  font-size: 0.88rem;
+  margin: 0 0 0.45rem;
+  font-style: italic;
+  color: var(--text);
+}
+.ai-meta { margin-top: 0.4rem; font-size: 0.7rem; }
+
+/* Zone 4: Supporting evidence (de-emphasized) */
+.detail-panel .zone-evidence { background: transparent; }
+.zone-head-evidence { opacity: 0.75; }
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem 1.2rem;
   font-size: 0.78rem;
+}
+.evidence-grid h5 {
+  margin: 0 0 0.2rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   color: var(--muted);
   letter-spacing: 0.06em;
   font-weight: 600;
 }
-.detail-grid section p { margin: 0.15rem 0 0.5rem; }
-.detail-grid .kv { list-style: none; padding: 0; margin: 0; font-size: 0.82rem; }
-.detail-grid .kv li {
-  display: flex;
-  justify-content: space-between;
-  padding: 1px 0;
-  border-bottom: 1px dashed var(--border);
-}
-.detail-grid .kv li span:first-child { color: var(--muted); }
-.detail-grid ul.factors,
-.detail-grid ul.sources,
-.detail-grid ul.personas,
-.detail-grid ul.rel-list {
+
+/* Universal lists used inside zones (factors / sources / personas) */
+.detail-panel ul.factors,
+.detail-panel ul.sources,
+.detail-panel ul.personas {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-.detail-grid ul.factors li,
-.detail-grid ul.sources li,
-.detail-grid ul.personas li,
-.detail-grid ul.rel-list li {
+.detail-panel ul.factors li,
+.detail-panel ul.sources li,
+.detail-panel ul.personas li {
   word-break: break-word;
 }
-.detail-grid .muted { color: var(--muted); }
-.detail-grid .small { font-size: 0.72rem; }
+.detail-panel .muted { color: var(--muted); }
+.detail-panel .small { font-size: 0.72rem; }
+.detail-panel ul.personas { font-size: 0.85rem; gap: 0.3rem; }
 .weight { color: var(--muted); font-size: 0.7rem; }
 .rel-block { margin-bottom: 0.6rem; }
 .rel-list { display: flex; flex-direction: column; gap: 0.35rem !important; }
