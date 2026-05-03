@@ -5,8 +5,14 @@ Regenerate data/manifest.json from data/certs/**/*.json.
 The manifest is the single fetch entrypoint for the static site (GitHub Pages
 cannot glob server-side). Every cert file appears with its id, relative path,
 and a short content hash so browsers can cache-bust.
+
+Output is deterministic — the same set of cert files always produces a
+byte-identical manifest. The build's "when was this generated" signal
+lives in `assets/version.json` (stamped by the deploy workflow with
+build_date and dataset_updated). Removing the timestamp from this file
+is what lets the validate-data CI job's `git diff --quiet` check work
+across days without spurious failures.
 """
-import datetime
 import hashlib
 import json
 import pathlib
@@ -38,7 +44,6 @@ def main() -> int:
 
     manifest = {
         "schema_version": 1,
-        "generated_at": datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "domains_path": "domains.json",
         "tiers_path": "tiers.json",
         "agencies_path": "sources/agencies.json",

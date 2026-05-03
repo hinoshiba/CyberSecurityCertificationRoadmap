@@ -48,7 +48,8 @@
       {
         "code": "ANSI_ISO_17024_ACCREDITED",
         "weight_hint": "high",
-        "evidence": "ANAB ISO/IEC 17024 accredited."
+        "evidence": "https://www.ansica.org/wwwversion2/outside/PERdirectoryListing.asp",
+        "note": "ANAB ISO/IEC 17024 accredited."
       },
       {
         "code": "DOD_8140_APPROVED",
