@@ -166,11 +166,113 @@ function bfs(startId, byId, inverseMap, kind) {
 }
 
 /** Compose a sortable priority key — lower = drawn first / kept when capping.
- *    primary  : source rank (required = 0, community = 3)
- *    secondary: depth (shallower = preferred)                              */
+ *
+ *    primary  : depth (shallower wins). Connectivity must be preserved —
+ *               if we kept a depth-2 edge but dropped its depth-1 parent,
+ *               the parent node would render with arrows leaving it but no
+ *               arrow reaching it (ORPHAN EDGE BUG, reproduced via
+ *               "ipa.ap → CISSP (community, depth 1)" being dropped while
+ *               "CISSP → ISSAP/ISSEP/ISSMP (vendor-ladder, depth 2)" was
+ *               kept). Depth-first sort guarantees no kept edge is
+ *               orphaned: when budget runs out at some depth d, we drop
+ *               from depth d+ before dropping anything at depth d-1.
+ *    secondary: source rank (required = 0, community = 3) — within the
+ *               same depth, higher-trust edges survive first.            */
 function priorityKey(edge) {
   const s = SOURCE_RANK[edge.source] ?? 9;
-  return s * 10 + edge.depth;
+  return edge.depth * 10 + s;
+}
+
+/** When the same neighbor cert is reached BOTH as a prereq (in prereq
+ *  BFS) AND as a successor (in next BFS), drop the next-direction edge so
+ *  only the prereq arrow renders. Otherwise the two arrows overlap with
+ *  different colors + dash patterns and produce a confusing "striped"
+ *  visual. User-specified resolution: prereq wins.
+ *
+ *  Per-direction BFS already dedupes within each direction (visited
+ *  set), so each non-selected node has at most one prereq edge and at
+ *  most one next edge — the filter below preserves at most one entry per
+ *  (other-node, kind) pair. */
+function dedupeBidirectionalPairs(edges) {
+  // For each non-selected node, collect which kinds of edge touch it.
+  const otherKinds = new Map();   // otherId → Set<"prereq" | "next">
+  for (const e of edges) {
+    const other = e.kind === "prereq" ? e.fromId : e.toId;
+    if (!otherKinds.has(other)) otherKinds.set(other, new Set());
+    otherKinds.get(other).add(e.kind);
+  }
+  return edges.filter(e => {
+    const other = e.kind === "prereq" ? e.fromId : e.toId;
+    const kinds = otherKinds.get(other);
+    if (kinds.size > 1 && e.kind === "next") return false;   // drop next, keep prereq
+    return true;
+  });
+}
+
+/** Remove edges whose path back to the selected cert is broken because
+ *  some intermediate edge was dropped. Walks from each kept edge toward
+ *  the selected cert; if the parent edge in its BFS path isn't present,
+ *  the edge is an orphan and is dropped.
+ *
+ *  For prereq edges: parent is the edge whose `toId` matches our `fromId`.
+ *  For next   edges: parent is the edge whose `toId` matches our `fromId`.
+ *  In both cases, an edge at depth d>1 needs a same-kind edge at depth d-1
+ *  whose endpoint matches its origin.
+ */
+function pruneOrphans(edges, selectedId) {
+  // Index kept edges by (kind, toId) for fast parent lookup.
+  // For prereq edges going A→B (where B is the SELECTED side of the BFS
+  // step), A's depth-d-1 parent is the edge whose `toId === A.fromId`'s
+  // BFS-frontier ancestor. Simpler: for kind=prereq the BFS expansion
+  // step at depth d looks at f's prereqNeighbors and adds edges with
+  // toId=f. So an edge at depth d has fromId = neighbor, toId = f, and
+  // f is some node visited at depth d-1. Its parent edge (the one that
+  // brought f into the visited set) has toId=f at depth d-1 (or f is the
+  // selected node itself, in which case no parent is needed).
+  //
+  // For kind=next, the expansion at depth d looks at f's inverseMap; the
+  // edge added has fromId = f, toId = neighbor. Its parent edge has
+  // toId = f at depth d-1.
+
+  // Build set of "reachable nodes from selected" via the kept edges,
+  // walking outward from the selected node up to MAX_DEPTH.
+  const keptSet = new Set();
+  const byKindAndOrigin = { prereq: new Map(), next: new Map() };
+  for (const e of edges) {
+    // For BFS reachability tracking: the "origin" (the side closer to
+    // the selected cert) of the edge.
+    //   prereq: edge fromId=neighbor, toId=closer-to-selected → origin = toId
+    //   next  : edge fromId=closer-to-selected, toId=neighbor → origin = fromId
+    const origin = e.kind === "prereq" ? e.toId : e.fromId;
+    if (!byKindAndOrigin[e.kind].has(origin)) byKindAndOrigin[e.kind].set(origin, []);
+    byKindAndOrigin[e.kind].get(origin).push(e);
+  }
+
+  const out = [];
+  // Walk outward from selectedId for each kind, BFS, only following edges
+  // present in the kept set. Anything reachable that way is non-orphan.
+  for (const kind of ["prereq", "next"]) {
+    const visited = new Set([selectedId]);
+    let frontier = [selectedId];
+    while (frontier.length) {
+      const nextFrontier = [];
+      for (const node of frontier) {
+        const outgoing = byKindAndOrigin[kind].get(node) || [];
+        for (const e of outgoing) {
+          // The endpoint farther from selected:
+          //   prereq: fromId is the prereq (farther)
+          //   next  : toId is the successor (farther)
+          const farther = e.kind === "prereq" ? e.fromId : e.toId;
+          if (visited.has(farther)) continue;
+          visited.add(farther);
+          out.push(e);
+          nextFrontier.push(farther);
+        }
+      }
+      frontier = nextFrontier;
+    }
+  }
+  return out;
 }
 
 export function drawArrows(svg, gridEl, selectedId, byId, inverseMap) {
@@ -200,14 +302,29 @@ export function drawArrows(svg, gridEl, selectedId, byId, inverseMap) {
     ...bfs(selectedId, byId, inverseMap, "next"),
   ];
 
+  // Dedupe bidirectional pairs: when the same neighbor cert is reached as
+  // BOTH a prereq AND a successor of the selected (possible via multi-hop
+  // cycles in the recommended_certs graph), keep only the prereq edge.
+  // Without this, both arrows draw on top of each other — solid prereq
+  // (blue) underneath + dashed next (green) on top — producing a visually
+  // confusing "blue striped" arrow. User preference: prereq wins.
+  edges = dedupeBidirectionalPairs(edges);
+
   // Cap to MAX_VISIBLE_EDGES, dropping lower-priority edges first.
-  // Required edges (priority 0) are always retained because they sit at
-  // the top of the sorted list and the cap is set well above the typical
-  // required-cert count for any single cert.
+  // Required edges (priority 0 within depth-1) are always retained because
+  // they sit at the top of the sorted list and the cap is set well above
+  // the typical required-cert count for any single cert.
   edges.sort((a, b) => priorityKey(a) - priorityKey(b));
   if (edges.length > MAX_VISIBLE_EDGES) {
     edges = edges.slice(0, MAX_VISIBLE_EDGES);
   }
+
+  // Defense-in-depth orphan prune: drop any kept edge whose path back to
+  // the selected cert isn't fully present. With depth-first priorityKey
+  // this should be a no-op; kept here as a safety net so future ordering
+  // changes can't reintroduce the orphan-edge visualization bug.
+  edges = pruneOrphans(edges, selectedId);
+
   // Now reverse for drawing order: deeper edges drawn first so shallow
   // ones land on top of them.
   edges.sort((a, b) => b.depth - a.depth);
