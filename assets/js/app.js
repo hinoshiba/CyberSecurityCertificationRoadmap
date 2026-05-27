@@ -9,6 +9,7 @@ import { exportMatrixPNG } from "./export.js";
 import { loadVersion, versionLabel } from "./version.js";
 import { attachContextMenu } from "./context_menu.js";
 import { matchCertIds } from "./search.js";
+import { updateSelectedOverlay } from "./selected_overlay.js";
 import { t } from "./i18n.js";
 
 const state = {
@@ -17,6 +18,9 @@ const state = {
   certs: [],
   byId: new Map(),
   inverseMap: new Map(),
+  // Map<vendor-slug, count> over the full cert set. Used by the
+  // vendor-prominent highlight (threshold is in ui.vendorThreshold).
+  vendorCounts: new Map(),
   ui: {
     showJp: false,
     labelLang: "en",
@@ -28,6 +32,11 @@ const state = {
     panelDismissed: true,
     // Live header search query (URL ?q=). Empty string = no search active.
     searchQuery: "",
+    // Vendor-highlight threshold (URL ?vt=). null/0 = highlight off.
+    vendorThreshold: null,
+    // Pass-through to render.js so it can apply .vendor-prominent without
+    // recomputing counts on every render.
+    vendorCounts: new Map(),
   }
 };
 
@@ -36,9 +45,16 @@ const wrap = document.getElementById("matrix-wrap");
 const counter = document.getElementById("cert-count");
 const detail = document.getElementById("detail-panel");
 const arrowsSvg = document.getElementById("arrows-overlay");
+const selectedOverlay = document.getElementById("selected-overlay");
 const vendorPanel = document.getElementById("vendor-panel");
 
 function rerender() {
+  // Skip while data is still loading. The priming syncFromUrl() call runs
+  // before bootstrap finishes; without this guard, it would wipe the
+  // "Loading roadmap…" message and leave an empty grid until the fetch
+  // resolves.
+  if (state.byId.size === 0) return;
+
   const visible = applyFilters(state.certs, state.ui);
   renderGrid(grid, state.domains, state.tiers, visible, state.ui);
   counter.textContent = `${visible.length} of ${state.certs.length} certs`;
@@ -70,6 +86,7 @@ function rerender() {
 
   requestAnimationFrame(() => {
     drawArrows(arrowsSvg, grid, state.ui.selectedId, state.byId, state.inverseMap);
+    updateSelectedOverlay(selectedOverlay, grid, state.ui.selectedId, state.byId);
     if (state.ui.selectedId) {
       scrollSelectedIntoView(state.ui.selectedId, showPanel && !wasPanelOpen);
     }
@@ -125,7 +142,13 @@ async function bootstrap() {
     state.byId    = new Map(data.certs.map(c => [c.id, c]));
     state.inverseMap = buildInverseMap(state.byId);
 
-    buildVendorPanel(vendorPanel, vendorIndex(data.certs));
+    // vendorIndex returns [{slug, name, count}], already over the full set.
+    // Reuse it for both the filter panel and the prominent-vendor highlight.
+    const vendors = vendorIndex(data.certs);
+    state.vendorCounts = new Map(vendors.map(v => [v.slug, v.count]));
+    state.ui.vendorCounts = state.vendorCounts;
+
+    buildVendorPanel(vendorPanel, vendors);
 
     initThemeToggle(document.getElementById("theme-toggle"));
     attachFilterListeners({
@@ -315,6 +338,21 @@ if (pngBtn) {
   });
 }
 
+// Vendor-highlight threshold input. Debounced so URL doesn't churn while
+// the user is still typing. Empty / 0 / NaN clears the highlight (state
+// = null, URL drops the `vt` param).
+const vtInput = document.getElementById("vt-input");
+if (vtInput) {
+  let vtDebounce = 0;
+  vtInput.addEventListener("input", () => {
+    const raw = vtInput.value.trim();
+    const n = parseInt(raw, 10);
+    const next = (Number.isFinite(n) && n > 0) ? n : null;
+    clearTimeout(vtDebounce);
+    vtDebounce = setTimeout(() => setState({ vt: next }), 200);
+  });
+}
+
 // "Show details" floating CTA — surfaces when the panel is dismissed but
 // a cert is still selected. Lets the user re-open the detail panel without
 // having to re-click the same card.
@@ -330,6 +368,7 @@ if (showDetailsBtn) {
 window.addEventListener("resize", () => {
   if (state.ui.selectedId) {
     drawArrows(arrowsSvg, grid, state.ui.selectedId, state.byId, state.inverseMap);
+    updateSelectedOverlay(selectedOverlay, grid, state.ui.selectedId, state.byId);
   }
 });
 
@@ -338,20 +377,31 @@ window.addEventListener("resize", () => {
 // panel is opt-in via the Show details CTA. Anyone receiving a shared
 // link sees the highlighted cert + arrows immediately and can choose to
 // open the detail panel.
-subscribe(() => {
+function syncFromUrl() {
   const s = getState();
   state.ui.showJp      = !!s.jp;
   state.ui.labelLang   = s.lang === "ja" ? "ja" : "en";
   state.ui.vendors     = s.vendors;
   state.ui.selectedId  = s.cert || null;
   state.ui.searchQuery = s.q || "";
+  state.ui.vendorThreshold = s.vt;
   // Keep input field in sync (e.g., when state arrives from URL on load
   // or back/forward).
   const si = document.getElementById("search-input");
   if (si && si.value !== state.ui.searchQuery) si.value = state.ui.searchQuery;
+  const vi = document.getElementById("vt-input");
+  if (vi) {
+    const want = s.vt ? String(s.vt) : "";
+    if (vi.value !== want) vi.value = want;
+  }
   updateChromeLabels();
   rerender();
-});
+}
+subscribe(syncFromUrl);
+// subscribe() only fires on setState/popstate, so prime the state once on
+// load so URL params (?q=, ?vt=, ?cert=, etc.) take effect even before
+// any user interaction.
+syncFromUrl();
 
 /** Localize static chrome (legend, floating CTA, export buttons) on every
  *  language change. Detail panel content + cert cards localize themselves
@@ -366,6 +416,13 @@ function updateChromeLabels() {
   set("lg-next",   "legend_next");
   set("lg-depth",  "legend_depth");
   set("lg-hint",   "legend_hint");
+
+  set("vt-label",  "vt_label");
+  set("vt-suffix", "vt_suffix");
+  const vtControl = document.getElementById("vt-control");
+  if (vtControl) vtControl.title = t("vt_tooltip", lang);
+  const vtInputEl = document.getElementById("vt-input");
+  if (vtInputEl) vtInputEl.setAttribute("aria-label", t("vt_tooltip", lang));
 
   const png = document.getElementById("png-export-btn");
   if (png) {

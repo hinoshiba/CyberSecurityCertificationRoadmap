@@ -27,6 +27,15 @@ export function renderGrid(root, domains, tiers, certs, ui) {
   root.innerHTML = "";
   const lang = ui.labelLang === "ja" ? "ja" : "en";
 
+  // Vendor-highlight: tint cards whose vendor publishes ≥ threshold certs.
+  // The count is over the FULL (unfiltered) cert set so toggling JP / vendor
+  // filters doesn't change which vendors qualify — the threshold reflects
+  // the vendor's portfolio breadth, not what's currently visible.
+  const vt = Number.isFinite(ui.vendorThreshold) && ui.vendorThreshold > 0
+    ? ui.vendorThreshold : 0;
+  const vendorCounts = ui.vendorCounts || new Map();
+  const isProminent = slug => vt > 0 && (vendorCounts.get(slug) || 0) >= vt;
+
   // Per-domain cert counts → sqrt-weighted column fractions.
   // Domains with many certs (governance-risk has 76) get more horizontal
   // space than sparse domains (threat-intel has 7) without dominating —
@@ -120,6 +129,7 @@ export function renderGrid(root, domains, tiers, certs, ui) {
         if (c.japan_only) classes.push("jp");
         if (availability !== "available") classes.push("unavail", `unavail-${availability}`);
         if (ui.selectedId === c.id) classes.push("selected");
+        if (isProminent(c.vendor?.slug)) classes.push("vendor-prominent");
         card.className = classes.join(" ");
         // Bookmarkable link with both ?cert= AND #anchor for completeness.
         card.href = `?cert=${encodeURIComponent(c.id)}`;

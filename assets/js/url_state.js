@@ -8,18 +8,25 @@
  *   ?v=isc2,offsec,giac         (vendor filter; absent param = no filter; empty = show none)
  *   ?cert=isc2.cissp            (selected cert id)
  *   ?q=GIAC                     (live header search query; matches abbr / name / vendor)
+ *   ?vt=10                      (vendor-highlight threshold: tint cards whose
+ *                                vendor publishes ≥ vt certs; 0/missing = off)
  *
  * Updates use history.replaceState so the back/forward stack isn't polluted
  * with every keystroke; the URL still bookmarks correctly.
  */
 
-const KEYS = ["theme", "lang", "jp", "v", "cert", "q"];
+const KEYS = ["theme", "lang", "jp", "v", "cert", "q", "vt"];
 
 function readParams() {
   const sp = new URLSearchParams(window.location.search);
   let vendors = null;
   if (sp.has("v")) {
     vendors = (sp.get("v") || "").split(",").map(s => s.trim()).filter(Boolean);
+  }
+  let vt = null;
+  if (sp.has("vt")) {
+    const n = parseInt(sp.get("vt"), 10);
+    if (Number.isFinite(n) && n > 0) vt = n;
   }
   return {
     theme:   sp.get("theme") || null,
@@ -28,6 +35,7 @@ function readParams() {
     vendors,
     cert:    sp.get("cert") || null,
     q:       sp.get("q") || "",
+    vt,
   };
 }
 
@@ -42,6 +50,7 @@ function writeParams(state) {
   }
   if (state.cert)              sp.set("cert", state.cert);
   if (state.q)                 sp.set("q", state.q);
+  if (state.vt && state.vt > 0) sp.set("vt", String(state.vt));
   const qs = sp.toString();
   const url = window.location.pathname + (qs ? "?" + qs : "") + window.location.hash;
   window.history.replaceState(null, "", url);
