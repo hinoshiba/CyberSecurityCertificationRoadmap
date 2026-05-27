@@ -75,6 +75,11 @@ const STRINGS = {
   legend_depth:  { en: "(up to 3 hops, max 20 edges; fainter = farther)",     ja: "(最大3ホップ・最大20本、薄いほど遠い)" },
   legend_hint:   { en: "Click a cert. ESC to deselect. URL is bookmarkable.", ja: "資格をクリック。ESC で選択解除。URL はブックマーク可能。" },
 
+  // vendor-highlight threshold
+  vt_label:   { en: "Vendor highlight ≥",                                              ja: "ベンダ強調: 資格数" },
+  vt_suffix:  { en: "certs",                                                           ja: "件以上" },
+  vt_tooltip: { en: "Tint cards whose vendor publishes at least this many certs (blank / 0 disables).", ja: "この件数以上の資格を提供しているベンダの背景を強調表示します (空欄または 0 で無効)。" },
+
   // availability
   availability:           { en: "Availability",           ja: "受験可否" },
   avail_paused_badge:     { en: "PAUSED",                 ja: "受験停止中" },

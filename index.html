@@ -58,6 +58,11 @@
 
   <section class="controls" aria-label="Status">
     <span class="meta" id="cert-count" aria-live="polite"></span>
+    <label class="vt-control" id="vt-control" title="">
+      <span class="vt-label" id="vt-label"></span>
+      <input id="vt-input" type="number" min="0" step="1" inputmode="numeric" placeholder="0" />
+      <span class="vt-suffix" id="vt-suffix"></span>
+    </label>
     <span class="legend">
       <span id="lg-prereq" class="lg-prereq"></span>
       <span id="lg-next"   class="lg-next"></span>
@@ -72,6 +77,10 @@
         <p class="loading">Loading roadmap…</p>
       </div>
       <svg id="arrows-overlay" aria-hidden="true"></svg>
+      <!-- Floating "spotlight" for the selected cert. Sits above the arrow
+           overlay so the cert name stays readable even when many edges
+           converge on the same card. Positioned by JS to track the card. -->
+      <div id="selected-overlay" class="selected-overlay" aria-hidden="true"></div>
     </div>
   </main>
 
