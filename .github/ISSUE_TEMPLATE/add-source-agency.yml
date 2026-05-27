@@ -1,5 +1,5 @@
-name: Add a source agency
-description: Propose a new authoritative source agency for `data/sources/agencies.json`.
+name: Add a source agency (English)
+description: Propose a new authoritative source agency for `data/sources/agencies.json`. / 新しい権威ある情報ソース機関を提案する (英語フォーム)
 title: "[add-source] <agency name>"
 labels: ["add-source"]
 body:

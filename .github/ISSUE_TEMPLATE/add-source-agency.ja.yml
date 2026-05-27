@@ -1,0 +1,51 @@
+name: 情報ソース機関を追加する (日本語)
+description: 新しい権威ある情報ソース機関を `data/sources/agencies.json` に追加する提案 / Propose a new source agency (Japanese form)
+title: "[add-source] <機関名>"
+labels: ["add-source"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        受け入れ可能な機関は、政府機関、非営利の標準化団体、
+        または ISO/IEC 17024 の認定機関に限ります。ベンダのブログや
+        コンサルティング会社のホワイトペーパーは情報ソース機関には
+        該当しません。これらは個別の資格に
+        `third_party_evaluations[].url` として登録してください。
+
+  - type: input
+    id: agency_name
+    attributes:
+      label: 機関の正式名称
+      placeholder: 独立行政法人 情報処理推進機構
+    validations: { required: true }
+
+  - type: input
+    id: agency_url
+    attributes:
+      label: 機関の公式 URL
+      placeholder: https://www.ipa.go.jp/
+    validations: { required: true }
+
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: 管轄 (ISO 3166-1 alpha-2 コード、"EU"、"INTL" 等)
+      placeholder: JP
+    validations: { required: true }
+
+  - type: dropdown
+    id: trust_tier
+    attributes:
+      label: 信頼度ティア
+      options:
+        - high
+        - medium
+        - vendor
+    validations: { required: true }
+
+  - type: textarea
+    id: use
+    attributes:
+      label: この機関を情報ソースとしてどのように活用しますか?
+      placeholder: 例) 日本の国家試験の根拠、EU フレームワーク整合、認定エビデンス
+    validations: { required: true }

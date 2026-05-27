@@ -1,5 +1,5 @@
-name: Update a certification
-description: Refresh facts on an existing certification (cost change, blueprint refresh, retired, renamed).
+name: Update a certification (English)
+description: Refresh facts on an existing certification (cost change, blueprint refresh, retired, renamed). / 既存資格の情報を更新する (英語フォーム)
 title: "[update-cert] <cert id>: <what changed>"
 labels: ["update-cert"]
 body:

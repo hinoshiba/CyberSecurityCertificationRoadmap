@@ -1,0 +1,53 @@
+name: 評価結果に異議を申し立てる (日本語)
+description: AI が付与したティアや評価の根拠に対する異議 / Disagree with the AI-assigned tier (Japanese form)
+title: "[eval] <資格 ID>: <一行サマリ>"
+labels: ["evaluation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [コア原則](../../README.md#core-principle-ai-as-third-party-evaluator)
+        にしたがい、ティアを修正する正しい方法は、
+        資格の `scoring_factors` を新しい根拠とともに更新するか、
+        `.claude/skills/evaluate-roadmap-3-personas/SKILL.md` の
+        ルーブリックを変更することです。`evaluation.computed_tier`
+        を手作業で書き換えることはしません。
+
+  - type: input
+    id: cert_id
+    attributes:
+      label: 資格 ID
+      placeholder: isc2.cissp
+    validations: { required: true }
+
+  - type: input
+    id: current_tier
+    attributes:
+      label: 現在表示されているティア
+      placeholder: expert
+    validations: { required: true }
+
+  - type: dropdown
+    id: expected
+    attributes:
+      label: 妥当だと考えるティア
+      options: [foundational, associate, professional, expert, specialty]
+    validations: { required: true }
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: そう判断する理由 (根拠を提示してください)
+      description: 公式ソース、第三者評価、採用市場データへのリンクを記入してください。主観的な感覚のみでは不十分です。
+    validations: { required: true }
+
+  - type: dropdown
+    id: which_change
+    attributes:
+      label: 必要と考える修正
+      options:
+        - Change the cert's plus / minus scoring_factors (資格の加点・減点要素を更新)
+        - Change the rubric in .claude/skills/evaluate-roadmap-3-personas (ルーブリックの見直し)
+        - One of the personas needs adjustment (ペルソナ定義の調整)
+        - Not sure (判断がつかない)
+    validations: { required: true }
