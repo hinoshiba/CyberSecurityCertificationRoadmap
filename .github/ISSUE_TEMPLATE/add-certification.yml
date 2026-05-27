@@ -1,5 +1,5 @@
-name: Add a certification
-description: Propose a certification not yet in the roadmap.
+name: Add a certification (English)
+description: Propose a certification not yet in the roadmap. / ロードマップに未収録の資格を提案する (英語フォーム)
 title: "[add-cert] <Vendor> <Cert name or abbreviation>"
 labels: ["add-cert"]
 body:

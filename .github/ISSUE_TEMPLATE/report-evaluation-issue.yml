@@ -1,5 +1,5 @@
-name: Report an evaluation issue
-description: Disagree with the tier the AI assigned a certification, or with how a persona reasoned about it.
+name: Report an evaluation issue (English)
+description: Disagree with the tier the AI assigned a certification, or with how a persona reasoned about it. / AI が付与したティアや評価の根拠に対する異議を申し立てる (英語フォーム)
 title: "[eval] <cert id>: <one-line summary>"
 labels: ["evaluation"]
 body:

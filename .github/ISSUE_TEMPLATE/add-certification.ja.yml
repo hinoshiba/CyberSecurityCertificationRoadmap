@@ -1,0 +1,93 @@
+name: 資格を追加する (日本語)
+description: ロードマップに未収録の資格を提案する (日本語フォーム / Japanese form)
+title: "[add-cert] <ベンダ> <資格名または略称>"
+labels: ["add-cert"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        新しい資格をご提案いただきありがとうございます。
+
+        以下の回答をもとに `respond-to-issue` スキルが
+        `data/certs/<vendor>/<cert>.json` のドラフトを生成します。
+        メンテナがドラフト PR を確認してからマージします。
+
+  - type: input
+    id: vendor
+    attributes:
+      label: ベンダ / 発行機関
+      description: '正式名称 (例: "ISC2", "OffSec", "IPA")'
+      placeholder: ISC2
+    validations: { required: true }
+
+  - type: input
+    id: name
+    attributes:
+      label: 資格名
+      description: 正式名称と略称をご記入ください。
+      placeholder: Certified Information Systems Security Professional (CISSP)
+    validations: { required: true }
+
+  - type: input
+    id: official_url
+    attributes:
+      label: 公式の資格ページ URL
+      description: ベンダの公式ページへのリンク
+      placeholder: https://www.isc2.org/Certifications/CISSP
+    validations: { required: true }
+
+  - type: textarea
+    id: third_party
+    attributes:
+      label: 第三者評価の URL
+      description: 少なくとも 1 件の独立した評価 (NIST NICE マッピング、DoD 8140 リスト、IPA レジストリ、ENISA レポート、ANSI ディレクトリ等) を記入してください。ベンダの自己評価は含めません。
+      placeholder: |
+        - https://public.cyber.mil/wid/dod8140/
+        - https://www.nist.gov/itl/applied-cybersecurity/nice/...
+    validations: { required: true }
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: 主ドメインの候補
+      options:
+        - governance-risk
+        - security-architecture
+        - iam
+        - network-defense
+        - endpoint-mobile
+        - cloud-security
+        - application-appsec
+        - offensive-redteam
+        - incident-forensics
+        - threat-intel
+        - ot-ics-iot
+        - privacy-data-protection
+    validations: { required: true }
+
+  - type: checkboxes
+    id: japan_only
+    attributes:
+      label: 日本限定
+      description: 主に日本の発行機関 (SEA/J, IPA 等) によって提供され、日本国外での需要が限定的な資格にのみチェックしてください。
+      options:
+        - label: この資格は日本限定です (JP モードトグルでデフォルト非表示)
+          required: false
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: 推奨される前提資格 (任意)
+      description: |
+        ベンダが前提または強く推奨している資格の ID (`data/manifest.json`
+        に記載のもの) を 1 行 1 件で記入してください。この情報は
+        ロードマップ上の矢印描画に使用されます。
+      placeholder: |
+        isc2.cissp
+        comptia.security-plus
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: AI 評価担当に伝えたい情報 (受験料、形式、なぜ重要か等) があればご記入ください。

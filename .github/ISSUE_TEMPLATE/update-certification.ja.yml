@@ -1,0 +1,38 @@
+name: 資格を更新する (日本語)
+description: 既存資格の情報を更新する (受験料変更、シラバス改訂、提供終了、改名等) / Refresh facts on an existing cert (Japanese form)
+title: "[update-cert] <資格 ID>: <変更点>"
+labels: ["update-cert"]
+body:
+  - type: input
+    id: cert_id
+    attributes:
+      label: 資格 ID
+      description: JSON ファイルに記載されている id (例 "isc2.cissp")
+      placeholder: isc2.cissp
+    validations: { required: true }
+
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: 何が変わりましたか?
+      options:
+        - cost / logistics (受験料・所要時間・形式の変更)
+        - blueprint / domain coverage refresh (出題範囲の改訂)
+        - prerequisite change (前提資格の変更)
+        - retired / replaced / renamed (提供終了 / 後継・改名)
+        - new third-party evaluation available (新しい第三者評価あり)
+        - scoring factor (plus / minus) needs revision (加点・減点要素の見直し)
+        - other (その他)
+    validations: { required: true }
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 根拠 URL
+      description: 変更を示す公式ページや第三者評価へのリンクを記入してください。
+    validations: { required: true }
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足情報
