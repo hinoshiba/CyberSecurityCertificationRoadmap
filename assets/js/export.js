@@ -108,6 +108,7 @@ async function captureMatrixWithArrows(redrawArrows) {
   const scrollX    = matrixWrap.scrollLeft;
   const scrollY    = matrixWrap.scrollTop;
 
+  document.body.classList.add("exporting-png");
   document.body.style.overflowX = "hidden";
   matrixWrap.style.width    = `${EXPORT_WIDTH}px`;
   matrixWrap.style.maxWidth = "none";
@@ -172,6 +173,7 @@ async function captureMatrixWithArrows(redrawArrows) {
     for (const [el, val] of restored) el.setAttribute("filter", val);
     matrixWrap.style.cssText = origMatrix;
     document.body.style.cssText = origBody;
+    document.body.classList.remove("exporting-png");
     matrixWrap.scrollLeft = scrollX;
     matrixWrap.scrollTop  = scrollY;
     if (typeof redrawArrows === "function") {

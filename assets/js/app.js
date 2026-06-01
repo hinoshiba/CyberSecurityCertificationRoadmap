@@ -47,6 +47,12 @@ const detail = document.getElementById("detail-panel");
 const arrowsSvg = document.getElementById("arrows-overlay");
 const selectedOverlay = document.getElementById("selected-overlay");
 const vendorPanel = document.getElementById("vendor-panel");
+const topbar = document.querySelector(".topbar");
+const topbarNav = document.getElementById("topbar-nav");
+const mobileToolsToggle = document.getElementById("mobile-tools-toggle");
+const mobileToolsMql = window.matchMedia("(max-width: 640px)");
+
+const OVERVIEW_REL_CLASSES = ["rel-prereq", "rel-next", "rel-d2", "rel-d3", "rel-both"];
 
 function rerender() {
   // Skip while data is still loading. The priming syncFromUrl() call runs
@@ -57,6 +63,7 @@ function rerender() {
 
   const visible = applyFilters(state.certs, state.ui);
   renderGrid(grid, state.domains, state.tiers, visible, state.ui);
+  attachOverviewListeners();
   counter.textContent = `${visible.length} of ${state.certs.length} certs`;
 
   // Apply live search highlight. The matched set is computed against
@@ -84,13 +91,126 @@ function rerender() {
   detail.classList.toggle("open", showPanel);
   detail.setAttribute("aria-hidden", String(!showPanel));
 
-  requestAnimationFrame(() => {
-    drawArrows(arrowsSvg, grid, state.ui.selectedId, state.byId, state.inverseMap);
+  let didScrollSelection = false;
+  const paintSelectionState = () => {
+    redrawCurrentArrows();
     updateSelectedOverlay(selectedOverlay, grid, state.ui.selectedId, state.byId);
-    if (state.ui.selectedId) {
+    updateOverviewCtaVisibility();
+    requestAnimationFrame(updateOverviewCtaVisibility);
+    if (state.ui.selectedId && !didScrollSelection) {
+      didScrollSelection = true;
       scrollSelectedIntoView(state.ui.selectedId, showPanel && !wasPanelOpen);
     }
-  });
+  };
+  requestAnimationFrame(paintSelectionState);
+  setTimeout(paintSelectionState, 140);
+}
+
+function updateOverviewRelations() {
+  const overviewCells = grid.querySelectorAll(".overview-cell");
+  if (!overviewCells.length) return;
+
+  for (const cell of overviewCells) {
+    cell.classList.remove(...OVERVIEW_REL_CLASSES);
+  }
+
+  const relByCell = new Map();
+  for (const card of grid.querySelectorAll(".cert-card.rel-prereq, .cert-card.rel-next")) {
+    const matrixCell = card.closest(".cell[data-tier][data-domain]");
+    if (!matrixCell) continue;
+    const key = `${matrixCell.dataset.tier}|${matrixCell.dataset.domain}`;
+    const rel = relByCell.get(key) || { prereq: false, next: false, depth: 3 };
+    rel.prereq ||= card.classList.contains("rel-prereq");
+    rel.next   ||= card.classList.contains("rel-next");
+    const depth = card.classList.contains("rel-d3") ? 3 : card.classList.contains("rel-d2") ? 2 : 1;
+    rel.depth = Math.min(rel.depth, depth);
+    relByCell.set(key, rel);
+  }
+
+  for (const [key, rel] of relByCell) {
+    const [tier, domain] = key.split("|");
+    const overviewCell = grid.querySelector(
+      `.overview-cell[data-overview-tier="${CSS.escape(tier)}"][data-overview-domain="${CSS.escape(domain)}"]`
+    );
+    if (!overviewCell || overviewCell.classList.contains("empty")) continue;
+    if (rel.prereq) overviewCell.classList.add("rel-prereq");
+    if (rel.next) overviewCell.classList.add("rel-next");
+    if (rel.prereq && rel.next) overviewCell.classList.add("rel-both");
+    if (rel.depth === 2) overviewCell.classList.add("rel-d2");
+    if (rel.depth === 3) overviewCell.classList.add("rel-d3");
+  }
+}
+
+function isMobileToolsLayout() {
+  return mobileToolsMql.matches;
+}
+
+function syncMobileToolsAccessibility() {
+  if (!topbarNav) return;
+  const shouldHide = isMobileToolsLayout() && !document.body.classList.contains("mobile-tools-open");
+  topbarNav.toggleAttribute("inert", shouldHide);
+  topbarNav.setAttribute("aria-hidden", String(shouldHide));
+}
+
+function setMobileToolsOpen(open) {
+  const next = !!open && isMobileToolsLayout();
+  if (topbar) topbar.classList.toggle("tools-open", next);
+  document.body.classList.toggle("mobile-tools-open", next);
+  if (mobileToolsToggle) mobileToolsToggle.setAttribute("aria-expanded", String(next));
+  if (!next) setVendorPanelOpen(false);
+  syncMobileToolsAccessibility();
+}
+
+function updateOverviewCtaVisibility() {
+  const overview = grid.querySelector(".mobile-overview");
+  if (!overview) {
+    document.body.classList.remove("overview-in-view");
+    return;
+  }
+  const overviewRect = overview.getBoundingClientRect();
+  const wrapRect = wrap.getBoundingClientRect();
+  const isVisible = overviewRect.bottom > wrapRect.top + 8 && overviewRect.top < wrapRect.bottom - 8;
+  document.body.classList.toggle("overview-in-view", isVisible);
+}
+
+function jumpToOverviewCell(overviewCell) {
+  const target = grid.querySelector(
+    `.cell[data-tier="${CSS.escape(overviewCell.dataset.overviewTier)}"][data-domain="${CSS.escape(overviewCell.dataset.overviewDomain)}"]`
+  );
+  if (!target) return;
+  const stickyOffset = grid.querySelector(".tier-head")?.getBoundingClientRect().height || 0;
+  wrap.scrollTo({ top: Math.max(0, target.offsetTop - stickyOffset), left: 0, behavior: "smooth" });
+}
+
+function attachOverviewListeners() {
+  for (const cell of grid.querySelectorAll("[data-overview-tier][data-overview-domain]")) {
+    let downPoint = null;
+    let pointerHandled = false;
+    cell.addEventListener("pointerdown", e => {
+      downPoint = { x: e.clientX, y: e.clientY };
+      pointerHandled = false;
+    });
+    cell.addEventListener("pointerup", e => {
+      if (!downPoint) return;
+      const dx = Math.abs(e.clientX - downPoint.x);
+      const dy = Math.abs(e.clientY - downPoint.y);
+      downPoint = null;
+      if (dx > 8 || dy > 8) return;
+      pointerHandled = true;
+      e.preventDefault();
+      e.stopPropagation();
+      jumpToOverviewCell(cell);
+    });
+    cell.addEventListener("click", e => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (pointerHandled) {
+        pointerHandled = false;
+        return;
+      }
+      jumpToOverviewCell(cell);
+    });
+  }
 }
 
 function scrollSelectedIntoView(certId, transitioning) {
@@ -168,10 +288,30 @@ async function bootstrap() {
 
 // ---------- Event wiring ----------
 
+if (mobileToolsToggle) {
+  mobileToolsToggle.addEventListener("click", () => {
+    setMobileToolsOpen(!document.body.classList.contains("mobile-tools-open"));
+  });
+}
+
+if (topbarNav) {
+  topbarNav.addEventListener("click", e => {
+    if (e.target.closest("a")) setMobileToolsOpen(false);
+  });
+}
+
+syncMobileToolsAccessibility();
+
 // Cert card click → just toggle selection (highlight + arrows).
 // The panel does NOT auto-open; user opens it via "Show details" CTA.
 // Switching certs preserves the user's current panel preference.
 document.addEventListener("click", e => {
+  if (document.body.classList.contains("mobile-tools-open") &&
+      !e.target.closest("#topbar-nav, #mobile-tools-toggle, #vendor-panel")) {
+    setMobileToolsOpen(false);
+    return;
+  }
+
   const card = e.target.closest("a.cert-card");
   if (card) {
     e.preventDefault();
@@ -181,12 +321,19 @@ document.addEventListener("click", e => {
     return;
   }
 
+  const overviewCell = e.target.closest("[data-overview-tier][data-overview-domain]");
+  if (overviewCell) {
+    e.preventDefault();
+    jumpToOverviewCell(overviewCell);
+    return;
+  }
+
   // Click outside any card. Chrome (topbar / controls / about footer / vendor
   // dropdown / detail panel) is excluded so PNG export, language toggle, JP
   // toggle, theme switch, etc. NEVER clear the selection. Only a click on
   // the matrix area itself (empty cell, tier label, etc.) deselects.
   if (state.ui.selectedId &&
-      !e.target.closest("#detail-panel, .topbar, .controls, #about, #vendor-panel, .show-details-cta")) {
+      !e.target.closest("#detail-panel, .topbar, .controls, #about, #vendor-panel, .show-details-cta, .show-overview-cta, .mobile-overview")) {
     state.ui.panelDismissed = true;   // reset the panel preference
     setState({ cert: null });
   }
@@ -223,6 +370,7 @@ function applySearchHighlight() {
  *  export.js shouldn't import directly from app state. */
 function redrawCurrentArrows() {
   drawArrows(arrowsSvg, grid, state.ui.selectedId, state.byId, state.inverseMap);
+  updateOverviewRelations();
 }
 
 // Right-click context menu on cert cards: deselect / copy abbr / show details.
@@ -269,6 +417,10 @@ document.addEventListener("keydown", e => {
     setState({ q: "" });
     return;
   }
+  if (document.body.classList.contains("mobile-tools-open")) {
+    setMobileToolsOpen(false);
+    return;
+  }
   if (state.ui.selectedId) {
     state.ui.panelDismissed = true;
     setState({ cert: null });
@@ -307,15 +459,23 @@ if (searchClear) {
 }
 
 // Vendor filter dropdown open/close
+function setVendorPanelOpen(open) {
+  const panel = document.getElementById("vendor-panel");
+  if (!panel) return;
+  panel.classList.toggle("open", open);
+  panel.setAttribute("aria-hidden", String(!open));
+}
+
 document.addEventListener("click", e => {
   const toggle = e.target.closest("#vendor-filter-toggle");
   const panel = document.getElementById("vendor-panel");
+  if (!panel) return;
   if (toggle) {
-    panel.classList.toggle("open");
+    setVendorPanelOpen(!panel.classList.contains("open"));
     return;
   }
   if (panel.classList.contains("open") && !e.target.closest("#vendor-panel")) {
-    panel.classList.remove("open");
+    setVendorPanelOpen(false);
   }
 });
 
@@ -365,11 +525,31 @@ if (showDetailsBtn) {
   });
 }
 
+const showOverviewBtn = document.getElementById("show-overview-btn");
+if (showOverviewBtn) {
+  showOverviewBtn.addEventListener("click", () => {
+    const overview = grid.querySelector(".mobile-overview");
+    if (overview) overview.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+  });
+}
+
 window.addEventListener("resize", () => {
-  if (state.ui.selectedId) {
-    drawArrows(arrowsSvg, grid, state.ui.selectedId, state.byId, state.inverseMap);
-    updateSelectedOverlay(selectedOverlay, grid, state.ui.selectedId, state.byId);
+  if (!isMobileToolsLayout()) {
+    setMobileToolsOpen(false);
+  } else {
+    syncMobileToolsAccessibility();
   }
+  updateOverviewCtaVisibility();
+  if (state.ui.selectedId) {
+    redrawCurrentArrows();
+    updateSelectedOverlay(selectedOverlay, grid, state.ui.selectedId, state.byId);
+  } else {
+    updateOverviewRelations();
+  }
+});
+
+wrap.addEventListener("scroll", () => {
+  requestAnimationFrame(updateOverviewCtaVisibility);
 });
 
 // Re-render on URL state changes from outside the widgets (back/forward,
@@ -431,6 +611,20 @@ function updateChromeLabels() {
   }
   const showLabel = document.querySelector(".show-details-label");
   if (showLabel) showLabel.textContent = t("show_details", lang);
+  const overviewBtn = document.getElementById("show-overview-btn");
+  if (overviewBtn) {
+    overviewBtn.title = t("show_overview_tooltip", lang);
+    overviewBtn.setAttribute("aria-label", t("show_overview_tooltip", lang));
+  }
+  const overviewLabel = document.querySelector(".show-overview-label");
+  if (overviewLabel) overviewLabel.textContent = t("show_overview", lang);
+  const toolsToggle = document.getElementById("mobile-tools-toggle");
+  if (toolsToggle) {
+    toolsToggle.title = t("tools_tooltip", lang);
+    toolsToggle.setAttribute("aria-label", t("tools_tooltip", lang));
+  }
+  const toolsLabel = document.querySelector(".mobile-tools-label");
+  if (toolsLabel) toolsLabel.textContent = t("tools", lang);
 }
 
 // Initial label paint (the subscribe() above also runs on page load,

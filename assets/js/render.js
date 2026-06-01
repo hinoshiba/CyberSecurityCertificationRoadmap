@@ -1,3 +1,5 @@
+import { t } from "./i18n.js";
+
 function escapeHtml(s) {
   return String(s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -5,6 +7,48 @@ function escapeHtml(s) {
 
 function tierOf(cert) {
   return cert?.evaluation?.computed_tier || "specialty";
+}
+
+const DOMAIN_SHORT = {
+  "governance-risk": "GRC",
+  "security-architecture": "Arc",
+  iam: "IAM",
+  "network-defense": "Net",
+  "endpoint-mobile": "End",
+  "cloud-security": "Cld",
+  "application-appsec": "App",
+  "offensive-redteam": "Red",
+  "incident-forensics": "IR",
+  "threat-intel": "CTI",
+  "ot-ics-iot": "OT",
+  "privacy-data-protection": "Pri",
+};
+
+const TIER_SHORT_EN = {
+  specialty: "Spec",
+  expert: "Exp",
+  professional: "Pro",
+  associate: "Assoc",
+  foundational: "Found",
+  introductory: "Intro",
+};
+
+const TIER_SHORT_JA = {
+  specialty: "特化",
+  expert: "上級",
+  professional: "プロ",
+  associate: "中級",
+  foundational: "基礎",
+  introductory: "入門",
+};
+
+function shortDomainLabel(domain) {
+  return DOMAIN_SHORT[domain.id] || domain.id.slice(0, 4);
+}
+
+function shortTierLabel(tier, lang) {
+  const map = lang === "ja" ? TIER_SHORT_JA : TIER_SHORT_EN;
+  return map[tier.id] || (lang === "ja" ? (tier.label_ja || tier.label_en) : tier.label_en).slice(0, 5);
 }
 
 /**
@@ -96,6 +140,67 @@ export function renderGrid(root, domains, tiers, certs, ui) {
     });
   }
 
+  const overview = document.createElement("section");
+  overview.className = "mobile-overview";
+  overview.setAttribute("aria-label", t("overview_aria", lang));
+  overview.innerHTML = `
+    <div class="mobile-overview-head">
+      <span class="mobile-overview-title">${escapeHtml(t("overview_title", lang))}</span>
+      <span class="mobile-overview-note">${escapeHtml(t("overview_note", lang))}</span>
+    </div>
+  `;
+  const overviewGrid = document.createElement("div");
+  overviewGrid.className = "mobile-overview-grid";
+  overviewGrid.style.setProperty("--overview-domain-count", domains.length);
+
+  const overviewCorner = document.createElement("div");
+  overviewCorner.className = "overview-corner";
+  overviewCorner.textContent = t("overview_tier_axis", lang);
+  overviewGrid.appendChild(overviewCorner);
+  for (const d of domains) {
+    const h = document.createElement("div");
+    h.className = "overview-domain";
+    h.title = lang === "ja" ? (d.label_ja || d.label_en) : d.label_en;
+    h.style.setProperty("--domain-color", d.color || "#888");
+    h.textContent = shortDomainLabel(d);
+    overviewGrid.appendChild(h);
+  }
+
+  for (const t of tiers) {
+    const tierLabel = lang === "ja" ? (t.label_ja || t.label_en) : t.label_en;
+    const rowHead = document.createElement("div");
+    rowHead.className = "overview-tier";
+    rowHead.dataset.tier = t.id;
+    rowHead.textContent = shortTierLabel(t, lang);
+    rowHead.title = tierLabel;
+    overviewGrid.appendChild(rowHead);
+
+    for (const d of domains) {
+      const domainLabel = lang === "ja" ? (d.label_ja || d.label_en) : d.label_en;
+      const list = buckets.get(`${t.id}|${d.id}`) || [];
+      const count = list.length;
+      const cell = document.createElement("button");
+      cell.type = "button";
+      cell.className = "overview-cell";
+      cell.dataset.overviewTier = t.id;
+      cell.dataset.overviewDomain = d.id;
+      cell.style.setProperty("--domain-color", d.color || "#888");
+      cell.style.setProperty("--density", `${Math.min(72, 14 + count * 4)}%`);
+      cell.title = `${tierLabel} / ${domainLabel}: ${count}`;
+      cell.setAttribute("aria-label", `${tierLabel} / ${domainLabel}: ${count}`);
+      if (count === 0) {
+        cell.classList.add("empty");
+        cell.disabled = true;
+      } else {
+        cell.textContent = count > 99 ? "99+" : String(count);
+      }
+      if (list.some(c => c.id === ui.selectedId)) cell.classList.add("selected");
+      overviewGrid.appendChild(cell);
+    }
+  }
+  overview.appendChild(overviewGrid);
+  root.appendChild(overview);
+
   // Body rows
   for (const t of tiers) {
     const tierLabel = lang === "ja" ? (t.label_ja || t.label_en) : t.label_en;
@@ -111,6 +216,8 @@ export function renderGrid(root, domains, tiers, certs, ui) {
       cell.className = "cell";
       cell.dataset.tier = t.id;
       cell.dataset.domain = d.id;
+      cell.dataset.domainLabel = lang === "ja" ? (d.label_ja || d.label_en) : d.label_en;
+      cell.style.setProperty("--domain-color", d.color || "#888");
 
       const list = buckets.get(`${t.id}|${d.id}`) || [];
       if (list.length === 0) cell.classList.add("empty");
