@@ -1,635 +1,715 @@
 import { loadAll } from "./loader.js";
-import { renderGrid, vendorIndex } from "./render.js";
-import { applyFilters, attachFilterListeners, buildVendorPanel } from "./filter.js";
-import { initThemeToggle } from "./theme.js";
+import { getState, setState, subscribe, serializeState } from "./url_state.js";
+import {
+  filterCatalog,
+  sortCatalog,
+  vendorIndex,
+  matrixGroups,
+  LEVEL_ORDER,
+  escapeHtml as esc,
+  label,
+  certName,
+  certTier,
+} from "./catalog.js";
 import { renderDetailPanel } from "./detail_panel.js";
-import { drawArrows, buildInverseMap } from "./arrows.js";
-import { getState, setState, subscribe } from "./url_state.js";
-import { exportMatrixPNG } from "./export.js";
+import { exportRoadmapPNG } from "./export.js";
 import { loadVersion, versionLabel } from "./version.js";
-import { attachContextMenu } from "./context_menu.js";
-import { matchCertIds } from "./search.js";
-import { updateSelectedOverlay } from "./selected_overlay.js";
-import { t } from "./i18n.js";
+import { copy } from "./copy.js";
 
-const state = {
-  domains: [],
-  tiers: [],
-  certs: [],
-  byId: new Map(),
-  inverseMap: new Map(),
-  // Map<vendor-slug, count> over the full cert set. Used by the
-  // vendor-prominent highlight (threshold is in ui.vendorThreshold).
-  vendorCounts: new Map(),
-  ui: {
-    showJp: false,
-    labelLang: "en",
-    vendors: null,
-    selectedId: null,
-    // Default: panel is HIDDEN. Clicking a cert only updates highlight +
-    // arrows; the panel is opt-in via the "Show details" button so the
-    // arrow state is preserved while the user navigates between certs.
-    panelDismissed: true,
-    // Live header search query (URL ?q=). Empty string = no search active.
-    searchQuery: "",
-    // Vendor-highlight threshold (URL ?vt=). null/0 = highlight off.
-    vendorThreshold: null,
-    // Pass-through to render.js so it can apply .vendor-prominent without
-    // recomputing counts on every render.
-    vendorCounts: new Map(),
-  }
+const $ = (id) => document.getElementById(id);
+const dom = {
+  results: $("cert-results"),
+  table: $("roadmap-table"),
+  detail: $("detail-dialog"),
+  panel: $("detail-panel"),
+  filters: $("filter-dialog"),
 };
+let data = null,
+  byId = new Map(),
+  vendors = [],
+  visible = [],
+  overview = [],
+  pageSize = 24;
+let lastState = null,
+  detailId = null,
+  detailLang = null,
+  returnFocus = null;
+let draftVendors = null,
+  toastTimer,
+  loading = false;
+const lang = () => getState().lang;
+const tr = (key) => copy[lang()][key];
+const nameOf = (id) =>
+  label(
+    data?.domains.find((d) => d.id === id),
+    lang(),
+  );
+const levelOf = (id) =>
+  label(
+    data?.tiers.find((t) => t.id === id),
+    lang(),
+  ) || tr("unrated");
+const colorOf = (id) =>
+  data?.domains.find((d) => d.id === id)?.color || "#277a65";
+const certHref = (id) => serializeState({ ...getState(), cert: id });
+const safeColor = (value) =>
+  /^#[0-9a-f]{6}$/i.test(value || "") ? value : "#277a65";
 
-const grid = document.getElementById("grid");
-const wrap = document.getElementById("matrix-wrap");
-const counter = document.getElementById("cert-count");
-const detail = document.getElementById("detail-panel");
-const arrowsSvg = document.getElementById("arrows-overlay");
-const selectedOverlay = document.getElementById("selected-overlay");
-const vendorPanel = document.getElementById("vendor-panel");
-const topbar = document.querySelector(".topbar");
-const topbarNav = document.getElementById("topbar-nav");
-const mobileToolsToggle = document.getElementById("mobile-tools-toggle");
-const mobileToolsMql = window.matchMedia("(max-width: 640px)");
-
-const OVERVIEW_REL_CLASSES = ["rel-prereq", "rel-next", "rel-d2", "rel-d3", "rel-both"];
-
-function rerender() {
-  // Skip while data is still loading. The priming syncFromUrl() call runs
-  // before bootstrap finishes; without this guard, it would wipe the
-  // "Loading roadmap…" message and leave an empty grid until the fetch
-  // resolves.
-  if (state.byId.size === 0) return;
-
-  const visible = applyFilters(state.certs, state.ui);
-  renderGrid(grid, state.domains, state.tiers, visible, state.ui);
-  attachOverviewListeners();
-  counter.textContent = `${visible.length} of ${state.certs.length} certs`;
-
-  // Apply live search highlight. The matched set is computed against
-  // the FULL cert list so a search match still surfaces certs that
-  // happen to be JP-filtered or vendor-filtered out (the user can then
-  // adjust those filters to see them).
-  applySearchHighlight();
-
-  const isSelected = !!state.ui.selectedId && state.byId.has(state.ui.selectedId);
-  const showPanel  = isSelected && !state.ui.panelDismissed;
-
-  // .has-selection: cert chosen → dim unrelated cards, show arrows.
-  // .detail-open : panel is visible → matrix-wrap shrinks to leave room.
-  const wasPanelOpen = document.body.classList.contains("detail-open");
-  document.body.classList.toggle("has-selection", isSelected);
-  document.body.classList.toggle("detail-open",   showPanel);
-  // .panel-dismissed shows the floating "Show details" CTA.
-  document.body.classList.toggle("panel-dismissed", isSelected && state.ui.panelDismissed);
-
-  // Always render the cert content into the panel when something is selected,
-  // even if currently dismissed (CSS .open class controls visibility).
-  const selected = isSelected ? state.byId.get(state.ui.selectedId) : null;
-  renderDetailPanel(detail, selected, state.byId, state.ui);
-  // Visibility is now CSS-driven (.open class), independent of content.
-  detail.classList.toggle("open", showPanel);
-  detail.setAttribute("aria-hidden", String(!showPanel));
-
-  let didScrollSelection = false;
-  const paintSelectionState = () => {
-    redrawCurrentArrows();
-    updateSelectedOverlay(selectedOverlay, grid, state.ui.selectedId, state.byId);
-    updateOverviewCtaVisibility();
-    requestAnimationFrame(updateOverviewCtaVisibility);
-    if (state.ui.selectedId && !didScrollSelection) {
-      didScrollSelection = true;
-      scrollSelectedIntoView(state.ui.selectedId, showPanel && !wasPanelOpen);
-    }
-  };
-  requestAnimationFrame(paintSelectionState);
-  setTimeout(paintSelectionState, 140);
-}
-
-function updateOverviewRelations() {
-  const overviewCells = grid.querySelectorAll(".overview-cell");
-  if (!overviewCells.length) return;
-
-  for (const cell of overviewCells) {
-    cell.classList.remove(...OVERVIEW_REL_CLASSES);
+function localize() {
+  const s = getState(),
+    c = copy[s.lang];
+  document.documentElement.lang = s.lang;
+  document.title =
+    s.lang === "ja"
+      ? "セキュリティ資格ロードマップ — 次の一歩を見つける"
+      : "Security Certification Roadmap — Find your next step";
+  for (const el of document.querySelectorAll("[data-i18n]")) {
+    const value = c[el.dataset.i18n];
+    if (typeof value === "string") el.innerHTML = value;
   }
-
-  const relByCell = new Map();
-  for (const card of grid.querySelectorAll(".cert-card.rel-prereq, .cert-card.rel-next")) {
-    const matrixCell = card.closest(".cell[data-tier][data-domain]");
-    if (!matrixCell) continue;
-    const key = `${matrixCell.dataset.tier}|${matrixCell.dataset.domain}`;
-    const rel = relByCell.get(key) || { prereq: false, next: false, depth: 3 };
-    rel.prereq ||= card.classList.contains("rel-prereq");
-    rel.next   ||= card.classList.contains("rel-next");
-    const depth = card.classList.contains("rel-d3") ? 3 : card.classList.contains("rel-d2") ? 2 : 1;
-    rel.depth = Math.min(rel.depth, depth);
-    relByCell.set(key, rel);
-  }
-
-  for (const [key, rel] of relByCell) {
-    const [tier, domain] = key.split("|");
-    const overviewCell = grid.querySelector(
-      `.overview-cell[data-overview-tier="${CSS.escape(tier)}"][data-overview-domain="${CSS.escape(domain)}"]`
+  $("lang-toggle").textContent = s.lang === "ja" ? "English" : "日本語";
+  $("lang-toggle").setAttribute(
+    "aria-label",
+    s.lang === "ja" ? "Switch to English" : "日本語に切り替え",
+  );
+  const theme =
+    s.theme ||
+    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.dataset.theme = theme;
+  $("theme-toggle").innerHTML =
+    theme === "dark"
+      ? '<span aria-hidden="true">☀</span>'
+      : '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 15.4A8.5 8.5 0 0 1 8.6 4 8.5 8.5 0 1 0 20 15.4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  $("theme-toggle").setAttribute(
+    "aria-label",
+    theme === "dark" ? c.light : c.dark,
+  );
+  $("search-input").placeholder = c.search;
+  $("search-input").setAttribute("aria-label", c.searchLabel);
+  $("search-clear").setAttribute("aria-label", c.clearSearch);
+  $("vendor-search").placeholder = c.vendorSearch;
+  $("vendor-search").setAttribute(
+    "aria-label",
+    s.lang === "ja" ? "提供元を検索" : "Search vendors",
+  );
+  $("sort-select").setAttribute("aria-label", c.sortLabel);
+  $("level-filters").setAttribute("aria-label", c.levelLabel);
+  $("domain-nav").setAttribute("aria-label", c.domainLabel);
+  $("map-scroll").setAttribute("aria-label", c.overviewLabel);
+  document
+    .querySelector(".header-nav")
+    .setAttribute("aria-label", c.navigation);
+  dom.filters
+    .querySelector("[data-close-filters]")
+    .setAttribute(
+      "aria-label",
+      s.lang === "ja" ? "絞り込みを閉じる" : "Close filters",
     );
-    if (!overviewCell || overviewCell.classList.contains("empty")) continue;
-    if (rel.prereq) overviewCell.classList.add("rel-prereq");
-    if (rel.next) overviewCell.classList.add("rel-next");
-    if (rel.prereq && rel.next) overviewCell.classList.add("rel-both");
-    if (rel.depth === 2) overviewCell.classList.add("rel-d2");
-    if (rel.depth === 3) overviewCell.classList.add("rel-d3");
+  document
+    .querySelector("[data-close-share]")
+    .setAttribute(
+      "aria-label",
+      s.lang === "ja" ? "共有を閉じる" : "Close share",
+    );
+  $("sort-select").options[0].textContent = c.level;
+  $("sort-select").options[1].textContent = c.name;
+  $("sort-select").options[2].textContent = c.vendor;
+  $("share-url").setAttribute(
+    "aria-label",
+    s.lang === "ja" ? "共有用リンク" : "Shareable URL",
+  );
+  $("vt-input").setAttribute(
+    "aria-label",
+    s.lang === "ja"
+      ? "提供元の強調表示のしきい値"
+      : "Vendor highlight threshold",
+  );
+  document
+    .querySelector(".hero-aside")
+    .setAttribute(
+      "aria-label",
+      s.lang === "ja" ? "カタログの概要" : "Catalog at a glance",
+    );
+  $("workspace").setAttribute(
+    "aria-label",
+    s.lang === "ja" ? "資格を探す" : "Certification explorer",
+  );
+  document
+    .querySelector(".view-switch")
+    .setAttribute("aria-label", s.lang === "ja" ? "表示形式" : "View");
+}
+
+function focusKey(el) {
+  if (!el || el === document.body) return null;
+  if (el.id) return "#" + CSS.escape(el.id);
+  for (const attr of [
+    "data-cert-id",
+    "data-domain",
+    "data-level",
+    "data-cell",
+    "data-view",
+    "data-clear",
+  ]) {
+    if (el.hasAttribute(attr)) {
+      const scope = el.closest(
+        "#cert-results,#roadmap-table,#domain-nav,#level-filters,#active-filters",
+      );
+      return `${scope ? "#" + scope.id + " " : ""}[${attr}="${CSS.escape(el.getAttribute(attr))}"]`;
+    }
+  }
+  return null;
+}
+function render() {
+  const s = getState();
+  const active = document.activeElement,
+    key = focusKey(active);
+  localize();
+  $("search-input").value = s.q;
+  $("search-clear").hidden = !s.q;
+  $("jp-toggle").checked = s.jp;
+  $("map-names").checked = s.names;
+  $("sort-select").value = s.sort;
+  document
+    .querySelectorAll("[data-view]")
+    .forEach((b) =>
+      b.setAttribute("aria-pressed", String(b.dataset.view === s.view)),
+    );
+  if (!data) return;
+  const filterChanged =
+    !lastState ||
+    ["q", "domain", "level", "view", "jp", "sort", "lang"].some(
+      (k) => lastState[k] !== s[k],
+    ) ||
+    JSON.stringify(lastState.vendors) !== JSON.stringify(s.vendors);
+  if (filterChanged) pageSize = 24;
+  overview = filterCatalog(data.certs, s, { overview: true });
+  visible = sortCatalog(filterCatalog(data.certs, s), s.sort, s.lang);
+  renderNavigation();
+  renderActiveFilters();
+  $("map-section").hidden = s.view !== "map";
+  $("workspace-title").textContent = s.domain
+    ? nameOf(s.domain)
+    : tr("landscape");
+  if (s.view === "map") renderMap();
+  renderResults();
+  syncDetail();
+  lastState = s;
+  if (
+    active !== document.body &&
+    !active.isConnected &&
+    !document.querySelector("dialog[open]")
+  ) {
+    const replacement = key && document.querySelector(key);
+    (replacement?.getClientRects().length
+      ? replacement
+      : $("results-title")
+    ).focus({ preventScroll: true });
   }
 }
 
-function isMobileToolsLayout() {
-  return mobileToolsMql.matches;
+function renderNavigation() {
+  const s = getState();
+  const scoped = filterCatalog(data.certs, { ...s, domain: "" });
+  $("domain-nav").innerHTML =
+    `<button class="domain-button all-domains" data-domain="" aria-pressed="${!s.domain}"><span class="domain-icon" aria-hidden="true">▦</span><span>${tr("allDomains")}</span><span class="domain-count">${scoped.length}</span></button>` +
+    data.domains
+      .map((d, i) => {
+        const count = scoped.filter(
+          (c) =>
+            c.domain === d.id ||
+            (s.view === "explore" && c.secondary_domains?.includes(d.id)),
+        ).length;
+        return `<button class="domain-button" data-domain="${esc(d.id)}" aria-pressed="${s.domain === d.id}" style="--domain-color:${safeColor(d.color)}"><span class="domain-dot" aria-hidden="true"></span><span>${esc(copy[s.lang].domainShort[i] || label(d, s.lang))}</span><span class="domain-count">${count}</span></button>`;
+      })
+      .join("");
+  $("domain-select").innerHTML =
+    `<option value="">${tr("allDomains")}</option>` +
+    data.domains
+      .map(
+        (d) => `<option value="${esc(d.id)}">${esc(label(d, s.lang))}</option>`,
+      )
+      .join("");
+  $("domain-select").value = s.domain;
+  const levels = LEVEL_ORDER.map((id) =>
+    data.tiers.find((t) => t.id === id),
+  ).filter(Boolean);
+  $("level-filters").innerHTML =
+    `<button data-level="" aria-pressed="${!s.level}">${tr("allLevels")}</button>` +
+    levels
+      .map(
+        (t) =>
+          `<button data-level="${esc(t.id)}" aria-pressed="${s.level === t.id}"><span class="level-dot" data-tier="${esc(t.id)}" aria-hidden="true"></span>${esc(label(t, s.lang))}</button>`,
+      )
+      .join("");
+  $("level-description").textContent = s.level
+    ? copy[s.lang].levels[s.level] || ""
+    : "";
+  $("level-description").hidden = !s.level;
 }
 
-function syncMobileToolsAccessibility() {
-  if (!topbarNav) return;
-  const shouldHide = isMobileToolsLayout() && !document.body.classList.contains("mobile-tools-open");
-  topbarNav.toggleAttribute("inert", shouldHide);
-  topbarNav.setAttribute("aria-hidden", String(shouldHide));
+function renderActiveFilters() {
+  const s = getState();
+  const chips = [];
+  const add = (key, text) =>
+    chips.push(
+      `<button class="filter-chip" data-clear="${key}" aria-label="${esc(tr("clear") + ": " + text)}">${esc(text)} <span aria-hidden="true">×</span></button>`,
+    );
+  if (s.domain) add("domain", nameOf(s.domain));
+  if (s.level) add("level", levelOf(s.level));
+  if (s.q) add("q", s.q);
+  if (s.vendors !== null)
+    add(
+      "vendors",
+      s.vendors.length === 1
+        ? vendors.find((v) => v.slug === s.vendors[0])?.name || s.vendors[0]
+        : tr("vendorCount")(s.vendors.length),
+    );
+  if (s.jp) add("jp", tr("japan"));
+  $("active-filters").innerHTML =
+    chips.join("") +
+    (chips.length
+      ? `<button class="text-button" data-reset>${tr("reset")}</button>`
+      : "");
+  $("active-filters").hidden = !chips.length;
+  $("filter-count").hidden = s.vendors === null;
+  $("filter-count").textContent = s.vendors === null ? "" : "1";
 }
 
-function setMobileToolsOpen(open) {
-  const next = !!open && isMobileToolsLayout();
-  if (topbar) topbar.classList.toggle("tools-open", next);
-  document.body.classList.toggle("mobile-tools-open", next);
-  if (mobileToolsToggle) mobileToolsToggle.setAttribute("aria-expanded", String(next));
-  if (!next) setVendorPanelOpen(false);
-  syncMobileToolsAccessibility();
+function renderMap() {
+  const s = getState(),
+    groups = matrixGroups(overview);
+  // Keep the full landscape in view when drilling down by domain or level.
+  const ordered = [
+    "expert",
+    "professional",
+    "associate",
+    "foundational",
+    "introductory",
+    "specialty",
+  ]
+    .map((id) => data.tiers.find((t) => t.id === id))
+    .filter(Boolean);
+  dom.table.classList.toggle("with-names", s.names);
+  dom.table.innerHTML = `<caption class="sr-only">${tr("overviewLabel")}</caption><thead><tr><th class="map-corner" scope="col">${tr("level")} <span aria-hidden="true">↓</span></th>${data.domains.map((d, i) => `<th scope="col" style="--domain-color:${safeColor(d.color)}"><span class="map-domain-dot" aria-hidden="true"></span><button data-domain="${esc(d.id)}" title="${esc(label(d, s.lang))}">${esc(copy[s.lang].domainShort[i] || label(d, s.lang))}</button></th>`).join("")}</tr></thead><tbody>${ordered
+    .map(
+      (t) =>
+        `<tr data-tier="${esc(t.id)}"><th scope="row"><span class="level-dot" data-tier="${esc(t.id)}" aria-hidden="true"></span>${esc(label(t, s.lang))}${t.id === "specialty" ? '<span class="specialty-mark" aria-hidden="true">↗</span>' : ""}</th>${data.domains
+          .map((d) => {
+            const certs = sortCatalog(
+              groups.get(`${t.id}|${d.id}`) || [],
+              "name",
+              s.lang,
+            );
+            const selected =
+              (!s.domain || s.domain === d.id) &&
+              (!s.level || s.level === t.id) &&
+              (s.domain || s.level);
+            const density =
+              certs.length === 0
+                ? 0
+                : certs.length < 3
+                  ? 1
+                  : certs.length < 6
+                    ? 2
+                    : certs.length < 12
+                      ? 3
+                      : 4;
+            const cell = `${t.id}|${d.id}`;
+            const text = `${label(t, s.lang)} / ${label(d, s.lang)}: ${tr("mapCount")(certs.length)}`;
+            return `<td class="density-${density}${selected ? " cell-selected" : ""}" style="--domain-color:${safeColor(d.color)}">${s.names && certs.length ? `<div class="map-cert-list">${certs.map((c) => `<a class="map-cert${s.vt && vendors.find((v) => v.slug === c.vendor?.slug)?.count >= s.vt ? " vendor-prominent" : ""}" href="${esc(certHref(c.id))}" data-cert-id="${esc(c.id)}" aria-label="${esc(c.abbr + " — " + certName(c, s.lang))}">${esc(c.abbr)}${c.japan_only ? "<small>JP</small>" : ""}${c.availability && c.availability !== "available" ? "<small>◷</small>" : ""}</a>`).join("")}</div>` : `<button class="map-cell" data-cell="${esc(cell)}" aria-pressed="${!!selected}" aria-label="${esc(text)}" ${certs.length ? "" : "disabled"}><span>${certs.length || "—"}</span>${certs.length ? '<span class="cell-arrow" aria-hidden="true">↗</span>' : ""}</button>`}</td>`;
+          })
+          .join("")}</tr>`,
+    )
+    .join("")}</tbody>`;
 }
 
-function updateOverviewCtaVisibility() {
-  const overview = grid.querySelector(".mobile-overview");
-  if (!overview) {
-    document.body.classList.remove("overview-in-view");
+function renderResults() {
+  const s = getState();
+  $("results-toolbar").hidden = false;
+  $("export-button").disabled = !visible.length;
+  $("results-title").textContent = s.domain
+    ? `${nameOf(s.domain)}${s.level ? " · " + levelOf(s.level) : ""}`
+    : s.level
+      ? levelOf(s.level)
+      : tr("allCerts");
+  $("result-count").textContent =
+    tr("count")(visible.length, data.certs.length) +
+    (s.domain
+      ? " · " + tr(s.view === "map" ? "primaryNote" : "secondaryNote")
+      : "");
+  dom.results.setAttribute("aria-busy", "false");
+  if (!visible.length) {
+    dom.results.innerHTML = `<div class="empty-state"><span class="empty-symbol" aria-hidden="true">⌕</span><h3>${tr("noResults")}</h3><p>${tr("noResultsHint")}</p><button class="primary-button" data-reset>${tr("reset")}</button></div>`;
+  } else
+    dom.results.innerHTML = visible
+      .slice(0, pageSize)
+      .map((c) => {
+        const tier = certTier(c),
+          color = safeColor(colorOf(c.domain));
+        const prominent =
+          s.vt && vendors.find((v) => v.slug === c.vendor?.slug)?.count >= s.vt;
+        return `<a class="cert-card${prominent ? " vendor-prominent" : ""}" href="${esc(certHref(c.id))}" data-cert-id="${esc(c.id)}" style="--domain-color:${color}"><div class="card-top"><span class="card-vendor">${esc(c.vendor?.name || "")}</span><span class="card-arrow" aria-hidden="true">↗</span></div><h4>${esc(c.abbr)}</h4><p class="card-name">${esc(certName(c, s.lang))}</p><div class="card-bottom"><span class="tier-badge" data-tier="${esc(tier)}"><span class="level-dot" data-tier="${esc(tier)}" aria-hidden="true"></span>${esc(levelOf(tier))}</span>${c.japan_only ? '<span class="badge">JP</span>' : ""}${c.availability && c.availability !== "available" ? `<span class="availability-badge">${esc(tr(c.availability === "coming-soon" ? "coming" : c.availability) || c.availability)}</span>` : ""}</div><span class="card-domain"><span class="domain-dot" aria-hidden="true"></span>${esc(nameOf(c.domain))}</span></a>`;
+      })
+      .join("");
+  $("load-more").hidden = pageSize >= visible.length;
+  $("load-more").textContent = tr("loadMore")(
+    Math.min(24, visible.length - pageSize),
+  );
+}
+
+function syncDetail() {
+  const s = getState();
+  if (!s.cert) {
+    if (dom.detail.open) {
+      dom.detail.close();
+      document.body.classList.remove("dialog-open");
+      const target = returnFocus && document.querySelector(returnFocus);
+      (target?.getClientRects().length ? target : $("search-input")).focus({
+        preventScroll: true,
+      });
+    }
+    detailId = null;
     return;
   }
-  const overviewRect = overview.getBoundingClientRect();
-  const wrapRect = wrap.getBoundingClientRect();
-  const isVisible = overviewRect.bottom > wrapRect.top + 8 && overviewRect.top < wrapRect.bottom - 8;
-  document.body.classList.toggle("overview-in-view", isVisible);
+  if (detailId === s.cert && detailLang === s.lang && dom.detail.open) return;
+  const cert = byId.get(s.cert);
+  if (cert)
+    renderDetailPanel(dom.panel, cert, byId, {
+      labelLang: s.lang,
+      domains: data.domains,
+      tiers: data.tiers,
+    });
+  else
+    dom.panel.innerHTML = `<div class="detail-topline"><h2 id="detail-title" tabindex="-1">${tr("noCert")}</h2><button class="square-button" data-action="close" aria-label="${tr("close")}">×</button></div><p>${tr("noCertHint")}</p>`;
+  detailId = s.cert;
+  detailLang = s.lang;
+  if (!dom.detail.open) {
+    dom.detail.showModal();
+    document.body.classList.add("dialog-open");
+  }
+  dom.detail.scrollTop = 0;
+  const heading = $("detail-title");
+  heading.setAttribute("tabindex", "-1");
+  heading.focus({ preventScroll: true });
+}
+function openCert(id, trigger) {
+  if (!dom.detail.open) returnFocus = focusKey(trigger) || "#search-input";
+  setState({ cert: id });
+}
+function closeDetail() {
+  setState({ cert: null });
+}
+function resetFilters() {
+  setState({ domain: "", level: "", q: "", vendors: null, jp: false });
+}
+function jumpToResults() {
+  requestAnimationFrame(() => {
+    $("results-title").scrollIntoView({
+      block: "start",
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+    });
+    $("results-title").focus({ preventScroll: true });
+  });
+}
+function toast(message) {
+  clearTimeout(toastTimer);
+  $("toast").textContent = message;
+  $("toast").hidden = false;
+  toastTimer = setTimeout(() => ($("toast").hidden = true), 4000);
 }
 
-function jumpToOverviewCell(overviewCell) {
-  const target = grid.querySelector(
-    `.cell[data-tier="${CSS.escape(overviewCell.dataset.overviewTier)}"][data-domain="${CSS.escape(overviewCell.dataset.overviewDomain)}"]`
+function renderVendors() {
+  const query = $("vendor-search").value.toLocaleLowerCase().trim();
+  const matched = vendors.filter((v) =>
+    v.name.toLocaleLowerCase().includes(query),
   );
-  if (!target) return;
-  const stickyOffset = grid.querySelector(".tier-head")?.getBoundingClientRect().height || 0;
-  wrap.scrollTo({ top: Math.max(0, target.offsetTop - stickyOffset), left: 0, behavior: "smooth" });
+  $("vendor-list").innerHTML =
+    matched
+      .map(
+        (v) =>
+          `<label class="vendor-row"><input type="checkbox" value="${esc(v.slug)}" ${draftVendors === null || draftVendors.has(v.slug) ? "checked" : ""}><span>${esc(v.name)}</span><span class="vendor-count">${v.count}</span></label>`,
+      )
+      .join("") || `<p class="muted">${tr("noVendors")}</p>`;
+  $("filter-preview").textContent = tr("filterPreview")(
+    filterCatalog(data.certs, {
+      ...getState(),
+      vendors: draftVendors === null ? null : [...draftVendors],
+    }).length,
+  );
+}
+function openFilters() {
+  if (!data) return;
+  draftVendors =
+    getState().vendors === null ? null : new Set(getState().vendors);
+  $("vendor-search").value = "";
+  $("vt-input").value = getState().vt || "";
+  renderVendors();
+  dom.filters.showModal();
+  document.body.classList.add("dialog-open");
+}
+function closeFilters() {
+  dom.filters.close();
+  document.body.classList.remove("dialog-open");
+  $("filters-button").focus({ preventScroll: true });
 }
 
-function attachOverviewListeners() {
-  for (const cell of grid.querySelectorAll("[data-overview-tier][data-overview-domain]")) {
-    let downPoint = null;
-    let pointerHandled = false;
-    cell.addEventListener("pointerdown", e => {
-      downPoint = { x: e.clientX, y: e.clientY };
-      pointerHandled = false;
-    });
-    cell.addEventListener("pointerup", e => {
-      if (!downPoint) return;
-      const dx = Math.abs(e.clientX - downPoint.x);
-      const dy = Math.abs(e.clientY - downPoint.y);
-      downPoint = null;
-      if (dx > 8 || dy > 8) return;
-      pointerHandled = true;
-      e.preventDefault();
-      e.stopPropagation();
-      jumpToOverviewCell(cell);
-    });
-    cell.addEventListener("click", e => {
-      e.preventDefault();
-      e.stopPropagation();
-      if (pointerHandled) {
-        pointerHandled = false;
-        return;
-      }
-      jumpToOverviewCell(cell);
-    });
+// One listener per stable surface; rerendering never accumulates event handlers.
+document.addEventListener("click", (event) => {
+  const cert = event.target.closest("[data-cert-id],[data-cert-link]");
+  if (cert) {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+      return;
+    event.preventDefault();
+    openCert(cert.dataset.certId || cert.dataset.certLink, cert);
+    return;
   }
-}
-
-function scrollSelectedIntoView(certId, transitioning) {
-  const findEl = () =>
-    grid.querySelector(`.cert-card[data-cert-id="${CSS.escape(certId)}"]`);
-
-  const doScroll = () => {
-    const el = findEl();
-    if (el) el.scrollIntoView({ block: "center", inline: "nearest", behavior: "smooth" });
-  };
-
-  if (!transitioning) { doScroll(); return; }
-
-  let done = false;
-  const finish = () => {
-    if (done) return;
-    done = true;
-    document.body.removeEventListener("transitionend", onTransitionEnd);
-    doScroll();
-  };
-  function onTransitionEnd(e) {
-    if (e.target !== document.body) return;
-    if (e.propertyName !== "padding-bottom") return;
-    finish();
+  if (event.target.closest('[data-action="close"]')) {
+    closeDetail();
+    return;
   }
-  document.body.addEventListener("transitionend", onTransitionEnd);
-  setTimeout(finish, 260);
-}
-
-async function renderVersion() {
-  const target = document.getElementById("about-version");
-  if (!target) return;
-  const v = await loadVersion();
-  const label = versionLabel(v);
-  if (v.commit_url && v.commit !== "dev") {
-    target.innerHTML = `<a href="${v.commit_url}" target="_blank" rel="noopener" title="View commit on GitHub">${label}</a>`;
-  } else {
-    target.textContent = label;
+  const domain = event.target.closest("[data-domain]");
+  if (domain) {
+    setState({ domain: domain.dataset.domain });
+    return;
   }
+  const level = event.target.closest("[data-level]");
+  if (level) {
+    setState({ level: level.dataset.level });
+    return;
+  }
+  const view = event.target.closest("[data-view]");
+  if (view) {
+    setState({ view: view.dataset.view });
+    return;
+  }
+  const cell = event.target.closest("[data-cell]");
+  if (cell) {
+    const [level, domain] = cell.dataset.cell.split("|");
+    setState({ level, domain });
+    jumpToResults();
+    return;
+  }
+  const clear = event.target.closest("[data-clear]");
+  if (clear) {
+    const key = clear.dataset.clear;
+    setState({ [key]: key === "vendors" ? null : key === "jp" ? false : "" });
+    return;
+  }
+  if (event.target.closest("[data-reset]")) resetFilters();
+  if (event.target.closest("[data-close-filters]")) closeFilters();
+  if (event.target.closest("[data-close-share]")) $("share-dialog").close();
+  if (event.target.closest("[data-retry]")) bootstrap();
+});
+$("search-input").addEventListener("input", () =>
+  setState({ q: $("search-input").value }, { replace: true }),
+);
+$("search-clear").addEventListener("click", () => {
+  setState({ q: "" }, { replace: true });
+  $("search-input").focus();
+});
+$("jp-toggle").addEventListener("change", () =>
+  setState({ jp: $("jp-toggle").checked }),
+);
+$("lang-toggle").addEventListener("click", () =>
+  setState({ lang: lang() === "en" ? "ja" : "en" }),
+);
+$("theme-toggle").addEventListener("click", () =>
+  setState({
+    theme: document.documentElement.dataset.theme === "dark" ? "light" : "dark",
+  }),
+);
+$("domain-select").addEventListener("change", () =>
+  setState({ domain: $("domain-select").value }),
+);
+$("sort-select").addEventListener("change", () =>
+  setState({ sort: $("sort-select").value }),
+);
+$("map-names").addEventListener("change", () =>
+  setState({ names: $("map-names").checked }),
+);
+$("beginner-button").addEventListener("click", () => {
+  setState({
+    level: "introductory",
+    domain: "",
+    view: "explore",
+    q: "",
+    vendors: null,
+  });
+  jumpToResults();
+});
+$("filters-button").addEventListener("click", openFilters);
+$("vendor-search").addEventListener("input", renderVendors);
+$("vendors-all").addEventListener("click", () => {
+  draftVendors = null;
+  renderVendors();
+});
+$("vendors-none").addEventListener("click", () => {
+  draftVendors = new Set();
+  renderVendors();
+});
+$("vendor-list").addEventListener("change", (e) => {
+  if (!e.target.matches("input")) return;
+  if (draftVendors === null) draftVendors = new Set(vendors.map((v) => v.slug));
+  if (e.target.checked) draftVendors.add(e.target.value);
+  else draftVendors.delete(e.target.value);
+  $("filter-preview").textContent = tr("filterPreview")(
+    filterCatalog(data.certs, { ...getState(), vendors: [...draftVendors] })
+      .length,
+  );
+});
+$("apply-filters").addEventListener("click", () => {
+  const n = Number($("vt-input").value);
+  setState({
+    vendors:
+      draftVendors === null || vendors.every((v) => draftVendors.has(v.slug))
+        ? null
+        : [...draftVendors],
+    vt: Number.isInteger(n) && n > 0 ? n : null,
+  });
+  closeFilters();
+});
+$("load-more").addEventListener("click", () => {
+  const firstNew = visible[pageSize]?.id;
+  pageSize += 24;
+  renderResults();
+  if (firstNew)
+    dom.results
+      .querySelector(`[data-cert-id="${CSS.escape(firstNew)}"]`)
+      ?.focus({ preventScroll: true });
+});
+dom.detail.addEventListener("cancel", (e) => {
+  e.preventDefault();
+  closeDetail();
+});
+dom.filters.addEventListener("cancel", (e) => {
+  e.preventDefault();
+  closeFilters();
+});
+for (const dialog of [dom.detail, dom.filters, $("share-dialog")]) {
+  dialog.addEventListener("click", (e) => {
+    if (e.target !== dialog) return;
+    const r = dialog.getBoundingClientRect();
+    if (
+      e.clientX >= r.left &&
+      e.clientX <= r.right &&
+      e.clientY >= r.top &&
+      e.clientY <= r.bottom
+    )
+      return;
+    if (dialog === dom.detail) closeDetail();
+    else if (dialog === dom.filters) closeFilters();
+    else dialog.close();
+  });
 }
+$("share-dialog").addEventListener("close", () => {
+  document.body.classList.remove("dialog-open");
+  $("share-button").focus({ preventScroll: true });
+});
+$("share-button").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(location.href);
+    toast(tr("copied"));
+  } catch {
+    $("share-url").value = location.href;
+    $("share-dialog").showModal();
+    document.body.classList.add("dialog-open");
+    $("share-url").select();
+  }
+});
+$("export-button").addEventListener("click", async () => {
+  if (!data) return;
+  const button = $("export-button");
+  button.disabled = true;
+  toast(tr("exporting"));
+  try {
+    const s = getState();
+    const context = [
+      s.q ? `Search: ${s.q}` : "",
+      s.domain ? nameOf(s.domain) : "",
+      s.level ? levelOf(s.level) : "",
+      s.vendors !== null ? s.vendors.join(", ") : "",
+      s.jp ? "Japan included" : "Japan excluded",
+    ]
+      .filter(Boolean)
+      .join(" · ");
+    await exportRoadmapPNG({
+      certs: visible,
+      domains: data.domains,
+      tiers: data.tiers,
+      lang: s.lang,
+      queryLabel: context,
+    });
+    toast(tr("exported"));
+  } catch (error) {
+    console.error(error);
+    toast(error.message || tr("exportError"));
+  } finally {
+    button.disabled = false;
+  }
+});
+document.addEventListener("keydown", (e) => {
+  const typing = e.target.matches(
+    'input,textarea,select,[contenteditable="true"]',
+  );
+  if (e.key === "/" && !typing && !document.querySelector("dialog[open]")) {
+    e.preventDefault();
+    $("search-input").focus();
+  }
+  if (e.key === "Escape" && e.target === $("search-input") && getState().q) {
+    e.preventDefault();
+    setState({ q: "" }, { replace: true });
+  }
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+  if (!getState().theme) localize();
+});
 
 async function bootstrap() {
-  renderVersion();   // fire-and-forget
+  if (loading) return;
+  loading = true;
+  $("load-status").hidden = false;
+  $("load-status").innerHTML =
+    `<span class="loading-dot"></span>${tr("loading")}`;
+  dom.results.setAttribute("aria-busy", "true");
   try {
-    const data = await loadAll("data/manifest.json");
-    state.domains = data.domains;
-    state.tiers   = data.tiers;
-    state.certs   = data.certs;
-    state.byId    = new Map(data.certs.map(c => [c.id, c]));
-    state.inverseMap = buildInverseMap(state.byId);
-
-    // vendorIndex returns [{slug, name, count}], already over the full set.
-    // Reuse it for both the filter panel and the prominent-vendor highlight.
-    const vendors = vendorIndex(data.certs);
-    state.vendorCounts = new Map(vendors.map(v => [v.slug, v.count]));
-    state.ui.vendorCounts = state.vendorCounts;
-
-    buildVendorPanel(vendorPanel, vendors);
-
-    initThemeToggle(document.getElementById("theme-toggle"));
-    attachFilterListeners({
-      jpToggleBtn:   document.getElementById("jp-toggle-btn"),
-      langToggleBtn: document.getElementById("lang-toggle-btn"),
-      vendorPanel,
-      state: state.ui,
-      onChange: rerender,
-    });
-  } catch (err) {
-    grid.innerHTML = `<p class="loading">Failed to load roadmap data: ${err.message}</p>`;
-    console.error(err);
+    data = await loadAll("data/manifest.json");
+    byId = new Map(data.certs.map((c) => [c.id, c]));
+    vendors = vendorIndex(data.certs);
+    const s = getState(),
+      clean = {};
+    if (s.domain && !data.domains.some((d) => d.id === s.domain))
+      clean.domain = "";
+    if (s.level && !data.tiers.some((t) => t.id === s.level)) clean.level = "";
+    if (Object.keys(clean).length)
+      setState(clean, { replace: true, silent: true });
+    $("total-stat").textContent = data.certs.length;
+    $("domain-stat").textContent = data.domains.length;
+    $("sidebar-domain-count").textContent = data.domains.length;
+    $("load-status").hidden = true;
+    render();
+  } catch (error) {
+    console.error(error);
+    $("load-status").innerHTML =
+      `<div class="empty-state"><h3>${tr("loadError")}</h3><p>${tr("loadErrorHint")}</p><button class="primary-button" data-retry>${tr("retry")}</button></div>`;
+    dom.results.setAttribute("aria-busy", "false");
   } finally {
-    wrap.removeAttribute("aria-busy");
+    loading = false;
   }
 }
-
-// ---------- Event wiring ----------
-
-if (mobileToolsToggle) {
-  mobileToolsToggle.addEventListener("click", () => {
-    setMobileToolsOpen(!document.body.classList.contains("mobile-tools-open"));
-  });
-}
-
-if (topbarNav) {
-  topbarNav.addEventListener("click", e => {
-    if (e.target.closest("a")) setMobileToolsOpen(false);
-  });
-}
-
-syncMobileToolsAccessibility();
-
-// Cert card click → just toggle selection (highlight + arrows).
-// The panel does NOT auto-open; user opens it via "Show details" CTA.
-// Switching certs preserves the user's current panel preference.
-document.addEventListener("click", e => {
-  if (document.body.classList.contains("mobile-tools-open") &&
-      !e.target.closest("#topbar-nav, #mobile-tools-toggle, #vendor-panel")) {
-    setMobileToolsOpen(false);
-    return;
-  }
-
-  const card = e.target.closest("a.cert-card");
-  if (card) {
-    e.preventDefault();
-    const id = card.dataset.certId;
-    const sameAgain = state.ui.selectedId === id;
-    setState({ cert: sameAgain ? null : id });   // panelDismissed untouched
-    return;
-  }
-
-  const overviewCell = e.target.closest("[data-overview-tier][data-overview-domain]");
-  if (overviewCell) {
-    e.preventDefault();
-    jumpToOverviewCell(overviewCell);
-    return;
-  }
-
-  // Click outside any card. Chrome (topbar / controls / about footer / vendor
-  // dropdown / detail panel) is excluded so PNG export, language toggle, JP
-  // toggle, theme switch, etc. NEVER clear the selection. Only a click on
-  // the matrix area itself (empty cell, tier label, etc.) deselects.
-  if (state.ui.selectedId &&
-      !e.target.closest("#detail-panel, .topbar, .controls, #about, #vendor-panel, .show-details-cta, .show-overview-cta, .mobile-overview")) {
-    state.ui.panelDismissed = true;   // reset the panel preference
-    setState({ cert: null });
-  }
-});
-
-// Detail panel "X" — dismiss panel only, keep arrows + highlight.
-document.addEventListener("dismiss-panel", () => {
-  if (!state.ui.selectedId) return;
-  state.ui.panelDismissed = true;
-  rerender();
-});
-
-/** Re-apply `.search-match` classes on cards based on current query.
- *  Toggles `body.has-search` so CSS can dim non-matches. Recomputed
- *  in rerender() and on every keystroke (URL state subscriber). */
-function applySearchHighlight() {
-  const q = state.ui.searchQuery || "";
-  const matched = matchCertIds(state.certs, q);
-  document.body.classList.toggle("has-search", !!matched && matched.size > 0);
-  // Stamp matching cards. matched===null means no active search.
-  for (const card of grid.querySelectorAll(".cert-card")) {
-    const id = card.dataset.certId;
-    card.classList.toggle("search-match", !!matched && matched.has(id));
-  }
-  // Update the count badge to show match count when a search is active.
-  if (matched !== null) {
-    const total = state.certs.length;
-    counter.textContent = `${matched.size} match · ${total} certs`;
-  }
-}
-
-/** Helper passed to export functions so they can re-run drawArrows after
- *  forcing the matrix to its fixed export width. Captured here because
- *  export.js shouldn't import directly from app state. */
-function redrawCurrentArrows() {
-  drawArrows(arrowsSvg, grid, state.ui.selectedId, state.byId, state.inverseMap);
-  updateOverviewRelations();
-}
-
-// Right-click context menu on cert cards: deselect / copy abbr / show details.
-attachContextMenu({
-  getState: () => ({ byId: state.byId, ui: state.ui }),
-  onAction: async (action, cert) => {
-    switch (action) {
-      case "deselect":
-        state.ui.panelDismissed = true;
-        setState({ cert: null });
-        break;
-      case "copy-abbr":
-        try {
-          await navigator.clipboard.writeText(cert.abbr);
-        } catch (_) {
-          const ta = document.createElement("textarea");
-          ta.value = cert.abbr;
-          document.body.appendChild(ta);
-          ta.select();
-          try { document.execCommand("copy"); } catch (_) {}
-          ta.remove();
-        }
-        break;
-      case "show-details":
-        state.ui.panelDismissed = false;
-        if (state.ui.selectedId !== cert.id) setState({ cert: cert.id });
-        else rerender();
-        break;
-      case "open-official": {
-        const url = cert.official?.exam_url || cert.vendor?.url;
-        if (url) window.open(url, "_blank", "noopener,noreferrer");
-        break;
-      }
-    }
-  },
-});
-
-// ESC clears search first (if focused/active), then selection.
-document.addEventListener("keydown", e => {
-  if (e.key !== "Escape") return;
-  const searchInput = document.getElementById("search-input");
-  if (state.ui.searchQuery) {
-    if (searchInput) searchInput.value = "";
-    setState({ q: "" });
-    return;
-  }
-  if (document.body.classList.contains("mobile-tools-open")) {
-    setMobileToolsOpen(false);
-    return;
-  }
-  if (state.ui.selectedId) {
-    state.ui.panelDismissed = true;
-    setState({ cert: null });
-  }
-});
-
-// Header search input — debounced URL state update so the cache-busted
-// shareable URL is always in sync. Match highlight applies on every
-// keystroke immediately (no debounce) so feedback feels live.
-const searchInput = document.getElementById("search-input");
-const searchClear = document.getElementById("search-clear");
-if (searchInput) {
-  let debounce = 0;
-  searchInput.addEventListener("input", () => {
-    state.ui.searchQuery = searchInput.value;
-    applySearchHighlight();
-    clearTimeout(debounce);
-    debounce = setTimeout(() => setState({ q: searchInput.value }, { silent: true }), 200);
-  });
-  // Submitting a search (Enter) auto-selects the single match if any.
-  searchInput.addEventListener("keydown", e => {
-    if (e.key !== "Enter") return;
-    const matched = matchCertIds(state.certs, state.ui.searchQuery);
-    if (matched && matched.size === 1) {
-      const onlyId = matched.values().next().value;
-      setState({ cert: onlyId });
-    }
-  });
-}
-if (searchClear) {
-  searchClear.addEventListener("click", () => {
-    if (searchInput) searchInput.value = "";
-    setState({ q: "" });
-    if (searchInput) searchInput.focus();
-  });
-}
-
-// Vendor filter dropdown open/close
-function setVendorPanelOpen(open) {
-  const panel = document.getElementById("vendor-panel");
-  if (!panel) return;
-  panel.classList.toggle("open", open);
-  panel.setAttribute("aria-hidden", String(!open));
-}
-
-document.addEventListener("click", e => {
-  const toggle = e.target.closest("#vendor-filter-toggle");
-  const panel = document.getElementById("vendor-panel");
-  if (!panel) return;
-  if (toggle) {
-    setVendorPanelOpen(!panel.classList.contains("open"));
-    return;
-  }
-  if (panel.classList.contains("open") && !e.target.closest("#vendor-panel")) {
-    setVendorPanelOpen(false);
-  }
-});
-
-// PNG export button
-const pngBtn = document.getElementById("png-export-btn");
-if (pngBtn) {
-  pngBtn.addEventListener("click", async () => {
-    const orig = pngBtn.textContent;
-    pngBtn.disabled = true;
-    pngBtn.textContent = "…";
-    try {
-      await exportMatrixPNG(redrawCurrentArrows);
-    } catch (err) {
-      console.error("PNG export failed:", err);
-      alert("PNG export failed: " + err.message);
-    } finally {
-      pngBtn.disabled = false;
-      pngBtn.textContent = orig;
-    }
-  });
-}
-
-// Vendor-highlight threshold input. Debounced so URL doesn't churn while
-// the user is still typing. Empty / 0 / NaN clears the highlight (state
-// = null, URL drops the `vt` param).
-const vtInput = document.getElementById("vt-input");
-if (vtInput) {
-  let vtDebounce = 0;
-  vtInput.addEventListener("input", () => {
-    const raw = vtInput.value.trim();
-    const n = parseInt(raw, 10);
-    const next = (Number.isFinite(n) && n > 0) ? n : null;
-    clearTimeout(vtDebounce);
-    vtDebounce = setTimeout(() => setState({ vt: next }), 200);
-  });
-}
-
-// "Show details" floating CTA — surfaces when the panel is dismissed but
-// a cert is still selected. Lets the user re-open the detail panel without
-// having to re-click the same card.
-const showDetailsBtn = document.getElementById("show-details-btn");
-if (showDetailsBtn) {
-  showDetailsBtn.addEventListener("click", () => {
-    if (!state.ui.selectedId) return;
-    state.ui.panelDismissed = false;
-    rerender();
-  });
-}
-
-const showOverviewBtn = document.getElementById("show-overview-btn");
-if (showOverviewBtn) {
-  showOverviewBtn.addEventListener("click", () => {
-    const overview = grid.querySelector(".mobile-overview");
-    if (overview) overview.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
-  });
-}
-
-window.addEventListener("resize", () => {
-  if (!isMobileToolsLayout()) {
-    setMobileToolsOpen(false);
-  } else {
-    syncMobileToolsAccessibility();
-  }
-  updateOverviewCtaVisibility();
-  if (state.ui.selectedId) {
-    redrawCurrentArrows();
-    updateSelectedOverlay(selectedOverlay, grid, state.ui.selectedId, state.byId);
-  } else {
-    updateOverviewRelations();
-  }
-});
-
-wrap.addEventListener("scroll", () => {
-  requestAnimationFrame(updateOverviewCtaVisibility);
-});
-
-// Re-render on URL state changes from outside the widgets (back/forward,
-// pasted bookmark URL). We do NOT change panelDismissed on URL nav — the
-// panel is opt-in via the Show details CTA. Anyone receiving a shared
-// link sees the highlighted cert + arrows immediately and can choose to
-// open the detail panel.
-function syncFromUrl() {
-  const s = getState();
-  state.ui.showJp      = !!s.jp;
-  state.ui.labelLang   = s.lang === "ja" ? "ja" : "en";
-  state.ui.vendors     = s.vendors;
-  state.ui.selectedId  = s.cert || null;
-  state.ui.searchQuery = s.q || "";
-  state.ui.vendorThreshold = s.vt;
-  // Keep input field in sync (e.g., when state arrives from URL on load
-  // or back/forward).
-  const si = document.getElementById("search-input");
-  if (si && si.value !== state.ui.searchQuery) si.value = state.ui.searchQuery;
-  const vi = document.getElementById("vt-input");
-  if (vi) {
-    const want = s.vt ? String(s.vt) : "";
-    if (vi.value !== want) vi.value = want;
-  }
-  updateChromeLabels();
-  rerender();
-}
-subscribe(syncFromUrl);
-// subscribe() only fires on setState/popstate, so prime the state once on
-// load so URL params (?q=, ?vt=, ?cert=, etc.) take effect even before
-// any user interaction.
-syncFromUrl();
-
-/** Localize static chrome (legend, floating CTA, export buttons) on every
- *  language change. Detail panel content + cert cards localize themselves
- *  during their own renders. */
-function updateChromeLabels() {
-  const lang = state.ui.labelLang;
-  const set = (id, key) => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = t(key, lang);
-  };
-  set("lg-prereq", "legend_prereq");
-  set("lg-next",   "legend_next");
-  set("lg-depth",  "legend_depth");
-  set("lg-hint",   "legend_hint");
-
-  set("vt-label",  "vt_label");
-  set("vt-suffix", "vt_suffix");
-  const vtControl = document.getElementById("vt-control");
-  if (vtControl) vtControl.title = t("vt_tooltip", lang);
-  const vtInputEl = document.getElementById("vt-input");
-  if (vtInputEl) vtInputEl.setAttribute("aria-label", t("vt_tooltip", lang));
-
-  const png = document.getElementById("png-export-btn");
-  if (png) {
-    png.textContent = t("png_btn_label", lang);
-    png.title       = t("export_png", lang);
-  }
-  const showLabel = document.querySelector(".show-details-label");
-  if (showLabel) showLabel.textContent = t("show_details", lang);
-  const overviewBtn = document.getElementById("show-overview-btn");
-  if (overviewBtn) {
-    overviewBtn.title = t("show_overview_tooltip", lang);
-    overviewBtn.setAttribute("aria-label", t("show_overview_tooltip", lang));
-  }
-  const overviewLabel = document.querySelector(".show-overview-label");
-  if (overviewLabel) overviewLabel.textContent = t("show_overview", lang);
-  const toolsToggle = document.getElementById("mobile-tools-toggle");
-  if (toolsToggle) {
-    toolsToggle.title = t("tools_tooltip", lang);
-    toolsToggle.setAttribute("aria-label", t("tools_tooltip", lang));
-  }
-  const toolsLabel = document.querySelector(".mobile-tools-label");
-  if (toolsLabel) toolsLabel.textContent = t("tools", lang);
-}
-
-// Initial label paint (the subscribe() above also runs on page load,
-// but call here too in case there's a brief gap before the URL state
-// settles or to cover environments without the URL-state event).
-updateChromeLabels();
-
+subscribe(render);
+localize();
 bootstrap();
+loadVersion().then((v) => {
+  const target = $("about-version");
+  target.textContent = versionLabel(v);
+  if (/^https:\/\//.test(v.commit_url || "")) {
+    const a = document.createElement("a");
+    a.href = v.commit_url;
+    a.textContent = versionLabel(v);
+    a.target = "_blank";
+    a.rel = "noopener";
+    target.replaceChildren(a);
+  }
+});

@@ -1,31 +1,35 @@
 async function fetchJson(path) {
-  const res = await fetch(path, { cache: "no-cache" });
-  if (!res.ok) throw new Error(`${path}: HTTP ${res.status}`);
-  return res.json();
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+  return response.json();
 }
-
+/** Fail visibly instead of silently presenting an incomplete roadmap as complete. */
 export async function loadAll(manifestPath) {
   const manifest = await fetchJson(manifestPath);
-  const baseDir  = manifestPath.replace(/[^/]+$/, "");
-
-  const [domainsDoc, tiersDoc] = await Promise.all([
-    fetchJson(baseDir + manifest.domains_path),
-    fetchJson(baseDir + manifest.tiers_path)
+  const base = manifestPath.replace(/[^/]+$/, "");
+  const [domains, tiers] = await Promise.all([
+    fetchJson(base + manifest.domains_path),
+    fetchJson(base + manifest.tiers_path),
   ]);
-
-  const certResults = await Promise.allSettled(
-    (manifest.certs || []).map(entry => fetchJson(baseDir + entry.path))
+  const entries = manifest.certs || [];
+  if (!entries.length) throw new Error("The catalog manifest is empty.");
+  const certs = new Array(entries.length);
+  let cursor = 0;
+  // Bound requests to avoid flooding a mobile connection with 317 concurrent fetches.
+  await Promise.all(
+    Array.from({ length: Math.min(12, entries.length) }, async () => {
+      while (cursor < entries.length) {
+        const index = cursor++;
+        const cert = await fetchJson(base + entries[index].path);
+        if (cert.id !== entries[index].id)
+          throw new Error(`Certification ID mismatch: ${entries[index].path}`);
+        certs[index] = cert;
+      }
+    }),
   );
-
-  const certs = [];
-  for (const r of certResults) {
-    if (r.status === "fulfilled") certs.push(r.value);
-    else console.warn("cert fetch failed:", r.reason);
-  }
-
   return {
-    domains: domainsDoc.domains,
-    tiers:   tiersDoc.tiers.sort((a, b) => a.order - b.order),
-    certs
+    domains: domains.domains,
+    tiers: tiers.tiers.sort((a, b) => a.order - b.order),
+    certs,
   };
 }

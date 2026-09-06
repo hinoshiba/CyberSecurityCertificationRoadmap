@@ -1,239 +1,397 @@
 /**
- * PNG export of the matrix (with arrows for the current selection).
- *
- * html2canvas captures .grid-and-arrows with the SVG VISIBLE. We
- * temporarily strip the SVG `filter` attributes (the Gaussian-blur glow
- * is what html2canvas chokes on) so paths and markers render at their
- * correct grid coordinates. The caller redraws arrows for the current
- * selection RIGHT BEFORE capture so the SVG matches the export-width
- * grid layout exactly.
- *
- * A footer band is composited under the matrix with credit + dataset
- * version + commit + generation timestamp.
+ * Draw the filtered roadmap directly into a PNG. Export geometry is independent
+ * of the viewport, scroll position and DOM: every supplied certification appears
+ * once in its primary domain, with text wrapped instead of shrunk or truncated.
  */
-
 import { loadVersion, versionLabel } from "./version.js";
 
-const HTML2CANVAS_SRC = "https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js";
+const FONT =
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", sans-serif';
+const COLORS = {
+  ink: "#172c2b",
+  muted: "#526762",
+  line: "#dce5e0",
+  green: "#176b50",
+  greenLight: "#f0f7f2",
+  purple: "#79549c",
+  purpleLight: "#f6f0fb",
+  white: "#ffffff",
+};
+const LABEL_SIZE = 14;
+const LINE_HEIGHT = 20;
+const CARD_PAD = 12;
+const CARD_GAP = 8;
+const CELL_PAD = 10;
+const MARGIN = 36;
+const AXIS_WIDTH = 172;
+const COLUMN_MIN = 180;
 
-const FOOTER_TEXT = "Cyber Security Certification Roadmap · by hinoshiba · built with Claude";
+function label(item, lang) {
+  return (lang === "ja" && item.label_ja) || item.label_en || item.id;
+}
 
-const FONT_FAMILY = `-apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", sans-serif`;
+function setFont(ctx, size = LABEL_SIZE, weight = 400) {
+  ctx.font = `${weight} ${size}px ${FONT}`;
+}
 
-/* ---------------- Helpers ---------------- */
+/** Keep all characters, including long identifiers and Japanese text. */
+function wrapText(ctx, value, width) {
+  const lines = [];
+  for (const paragraph of String(value ?? "").split(/\r?\n/)) {
+    let line = "";
+    for (const token of paragraph.match(/\S+\s*|\s+/gu) || [""]) {
+      if (line && ctx.measureText(line + token).width > width) {
+        lines.push(line.trimEnd());
+        line = "";
+      }
+      for (const char of token) {
+        if (line && ctx.measureText(line + char).width > width) {
+          lines.push(line.trimEnd());
+          line = "";
+        }
+        if (line || char.trim()) line += char;
+      }
+    }
+    if (line || !paragraph) lines.push(line.trimEnd());
+  }
+  return lines.length ? lines : [""];
+}
 
-function loadScript(src) {
-  return new Promise((res, rej) => {
-    if (document.querySelector(`script[data-src="${src}"]`)) return res();
-    const s = document.createElement("script");
-    s.src = src;
-    s.dataset.src = src;
-    s.async = true;
-    s.onload  = () => res();
-    s.onerror = () => rej(new Error(`Failed to load ${src}`));
-    document.head.appendChild(s);
+function drawLines(ctx, lines, x, y, height = LINE_HEIGHT) {
+  for (const line of lines) {
+    ctx.fillText(line, x, y);
+    y += height;
+  }
+  return y;
+}
+
+function rectangle(ctx, x, y, width, height, fill, border = null) {
+  ctx.fillStyle = fill;
+  ctx.fillRect(x, y, width, height);
+  if (border) {
+    ctx.strokeStyle = border;
+    ctx.lineWidth = 1;
+    ctx.strokeRect(x + 0.5, y + 0.5, width - 1, height - 1);
+  }
+}
+
+function cardLayout(ctx, cert, width, lang) {
+  const abbr = String(cert.abbr || cert.name || cert.id);
+  const fullName = String(
+    (lang === "ja" ? cert.name_ja || cert.name : cert.name) || "",
+  );
+  const vendor = String(cert.vendor?.name || "");
+  setFont(ctx, LABEL_SIZE, 700);
+  const title = wrapText(ctx, abbr, width - 2 * CARD_PAD);
+  setFont(ctx);
+  const name =
+    fullName && fullName !== abbr
+      ? wrapText(ctx, fullName, width - 2 * CARD_PAD)
+      : [];
+  setFont(ctx, 12);
+  const publisher = vendor ? wrapText(ctx, vendor, width - 2 * CARD_PAD) : [];
+  return {
+    title,
+    name,
+    publisher,
+    height:
+      CARD_PAD * 2 +
+      (title.length + name.length) * LINE_HEIGHT +
+      (name.length ? 4 : 0) +
+      (publisher.length ? 6 + publisher.length * 17 : 0),
+  };
+}
+
+function drawCard(ctx, card, x, y, width, specialty) {
+  rectangle(ctx, x, y, width, card.height, COLORS.white, COLORS.line);
+  rectangle(
+    ctx,
+    x,
+    y,
+    3,
+    card.height,
+    specialty ? COLORS.purple : COLORS.green,
+  );
+  setFont(ctx, LABEL_SIZE, 700);
+  ctx.fillStyle = COLORS.ink;
+  let textY = drawLines(ctx, card.title, x + CARD_PAD, y + CARD_PAD);
+  if (card.name.length) {
+    setFont(ctx);
+    textY = drawLines(ctx, card.name, x + CARD_PAD, textY + 4);
+  }
+  if (card.publisher.length) {
+    setFont(ctx, 12);
+    ctx.fillStyle = COLORS.muted;
+    drawLines(ctx, card.publisher, x + CARD_PAD, textY + 6, 17);
+  }
+}
+
+function asBlob(canvas) {
+  return new Promise((resolve, reject) => {
+    try {
+      canvas.toBlob((blob) => {
+        if (blob?.size) resolve(blob);
+        else
+          reject(
+            new Error(
+              "The browser could not create the PNG. Try exporting fewer certifications.",
+            ),
+          );
+      }, "image/png");
+    } catch (error) {
+      reject(
+        new Error("The browser could not encode the PNG.", { cause: error }),
+      );
+    }
   });
 }
 
-function bg() {
-  return resolveCssColor(getComputedStyle(document.body).getPropertyValue("background-color")) || "#0e1117";
-}
-
-/** Convert ANY valid CSS color expression — hex, rgb(), rgba(), hsl(),
- *  color-mix(), color(srgb …), named colors — to a plain "rgba(r, g, b, a)"
- *  string that legacy parsers (notably html2canvas v1.4) can handle.
- *  Done via a 1x1 canvas pixel readback so the browser does the work. */
-function resolveCssColor(cssColor) {
-  if (!cssColor) return cssColor;
-  const s = String(cssColor).trim();
-  if (/^#|^rgb\(|^rgba\(/i.test(s)) return s;
-  try {
-    const c = document.createElement("canvas");
-    c.width = c.height = 1;
-    const ctx = c.getContext("2d");
-    ctx.fillStyle = "rgba(0,0,0,0)";
-    ctx.clearRect(0, 0, 1, 1);
-    ctx.fillStyle = s;
-    ctx.fillRect(0, 0, 1, 1);
-    const [r, g, b, a] = ctx.getImageData(0, 0, 1, 1).data;
-    return `rgba(${r}, ${g}, ${b}, ${(a / 255).toFixed(3)})`;
-  } catch (_) {
-    return s;
-  }
-}
-
-function downloadBlob(blob, name) {
+function download(blob, date) {
   const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = name;
-  document.body.appendChild(a);
-  a.click();
-  setTimeout(() => { a.remove(); URL.revokeObjectURL(url); }, 1500);
-}
-
-function timestamp() {
-  const d = new Date();
-  const pad = n => String(n).padStart(2, "0");
-  return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}`;
-}
-
-function generationLine(v) {
-  const dt = new Date().toISOString().replace("T", " ").slice(0, 16) + " UTC";
-  return [
-    `${window.location.origin}${window.location.pathname}`,
-    versionLabel(v),
-    `generated ${dt}`,
-  ].filter(Boolean).join("  ·  ");
-}
-
-/* ---------------- Matrix capture (with arrows) ----------------
- *
- * Exports use a FIXED virtual canvas size (FHD) regardless of the
- * user's actual viewport. This makes coordinates deterministic — a
- * 1366px viewport and a 4K viewport produce the same export.
- */
-
-const EXPORT_WIDTH_FHD = 1920;
-const EXPORT_WIDTH     = EXPORT_WIDTH_FHD;
-
-async function captureMatrixWithArrows(redrawArrows) {
-  const wrap       = document.querySelector(".grid-and-arrows");
-  const matrixWrap = document.querySelector(".matrix-wrap");
-  const svg        = document.getElementById("arrows-overlay");
-  if (!wrap || !matrixWrap) throw new Error("matrix not found");
-
-  const origMatrix = matrixWrap.style.cssText;
-  const origBody   = document.body.style.cssText;
-  const scrollX    = matrixWrap.scrollLeft;
-  const scrollY    = matrixWrap.scrollTop;
-
-  document.body.classList.add("exporting-png");
-  document.body.style.overflowX = "hidden";
-  matrixWrap.style.width    = `${EXPORT_WIDTH}px`;
-  matrixWrap.style.maxWidth = "none";
-  matrixWrap.style.minWidth = `${EXPORT_WIDTH}px`;
-  matrixWrap.style.overflow = "visible";
-
-  await new Promise(r => requestAnimationFrame(r));
-  if (typeof redrawArrows === "function") {
-    redrawArrows();
-    await new Promise(r => requestAnimationFrame(r));
-  }
-
-  const filteredEls = svg ? Array.from(svg.querySelectorAll("[filter]")) : [];
-  const restored = filteredEls.map(el => [el, el.getAttribute("filter")]);
-  for (const el of filteredEls) el.removeAttribute("filter");
-
-  let canvas;
+  const anchor = document.createElement("a");
   try {
-    canvas = await window.html2canvas(wrap, {
-      backgroundColor: bg(),
-      scale: 2,
-      useCORS: true,
-      width:  wrap.scrollWidth,
-      height: wrap.scrollHeight,
-      windowWidth:  wrap.scrollWidth,
-      windowHeight: wrap.scrollHeight,
-      onclone: (doc) => {
-        // html2canvas v1.4 cannot parse modern CSS color-mix() / color()
-        // functions used in our cell tier-tinted backgrounds. Pre-resolve
-        // each tier's background to a flat rgba() via canvas pixel readback
-        // and pin it as inline style on every clone cell.
-        const tierBg = {};
-        for (const tier of ["introductory","foundational","associate","professional","expert","specialty"]) {
-          const live = document.querySelector(`.cell[data-tier="${tier}"]`);
-          if (live) tierBg[tier] = resolveCssColor(getComputedStyle(live).backgroundColor);
-        }
-        for (const el of doc.querySelectorAll(".cell[data-tier]")) {
-          const bg = tierBg[el.dataset.tier];
-          if (bg) el.style.backgroundColor = bg;
-        }
-
-        // Flatten sticky positioning so headers land at the top of the
-        // capture rather than at the user's current scroll offset.
-        for (const el of doc.querySelectorAll(".corner, .domain-head, .tier-head")) {
-          el.style.position = "static";
-        }
-        // Hide chrome that shouldn't appear in the export.
-        for (const el of doc.querySelectorAll(".topbar, .controls, .about, .detail-panel, .vendor-panel, .show-details-cta")) {
-          el.style.display = "none";
-        }
-        // Mirror the SVG's style.width/height onto the actual SVG attributes.
-        const cs = doc.getElementById("arrows-overlay");
-        if (cs) {
-          const w = parseFloat(cs.style.width);
-          const h = parseFloat(cs.style.height);
-          if (w) cs.setAttribute("width",  String(w));
-          if (h) cs.setAttribute("height", String(h));
-        }
-      },
-    });
+    anchor.href = url;
+    anchor.download = `security-certification-roadmap-${date.toISOString().replace(/[:.]/g, "-")}.png`;
+    document.body.appendChild(anchor);
+    anchor.click();
   } finally {
-    for (const [el, val] of restored) el.setAttribute("filter", val);
-    matrixWrap.style.cssText = origMatrix;
-    document.body.style.cssText = origBody;
-    document.body.classList.remove("exporting-png");
-    matrixWrap.scrollLeft = scrollX;
-    matrixWrap.scrollTop  = scrollY;
-    if (typeof redrawArrows === "function") {
-      await new Promise(r => requestAnimationFrame(r));
-      redrawArrows();
-    }
+    anchor.remove();
+    // Give the download time to consume the blob, including on mobile Safari.
+    setTimeout(() => URL.revokeObjectURL(url), 60_000);
   }
-  return canvas;
 }
 
-/* ---------------- Footer band ---------------- */
+/** certs is the already-filtered set; no user filters are reinterpreted here. */
+export async function exportRoadmapPNG({
+  certs,
+  domains,
+  tiers,
+  lang = "en",
+  queryLabel = "",
+}) {
+  if (
+    !Array.isArray(certs) ||
+    !Array.isArray(domains) ||
+    !domains.length ||
+    !Array.isArray(tiers) ||
+    !tiers.length
+  ) {
+    throw new Error("The roadmap data is not available for export.");
+  }
+  if (!certs.length)
+    throw new Error(
+      lang === "ja"
+        ? "書き出す資格がありません。絞り込みを変更してください。"
+        : "No certifications to export. Change the filters and try again.",
+    );
 
-function withFooter(canvas, v) {
-  const SCALE = 2;
-  const PAD_X = 18 * SCALE;
-  const FONT_PX  = 16 * SCALE;
-  const SUB_PX   = 12 * SCALE;
-  const FOOTER_H = 70 * SCALE;
+  const version = await loadVersion();
+  if (document.fonts?.ready) await document.fonts.ready;
+  const date = new Date();
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("This browser does not support PNG export.");
 
-  const out = document.createElement("canvas");
-  out.width  = canvas.width;
-  out.height = canvas.height + FOOTER_H;
-  const ctx  = out.getContext("2d");
+  const width = Math.max(
+    2400,
+    MARGIN * 2 + AXIS_WIDTH + domains.length * COLUMN_MIN,
+  );
+  const columnWidth = (width - MARGIN * 2 - AXIS_WIDTH) / domains.length;
+  const cardWidth = columnWidth - 2 * CELL_PAD;
+  const displayOrder = [
+    "expert",
+    "professional",
+    "associate",
+    "foundational",
+    "introductory",
+    "specialty",
+  ];
+  const orderedTiers = [...tiers].sort(
+    (a, b) => displayOrder.indexOf(a.id) - displayOrder.indexOf(b.id),
+  );
+  const buckets = new Map(
+    orderedTiers.flatMap((tier) =>
+      domains.map((domain) => [`${tier.id}|${domain.id}`, []]),
+    ),
+  );
+  for (const cert of certs) {
+    const tier = cert.evaluation?.computed_tier || "specialty";
+    const bucket = buckets.get(`${tier}|${cert.domain}`);
+    // Never silently leave a supplied certification out of the exported map.
+    if (!bucket)
+      throw new Error(
+        `Cannot place certification ${cert.id}: unknown domain or tier.`,
+      );
+    bucket.push(cert);
+  }
 
-  ctx.fillStyle = bg();
-  ctx.fillRect(0, 0, out.width, out.height);
-  ctx.drawImage(canvas, 0, 0);
+  const rows = orderedTiers.map((tier) => {
+    const columns = domains.map((domain) =>
+      buckets
+        .get(`${tier.id}|${domain.id}`)
+        .sort((a, b) =>
+          String(a.abbr || a.name || a.id).localeCompare(
+            String(b.abbr || b.name || b.id),
+            lang,
+          ),
+        )
+        .map((cert) => cardLayout(ctx, cert, cardWidth, lang)),
+    );
+    return {
+      tier,
+      columns,
+      height: Math.max(
+        110,
+        ...columns.map(
+          (cards) =>
+            2 * CELL_PAD +
+            cards.reduce(
+              (sum, card) => sum + card.height + CARD_GAP,
+              -CARD_GAP,
+            ),
+        ),
+      ),
+    };
+  });
 
-  ctx.fillStyle = "rgba(0,0,0,0.18)";
-  ctx.fillRect(0, canvas.height, out.width, FOOTER_H);
-
-  ctx.strokeStyle = "rgba(88,166,255,0.8)";
-  ctx.lineWidth = 2 * SCALE;
-  ctx.beginPath();
-  ctx.moveTo(0, canvas.height + 1);
-  ctx.lineTo(out.width, canvas.height + 1);
-  ctx.stroke();
-
-  ctx.fillStyle = "#e6edf3";
-  ctx.font = `600 ${FONT_PX}px ${FONT_FAMILY}`;
+  setFont(ctx, 16);
+  const filterLines = wrapText(
+    ctx,
+    queryLabel || (lang === "ja" ? "すべての資格" : "All certifications"),
+    width - 2 * MARGIN,
+  );
+  const introHeight = 142 + filterLines.length * 23;
+  setFont(ctx, 15, 700);
+  const domainLabels = domains.map((domain) =>
+    wrapText(ctx, label(domain, lang), columnWidth - 22),
+  );
+  const headerHeight = Math.max(
+    100,
+    ...domainLabels.map((lines) => 28 + lines.length * LINE_HEIGHT),
+  );
+  const url = `${window.location.origin}${window.location.pathname}${window.location.search}${window.location.hash}`;
+  setFont(ctx, 14);
+  const footerLines = [
+    lang === "ja"
+      ? "スペシャリティは専門領域であり、エキスパートの上位ではありません。"
+      : "Specialty is a focused track, not a level above Expert.",
+    "CC BY-SA 4.0 · Inspired by Paul Jerimy and CyberDudeKZ · Independently curated certification data",
+    `${versionLabel(version)} · ${lang === "ja" ? "生成日時" : "Generated"} ${date.toISOString().replace("T", " ").slice(0, 19)} UTC`,
+    url,
+  ].flatMap((line) => wrapText(ctx, line, width - 2 * MARGIN));
+  const footerHeight = 52 + footerLines.length * 22;
+  const tableHeight =
+    headerHeight + rows.reduce((sum, row) => sum + row.height, 0);
+  const height = Math.ceil(introHeight + tableHeight + footerHeight + MARGIN);
+  // Fail with a useful message instead of returning a blank, oversized canvas.
+  if (width > 32767 || height > 32767 || width * height > 64_000_000) {
+    throw new Error(
+      lang === "ja"
+        ? "画像が大きすぎます。絞り込んで再度書き出してください。"
+        : "The image is too large. Narrow the filters and export again.",
+    );
+  }
+  canvas.width = width;
+  canvas.height = height;
   ctx.textBaseline = "top";
   ctx.textAlign = "left";
-  ctx.fillText(FOOTER_TEXT, PAD_X, canvas.height + 14 * SCALE);
+  rectangle(ctx, 0, 0, width, height, COLORS.white);
+  rectangle(ctx, MARGIN, 30, 48, 5, COLORS.green);
+  rectangle(ctx, MARGIN + 54, 30, 24, 5, COLORS.purple);
+  setFont(ctx, 36, 700);
+  ctx.fillStyle = COLORS.ink;
+  ctx.fillText("Security Certification Roadmap", MARGIN, 50);
+  setFont(ctx, 16);
+  ctx.fillStyle = COLORS.muted;
+  ctx.fillText(
+    `by hinoshiba · ${certs.length} ${lang === "ja" ? "資格" : "certifications"} · ${domains.length} ${lang === "ja" ? "分野" : "domains"}`,
+    MARGIN,
+    100,
+  );
+  ctx.fillStyle = COLORS.green;
+  drawLines(ctx, filterLines, MARGIN, 132, 23);
 
-  ctx.fillStyle = "#8b949e";
-  ctx.font = `400 ${SUB_PX}px ${FONT_FAMILY}`;
-  ctx.fillText(generationLine(v), PAD_X, canvas.height + 38 * SCALE);
+  const tableX = MARGIN;
+  let rowY = introHeight;
+  rectangle(
+    ctx,
+    tableX,
+    rowY,
+    AXIS_WIDTH,
+    headerHeight,
+    COLORS.greenLight,
+    COLORS.line,
+  );
+  setFont(ctx, 14, 700);
+  ctx.fillStyle = COLORS.ink;
+  drawLines(
+    ctx,
+    lang === "ja" ? ["レベル ↓", "分野 →"] : ["Level ↓", "Domain →"],
+    tableX + 14,
+    rowY + 20,
+    25,
+  );
+  domains.forEach((domain, index) => {
+    const x = tableX + AXIS_WIDTH + index * columnWidth;
+    rectangle(
+      ctx,
+      x,
+      rowY,
+      columnWidth,
+      headerHeight,
+      COLORS.greenLight,
+      COLORS.line,
+    );
+    rectangle(
+      ctx,
+      x + 1,
+      rowY + 1,
+      columnWidth - 2,
+      4,
+      domain.color || COLORS.green,
+    );
+    setFont(ctx, 15, 700);
+    ctx.fillStyle = COLORS.ink;
+    drawLines(ctx, domainLabels[index], x + 11, rowY + 19);
+  });
+  rowY += headerHeight;
 
-  return out;
-}
+  for (const row of rows) {
+    const specialty = row.tier.id === "specialty";
+    const tint = specialty ? COLORS.purpleLight : COLORS.greenLight;
+    rectangle(ctx, tableX, rowY, AXIS_WIDTH, row.height, tint, COLORS.line);
+    setFont(ctx, 16, 700);
+    ctx.fillStyle = specialty ? COLORS.purple : COLORS.green;
+    drawLines(
+      ctx,
+      wrapText(ctx, label(row.tier, lang), AXIS_WIDTH - 28),
+      tableX + 14,
+      rowY + 19,
+      23,
+    );
+    row.columns.forEach((cards, index) => {
+      const x = tableX + AXIS_WIDTH + index * columnWidth;
+      rectangle(ctx, x, rowY, columnWidth, row.height, tint, COLORS.line);
+      let cardY = rowY + CELL_PAD;
+      for (const card of cards) {
+        drawCard(ctx, card, x + CELL_PAD, cardY, cardWidth, specialty);
+        cardY += card.height + CARD_GAP;
+      }
+      if (!cards.length) {
+        setFont(ctx, 16);
+        ctx.fillStyle = COLORS.muted;
+        ctx.fillText("—", x + CELL_PAD + CARD_PAD, cardY + CARD_PAD);
+      }
+    });
+    rowY += row.height;
+  }
 
-/* ---------------- Public ---------------- */
-
-export async function exportMatrixPNG(redrawArrows) {
-  await loadScript(HTML2CANVAS_SRC);
-  const v = await loadVersion();
-  const matrix = await captureMatrixWithArrows(redrawArrows);
-  const final  = withFooter(matrix, v);
-  await new Promise(res => final.toBlob(blob => {
-    downloadBlob(blob, `roadmap-${timestamp()}.png`);
-    res();
-  }, "image/png"));
+  setFont(ctx, 14);
+  ctx.fillStyle = COLORS.muted;
+  drawLines(ctx, footerLines, MARGIN, rowY + 26, 22);
+  const blob = await asBlob(canvas);
+  download(blob, date);
+  // Release the bitmap after encoding; the download owns its Blob independently.
+  canvas.width = canvas.height = 1;
+  return { width, height, count: certs.length };
 }

@@ -1,4 +1,4 @@
-.PHONY: shell serve serve-stop validate evaluate manifest check-eval infer-relationships build help
+.PHONY: shell serve serve-stop test-ui validate evaluate manifest check-eval infer-relationships build help
 
 DC  := docker compose
 SVC := roadmap
@@ -9,6 +9,7 @@ help:
 	@echo "  make shell        Drop into a shell with claude / codex available"
 	@echo "  make serve        Serve the static site on http://localhost:8080 (nginx, detached)"
 	@echo "  make serve-stop   Stop the preview server"
+	@echo "  make test-ui      Check frontend syntax/assets and run UI logic tests (Node 22)"
 	@echo "  make validate     Validate every cert JSON against schema/"
 	@echo "  make manifest     Regenerate data/manifest.json from data/certs/**"
 	@echo "  make check-eval   Verify every cert has a fresh evaluation block"
@@ -30,6 +31,9 @@ serve:
 serve-stop:
 	$(DC) stop preview
 	$(DC) rm -f preview
+
+test-ui:
+	$(DC) run --rm ui-checks
 
 validate: build
 	$(DC) run --rm $(SVC) bash -lc 'set -e; \

@@ -5,9 +5,8 @@
  * scoring_factors, sources, third-party evals, rationales — those produce
  * too many spurious matches.
  *
- * The match set is exposed as a Set<cert.id> via `matchCertIds()`. The
- * renderer uses that to apply `.search-match` class on cards; a body
- * class `has-search` enables the dim-non-matches visual.
+ * The match set is exposed as a Set<cert.id> via `matchCertIds()`.
+ * The catalog combines it with the active filters before rendering results.
  */
 
 function normalize(s) {
@@ -39,7 +38,7 @@ export function matchCertIds(allCerts, query) {
   const out = new Set();
   for (const c of allCerts) {
     const hay = haystack(c);
-    if (terms.every(t => hay.includes(t))) out.add(c.id);
+    if (terms.every((t) => hay.includes(t))) out.add(c.id);
   }
   return out;
 }

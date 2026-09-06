@@ -1,125 +1,513 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cyber Security Certification Roadmap · by hinoshiba, built with Claude</title>
-  <meta name="description" content="An independently compiled, AI-evaluated security certification roadmap. Inspired by Paul Jerimy and CyberDudeKZ; data MIT-licensed." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <script>
-    // Apply theme synchronously so we don't flash light-on-dark.
-    (function () {
-      try {
-        var sp = new URLSearchParams(window.location.search);
-        var t = sp.get("theme");
-        if (t === "light" || t === "dark") {
-          document.documentElement.setAttribute("data-theme", t);
-        } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
-          document.documentElement.setAttribute("data-theme", "light");
-        }
-      } catch (e) {}
-    })();
-  </script>
-</head>
-<body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <button id="mobile-tools-toggle" type="button" class="mobile-tools-toggle" aria-expanded="false" aria-controls="topbar-nav" aria-label="Open tools">
-        ☰ <span class="mobile-tools-label">Tools</span>
-      </button>
-      <h1>Cyber Security Certification Roadmap <span class="byline">by <a href="https://x.com/hinoshiba" target="_blank" rel="noopener">hinoshiba</a>, built with <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude</a></span></h1>
-      <nav id="topbar-nav" class="topbar-nav" aria-label="Tools">
-        <div class="search-wrap">
-          <input id="search-input" type="search" autocomplete="off" spellcheck="false"
-                 placeholder="Search abbr / name / vendor…" aria-label="Search certs" />
-          <button id="search-clear" type="button" class="search-clear" aria-label="Clear search" title="Clear (ESC)">×</button>
-        </div>
-        <button id="vendor-filter-toggle" type="button" class="icon-btn" title="Filter by vendor">
-          🏷 Vendor
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Security Certification Roadmap — Find your next step</title>
+    <meta
+      name="description"
+      content="See the big picture of cybersecurity certifications. Explore domains, compare levels, and find your next step with independent, AI-evaluated research. CC BY-SA 4.0."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script>
+      const initialTheme = new URLSearchParams(location.search).get("theme");
+      document.documentElement.dataset.theme =
+        initialTheme === "dark" ||
+        (!initialTheme && matchMedia("(prefers-color-scheme: dark)").matches)
+          ? "dark"
+          : "light";
+      document.documentElement.lang =
+        new URLSearchParams(location.search).get("lang") === "ja" ? "ja" : "en";
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace" data-i18n="skip">Skip to roadmap</a>
+    <header class="site-header">
+      <a
+        class="brand"
+        href="./"
+        aria-label="Security Certification Roadmap home"
+      >
+        <svg
+          class="brand-symbol"
+          width="32"
+          height="36"
+          viewBox="0 0 32 36"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M16 2 29 7v10c0 8-6 13-13 17C9 30 3 25 3 17V7L16 2Z"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <path
+            d="m10 18 4 4 8-10"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span
+          >Security<span class="brand-sub">Certification Roadmap</span></span
+        >
+      </a>
+      <nav class="header-nav" aria-label="Site navigation">
+        <a href="#about" class="about-link" data-i18n="methodology"
+          >How it works</a
+        >
+        <a
+          class="github-link"
+          href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap"
+          target="_blank"
+          rel="noopener"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+        <span class="nav-divider"></span>
+        <button
+          id="lang-toggle"
+          class="quiet-button"
+          type="button"
+          aria-label="日本語に切り替え"
+        >
+          日本語
         </button>
-        <button id="png-export-btn" type="button" class="icon-btn" title="Export matrix as PNG">
-          📷 PNG export
-        </button>
-        <button id="jp-toggle-btn" type="button" class="icon-btn" aria-pressed="false" title="Toggle Japan-only certs">
-          🇯🇵 JP
-        </button>
-        <button id="lang-toggle-btn" type="button" class="icon-btn" aria-pressed="false" title="Toggle Japanese labels">
-          あ Lang
-        </button>
-        <button id="theme-toggle" type="button" class="icon-btn" aria-label="Toggle theme" title="Toggle dark/light">
-          <span class="theme-label"></span>
-        </button>
-        <a href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/issues/new/choose" target="_blank" rel="noopener">Issue</a>
-        <a href="#about">About</a>
+        <button
+          id="theme-toggle"
+          class="square-button"
+          type="button"
+          aria-label="Switch to dark theme"
+        ></button>
       </nav>
-    </div>
-    <!-- Vendor filter floating panel, anchored to the top-right toggle -->
-    <div id="vendor-panel" class="vendor-panel" aria-hidden="true"></div>
-  </header>
-
-  <section class="controls" aria-label="Status">
-    <span class="meta" id="cert-count" aria-live="polite"></span>
-    <label class="vt-control" id="vt-control" title="">
-      <span class="vt-label" id="vt-label"></span>
-      <input id="vt-input" type="number" min="0" step="1" inputmode="numeric" placeholder="0" />
-      <span class="vt-suffix" id="vt-suffix"></span>
-    </label>
-    <span class="legend">
-      <span id="lg-prereq" class="lg-prereq"></span>
-      <span id="lg-next"   class="lg-next"></span>
-      <span id="lg-depth"  class="lg-depth"></span>
-      <span id="lg-hint"   class="lg-hint"></span>
-    </span>
-  </section>
-
-  <main class="matrix-wrap" id="matrix-wrap" aria-busy="true">
-    <div class="grid-and-arrows">
-      <div id="grid" class="roadmap-grid">
-        <p class="loading">Loading roadmap…</p>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot"></span
+            ><span data-i18n="eyebrow"
+              >INDEPENDENT RESEARCH. A CLEARER DIRECTION.</span
+            >
+          </p>
+          <h1 id="page-title" data-i18n="heroTitle">
+            See the landscape.<br /><span>Find your next step.</span>
+          </h1>
+          <p class="hero-description" data-i18n="heroDescription">
+            Your field, your level, your next certification. Explore the big
+            picture of cybersecurity — then make it your own.
+          </p>
+          <div class="hero-actions">
+            <button id="beginner-button" class="primary-button" type="button">
+              <span data-i18n="beginner">New to security? Start here</span
+              ><span aria-hidden="true">↗</span></button
+            ><a href="#workspace" class="text-button"
+              ><span data-i18n="exploreMap">Explore the roadmap</span
+              ><span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+        <div class="hero-aside" aria-label="Catalog at a glance">
+          <div class="hero-stat">
+            <strong id="total-stat">—</strong
+            ><span data-i18n="certifications">certifications</span>
+          </div>
+          <div class="hero-stat">
+            <strong id="domain-stat">—</strong
+            ><span data-i18n="securityDomains">security domains</span>
+          </div>
+          <p class="hero-note">
+            <span class="small-spark" aria-hidden="true">✳</span
+            ><span data-i18n="heroNote"
+              >Many paths. One open roadmap.<br />Built for the security
+              community.</span
+            >
+          </p>
+        </div>
+      </section>
+      <section
+        class="workspace"
+        id="workspace"
+        aria-label="Certification explorer"
+        tabindex="-1"
+      >
+        <div class="search-toolbar">
+          <div class="search-field">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="10.5"
+                cy="10.5"
+                r="6.5"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+              <path
+                d="m16 16 5 5"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+              /></svg
+            ><input
+              id="search-input"
+              type="search"
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Search certifications"
+              placeholder="Search certifications, names, or vendors…"
+            /><button
+              id="search-clear"
+              type="button"
+              class="square-button"
+              aria-label="Clear search"
+              hidden
+            >
+              ×</button
+            ><kbd class="search-shortcut">/</kbd>
+          </div>
+          <button id="filters-button" class="outline-button" type="button">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 7h16M4 17h16M9 4v6m6 4v6"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+              /></svg
+            ><span data-i18n="filters">Filters</span
+            ><span id="filter-count" class="filter-count" hidden></span>
+          </button>
+          <label class="jp-control"
+            ><input type="checkbox" id="jp-toggle" /><span
+              class="switch"
+              aria-hidden="true"
+            ></span
+            ><span data-i18n="includeJapan">Include Japan</span></label
+          >
+        </div>
+        <div class="workspace-layout">
+          <aside class="domain-sidebar">
+            <div class="sidebar-heading">
+              <h2 data-i18n="domains">DOMAINS</h2>
+              <span id="sidebar-domain-count"></span>
+            </div>
+            <nav id="domain-nav" aria-label="Security domains"></nav>
+            <div class="sidebar-note">
+              <span class="note-symbol" aria-hidden="true">↗</span>
+              <p data-i18n="sidebarNote">A roadmap, not a ranking.</p>
+              <span data-i18n="sidebarDescription"
+                >Levels reflect independent AI evaluation of published
+                evidence.</span
+              ><a href="#about" data-i18n="readMethodology"
+                >About the methodology ↗</a
+              >
+            </div>
+          </aside>
+          <div class="workspace-main">
+            <div class="workspace-heading">
+              <div>
+                <p class="eyebrow" data-i18n="yourRoadmap">YOUR NEXT CHAPTER</p>
+                <h2 id="workspace-title">The security landscape</h2>
+              </div>
+              <div class="view-switch" role="group" aria-label="View">
+                <button type="button" data-view="map" aria-pressed="true">
+                  <span aria-hidden="true">▦</span
+                  ><span data-i18n="map">Roadmap</span></button
+                ><button type="button" data-view="explore" aria-pressed="false">
+                  <span aria-hidden="true">☷</span
+                  ><span data-i18n="explore">Explore</span>
+                </button>
+              </div>
+            </div>
+            <div class="mobile-domain">
+              <label for="domain-select" data-i18n="chooseDomain"
+                >Choose a domain</label
+              ><select id="domain-select"></select>
+            </div>
+            <div
+              id="level-filters"
+              class="level-filters"
+              role="group"
+              aria-label="Certification level"
+            ></div>
+            <p id="level-description" class="level-description"></p>
+            <div id="active-filters" class="active-filters"></div>
+            <div id="load-status" class="load-status" role="status">
+              <span class="loading-dot"></span
+              ><span data-i18n="loading">Mapping the landscape…</span>
+            </div>
+            <div id="map-section" hidden>
+              <div class="map-topline">
+                <p data-i18n="mapHint">
+                  Select a cell to explore. Each certification appears in its
+                  primary domain.
+                </p>
+                <label class="names-control"
+                  ><input type="checkbox" id="map-names" /><span
+                    data-i18n="showNames"
+                    >Show names</span
+                  ></label
+                >
+              </div>
+              <p class="mobile-map-hint" data-i18n="mapScroll">
+                Swipe across the map to see every domain →
+              </p>
+              <div
+                class="map-scroll"
+                id="map-scroll"
+                tabindex="0"
+                role="region"
+                aria-label="All domains and levels"
+                aria-describedby="map-caption"
+              >
+                <table id="roadmap-table" class="roadmap-table"></table>
+              </div>
+              <div class="map-caption" id="map-caption">
+                <span data-i18n="specialtyNote"
+                  >Specialty is a focused track, not a level above Expert.</span
+                >
+                <div class="map-density">
+                  <span data-i18n="fewer">Fewer</span><i></i><i></i><i></i
+                  ><i></i><span data-i18n="more">More</span>
+                </div>
+              </div>
+            </div>
+            <div class="results-toolbar" id="results-toolbar" hidden>
+              <div>
+                <h3 id="results-title" tabindex="-1">Explore certifications</h3>
+                <p id="result-count" role="status" aria-live="polite"></p>
+              </div>
+              <label class="sort-control"
+                ><span data-i18n="sortBy">Sort by</span
+                ><select id="sort-select" aria-label="Sort certifications">
+                  <option value="level">Level</option>
+                  <option value="name">Name</option>
+                  <option value="vendor">Vendor</option>
+                </select></label
+              >
+            </div>
+            <div id="cert-results" class="cert-results" aria-busy="true"></div>
+            <div class="more-row">
+              <button
+                id="load-more"
+                class="outline-button"
+                type="button"
+                hidden
+              ></button>
+            </div>
+            <div class="workspace-bottom">
+              <span data-i18n="evidenceNote"
+                >Independent evaluations. Open evidence. Always evolving.</span
+              >
+              <div>
+                <button id="share-button" class="text-button" type="button">
+                  <span data-i18n="share">Share view</span> ↗</button
+                ><button id="export-button" class="text-button" type="button">
+                  <span data-i18n="export">Export PNG</span> ↓
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about-section" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow" data-i18n="openByDesign">OPEN BY DESIGN</p>
+          <h2 id="about-title" data-i18n="aboutTitle">
+            Better decisions start<br />with the bigger picture.
+          </h2>
+        </div>
+        <div>
+          <p data-i18n="aboutDescription">
+            An independently compiled roadmap, inspired by Paul Jerimy and
+            CyberDudeKZ. Certification levels are evaluated by three AI reviewer
+            personas using curated facts and third-party evidence. They are
+            guidance, not official equivalencies.
+          </p>
+          <p class="muted" data-i18n="aboutFacts">
+            Check the official provider for current exam requirements and
+            pricing. Every certification includes its sources and evaluation
+            date.
+          </p>
+          <a
+            href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/issues/new/choose"
+            target="_blank"
+            rel="noopener"
+            class="text-button"
+            data-i18n="contribute"
+            >Help improve the roadmap ↗</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div>
+        <strong>Security Certification Roadmap</strong
+        ><span
+          >by
+          <a href="https://x.com/hinoshiba" target="_blank" rel="noopener"
+            >hinoshiba</a
+          >
+          · built with Claude &amp; Codex</span
+        >
       </div>
-      <svg id="arrows-overlay" aria-hidden="true"></svg>
-      <!-- Floating "spotlight" for the selected cert. Sits above the arrow
-           overlay so the cert name stays readable even when many edges
-           converge on the same card. Positioned by JS to track the card. -->
-      <div id="selected-overlay" class="selected-overlay" aria-hidden="true"></div>
-    </div>
-  </main>
-
-  <aside id="detail-panel" class="detail-panel" aria-hidden="true"></aside>
-
-  <!-- Floating CTA: surfaces only when a cert is selected but the panel is
-       dismissed. Click to re-open the panel (selection + arrows persist). -->
-  <button id="show-details-btn" type="button" class="show-details-cta" aria-label="Show details">
-    📋 <span class="show-details-label">Show details</span>
-  </button>
-  <button id="show-overview-btn" type="button" class="show-overview-cta" aria-label="Show overview">
-    🧭 <span class="show-overview-label">Overview</span>
-  </button>
-
-  <footer id="about" class="about" role="contentinfo">
-    <span class="about-block"><strong>by <a href="https://x.com/hinoshiba" target="_blank" rel="noopener">hinoshiba</a>, built with <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude</a>.</strong> Independently compiled; tiers AI-evaluated from JSON facts.</span>
-    <span class="about-sep">·</span>
-    <span class="about-block">Inspired by
-      <a href="https://pauljerimy.com/security-certification-roadmap/" target="_blank" rel="noopener">Paul Jerimy</a>
-      &amp;
-      <a href="https://cyberdudekz.github.io/security-cert-roadmap/" target="_blank" rel="noopener">CyberDudeKZ</a>
-    </span>
-    <span class="about-sep">·</span>
-    <span class="about-block">
-      <a href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/blob/main/NOTICE" target="_blank" rel="noopener">NOTICE</a>
-      ·
-      <a href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/blob/main/README.md" target="_blank" rel="noopener">README</a>
-      ·
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" title="License: CC BY-SA 4.0">CC BY-SA 4.0</a>
-    </span>
-    <span class="about-sep">·</span>
-    <span class="about-block about-version" id="about-version">
-      <span class="muted">loading…</span>
-    </span>
-  </footer>
-
-  <script type="module" src="assets/js/app.js"></script>
-</body>
+      <div class="footer-links">
+        <a
+          href="https://pauljerimy.com/security-certification-roadmap/"
+          target="_blank"
+          rel="noopener"
+          >Paul Jerimy ↗</a
+        ><a
+          href="https://cyberdudekz.github.io/security-cert-roadmap/"
+          target="_blank"
+          rel="noopener"
+          >CyberDudeKZ ↗</a
+        ><a
+          href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/blob/main/README.md"
+          target="_blank"
+          rel="noopener"
+          >README</a
+        ><a
+          href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/blob/main/NOTICE"
+          target="_blank"
+          rel="noopener"
+          >NOTICE</a
+        ><a
+          href="https://creativecommons.org/licenses/by-sa/4.0/"
+          target="_blank"
+          rel="noopener"
+          >CC BY-SA 4.0</a
+        >
+      </div>
+      <span id="about-version" class="version-label"></span>
+    </footer>
+    <dialog
+      id="detail-dialog"
+      class="detail-dialog"
+      aria-labelledby="detail-title"
+    >
+      <div id="detail-panel"></div>
+    </dialog>
+    <dialog
+      id="filter-dialog"
+      class="filter-dialog"
+      aria-labelledby="filter-title"
+    >
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow" data-i18n="refine">MAKE IT YOURS</p>
+          <h2 id="filter-title" data-i18n="filterTitle">Refine your roadmap</h2>
+        </div>
+        <button
+          type="button"
+          class="square-button"
+          data-close-filters
+          aria-label="Close filters"
+        >
+          ×
+        </button>
+      </div>
+      <p class="muted" data-i18n="vendorHint">
+        Choose the certification providers you want to see.
+      </p>
+      <div class="vendor-search-wrap">
+        <input
+          id="vendor-search"
+          type="search"
+          aria-label="Search vendors"
+          placeholder="Find a vendor…"
+        />
+      </div>
+      <div class="vendor-actions">
+        <strong data-i18n="vendors">Vendors</strong>
+        <div>
+          <button
+            id="vendors-all"
+            class="text-button"
+            type="button"
+            data-i18n="selectAll"
+          >
+            Select all</button
+          ><button
+            id="vendors-none"
+            class="text-button"
+            type="button"
+            data-i18n="selectNone"
+          >
+            Select none
+          </button>
+        </div>
+      </div>
+      <div id="vendor-list" class="vendor-list"></div>
+      <label class="highlight-control"
+        ><span data-i18n="highlightVendors"
+          >Highlight vendors with at least this many certifications</span
+        ><input
+          id="vt-input"
+          type="number"
+          min="0"
+          step="1"
+          placeholder="0"
+          aria-label="Vendor highlight threshold"
+        /><small data-i18n="highlightHint"
+          >0 turns highlighting off. This does not filter results.</small
+        ></label
+      >
+      <div class="dialog-footer">
+        <span id="filter-preview" role="status"></span
+        ><button
+          id="apply-filters"
+          class="primary-button"
+          type="button"
+          data-i18n="applyFilters"
+        >
+          Apply filters
+        </button>
+      </div>
+    </dialog>
+    <dialog
+      id="share-dialog"
+      class="share-dialog"
+      aria-labelledby="share-title"
+    >
+      <div class="dialog-header">
+        <h2 id="share-title" data-i18n="share">Share view</h2>
+        <button
+          type="button"
+          class="square-button"
+          data-close-share
+          aria-label="Close share"
+        >
+          ×
+        </button>
+      </div>
+      <p data-i18n="shareHint">
+        Copy this link to return to the same roadmap and filters.
+      </p>
+      <input id="share-url" type="text" readonly aria-label="Shareable URL" />
+    </dialog>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <noscript
+      ><div class="noscript">
+        JavaScript is needed to explore the roadmap.
+        <a
+          href="https://github.com/hinoshiba/CyberSecurityCertificationRoadmap/tree/main/data/certs"
+          >Browse the certification data on GitHub</a
+        >.
+      </div></noscript
+    >
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
 </html>

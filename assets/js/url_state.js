@@ -1,87 +1,99 @@
-/**
- * Single source of truth for filter / selection state in the URL.
- *
- * Param shape (all optional):
- *   ?theme=light|dark
- *   ?lang=en|ja
- *   ?jp=1                       (show Japan-only certs)
- *   ?v=isc2,offsec,giac         (vendor filter; absent param = no filter; empty = show none)
- *   ?cert=isc2.cissp            (selected cert id)
- *   ?q=GIAC                     (live header search query; matches abbr / name / vendor)
- *   ?vt=10                      (vendor-highlight threshold: tint cards whose
- *                                vendor publishes ≥ vt certs; 0/missing = off)
- *
- * Updates use history.replaceState so the back/forward stack isn't polluted
- * with every keystroke; the URL still bookmarks correctly.
- */
-
-const KEYS = ["theme", "lang", "jp", "v", "cert", "q", "vt"];
-
-function readParams() {
-  const sp = new URLSearchParams(window.location.search);
-  let vendors = null;
-  if (sp.has("v")) {
-    vendors = (sp.get("v") || "").split(",").map(s => s.trim()).filter(Boolean);
-  }
-  let vt = null;
-  if (sp.has("vt")) {
-    const n = parseInt(sp.get("vt"), 10);
-    if (Number.isFinite(n) && n > 0) vt = n;
-  }
+/** Bookmarkable state. Discrete navigation pushes history; text search replaces it. */
+const KEYS = [
+  "theme",
+  "lang",
+  "jp",
+  "v",
+  "cert",
+  "q",
+  "vt",
+  "d",
+  "level",
+  "view",
+  "sort",
+  "names",
+];
+export function parseState(search) {
+  const sp = new URLSearchParams(search);
+  const vt = Number(sp.get("vt"));
   return {
-    theme:   sp.get("theme") || null,
-    lang:    sp.get("lang") || null,
-    jp:      sp.get("jp") === "1",
-    vendors,
-    cert:    sp.get("cert") || null,
-    q:       sp.get("q") || "",
-    vt,
+    theme: ["light", "dark"].includes(sp.get("theme")) ? sp.get("theme") : null,
+    lang: sp.get("lang") === "ja" ? "ja" : "en",
+    jp: sp.get("jp") === "1",
+    vendors: sp.has("v")
+      ? [
+          ...new Set(
+            (sp.get("v") || "")
+              .split(",")
+              .map((x) => x.trim())
+              .filter(Boolean),
+          ),
+        ]
+      : null,
+    cert: sp.get("cert") || null,
+    q: sp.get("q") || "",
+    vt: Number.isInteger(vt) && vt > 0 ? vt : null,
+    domain: sp.get("d") || "",
+    level: sp.get("level") || "",
+    view: sp.get("view") === "explore" ? "explore" : "map",
+    sort: ["level", "name", "vendor"].includes(sp.get("sort"))
+      ? sp.get("sort")
+      : "level",
+    names: sp.get("names") === "1",
   };
 }
-
-function writeParams(state) {
-  const sp = new URLSearchParams(window.location.search);
-  for (const k of KEYS) sp.delete(k);
-  if (state.theme)             sp.set("theme", state.theme);
-  if (state.lang)              sp.set("lang", state.lang);
-  if (state.jp)                sp.set("jp", "1");
-  if (state.vendors !== null && state.vendors !== undefined) {
-    sp.set("v", state.vendors.join(","));
-  }
-  if (state.cert)              sp.set("cert", state.cert);
-  if (state.q)                 sp.set("q", state.q);
-  if (state.vt && state.vt > 0) sp.set("vt", String(state.vt));
-  const qs = sp.toString();
-  const url = window.location.pathname + (qs ? "?" + qs : "") + window.location.hash;
-  window.history.replaceState(null, "", url);
+export function serializeState(state, search = "") {
+  const sp = new URLSearchParams(search);
+  KEYS.forEach((k) => sp.delete(k));
+  if (state.theme) sp.set("theme", state.theme);
+  if (state.lang === "ja") sp.set("lang", "ja");
+  if (state.jp) sp.set("jp", "1");
+  if (state.vendors != null) sp.set("v", [...new Set(state.vendors)].join(","));
+  if (state.cert) sp.set("cert", state.cert);
+  if (state.q) sp.set("q", state.q);
+  if (state.vt > 0) sp.set("vt", String(state.vt));
+  if (state.domain) sp.set("d", state.domain);
+  if (state.level) sp.set("level", state.level);
+  if (state.view === "explore") sp.set("view", "explore");
+  if (state.sort && state.sort !== "level") sp.set("sort", state.sort);
+  if (state.names) sp.set("names", "1");
+  const query = sp.toString();
+  return query ? "?" + query : "";
 }
-
 const listeners = new Set();
-
-let current = readParams();
-
-export function getState() {
-  return { ...current, vendors: current.vendors === null ? null : [...current.vendors] };
-}
-
-export function setState(patch, opts = {}) {
-  const next = { ...current, ...patch };
-  if ("vendors" in patch) {
-    next.vendors = patch.vendors === null ? null : Array.from(new Set(patch.vendors));
-  }
-  current = next;
-  writeParams(current);
-  if (!opts.silent) {
-    for (const l of listeners) l(current);
-  }
-}
-
-export function subscribe(listener) {
-  listeners.add(listener);
-  return () => listeners.delete(listener);
-}
-
-window.addEventListener("popstate", () => {
-  current = readParams();
-  for (const l of listeners) l(current);
+let current = parseState(
+  typeof window === "undefined" ? "" : window.location.search,
+);
+export const getState = () => ({
+  ...current,
+  vendors: current.vendors == null ? null : [...current.vendors],
 });
+export function setState(patch, opts = {}) {
+  current = { ...current, ...patch };
+  if (typeof window !== "undefined") {
+    const url =
+      window.location.pathname +
+      serializeState(current, window.location.search) +
+      window.location.hash;
+    if (
+      url !==
+      window.location.pathname + window.location.search + window.location.hash
+    ) {
+      window.history[opts.replace ? "replaceState" : "pushState"](
+        null,
+        "",
+        url,
+      );
+    }
+  }
+  if (!opts.silent) listeners.forEach((fn) => fn(getState()));
+}
+export function subscribe(fn) {
+  listeners.add(fn);
+  return () => listeners.delete(fn);
+}
+if (typeof window !== "undefined")
+  window.addEventListener("popstate", () => {
+    current = parseState(window.location.search);
+    listeners.forEach((fn) => fn(getState()));
+  });
