@@ -1,4 +1,4 @@
-import { setState } from "./url_state.js";
+import { setState, certHref } from "./url_state.js";
 import { t } from "./i18n.js";
 
 function escapeHtml(s) {
@@ -50,7 +50,7 @@ function relatedCertList(label, entries, byId, ui, extraClass = "") {
     const name = lang === "ja" ? (c.name_ja || c.name) : c.name;
     return `<li>
       ${sourceBadge}
-      <a href="?cert=${encodeURIComponent(id)}" data-cert-link="${escapeHtml(id)}">
+      <a href="${escapeHtml(certHref(id))}" data-cert-link="${escapeHtml(id)}">
         <strong>${escapeHtml(c.abbr)}</strong>
         <span class="muted">${escapeHtml(c.vendor?.name || "")}</span>
         <span class="muted">— ${escapeHtml(name)}</span>
@@ -193,6 +193,7 @@ export function renderDetailPanel(panel, cert, byId, ui) {
             <span class="meta-label">${t("domain", lang)}</span>
             ${domainBadges}
           </div>
+          <p class="muted small">${lang === "ja" ? "公式情報の記録日" : "Official information recorded"}: ${escapeHtml(cert.official?.fetched_at || "—")}. ${lang === "ja" ? "最新の受験要件は公式ページで確認してください。" : "Check current requirements on the official page."}</p>
           <div class="meta-row meta-cta">
             <a class="cta-primary" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener">${t("open_official", lang)}</a>
             ${blueprintUrl ? `<a class="cta-secondary" href="${escapeHtml(blueprintUrl)}" target="_blank" rel="noopener">Blueprint ↗</a>` : ""}
@@ -258,12 +259,14 @@ export function renderDetailPanel(panel, cert, byId, ui) {
     panel.dispatchEvent(new CustomEvent("dismiss-panel", { bubbles: true }));
   });
 
-  panel.addEventListener("click", e => {
+  panel.onclick = e => {
     const a = e.target.closest("a[data-cert-link]");
     if (a) {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       e.preventDefault();
       e.stopPropagation();
       setState({ cert: a.dataset.certLink });
+      panel.focus({preventScroll: true});
     }
-  });
+  };
 }

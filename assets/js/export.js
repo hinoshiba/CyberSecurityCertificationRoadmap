@@ -107,6 +107,8 @@ async function captureMatrixWithArrows(redrawArrows) {
   const origBody   = document.body.style.cssText;
   const scrollX    = matrixWrap.scrollLeft;
   const scrollY    = matrixWrap.scrollTop;
+  const innerScrollX = wrap.scrollLeft;
+  const innerScrollY = wrap.scrollTop;
 
   document.body.classList.add("exporting-png");
   document.body.style.overflowX = "hidden";
@@ -136,6 +138,23 @@ async function captureMatrixWithArrows(redrawArrows) {
       windowWidth:  wrap.scrollWidth,
       windowHeight: wrap.scrollHeight,
       onclone: (doc) => {
+        // Chromium serializes color-mix() as color(srgb …), which the
+        // pinned html2canvas parser cannot read. Flatten all color-bearing
+        // styles in the captured subtree, including the selected spotlight.
+        const liveNodes = document.querySelectorAll(".grid-and-arrows, .grid-and-arrows *");
+        const cloneNodes = doc.querySelectorAll(".grid-and-arrows, .grid-and-arrows *");
+        const colorProperties = ["color", "background-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "outline-color", "box-shadow", "text-shadow", "fill", "stroke"];
+        liveNodes.forEach((live, index) => {
+          const cloned = cloneNodes[index];
+          if (!cloned) return;
+          const styles = getComputedStyle(live);
+          for (const property of colorProperties) {
+            const value = styles.getPropertyValue(property);
+            if (/(?:color|oklab|oklch|lab|lch)\(/.test(value)) {
+              cloned.style.setProperty(property, value.replace(/(?:color|oklab|oklch|lab|lch)\([^)]*\)/g, resolveCssColor));
+            }
+          }
+        });
         // html2canvas v1.4 cannot parse modern CSS color-mix() / color()
         // functions used in our cell tier-tinted backgrounds. Pre-resolve
         // each tier's background to a flat rgba() via canvas pixel readback
@@ -156,7 +175,7 @@ async function captureMatrixWithArrows(redrawArrows) {
           el.style.position = "static";
         }
         // Hide chrome that shouldn't appear in the export.
-        for (const el of doc.querySelectorAll(".topbar, .controls, .about, .detail-panel, .vendor-panel, .show-details-cta")) {
+        for (const el of doc.querySelectorAll(".topbar, .controls, .about, .detail-panel, .vendor-panel, .show-details-cta, .show-overview-cta, .discovery, .results-toolbar, #explorer-results, .selection-note, .skip-link")) {
           el.style.display = "none";
         }
         // Mirror the SVG's style.width/height onto the actual SVG attributes.
@@ -176,6 +195,8 @@ async function captureMatrixWithArrows(redrawArrows) {
     document.body.classList.remove("exporting-png");
     matrixWrap.scrollLeft = scrollX;
     matrixWrap.scrollTop  = scrollY;
+    wrap.scrollLeft = innerScrollX;
+    wrap.scrollTop = innerScrollY;
     if (typeof redrawArrows === "function") {
       await new Promise(r => requestAnimationFrame(r));
       redrawArrows();
@@ -212,13 +233,13 @@ function withFooter(canvas, v) {
   ctx.lineTo(out.width, canvas.height + 1);
   ctx.stroke();
 
-  ctx.fillStyle = "#e6edf3";
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--text").trim();
   ctx.font = `600 ${FONT_PX}px ${FONT_FAMILY}`;
   ctx.textBaseline = "top";
   ctx.textAlign = "left";
   ctx.fillText(FOOTER_TEXT, PAD_X, canvas.height + 14 * SCALE);
 
-  ctx.fillStyle = "#8b949e";
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--muted").trim();
   ctx.font = `400 ${SUB_PX}px ${FONT_FAMILY}`;
   ctx.fillText(generationLine(v), PAD_X, canvas.height + 38 * SCALE);
 

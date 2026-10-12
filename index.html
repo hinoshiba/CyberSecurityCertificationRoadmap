@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cyber Security Certification Roadmap · by hinoshiba, built with Claude</title>
-  <meta name="description" content="An independently compiled, AI-evaluated security certification roadmap. Inspired by Paul Jerimy and CyberDudeKZ; data MIT-licensed." />
+  <meta name="description" content="An independently compiled, AI-evaluated security certification roadmap. Inspired by Paul Jerimy and CyberDudeKZ; licensed CC BY-SA 4.0." />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <script>
@@ -23,6 +23,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#results-heading" data-i18n="skip_results">Skip to results</a>
   <header class="topbar">
     <div class="topbar-inner">
       <button id="mobile-tools-toggle" type="button" class="mobile-tools-toggle" aria-expanded="false" aria-controls="topbar-nav" aria-label="Open tools">
@@ -30,19 +31,8 @@
       </button>
       <h1>Cyber Security Certification Roadmap <span class="byline">by <a href="https://x.com/hinoshiba" target="_blank" rel="noopener">hinoshiba</a>, built with <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude</a></span></h1>
       <nav id="topbar-nav" class="topbar-nav" aria-label="Tools">
-        <div class="search-wrap">
-          <input id="search-input" type="search" autocomplete="off" spellcheck="false"
-                 placeholder="Search abbr / name / vendor…" aria-label="Search certs" />
-          <button id="search-clear" type="button" class="search-clear" aria-label="Clear search" title="Clear (ESC)">×</button>
-        </div>
-        <button id="vendor-filter-toggle" type="button" class="icon-btn" title="Filter by vendor">
-          🏷 Vendor
-        </button>
         <button id="png-export-btn" type="button" class="icon-btn" title="Export matrix as PNG">
           📷 PNG export
-        </button>
-        <button id="jp-toggle-btn" type="button" class="icon-btn" aria-pressed="false" title="Toggle Japan-only certs">
-          🇯🇵 JP
         </button>
         <button id="lang-toggle-btn" type="button" class="icon-btn" aria-pressed="false" title="Toggle Japanese labels">
           あ Lang
@@ -56,11 +46,52 @@
       </nav>
     </div>
     <!-- Vendor filter floating panel, anchored to the top-right toggle -->
-    <div id="vendor-panel" class="vendor-panel" aria-hidden="true"></div>
+
   </header>
 
+  <section class="discovery" aria-labelledby="explore-title">
+    <div class="discovery-intro">
+      <p class="eyebrow" data-i18n="explorer_kicker">EXPLORE YOUR NEXT STEP</p>
+      <h2 id="explore-title" data-i18n="explorer_title">Find your next certification</h2>
+      <p data-i18n="explorer_intro">Explore the landscape, narrow your options, then check the evidence.</p>
+    </div>
+    <div class="search-field">
+      <label for="search-input" data-i18n="search_label">Search certifications</label>
+      <div class="search-wrap">
+        <input id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-help" />
+        <button id="search-clear" type="button" class="search-clear" aria-label="Clear search">×</button>
+      </div>
+      <p id="search-help" data-i18n="search_help">Abbreviation, full name, or vendor. Combine words to narrow results.</p>
+    </div>
+    <details id="filter-disclosure" class="filter-disclosure" open>
+    <summary data-i18n="filter_options">Filter by domain, level, or language</summary>
+    <div class="filter-fields">
+      <label><span data-i18n="primary_domain">Primary domain</span><select id="domain-filter"></select></label>
+      <label><span data-i18n="tier_filter">Level (AI guide)</span><select id="tier-filter"></select></label>
+      <label><span data-i18n="exam_language">Exam language</span><select id="exam-language-filter"></select></label>
+      <div class="vendor-control">
+        <button id="vendor-filter-toggle" type="button" class="icon-btn" aria-expanded="false" aria-controls="vendor-panel" data-i18n="filter_vendor">Vendors</button>
+        <div id="vendor-panel" class="vendor-panel" aria-hidden="true" inert></div>
+      </div>
+      <button id="jp-toggle-btn" type="button" class="icon-btn" aria-pressed="false" data-i18n="include_jp">Include Japan-only certifications</button>
+    </div>
+    </details>
+    <div id="active-filters" class="active-filters" aria-label="Active filters"></div>
+    <p class="scope-note" data-i18n="scope_note">Levels are AI-evaluated guides, not an official difficulty ranking. Specialty is a separate category. Exam languages reflect recorded data.</p>
+    <details class="domain-disclosure"><summary data-i18n="browse_domains">Explore all 12 domains</summary><div id="domain-overview"></div></details>
+  </section>
+
+  <section class="results-toolbar">
+    <h2 id="results-heading" tabindex="-1"><span id="cert-count" role="status" aria-live="polite" aria-atomic="true"></span></h2>
+    <div class="view-switch" role="group" aria-label="View">
+      <button id="list-view-btn" type="button" aria-pressed="true" data-i18n="list_view">Results</button>
+      <button id="map-view-btn" type="button" aria-pressed="false" data-i18n="map_view">Roadmap</button>
+    </div>
+  </section>
+  <div id="selection-note" class="selection-note" hidden></div>
   <section class="controls" aria-label="Status">
-    <span class="meta" id="cert-count" aria-live="polite"></span>
+    <p class="map-hint" data-i18n="map_hint"></p>
+
     <label class="vt-control" id="vt-control" title="">
       <span class="vt-label" id="vt-label"></span>
       <input id="vt-input" type="number" min="0" step="1" inputmode="numeric" placeholder="0" />
@@ -75,6 +106,7 @@
   </section>
 
   <main class="matrix-wrap" id="matrix-wrap" aria-busy="true">
+    <section id="explorer-results" aria-labelledby="results-heading"></section>
     <div class="grid-and-arrows">
       <div id="grid" class="roadmap-grid">
         <p class="loading">Loading roadmap…</p>
@@ -87,7 +119,7 @@
     </div>
   </main>
 
-  <aside id="detail-panel" class="detail-panel" aria-hidden="true"></aside>
+  <aside id="detail-panel" class="detail-panel" aria-hidden="true" inert tabindex="-1"></aside>
 
   <!-- Floating CTA: surfaces only when a cert is selected but the panel is
        dismissed. Click to re-open the panel (selection + arrows persist). -->

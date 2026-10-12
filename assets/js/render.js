@@ -1,3 +1,4 @@
+import { certHref } from "./url_state.js";
 import { t } from "./i18n.js";
 
 function escapeHtml(s) {
@@ -239,7 +240,7 @@ export function renderGrid(root, domains, tiers, certs, ui) {
         if (isProminent(c.vendor?.slug)) classes.push("vendor-prominent");
         card.className = classes.join(" ");
         // Bookmarkable link with both ?cert= AND #anchor for completeness.
-        card.href = `?cert=${encodeURIComponent(c.id)}`;
+        card.href = certHref(c.id);
         card.dataset.certId = c.id;
         // Hover title carries vendor + full name since the compact card hides them.
         const availSuffix = availability !== "available" ? `  [${availability.toUpperCase()}]` : "";

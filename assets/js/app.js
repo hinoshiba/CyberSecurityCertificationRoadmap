@@ -8,7 +8,7 @@ import { getState, setState, subscribe } from "./url_state.js";
 import { exportMatrixPNG } from "./export.js";
 import { loadVersion, versionLabel } from "./version.js";
 import { attachContextMenu } from "./context_menu.js";
-import { matchCertIds } from "./search.js";
+import { renderExplorer, renderDomainOverview } from "./explorer.js";
 import { updateSelectedOverlay } from "./selected_overlay.js";
 import { t } from "./i18n.js";
 
@@ -22,6 +22,7 @@ const state = {
   // vendor-prominent highlight (threshold is in ui.vendorThreshold).
   vendorCounts: new Map(),
   ui: {
+    domain: "", tier: "", examLang: "", view: "list",
     showJp: false,
     labelLang: "en",
     vendors: null,
@@ -41,7 +42,7 @@ const state = {
 };
 
 const grid = document.getElementById("grid");
-const wrap = document.getElementById("matrix-wrap");
+const wrap = document.querySelector(".grid-and-arrows");
 const counter = document.getElementById("cert-count");
 const detail = document.getElementById("detail-panel");
 const arrowsSvg = document.getElementById("arrows-overlay");
@@ -52,6 +53,11 @@ const topbarNav = document.getElementById("topbar-nav");
 const mobileToolsToggle = document.getElementById("mobile-tools-toggle");
 const mobileToolsMql = window.matchMedia("(max-width: 640px)");
 
+const resultsRoot = document.getElementById("explorer-results");
+const overviewRoot = document.getElementById("domain-overview");
+let previousSelectedId = null;
+let previousView = null;
+let detailReturnTarget = null;
 const OVERVIEW_REL_CLASSES = ["rel-prereq", "rel-next", "rel-d2", "rel-d3", "rel-both"];
 
 function rerender() {
@@ -62,15 +68,25 @@ function rerender() {
   if (state.byId.size === 0) return;
 
   const visible = applyFilters(state.certs, state.ui);
+  const focusedCard = document.activeElement?.closest("[data-cert-id]")?.dataset.certId;
   renderGrid(grid, state.domains, state.tiers, visible, state.ui);
+  renderExplorer(resultsRoot, { certs: visible, allCerts: state.certs, domains: state.domains, tiers: state.tiers, ui: state.ui });
+  renderDomainOverview(overviewRoot, { certs: visible, domains: state.domains, tiers: state.tiers, ui: state.ui });
+  const mapView = state.ui.view === "map";
+  document.body.classList.toggle("map-view", mapView);
+  resultsRoot.hidden = mapView;
+  document.querySelector(".grid-and-arrows").hidden = !mapView || visible.length === 0;
+  if (mapView && visible.length === 0) resultsRoot.hidden = false;
+  document.querySelector(".controls").hidden = !mapView;
+  document.getElementById("list-view-btn").setAttribute("aria-pressed", String(!mapView));
+  document.getElementById("map-view-btn").setAttribute("aria-pressed", String(mapView));
+  document.getElementById("png-export-btn").disabled = !mapView || !visible.length;
+  syncDiscoveryControls();
+  if (focusedCard && mapView) grid.querySelector(`[data-cert-id="${CSS.escape(focusedCard)}"]`)?.focus({preventScroll: true});
   attachOverviewListeners();
-  counter.textContent = `${visible.length} of ${state.certs.length} certs`;
+  counter.textContent = state.ui.labelLang === "ja" ? `${visible.length} 件の資格 / 全 ${state.certs.length} 件` : `${visible.length} ${visible.length === 1 ? "certification" : "certifications"} / ${state.certs.length} total`;
 
-  // Apply live search highlight. The matched set is computed against
-  // the FULL cert list so a search match still surfaces certs that
-  // happen to be JP-filtered or vendor-filtered out (the user can then
-  // adjust those filters to see them).
-  applySearchHighlight();
+  document.body.classList.toggle("has-search", !!state.ui.searchQuery.trim());
 
   const isSelected = !!state.ui.selectedId && state.byId.has(state.ui.selectedId);
   const showPanel  = isSelected && !state.ui.panelDismissed;
@@ -90,6 +106,22 @@ function rerender() {
   // Visibility is now CSS-driven (.open class), independent of content.
   detail.classList.toggle("open", showPanel);
   detail.setAttribute("aria-hidden", String(!showPanel));
+  detail.toggleAttribute("inert", !showPanel);
+  detail.setAttribute("aria-label", selected ? selected.abbr : "Details");
+  const selectionNote = document.getElementById("selection-note");
+  selectionNote.replaceChildren();
+  selectionNote.hidden = !isSelected || visible.some(c => c.id === state.ui.selectedId);
+  if (!selectionNote.hidden) {
+    const text = document.createElement("span");
+    text.textContent = `${selected.abbr}: ${t("hidden_selection", state.ui.labelLang)} `;
+    const button = document.createElement("button");
+    button.type = "button"; button.dataset.showSelected = "";
+    button.textContent = t("show_selected", state.ui.labelLang);
+    selectionNote.append(text, button);
+  }
+  const shouldScroll = state.ui.view === "map" && (previousView !== "map" || previousSelectedId !== state.ui.selectedId || (showPanel && !wasPanelOpen));
+  previousSelectedId = state.ui.selectedId;
+  previousView = state.ui.view;
 
   let didScrollSelection = false;
   const paintSelectionState = () => {
@@ -97,7 +129,7 @@ function rerender() {
     updateSelectedOverlay(selectedOverlay, grid, state.ui.selectedId, state.byId);
     updateOverviewCtaVisibility();
     requestAnimationFrame(updateOverviewCtaVisibility);
-    if (state.ui.selectedId && !didScrollSelection) {
+    if (shouldScroll && state.ui.selectedId && !didScrollSelection) {
       didScrollSelection = true;
       scrollSelectedIntoView(state.ui.selectedId, showPanel && !wasPanelOpen);
     }
@@ -179,7 +211,7 @@ function jumpToOverviewCell(overviewCell) {
   );
   if (!target) return;
   const stickyOffset = grid.querySelector(".tier-head")?.getBoundingClientRect().height || 0;
-  wrap.scrollTo({ top: Math.max(0, target.offsetTop - stickyOffset), left: 0, behavior: "smooth" });
+  wrap.scrollTo({ top: Math.max(0, target.offsetTop - stickyOffset), left: 0, behavior: "auto" });
 }
 
 function attachOverviewListeners() {
@@ -219,7 +251,7 @@ function scrollSelectedIntoView(certId, transitioning) {
 
   const doScroll = () => {
     const el = findEl();
-    if (el) el.scrollIntoView({ block: "center", inline: "nearest", behavior: "smooth" });
+    if (el) el.scrollIntoView({ block: "center", inline: "nearest", behavior: "auto" });
   };
 
   if (!transitioning) { doScroll(); return; }
@@ -269,6 +301,7 @@ async function bootstrap() {
     state.ui.vendorCounts = state.vendorCounts;
 
     buildVendorPanel(vendorPanel, vendors);
+    updateChromeLabels();
 
     initThemeToggle(document.getElementById("theme-toggle"));
     attachFilterListeners({
@@ -276,13 +309,14 @@ async function bootstrap() {
       langToggleBtn: document.getElementById("lang-toggle-btn"),
       vendorPanel,
       state: state.ui,
-      onChange: rerender,
+
     });
+    rerender();
   } catch (err) {
     grid.innerHTML = `<p class="loading">Failed to load roadmap data: ${err.message}</p>`;
     console.error(err);
   } finally {
-    wrap.removeAttribute("aria-busy");
+    document.getElementById("matrix-wrap").removeAttribute("aria-busy");
   }
 }
 
@@ -301,6 +335,7 @@ if (topbarNav) {
 }
 
 syncMobileToolsAccessibility();
+if (mobileToolsMql.matches) document.getElementById("filter-disclosure").open = false;
 
 // Cert card click → just toggle selection (highlight + arrows).
 // The panel does NOT auto-open; user opens it via "Show details" CTA.
@@ -314,6 +349,7 @@ document.addEventListener("click", e => {
 
   const card = e.target.closest("a.cert-card");
   if (card) {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     const id = card.dataset.certId;
     const sameAgain = state.ui.selectedId === id;
@@ -333,7 +369,7 @@ document.addEventListener("click", e => {
   // toggle, theme switch, etc. NEVER clear the selection. Only a click on
   // the matrix area itself (empty cell, tier label, etc.) deselects.
   if (state.ui.selectedId &&
-      !e.target.closest("#detail-panel, .topbar, .controls, #about, #vendor-panel, .show-details-cta, .show-overview-cta, .mobile-overview")) {
+      e.target.closest("#grid")) {
     state.ui.panelDismissed = true;   // reset the panel preference
     setState({ cert: null });
   }
@@ -344,31 +380,14 @@ document.addEventListener("dismiss-panel", () => {
   if (!state.ui.selectedId) return;
   state.ui.panelDismissed = true;
   rerender();
+  restoreDetailFocus();
 });
-
-/** Re-apply `.search-match` classes on cards based on current query.
- *  Toggles `body.has-search` so CSS can dim non-matches. Recomputed
- *  in rerender() and on every keystroke (URL state subscriber). */
-function applySearchHighlight() {
-  const q = state.ui.searchQuery || "";
-  const matched = matchCertIds(state.certs, q);
-  document.body.classList.toggle("has-search", !!matched && matched.size > 0);
-  // Stamp matching cards. matched===null means no active search.
-  for (const card of grid.querySelectorAll(".cert-card")) {
-    const id = card.dataset.certId;
-    card.classList.toggle("search-match", !!matched && matched.has(id));
-  }
-  // Update the count badge to show match count when a search is active.
-  if (matched !== null) {
-    const total = state.certs.length;
-    counter.textContent = `${matched.size} match · ${total} certs`;
-  }
-}
 
 /** Helper passed to export functions so they can re-run drawArrows after
  *  forcing the matrix to its fixed export width. Captured here because
  *  export.js shouldn't import directly from app state. */
 function redrawCurrentArrows() {
+  if (state.ui.view !== "map") { arrowsSvg.replaceChildren(); return; }
   drawArrows(arrowsSvg, grid, state.ui.selectedId, state.byId, state.inverseMap);
   updateOverviewRelations();
 }
@@ -408,55 +427,48 @@ attachContextMenu({
   },
 });
 
-// ESC clears search first (if focused/active), then selection.
+// Escape closes the nearest open surface before clearing search/selection.
 document.addEventListener("keydown", e => {
   if (e.key !== "Escape") return;
-  const searchInput = document.getElementById("search-input");
-  if (state.ui.searchQuery) {
-    if (searchInput) searchInput.value = "";
-    setState({ q: "" });
-    return;
-  }
-  if (document.body.classList.contains("mobile-tools-open")) {
-    setMobileToolsOpen(false);
-    return;
-  }
-  if (state.ui.selectedId) {
+  if (vendorPanel.classList.contains("open")) {
+    setVendorPanelOpen(false);
+    document.getElementById("vendor-filter-toggle").focus();
+  } else if (!state.ui.panelDismissed && state.ui.selectedId) {
     state.ui.panelDismissed = true;
-    setState({ cert: null });
+    rerender(); restoreDetailFocus();
+  } else if (document.body.classList.contains("mobile-tools-open")) {
+    setMobileToolsOpen(false);
+    mobileToolsToggle.focus();
+  } else if (state.ui.searchQuery) {
+    searchSession = false;
+    setState({q: ""});
+    document.getElementById("search-input").focus();
+  } else if (state.ui.selectedId) {
+    setState({cert: null});
   }
 });
 
-// Header search input — debounced URL state update so the cache-busted
-// shareable URL is always in sync. Match highlight applies on every
-// keystroke immediately (no debounce) so feedback feels live.
+// A typing session occupies one history entry; discrete filters remain reversible.
 const searchInput = document.getElementById("search-input");
 const searchClear = document.getElementById("search-clear");
-if (searchInput) {
-  let debounce = 0;
-  searchInput.addEventListener("input", () => {
-    state.ui.searchQuery = searchInput.value;
-    applySearchHighlight();
-    clearTimeout(debounce);
-    debounce = setTimeout(() => setState({ q: searchInput.value }, { silent: true }), 200);
-  });
-  // Submitting a search (Enter) auto-selects the single match if any.
-  searchInput.addEventListener("keydown", e => {
-    if (e.key !== "Enter") return;
-    const matched = matchCertIds(state.certs, state.ui.searchQuery);
-    if (matched && matched.size === 1) {
-      const onlyId = matched.values().next().value;
-      setState({ cert: onlyId });
-    }
-  });
-}
-if (searchClear) {
-  searchClear.addEventListener("click", () => {
-    if (searchInput) searchInput.value = "";
-    setState({ q: "" });
-    if (searchInput) searchInput.focus();
-  });
-}
+let searchSession = false;
+searchInput.addEventListener("focus", () => { searchSession = false; });
+window.addEventListener("popstate", () => { searchSession = false; });
+searchInput.addEventListener("input", () => {
+  setState({q: searchInput.value}, {replace: searchSession});
+  searchSession = true;
+});
+searchInput.addEventListener("keydown", e => {
+  if (e.key !== "Enter" || e.isComposing) return;
+  const visible = applyFilters(state.certs, state.ui);
+  if (visible.length === 1) openDetails(visible[0].id);
+  else document.getElementById("results-heading").focus();
+});
+searchClear.addEventListener("click", () => {
+  searchSession = false;
+  setState({q: ""});
+  searchInput.focus();
+});
 
 // Vendor filter dropdown open/close
 function setVendorPanelOpen(open) {
@@ -464,6 +476,8 @@ function setVendorPanelOpen(open) {
   if (!panel) return;
   panel.classList.toggle("open", open);
   panel.setAttribute("aria-hidden", String(!open));
+  panel.toggleAttribute("inert", !open);
+  document.getElementById("vendor-filter-toggle").setAttribute("aria-expanded", String(open));
 }
 
 document.addEventListener("click", e => {
@@ -520,8 +534,7 @@ const showDetailsBtn = document.getElementById("show-details-btn");
 if (showDetailsBtn) {
   showDetailsBtn.addEventListener("click", () => {
     if (!state.ui.selectedId) return;
-    state.ui.panelDismissed = false;
-    rerender();
+    openDetails(state.ui.selectedId);
   });
 }
 
@@ -529,12 +542,13 @@ const showOverviewBtn = document.getElementById("show-overview-btn");
 if (showOverviewBtn) {
   showOverviewBtn.addEventListener("click", () => {
     const overview = grid.querySelector(".mobile-overview");
-    if (overview) overview.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+    if (overview) overview.scrollIntoView({ block: "start", inline: "nearest", behavior: "auto" });
   });
 }
 
 window.addEventListener("resize", () => {
   if (!isMobileToolsLayout()) {
+    document.getElementById("filter-disclosure").open = true;
     setMobileToolsOpen(false);
   } else {
     syncMobileToolsAccessibility();
@@ -552,6 +566,81 @@ wrap.addEventListener("scroll", () => {
   requestAnimationFrame(updateOverviewCtaVisibility);
 });
 
+function localizedLabel(item) {
+  return state.ui.labelLang === "ja" ? (item.label_ja || item.label_en) : item.label_en;
+}
+function syncDiscoveryControls() {
+  const options = (id, items, current, allKey) => {
+    const select = document.getElementById(id);
+    select.replaceChildren(new Option(t(allKey, state.ui.labelLang), ""));
+    for (const item of items) select.add(new Option(item.label, item.id));
+    // Preserve unknown bookmarked values instead of silently broadening the filter.
+    if (current && !items.some(item => item.id === current)) select.add(new Option(current, current));
+    select.value = current;
+  };
+  options("domain-filter", state.domains.map(d => ({id:d.id,label:localizedLabel(d)})), state.ui.domain, "all_domains");
+  options("tier-filter", [...state.tiers].reverse().map(d => ({id:d.id,label:localizedLabel(d)})), state.ui.tier, "all_tiers");
+  const names = new Intl.DisplayNames([state.ui.labelLang], {type:"language"});
+  const codes = [...new Set(state.certs.flatMap(c => c.logistics?.languages || []))].sort();
+  options("exam-language-filter", codes.map(id => { let label = id; try {label = names.of(id);} catch {} return {id,label}; }), state.ui.examLang, "all_languages");
+  const active = document.getElementById("active-filters");
+  active.replaceChildren();
+  const chips = [
+    ["q", state.ui.searchQuery, state.ui.searchQuery],
+    ["domain", state.ui.domain, document.getElementById("domain-filter").selectedOptions[0]?.textContent],
+    ["tier", state.ui.tier, document.getElementById("tier-filter").selectedOptions[0]?.textContent],
+    ["examLang", state.ui.examLang, document.getElementById("exam-language-filter").selectedOptions[0]?.textContent],
+    ["vendors", state.ui.vendors !== null, `${t("filter_vendor", state.ui.labelLang)}: ${state.ui.vendors?.map(slug => state.certs.find(c => c.vendor?.slug === slug)?.vendor.name || slug).join(", ") || t("no_vendors",state.ui.labelLang)}`]
+  ];
+  for (const [key, value, label] of chips) {
+    if (!value) continue;
+    const button = document.createElement("button");
+    button.type = "button"; button.className = "filter-chip";
+    button.dataset.clearFilter = key; button.textContent = `${label} ×`;
+    button.setAttribute("aria-label", `${label}: ${state.ui.labelLang === "ja" ? "条件を解除" : "remove filter"}`);
+    active.append(button);
+  }
+  const reset = document.createElement("button");
+  reset.type = "button"; reset.dataset.resetFilters = ""; reset.className = "reset-filters";
+  reset.textContent = t("reset_filters", state.ui.labelLang);
+  reset.disabled = !chips.some(([,value]) => value);
+  active.append(reset);
+}
+function resetFilters() {
+  setState({q:"", domain:"", tier:"", examLang:"", vendors:null});
+}
+function openDetails(id) {
+  const active = document.activeElement;
+  detailReturnTarget = active?.id ? {id: active.id} : {cert: id};
+  state.ui.panelDismissed = false;
+  if (state.ui.selectedId !== id) setState({cert:id}); else rerender();
+  detail.focus({preventScroll:true});
+}
+function restoreDetailFocus() {
+  const target = detailReturnTarget?.id ? document.getElementById(detailReturnTarget.id) : resultsRoot.querySelector(`[data-detail-id="${CSS.escape(detailReturnTarget?.cert || state.ui.selectedId || "")}"]`);
+  (target && target.getClientRects().length ? target : document.getElementById("results-heading")).focus({preventScroll:true});
+}
+for (const [id,key] of [["domain-filter","domain"],["tier-filter","tier"],["exam-language-filter","examLang"]]) {
+  document.getElementById(id).addEventListener("change", e => setState({[key]:e.target.value}));
+}
+for (const view of ["list","map"]) {
+  document.getElementById(`${view}-view-btn`).addEventListener("click", () => setState({view}));
+}
+document.addEventListener("click", e => {
+  const detailButton = e.target.closest("[data-detail-id]");
+  if (detailButton) { openDetails(detailButton.dataset.detailId); return; }
+  const mapButton = e.target.closest("[data-map-id]");
+  if (mapButton) { state.ui.panelDismissed = true; setState({view:"map",cert:mapButton.dataset.mapId}); document.getElementById("results-heading").focus(); return; }
+  const reset = e.target.closest("[data-reset-filters]");
+  if (reset) { resetFilters(); searchInput.focus(); return; }
+  const chip = e.target.closest("[data-clear-filter]");
+  if (chip) { const key = chip.dataset.clearFilter; setState({[key]:key === "vendors" ? null : ""}); searchInput.focus(); return; }
+  const domain = e.target.closest("[data-domain-id]");
+  if (domain) { setState({domain:domain.dataset.domainId,view:"list"}); document.getElementById("results-heading").focus(); return; }
+  if (e.target.closest("[data-include-jp]")) { setState({jp:true}); searchInput.focus(); return; }
+  if (e.target.closest("[data-show-selected]")) { setState({q:"",domain:"",tier:"",examLang:"",vendors:null,jp:state.ui.showJp || !!state.byId.get(state.ui.selectedId)?.japan_only}); document.getElementById("results-heading").focus(); }
+});
+
 // Re-render on URL state changes from outside the widgets (back/forward,
 // pasted bookmark URL). We do NOT change panelDismissed on URL nav — the
 // panel is opt-in via the Show details CTA. Anyone receiving a shared
@@ -559,6 +648,10 @@ wrap.addEventListener("scroll", () => {
 // open the detail panel.
 function syncFromUrl() {
   const s = getState();
+  state.ui.domain = s.domain || "";
+  state.ui.tier = s.tier || "";
+  state.ui.examLang = s.examLang || "";
+  state.ui.view = s.view || "list";
   state.ui.showJp      = !!s.jp;
   state.ui.labelLang   = s.lang === "ja" ? "ja" : "en";
   state.ui.vendors     = s.vendors;
@@ -588,6 +681,13 @@ syncFromUrl();
  *  during their own renders. */
 function updateChromeLabels() {
   const lang = state.ui.labelLang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n, lang); });
+  document.getElementById("search-input").placeholder = t("search_placeholder", lang);
+  document.getElementById("search-clear").setAttribute("aria-label", t("clear_search", lang));
+  document.getElementById("active-filters").setAttribute("aria-label", t("active_filters", lang));
+  document.querySelector(".view-switch").setAttribute("aria-label", t("view_label", lang));
+  document.getElementById("lang-toggle-btn").textContent = t("label_language", lang);
   const set = (id, key) => {
     const el = document.getElementById(id);
     if (el) el.textContent = t(key, lang);
@@ -611,6 +711,7 @@ function updateChromeLabels() {
   }
   const showLabel = document.querySelector(".show-details-label");
   if (showLabel) showLabel.textContent = t("show_details", lang);
+  document.getElementById("show-details-btn").setAttribute("aria-label", t("show_details", lang));
   const overviewBtn = document.getElementById("show-overview-btn");
   if (overviewBtn) {
     overviewBtn.title = t("show_overview_tooltip", lang);

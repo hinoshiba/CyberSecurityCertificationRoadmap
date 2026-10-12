@@ -1,4 +1,5 @@
 import { getState, setState, subscribe } from "./url_state.js";
+import { matchCertIds } from "./search.js";
 
 /**
  * vendors filter semantics:
@@ -8,10 +9,17 @@ import { getState, setState, subscribe } from "./url_state.js";
  */
 export function applyFilters(certs, ui) {
   const v = ui.vendors;
-  const allowed = v === null ? null : new Set(v);
+  const allowed = v == null ? null : new Set(v);
+  const matches = matchCertIds(certs, ui.searchQuery);
   return certs.filter(c => {
     if (c.japan_only && !ui.showJp) return false;
     if (allowed && !allowed.has(c.vendor?.slug)) return false;
+    if (ui.domain && c.domain !== ui.domain) return false;
+    if (ui.tier && (c.evaluation?.computed_tier || "specialty") !== ui.tier) return false;
+    // Use the recorded language code exactly; an absent language entry
+    // does not establish that an exam is available in that language.
+    if (ui.examLang && !c.logistics?.languages?.includes(ui.examLang)) return false;
+    if (matches && !matches.has(c.id)) return false;
     return true;
   });
 }
@@ -23,13 +31,18 @@ export function attachFilterListeners({ jpToggleBtn, langToggleBtn, vendorPanel,
     state.labelLang  = s.lang === "ja" ? "ja" : "en";
     state.vendors    = s.vendors;
     state.selectedId = s.cert || null;
+    state.domain = s.domain;
+    state.tier = s.tier;
+    state.examLang = s.examLang;
+    state.searchQuery = s.q;
+    state.view = s.view;
 
     if (jpToggleBtn)   jpToggleBtn.setAttribute("aria-pressed",   String(state.showJp));
     if (langToggleBtn) langToggleBtn.setAttribute("aria-pressed", String(state.labelLang === "ja"));
 
     if (vendorPanel) syncVendorPanel(vendorPanel, state.vendors);
 
-    onChange();
+    onChange?.();
   };
   sync();
   subscribe(sync);
@@ -50,13 +63,17 @@ export function buildVendorPanel(panel, allVendors) {
   const header = document.createElement("div");
   header.className = "vendor-panel-header";
   header.innerHTML = `
-    <strong>Filter by vendor</strong>
+    <strong data-i18n="filter_vendor">Filter by vendor</strong>
     <span class="vendor-actions">
-      <button type="button" class="link" data-action="all">All</button>
-      <button type="button" class="link" data-action="none">None</button>
+      <button type="button" class="link" data-action="all" data-i18n="all_vendors">All</button>
+      <button type="button" class="link" data-action="none" data-i18n="no_vendors">None</button>
     </span>
   `;
   panel.appendChild(header);
+  const note = document.createElement("p");
+  note.className = "muted small";
+  note.dataset.i18n = "vendor_counts_note";
+  panel.appendChild(note);
 
   const list = document.createElement("div");
   list.className = "vendor-list";

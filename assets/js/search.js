@@ -5,14 +5,13 @@
  * scoring_factors, sources, third-party evals, rationales — those produce
  * too many spurious matches.
  *
- * The match set is exposed as a Set<cert.id> via `matchCertIds()`. The
- * renderer uses that to apply `.search-match` class on cards; a body
- * class `has-search` enables the dim-non-matches visual.
+ * The match set is exposed as a Set<cert.id> via `matchCertIds()` so
+ * filtering and rendering use the same matching rules.
  */
 
 function normalize(s) {
   if (!s) return "";
-  return String(s).toLowerCase().normalize("NFKC");
+  return String(s).normalize("NFKC").toLowerCase();
 }
 
 /** Build the searchable haystack for one cert (lowercased, NFKC-normalized,
@@ -23,6 +22,7 @@ function haystack(cert) {
     cert.name,
     cert.name_ja,
     cert.vendor?.name,
+    cert.vendor?.name_ja,
     cert.vendor?.slug,
   ].filter(Boolean);
   return parts.map(normalize).join("|");
