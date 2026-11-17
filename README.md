@@ -1,10 +1,10 @@
 # Cyber Security Certification Roadmap
 
 > An independently compiled, AI-evaluated roadmap of security certifications.
-> Static site, hosted on GitHub Pages. Cert facts live in JSON; tier placement
+> Static site, deployed with Cloudflare Workers Builds. Cert facts live in JSON; tier placement
 > is computed by AI personas from those facts.
 
-[**Live roadmap →** https://hinoshiba.github.io/CyberSecurityCertificationRoadmap/](https://hinoshiba.github.io/CyberSecurityCertificationRoadmap/)
+[**Live roadmap →** https://www.hinoshiba.com/CyberSecurityCertificationRoadmap/](https://www.hinoshiba.com/CyberSecurityCertificationRoadmap/)
 
 日本語版は [README.ja.md](./README.ja.md) を参照してください。
 
@@ -109,6 +109,32 @@ make evaluate   # run the 3-persona evaluation skill on the current data
 
 See `docker-compose.yml` for the exact mount list.
 
+## Deployment
+
+The roadmap has its own Cloudflare Worker, connected to this repository's
+`main` branch. A path Route serves `/CyberSecurityCertificationRoadmap/` on
+`www.hinoshiba.com`; the homepage remains on its separate Worker. GitHub Pages
+deployment has been removed; the data-validation workflow remains.
+
+With Node.js 22.12.0 or later:
+
+```sh
+npm ci
+npm run build:cloudflare
+npm run check:cloudflare
+npx wrangler deploy --dry-run
+npm run preview:cloudflare
+```
+
+Open `http://localhost:8787/CyberSecurityCertificationRoadmap/?theme=light&lang=en&jp=1`.
+The same build/check/dry-run is available in Docker with `make cloudflare-check`.
+Only public files are packaged in the ignored `http_dist/` directory; normal
+builds do not fetch remote content or alter certification data.
+
+For the initial Worker/Git connection, build settings, Route permissions,
+cutover verification, and rollback, see [Cloudflare deployment](docs/cloudflare.md).
+Merging the PR alone does not create the Cloudflare Git integration.
+
 ---
 
 ## Repository layout
@@ -121,9 +147,11 @@ data/
   sources/agencies.json  # approved source agencies (NIST, IPA, JPCERT, ...)
   certs/<vendor>/<cert>.json
 schema/certification.schema.json
-assets/                  # static HTML / CSS / JS for GitHub Pages
+assets/                  # static CSS / JS / images
 .claude/skills/          # AI skills: add-cert, evaluate, etc.
-.github/                 # Issue templates, PR template, Pages workflow
+.github/                 # Issue / PR templates and data-validation workflow
+wrangler.jsonc           # dedicated Worker and existing URL path
+http_dist/               # generated public files (not committed)
 docker/                  # Dockerfile + entrypoint
 ```
 
