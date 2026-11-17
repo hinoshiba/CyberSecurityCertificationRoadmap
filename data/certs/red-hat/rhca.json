@@ -99,22 +99,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "expert",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 3. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "The recorded base credential plus five additional practical exams support expert infrastructure breadth at five years, reinforced by Japanese availability; aggregate architecture standing does not imply dedicated security expertise."
       },
       "maria-okonkwo": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "Five additional hands-on certifications beyond a base credential demonstrate substantial breadth and depth for expert platform responsibility. General infrastructure focus and vendor dependence limit cybersecurity conclusions, while aggregate exams provide stronger evidence than the title alone."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "The recorded five additional hands-on exams beyond a base credential demonstrate substantial infrastructure breadth and depth. That accumulated practical evidence supports expert platform work, while it should not be read as dedicated cybersecurity expertise."
       }
     }
   },

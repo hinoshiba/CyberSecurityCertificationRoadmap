@@ -73,22 +73,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "professional",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "Tenant-wide identity, security and compliance administration supports professional operational responsibility at three years; the recorded Expert label does not establish six-year seniority or practical cross-domain assessment."
       },
       "maria-okonkwo": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "Tenant-wide identity, security and compliance administration supports professional Microsoft 365 responsibility. Despite the expert hint and senior-scope factor, the three-year profile and no explicit practical assessment limit expert hiring assurance."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded tenant, identity, security and compliance administration scope supports professional platform responsibility at three years. The Expert label exceeds the practical and seniority evidence supplied here."
       }
     }
   },

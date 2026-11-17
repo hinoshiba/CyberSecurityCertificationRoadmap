@@ -63,21 +63,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded Singapore government alignment and two-year practitioner profile support associate standing; that regional recognition does not establish Japanese workforce equivalence or senior governance responsibility."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded proctored exam, two years of experience and Singapore government alignment support an associate governance signal. There is no recorded practical component or US baseline approval to justify a stronger MSSP hiring filter."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded two-year experience level, proctored assessment and Singapore IS-BOK alignment support an associate governance credential. They do not establish practical delivery or senior advisory depth."
       }
     }
   },

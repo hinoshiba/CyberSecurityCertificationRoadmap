@@ -92,21 +92,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "DoD 8140 aligned; JA exam available."
+        "rationale": "Japanese availability, SOC fundamentals and recorded workforce alignment support associate analyst placement; one-year experience and Cisco-leaning tools do not establish independent incident leadership."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "DoD 8140 aligned; popular SOC L1 hire signal."
+        "rationale": "SOC fundamentals, recorded DoD alignment and hiring recognition make this a useful associate SOC screen. The one-year profile and knowledge-based format do not establish autonomous complex incident response."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "SOC fundamentals; vendor-leaning."
+        "rationale": "SOC-focused fundamentals and a one-year practitioner profile support an associate responder credential. The multiple-choice and drag-and-drop format does not demonstrate independent incident delivery, despite the recorded DoD alignment."
       }
     }
   },

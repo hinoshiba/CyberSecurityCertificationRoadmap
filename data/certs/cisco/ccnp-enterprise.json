@@ -82,21 +82,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Enterprise design and operations across core and concentration exams support professional delivery at the recorded three-year level; vendor dependence bounds its portability."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Core and concentration coverage of enterprise design and operation with three years of experience fits professional delivery responsibility. The stored NICCS hint supports that judgment, but the record does not establish expert lab performance."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The core-plus-concentration scope covers enterprise network design and operation at a recorded three-year level. It supports professional domain responsibility, while the record lacks an expert practical examination."
       }
     }
   },

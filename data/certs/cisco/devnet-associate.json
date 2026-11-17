@@ -69,21 +69,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded one-year profile and network-automation implementation scope fit an associate practitioner; proctoring and production relevance do not establish broader security design responsibility."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "A proctored exam in network automation and software development fits associate work on a Cisco toolchain. The one-year experience profile and vendor-only scope do not establish professional application-security judgment."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded network automation and software-development scope fits a one-year toolchain practitioner. Cisco-specific coverage supports associate placement without implying secure-development mastery."
       }
     }
   },

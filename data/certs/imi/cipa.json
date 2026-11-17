@@ -80,21 +80,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, foundational: 2. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded identity-audit and privacy combination offers entry domain knowledge; no experience requirement, limited recognition and repeated multiple-choice attempts do not establish independent audit capability."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The identity-audit and privacy perspective supplies focused entry knowledge at an accessible price. With zero experience, multiple-choice-only assessment and limited independent recognition, the record does not establish applied auditor competence."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded combination of identity auditing and privacy gives this a focused practitioner-domain scope. Open entry and multiple-choice assessment limit the signal to associate knowledge rather than independent audit delivery."
       }
     }
   },

@@ -97,22 +97,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "DoD COOL; few proctored mobile creds exist."
+        "tier": "specialty",
+        "rationale": "The recorded mobile-device focus and explicit narrow-use limitation fit a specialization, with accreditation adding credibility; a three-year profile alone does not turn it into broad endpoint leadership."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "DoD COOL + ANSI; valuable for BYOD/MDM-heavy enterprises."
+        "tier": "specialty",
+        "rationale": "The narrow mobile-device security focus is best treated as a specialty for endpoint teams. Recorded accreditation and COOL recognition are useful, while an open-book exam and limited use case do not establish broader security seniority."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Open-book proctored mobile credential; narrow but technical."
+        "tier": "specialty",
+        "rationale": "The record identifies mobile device security as an unusually narrow use case with a three-year practitioner profile. Specialty conveys that focused extension more accurately than treating the professional hints as broad seniority."
       }
     }
   },

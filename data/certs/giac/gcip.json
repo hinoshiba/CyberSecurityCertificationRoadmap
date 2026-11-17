@@ -97,22 +97,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 1, specialty: 2. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded NERC CIP alignment is a specific critical-infrastructure regulatory specialization; accreditation supports credibility, but North American demand and limited Japanese applicability prevent treating it as broad OT seniority."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded accreditation and NERC CIP alignment support professional compliance responsibility for North American critical infrastructure. Its regional scope and absence of a recorded practical restrict how much it says about general OT response capability."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The record specifically ties this credential to North American NERC CIP compliance for electricity infrastructure. That regional regulatory branch fits specialty better than a general progression rank for an EU consultant."
       }
     }
   },

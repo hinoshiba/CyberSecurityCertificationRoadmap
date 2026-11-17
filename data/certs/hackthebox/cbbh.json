@@ -67,21 +67,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Practical exploit chaining and reporting support associate web-assessment ability at one year; the recorded newer-brand recognition limitation restrains its hiring signal for senior Japanese enterprise roles."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Practical exploit chains and reporting provide a strong associate web-testing signal at an accessible cost. The one-year profile and newer-brand hiring limitation do not yet establish professional engagement breadth."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded hands-on exploit chaining and reporting provide a credible associate web-testing signal at one year. Limited hiring recognition and the focused scope do not establish senior consulting responsibility."
       }
     }
   },

@@ -104,21 +104,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 3. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "DHS/CISA NICCS listed; advanced practical AppSec is rare and respected."
+        "rationale": "The recorded extended source review, exploit development and reporting support expert web-assessment judgment despite a three-year profile; narrow AppSec scope does not establish enterprise-wide security leadership."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "47-hour hands-on white-box exam is a strong senior-AppSec hiring signal."
+        "rationale": "Nearly 48 hours of source-code review and exploit development plus reporting provide strong expert AppSec evidence. Peer standing reinforces the practical signal, while the three-year profile and web-only scope limit claims about broader security leadership."
       },
       "alex-novak": {
         "tier": "expert",
-        "rationale": "White-box source-code review and exploit dev under time pressure - peer-revered expert tier."
+        "rationale": "The recorded nearly 48-hour source-review and exploit-development practical provides unusually strong applied AppSec evidence. Peer respect and advanced white-box depth justify expert placement despite a three-year typical profile."
       }
     }
   },

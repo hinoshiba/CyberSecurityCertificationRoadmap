@@ -89,21 +89,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "NICCS listed; vendor-neutral cloud foundation."
+        "rationale": "Vendor-neutral cloud principles and the recorded foundational hints support an entry security baseline; no experience requirement and open-book assessment limit claims of independently operating cloud controls."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "NICCS listed; open-book lowers hiring weight."
+        "rationale": "Vendor-neutral cloud foundations, zero-trust and AI coverage provide useful foundational cloud-security knowledge. Open-book online assessment and zero experience make this a weaker hiring filter than an experienced practitioner credential."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "Open-book foundation; useful priming for CCSP."
+        "rationale": "The recorded vendor-neutral cloud foundation includes current zero-trust and AI topics. With no experience prerequisite and an open-book knowledge format, it remains foundational despite its practical relevance to cloud engagements."
       }
     }
   },

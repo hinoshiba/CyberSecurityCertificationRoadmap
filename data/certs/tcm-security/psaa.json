@@ -69,21 +69,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded practical SIEM triage, alert investigation and response write-up fit associate Tier-1 SOC work at one year; that entry operational scope does not establish independent incident leadership."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Recorded Tier-1 SIEM triage, alert investigation and response write-up align directly with associate MSSP analyst work. The one-year profile and bounded junior scope do not establish autonomous complex-incident ownership."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded SIEM triage, alert investigation and response write-up directly test a tier-one SOC role. This is credible associate execution at a one-year profile, without evidence of broader incident ownership."
       }
     }
   },

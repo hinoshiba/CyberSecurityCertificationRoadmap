@@ -86,21 +86,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "SOC architecture and detection engineering in the recorded scope support professional monitoring decisions at three years; accreditation is useful, while no described practical component supports expert placement."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded SOC architecture and continuous detection coverage align with professional monitoring responsibility. Accreditation, COOL recognition and a three-year profile support that level, although practical implementation is not specified."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded SOC architecture, continuous diagnostics and detection-engineering scope fits professional design and operations at three years. Accreditation supports credibility, while no expert practical assessment is documented."
       }
     }
   },

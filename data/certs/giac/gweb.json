@@ -105,21 +105,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Accredited defensive-development coverage supports professional application-control decisions consistent with the recorded hint; a two-year profile and open-book assessment limit evidence of advanced implementation leadership."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Accredited defensive application-security coverage supports professional AppSec knowledge and aligns with the stored professional hint. The two-year profile and absence of a coding practical leave independent remediation and review delivery less certain."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded defensive application-security focus is valuable, but the two-year profile and open-book knowledge assessment do not demonstrate implementation delivery. I place it at associate rather than infer professional capability from accreditation alone."
       }
     }
   },

@@ -66,22 +66,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 2, professional: 1. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded investigation and automated-response workflow supports professional SOC delivery despite a two-year profile; Cortex-specific assessment limits inference about broader tool-independent incident leadership."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Cortex triage, investigation and automated-response coverage fits associate SOC platform work with a two-year profile. The professional hint and production relevance help, but no practical or senior-scope factor establishes independent complex-response delivery."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded Cortex triage, investigation and automated-response scope fits a two-year operational analyst. Without documented practical investigation, the evidence supports associate rather than the professional source hint."
       }
     }
   },

@@ -99,21 +99,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "DoD COOL; DevSecOps niche increasingly requested in JP cloud-native shops."
+        "rationale": "Container, Kubernetes and infrastructure-as-code coverage supports professional security-automation decisions at three years; recorded accreditation strengthens credibility, while a costly open-book exam does not demonstrate expert execution."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "DoD COOL + ANSI; leading DevSecOps credential."
+        "rationale": "Accreditation, recorded COOL recognition and Kubernetes, containers and IaC coverage support professional DevSecOps responsibility. The open-book exam provides less direct implementation evidence than a lab, and its cost does not establish expert depth."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Strong DevSecOps focus; modern attack surface."
+        "rationale": "The recorded Kubernetes, containers and IaC focus spans practical DevSecOps delivery concerns at a three-year level. The professional hints and accreditation support that placement, while an unspecified practical component prevents expert credit."
       }
     }
   },

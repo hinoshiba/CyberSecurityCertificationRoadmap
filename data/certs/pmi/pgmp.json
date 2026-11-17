@@ -81,22 +81,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "expert",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 3. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "The recorded extensive project/program experience and panel review support expert organizational program direction; nontechnical scope means this does not validate specialist cybersecurity delivery."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "Extensive verified program and project experience plus panel review support expert organizational program responsibility. The nontechnical focus means this is leadership evidence rather than a SOC or pentest skill filter."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "The recorded eleven-year profile and panel review of substantial program experience provide credible evidence of senior direction across projects. Expert fits that program-governance track, while the credential does not establish technical security ability."
       }
     }
   },

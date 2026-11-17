@@ -82,22 +82,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "foundational",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 2, introductory: 1. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "expert",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "The recorded recognized framework and accessible entry assessment support foundational delivery-process knowledge; no experience and limited depth do not establish professional team leadership or security capability."
       },
       "maria-okonkwo": {
-        "tier": "expert",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "A recognized framework and defined passing threshold provide foundational Scrum knowledge. Zero experience and an open-book objective exam leave actual delivery leadership and technical security capability unproven."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded open-entry, objective Scrum assessment provides introductory framework literacy. It has no technical-security assessment or evidence of actual delivery responsibility."
       }
     }
   },

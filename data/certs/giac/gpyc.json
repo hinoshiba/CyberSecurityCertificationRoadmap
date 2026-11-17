@@ -71,21 +71,21 @@
   ],
   "evaluation": {
     "computed_tier": "specialty",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "Python automation, parsing and forensic-tool development constitute a focused supporting specialization; accreditation does not turn the narrow use case and zero-experience profile into general security seniority."
       },
       "maria-okonkwo": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "Python automation, parsing and forensic tooling form a focused enabling specialty for security practitioners. Recorded accreditation and COOL recognition help, but zero listed experience and no specified coding practical leave seniority unresolved."
       },
       "alex-novak": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "The recorded Python automation, parsing and forensic-tooling scope is a focused supporting branch of security practice. Its specialty hint and narrow use case are more informative than a general progression tier, especially with no experience prerequisite."
       }
     }
   },

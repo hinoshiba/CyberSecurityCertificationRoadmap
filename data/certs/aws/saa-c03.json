@@ -83,21 +83,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Resilient distributed architecture and the recorded one-year experience profile support associate design knowledge; the NICCS hint is consistent, but AWS scope alone does not demonstrate senior enterprise architecture."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Resilient distributed AWS design and a one-year experience profile make this a useful associate cloud architecture signal. The stored NICCS recognition does not overcome the vendor-specific scope or establish practical security leadership."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded resilient, distributed AWS architecture scope provides a useful cloud design foundation at one year of experience. A proctored vendor exam without documented practical delivery is insufficient for professional security architecture."
       }
     }
   },

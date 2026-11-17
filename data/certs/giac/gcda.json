@@ -97,21 +97,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Detection-engineering coverage, accreditation and recorded SANS support justify professional detection responsibility despite the two-year profile; the open-book assessment limits direct evidence of operational implementation."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Accredited detection-engineering coverage has direct value for professional SIEM and detection work in an MSSP. The two-year profile and lack of a recorded practical component temper the signal, and the expensive bundle is not itself evidence of seniority."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded SIEM and detection-engineering focus is operationally useful, but the profile is two years and no practical assessment is specified. I therefore assess associate knowledge rather than infer professional detection delivery from accreditation."
       }
     }
   },

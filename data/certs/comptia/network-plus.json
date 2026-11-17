@@ -82,21 +82,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "Networking fundamentals; not a security credential proper."
+        "rationale": "Vendor-neutral networking fundamentals and Japanese availability provide the technical baseline for security work, matching the recorded foundational hint; the evidence does not establish domain design ownership."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "No security DoD 8140 listing; networking baseline."
+        "rationale": "Accredited vendor-neutral networking fundamentals give entry security candidates a credible technical baseline. Performance questions improve confidence, but the recorded scope and foundational hint stop short of independent network-defense responsibility."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "Foundational networking only."
+        "rationale": "Vendor-neutral networking fundamentals and performance-based questions are useful technical groundwork. The recorded scope is preparation for a security track rather than independent defensive delivery."
       }
     }
   },

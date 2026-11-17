@@ -72,21 +72,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Advanced detection, EDR/XDR and automated response across the recorded security fabric support professional operations at three years; vendor scope limits portability to other enterprise environments."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Advanced EDR/XDR detection and automated response across the Security Fabric fit professional SOC implementation. The three-year profile supports this level, but the proctored exam record does not prove expert live-response performance."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Advanced detection, EDR/XDR and automated response across the recorded Security Fabric scope support professional operations knowledge. The three-year profile and lack of an explicit practical exam keep it below expert."
       }
     }
   },

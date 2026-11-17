@@ -91,22 +91,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Live-cluster performance testing and Japanese availability substantiate associate operational ability at one year of experience; general infrastructure scope and version churn limit a stronger security-specific placement."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Live command-line administration under proctoring is a strong associate hiring filter for Kubernetes operations. The one-year profile and general infrastructure focus do not by themselves establish professional security ownership."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Live-cluster command-line tasks provide convincing evidence of Kubernetes administration at the recorded one-year level. The infrastructure focus keeps this at associate rather than treating practical format alone as advanced security expertise."
       }
     }
   },

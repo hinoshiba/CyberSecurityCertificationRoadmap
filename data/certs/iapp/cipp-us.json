@@ -80,21 +80,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "Recorded US privacy-law recognition and accreditation support professional jurisdictional advisory knowledge; open entry and multiple-choice testing do not establish experience, technical delivery or Japanese-law coverage."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "Recorded accreditation and US privacy-law hiring demand make this a useful professional privacy knowledge filter. Zero experience and a multiple-choice exam mean it should not substitute for demonstrated legal application or technical security delivery."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded US privacy-law breadth is useful for cross-border work, but it requires no experience and uses a multiple-choice exam. For this EU consulting perspective, the evidence supports associate legal-domain knowledge below the professional hints."
       }
     }
   },

@@ -78,21 +78,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Secure data pipeline and lake operations with two years of experience fit a domain practitioner; the recorded proctored assessment remains AWS-specific and does not establish broader privacy leadership."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded secure pipeline and data-lake scope and two-year experience profile support associate AWS implementation knowledge. Proctoring improves assurance, but vendor specificity and no recorded practical exam limit the hiring signal."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Secure AWS pipelines and data lakes are relevant to contemporary attack surfaces, and the recorded two-year level fits associate practice. Proctoring alone does not demonstrate independent secure data-platform design."
       }
     }
   },

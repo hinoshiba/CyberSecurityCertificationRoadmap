@@ -117,21 +117,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'professional' supported by maria-okonkwo, alex-novak; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "expert",
-        "rationale": "Sole national-statutory JP cybersecurity registration; mandatory ongoing training."
+        "tier": "professional",
+        "rationale": "National registration, METI/NISC recognition and ongoing practical training make a strong professional security signal in Japan; zero required experience and no recorded cross-domain leadership assessment limit the expert hints."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "High depth + statutory backing; no DoD 8140 listing limits the US hiring signal."
+        "rationale": "The SC exam, descriptive assessment and mandatory ongoing practical training support a professional security registration signal. Zero required experience and primarily Japanese recognition do not establish expert seniority merely from statutory registration."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Strong but JP-only; no peer presence in EU offensive circles."
+        "rationale": "The recorded specialist examination, national registration and mandatory ongoing practical training provide a credible professional security signal. Open entry and domestic recognition alone do not establish the expert seniority suggested by the source hints."
       }
     }
   },

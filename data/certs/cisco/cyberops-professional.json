@@ -78,21 +78,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Advanced detection, automation and forensics across two exams support professional SOC responsibility at three years; the recorded Cisco-tooling emphasis limits vendor-independent incident-response inference."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded two-exam coverage of detection, automation, forensics and response fits professional SOC delivery with three years of experience. Cisco-tool concentration and no explicit practical assessment limit evidence of cross-platform incident leadership."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded two-exam track covers detection, automation, forensics and response at a three-year level. Its breadth supports professional SOC delivery knowledge, though Cisco dependence and unspecified practical assessment limit the ceiling."
       }
     }
   },

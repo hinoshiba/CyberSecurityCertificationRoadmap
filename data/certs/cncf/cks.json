@@ -103,21 +103,21 @@
   ],
   "evaluation": {
     "computed_tier": "specialty",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "The required CKA and live-cluster security tasks establish a focused Kubernetes security specialization, consistent with the recorded specialty hint; frequent version changes limit longevity without ongoing practice."
       },
       "maria-okonkwo": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "The prior CKA requirement and live cluster security tasks establish a focused Kubernetes security specialization. This practical signal is valuable for cloud-native staffing, while version churn and platform concentration make a general seniority ranking misleading."
       },
       "alex-novak": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "The live-cluster security practical and required prior CKA make this a substantive extension to an existing Kubernetes track. Its focused cluster-security scope fits unordered specialty better than a general seniority rank."
       }
     }
   },

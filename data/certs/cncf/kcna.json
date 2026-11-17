@@ -84,21 +84,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "Cloud-native infrastructure concepts provide an entry technical baseline, with Japanese access useful locally; no prerequisites, multiple-choice testing and limited uptake prevent an applied associate inference."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The proctored exam provides technical cloud-native fundamentals despite its pre-professional audience. Multiple-choice assessment, zero experience and general infrastructure coverage leave operational readiness unproven."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded cloud-native infrastructure coverage supplies technical foundations, despite the Associate title. A multiple-choice exam with no experience requirement and limited security depth does not demonstrate operational Kubernetes competence."
       }
     }
   },

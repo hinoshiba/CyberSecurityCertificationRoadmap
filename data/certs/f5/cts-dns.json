@@ -77,21 +77,21 @@
   ],
   "evaluation": {
     "computed_tier": "specialty",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "specialty",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The F5 administrator prerequisite and DNS-specific expertise fit a narrow technical extension rather than general progression; product dependence and multiple-choice testing limit broader network-defense claims."
       },
       "maria-okonkwo": {
         "tier": "specialty",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "BIG-IP DNS knowledge builds on an administrator credential and serves a distinct network specialty. The proctored exam can screen platform familiarity, while multiple-choice assessment leaves practical DNS engineering unproven."
       },
       "alex-novak": {
         "tier": "specialty",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "BIG-IP DNS is a narrow extension to prior F5 administration, matching the unordered specialty rubric. Three years of expected experience add context, but a multiple-choice exam cannot establish broader expert network defense."
       }
     }
   },

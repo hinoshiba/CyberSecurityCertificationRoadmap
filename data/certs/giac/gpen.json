@@ -93,21 +93,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "DoD 8140 baseline; CyberLive."
+        "rationale": "CyberLive tasks, accreditation and a three-year assessment profile support professional testing delivery; recorded weaker peer recognition than OSCP and cost do not warrant either expert promotion or dismissal."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "DoD 8140 baseline; CyberLive hands-on; OSCP overshadows in hiring."
+        "rationale": "Recorded DoD approval, accreditation and CyberLive tasks provide a strong professional pentest filter with a three-year profile. The shorter task-based assessment and weaker recorded peer signal than OSCP do not establish expert engagement leadership."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "CyberLive partial; OSCP carries higher peer reputation."
+        "rationale": "Recorded CyberLive tasks and a three-year profile provide applied penetration-testing evidence. This supports professional delivery, while the shorter assessment and recorded weaker peer signal than OSCP limit claims beyond that level."
       }
     }
   },

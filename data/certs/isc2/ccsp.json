@@ -106,21 +106,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Vendor-neutral cloud governance is valued; JA exam available; not yet at IPA-equivalent statutory weight."
+        "rationale": "Five years of experience, vendor-neutral cloud coverage and Japanese availability support professional cloud-security decisions; mixed external hints and no practical lab limit evidence for expert implementation leadership."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "5-year experience requirement, ANSI accredited; no hands-on lab keeps it below expert."
+        "tier": "expert",
+        "rationale": "Recorded DoD recognition, accreditation, vendor-neutral cloud breadth and five years of experience provide a strong senior cloud-security hiring filter. The absent lab and mixed professional/expert hints mean this expert judgment concerns cloud-security responsibility, not demonstrated platform execution."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Modern cloud relevance, but no practical component."
+        "rationale": "The recorded five-year requirement and vendor-neutral cloud coverage support professional architecture and advisory judgment. The explicit absence of a lab prevents expert execution credit even though one source suggests expert."
       }
     }
   },

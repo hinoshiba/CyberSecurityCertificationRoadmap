@@ -69,21 +69,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Secure design, hybrid networking, identity and resilience at three years support professional architecture decisions; OCI-specific assessment does not demonstrate broader expert cloud direction."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded secure architecture, hybrid networking, identity and resilience coverage with three years of experience supports professional OCI design. Proctoring adds knowledge assurance, but no stated practical establishes expert cross-cloud capability."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded secure design, hybrid networking, identity and resilience scope fits professional architecture responsibility at three years. The evidence does not document an expert practical assessment or portability outside OCI."
       }
     }
   },

@@ -82,22 +82,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "foundational",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "Japanese availability and endpoint fleet relevance make this a useful technical baseline, while zero experience, limited depth and a product-specific multiple-choice exam do not establish independent security delivery."
       },
       "maria-okonkwo": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "The device-support scenarios and endpoint fleet relevance establish useful entry technical knowledge at low cost. Zero experience and multiple-choice assessment limit evidence of independent security operations."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "The zero-experience device-support scope is useful endpoint groundwork, but the recorded multiple-choice format and Apple-only coverage provide limited evidence of independent security delivery."
       }
     }
   },

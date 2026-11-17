@@ -107,21 +107,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "CyberLive examination and forensic peer recognition support professional evidence examination beyond the two-year baseline; the recorded scope and cost do not establish broader expert incident leadership."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "Accreditation, DoD recognition and CyberLive tasks provide credible evidence for professional forensic examination despite the two-year profile. The credential still warrants casework review and does not alone establish senior enterprise response leadership."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "The recorded CyberLive assessment and strong forensic peer reputation provide practical evidence beyond the two-year profile. That supports professional examination work, without implying expert investigative leadership."
       }
     }
   },

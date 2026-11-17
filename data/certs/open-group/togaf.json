@@ -92,22 +92,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Scenario-based application after Foundation supports associate architecture-method knowledge, with Japanese access aiding local use; eight questions and no experience requirement do not establish professional delivery ownership."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Scenario application following Foundation demonstrates associate use of an architecture framework. Zero experience and a short open-book objective exam do not establish professional security architecture responsibility despite broad recognition."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded scenario-based assessment and prior Foundation requirement demonstrate applied framework reasoning beyond terminology recall. With no experience requirement and no technical-security implementation, associate is the defensible level."
       }
     }
   },

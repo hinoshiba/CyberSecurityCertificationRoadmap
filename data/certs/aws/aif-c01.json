@@ -73,22 +73,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "introductory",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 1, introductory: 2. The ordered median is introductory. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded scope is AI and generative-AI concepts with no experience requirement, making it literacy rather than engineering evidence; proctoring and AWS authority do not overcome limited hiring depth."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "rationale": "The proctored AWS AI concepts exam supplies a foundational signal for modern cloud discussions. Its zero-experience entry and recorded limited hiring signal do not demonstrate operational AI security capability."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded scope is AI and generative-AI concepts with no experience requirement. Proctoring and modern subject matter do not turn that literacy signal into demonstrated engineering competence."
       }
     }
   },

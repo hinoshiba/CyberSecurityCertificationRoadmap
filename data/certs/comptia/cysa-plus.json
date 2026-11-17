@@ -100,22 +100,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "professional",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'associate' supported by hiroshi-tanaka, alex-novak; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "associate",
-        "rationale": "Blue team focus; DoD 8140 listing at associate-level."
+        "tier": "professional",
+        "rationale": "A four-year profile, blue-team focus and performance questions support professional analyst responsibility, with Japanese access valuable for staffing; the recorded lighter depth than GCIH prevents an expert inference."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Strong SOC-analyst hire signal; PBQs provide hands-on credibility."
+        "rationale": "Recorded DoD recognition, accreditation and blue-team performance questions make CySA+ a credible professional SOC knowledge filter with a four-year profile. Its lighter practical depth than GCIH limits evidence for advanced incident leadership."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "Multiple-choice base; PBQs limited."
+        "tier": "professional",
+        "rationale": "The recorded four-year profile and performance-based blue-team assessment support professional analyst responsibility. Its lighter practical depth and broad tooling coverage keep it below expert despite strong baseline recognition."
       }
     }
   },

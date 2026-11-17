@@ -119,21 +119,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "NICCS listed; capstone of Microsoft security ladder; Zero Trust focus."
+        "rationale": "The recorded security-exam prerequisite, five-year profile and Zero Trust capstone support expert architecture judgment, reinforced by Japanese delivery; vendor scope and knowledge testing limit cross-platform execution claims."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "NICCS recognition; capstone Microsoft cybersecurity architect cert."
+        "rationale": "A security-track capstone, prerequisite role credential and five-year profile support expert Microsoft security architecture judgment. Zero-trust case studies add design relevance, while the vendor-specific knowledge format does not prove practical implementation across clouds."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Architecture capstone; Zero Trust modern relevance."
+        "tier": "professional",
+        "rationale": "The recorded security-track prerequisite, five-year profile and zero-trust case studies support professional architecture judgment. I discount the Expert label because multiple-choice and case-study assessment does not establish expert implementation."
       }
     }
   },

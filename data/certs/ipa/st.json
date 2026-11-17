@@ -96,22 +96,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "expert",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'professional' supported by maria-okonkwo, alex-novak; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "CIO-track strategy depth in JP."
+        "rationale": "The recorded seven-year profile and CIO-oriented strategic depth support expert organizational IT direction in Japan; the strategy emphasis does not substantiate hands-on cybersecurity execution."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Strategy focus; not security per se."
+        "tier": "expert",
+        "rationale": "The recorded CIO-track strategy depth and seven-year profile support expert organizational IT direction. Local recognition and non-security emphasis limit its relevance to SOC staffing, but they do not erase the assessed senior strategic scope."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Strategy not security."
+        "rationale": "The recorded seven-year strategy profile supports senior IT advisory knowledge. The nonsecurity focus and absence of an applied executive assessment limit this to professional relevance for cybersecurity consulting rather than expert standing."
       }
     }
   },

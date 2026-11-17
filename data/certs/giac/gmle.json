@@ -78,22 +78,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded ML-security emphasis constitutes an emerging technical specialization rather than general security progression; recent uptake, uncertain accreditation and open-book assessment require caution about its enterprise hiring signal."
       },
       "maria-okonkwo": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded AI/ML security focus fits a developing specialization beside established security tracks. Limited uptake, uncertain accreditation and no explicit practical component mean novelty and SANS backing cannot establish expert or professional delivery by themselves."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded machine-learning security focus extends existing security knowledge into a distinct technical niche. Novelty, limited uptake and uncertain accreditation prevent claims of general senior authority, but do not remove that specialty character."
       }
     }
   },

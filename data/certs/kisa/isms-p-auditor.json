@@ -65,21 +65,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded Korean government recognition and a three-year combined security/privacy audit profile support professional assurance responsibility; that recognition does not establish equivalence to Japanese national schemes."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Korean government recognition and the combined ISMS-P auditor role support professional assurance responsibility with a three-year profile. The record lacks practical-assessment details and US recognition evidence, limiting operational hiring conclusions."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded combined information-security and privacy audit scope with three years of experience supports professional assurance. Korean government recognition establishes the scheme context without implying EU regulatory equivalence or offensive skill."
       }
     }
   },

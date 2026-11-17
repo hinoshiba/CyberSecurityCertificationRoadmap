@@ -69,22 +69,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 2, professional: 1. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded breadth across IAM, network protection, data and detection supports professional control decisions despite a two-year profile; vendor specificity limits cross-cloud portability."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "OCI IAM, network, data-protection and detection controls support associate platform-security knowledge with a two-year profile. The professional hint is noted, but the record supplies no senior-scope or practical evidence establishing independent professional delivery."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded OCI IAM, network controls and data-protection scope is useful operational knowledge. A two-year profile and no explicit practical component support associate placement below the Professional product label."
       }
     }
   },

@@ -66,21 +66,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "rationale": "Practical entry network testing supplies a technical security foundation at zero experience; recorded junior scope and limited hiring recognition do not establish independent professional assessment responsibility."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "rationale": "A hands-on entry network-pentest exam provides credible foundational offensive skills. Zero experience and the explicit limited entry hiring signal prevent treating it as evidence of independent engagement delivery."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "rationale": "The recorded hands-on network pentest validates meaningful entry technical skills with no experience requirement. Its junior scope and limited hiring signal keep it foundational rather than upgrading it solely for practical format."
       }
     }
   },

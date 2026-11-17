@@ -91,21 +91,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'associate' supported by hiroshi-tanaka, alex-novak; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "DoD 8140 baseline; SANS-backed; expensive for JP procurement."
+        "rationale": "A two-year profile, accreditation and broad security essentials support associate knowledge consistent with recorded hints; the open-book exam and cost do not independently demonstrate professional delivery responsibility."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "DoD 8140 IAT-II / IAM-I baseline; SANS curriculum reputation lifts the hiring signal."
+        "tier": "associate",
+        "rationale": "Recorded DoD baseline recognition, accreditation and a two-year profile support an associate security practitioner filter. The essentials scope and open-book exam do not establish professional incident delivery, despite the long exam and high cost."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Open-book multiple-choice; broad essentials."
+        "rationale": "The recorded two-year security-essentials profile and proctored assessment support broad associate knowledge. Accreditation strengthens credibility, but the open-book format here does not document independent practical delivery."
       }
     }
   },

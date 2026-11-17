@@ -119,21 +119,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "AWS share large in JP cloud; JA exam available; hiring-relevant."
+        "rationale": "Japanese availability, production relevance and a three-year profile support professional cloud-security responsibility across IAM and response; the absence of a practical lab limits claims of expert implementation ability."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Vendor-specific; high hiring demand for cloud security engineers."
+        "rationale": "Recorded production relevance, hiring demand and three years of experience support a strong professional cloud-security signal. The multiple-choice exam lacks a practical lab, so the Specialty title does not establish expert operational capability."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Vendor-specific cloud focus is modern attack surface."
+        "tier": "associate",
+        "rationale": "AWS production relevance and hiring demand are strong, but the record explicitly excludes a practical lab. Its multiple-choice assessment supports associate cloud-security knowledge rather than independently demonstrated professional delivery."
       }
     }
   },

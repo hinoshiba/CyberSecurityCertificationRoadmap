@@ -71,21 +71,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "Hands-on hardening, infrastructure compliance and automation support professional DevSecOps delivery despite the two-year profile; limited independent recognition and training dependence do not substantiate the Expert title."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "Practical hardening, IaC compliance, vulnerability management and automation support professional DevSecOps implementation. The two-year profile and limited outside recognition do not justify expert seniority solely from the credential name."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded practical covers hardening, IaC compliance, vulnerability management and automation beyond the base track. This supports professional delivery, but the two-year profile and limited independent recognition do not justify the Expert label."
       }
     }
   },

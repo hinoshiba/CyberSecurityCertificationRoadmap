@@ -88,21 +88,21 @@
   ],
   "evaluation": {
     "computed_tier": "specialty",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 1, specialty: 2. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "specialty",
-        "rationale": "EXP-401 is the OffSec 400-level apex specialist track beyond OSCE3."
+        "rationale": "The recorded 72-hour practical and advanced kernel/browser exploitation establish exceptional exploit-research depth; the explicit niche audience makes specialty more informative than broad enterprise rank despite expert peer hints."
       },
       "maria-okonkwo": {
         "tier": "specialty",
-        "rationale": "Specialist apex — small holder pool, very narrow advanced exploitation scope."
+        "rationale": "The 72-hour kernel and browser exploitation practical demonstrates exceptional depth in exploit research. Its narrow audience makes specialty the most informative placement, and the conventional OSCE3 milestone should not be treated as an enforced prerequisite."
       },
       "alex-novak": {
-        "tier": "specialty",
-        "rationale": "Beyond the standard expert ladder; 400-level specialist."
+        "tier": "expert",
+        "rationale": "The recorded 72-hour practical across advanced kernel and browser exploitation, with a report and strong top-tier peer recognition, demonstrates exceptional offensive depth. That sustained assessment supports expert placement despite the five-year profile and niche audience."
       }
     }
   },

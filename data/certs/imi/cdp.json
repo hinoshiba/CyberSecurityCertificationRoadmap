@@ -84,21 +84,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded governance, access and compliance breadth offers an entry data-protection baseline; zero experience, repeated multiple-choice attempts and limited independent recognition prevent an applied professional inference."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded ten-domain data-protection breadth offers foundational governance and access-control knowledge. Zero experience, repeated online multiple-choice attempts and limited recognition make this a weak filter for independent privacy delivery."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded ten-domain data-protection breadth offers entry knowledge with no experience requirement. Multiple-choice assessment and limited independent recognition keep it foundational despite the broad certification title."
       }
     }
   },

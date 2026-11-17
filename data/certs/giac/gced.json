@@ -84,21 +84,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded defensive operations, packet analysis and incident-response coverage beyond GSEC supports professional enterprise defense at three years; high training cost does not add expert-level evidence."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded accreditation, COOL recognition and coverage beyond GSEC in packet analysis, response and malware removal support professional defense work. The three-year profile fits delivery responsibility, while unspecified practical logistics limit expert inference."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded scope extends beyond fundamentals into packet analysis, incident response and malware removal at a three-year level. That breadth supports professional defensive responsibility, with no basis here for expert practical depth."
       }
     }
   },

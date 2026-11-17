@@ -96,22 +96,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "professional",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded three-year profile and strategy-focused modules support professional governance decisions, reinforced by Japanese availability; a training-dependent multiple-choice designation does not prove enterprise-wide expert practice."
       },
       "maria-okonkwo": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded strategic focus and three-year profile support professional decisions about IT services and organizational direction. Two multiple-choice modules and nontechnical coverage do not substantiate an expert security-operations tier."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The strategic scope and recorded three-year experience profile support management-level planning decisions. Multiple-choice modules and nontechnical security coverage limit its value as evidence of expert technical judgment."
       }
     }
   },

@@ -69,21 +69,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "Recorded senior rigor, active LPIC-2 dependency and advanced vendor-neutral Linux security support expert domain responsibility at five years; the evidence does not describe practical testing or wider enterprise leadership."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "Recorded accreditation, senior Linux security scope and the active LPIC-2 prerequisite support expert platform depth. The five-year profile and unspecified practical format mean hands-on capability should still be validated separately."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded active LPIC-2 prerequisite, five-year profile and senior Linux-security scope support professional knowledge. An unspecified proctored exam does not provide enough applied evidence for the expert source hint."
       }
     }
   },

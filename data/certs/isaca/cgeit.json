@@ -118,21 +118,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert, expert); pending differentiated human persona review."
+        "rationale": "Verified five-year experience, executive recognition and framework-independent governance support expert organizational direction, reinforced by Japanese delivery; the credential does not demonstrate hands-on technical security."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert, expert); pending differentiated human persona review."
+        "rationale": "Accreditation, verified five-year experience and executive, framework-agnostic governance scope support expert organizational direction. The multiple-choice and nontechnical focus limit operational inference, but executive responsibility is the relevant assessed domain."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert, expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "Verified five-year experience and framework-independent governance scope support professional executive advice. The multiple-choice, non-hands-on assessment does not establish the expert technical or applied leadership evidence I would require."
       }
     }
   },

@@ -89,21 +89,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Cloud and CI/CD assessment with a three-year profile supports professional testing scope, reinforced by accreditation; the open-book format limits evidence of practical offensive delivery beyond the recorded hint."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Accredited cloud and CI/CD offensive coverage with a three-year profile supports professional cloud-pentest knowledge. The supplied exam lacks a stated practical component, so engagement execution should be separately tested."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded cloud, container and CI/CD offensive scope is directly relevant to modern engagements at a three-year level. I accept professional knowledge depth but do not infer extended practical execution from the open-book format."
       }
     }
   },

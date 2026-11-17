@@ -72,21 +72,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded installation, tuning, correlation and risk-based alerting scope supports professional SIEM operations at three years; product dependence limits evidence of wider SOC architecture leadership."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Installation, tuning, asset/identity correlation and risk-based alerting with three years of experience support professional SIEM ownership. Strong production relevance does not eliminate the need to validate practical administration on an MSSP deployment."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded installation, tuning, identity correlation and risk-based alerting scope supports professional SIEM administration at three years. The record does not establish expert investigation or extensive practical assessment."
       }
     }
   },

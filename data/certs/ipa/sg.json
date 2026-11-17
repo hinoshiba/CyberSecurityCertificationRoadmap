@@ -67,22 +67,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "foundational",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, foundational: 2. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded national information-security management role and IPA delivery support associate workplace-security responsibility; no experience requirement or recorded advanced assessment justifies professional governance ownership."
       },
       "maria-okonkwo": {
-        "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "The recorded national security-management exam offers an entry security knowledge baseline. With zero experience and no practical or advanced-scope factors, the associate hint does not establish applied practitioner responsibility."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "The recorded open-entry information-security management exam supplies a baseline governance signal. With no experience or practical component documented, I place it foundational below the associate hint."
       }
     }
   },

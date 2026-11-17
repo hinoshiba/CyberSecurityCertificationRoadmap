@@ -89,21 +89,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded one-year profile and explicit SOC entry-role fit support associate analyst knowledge; accreditation does not overcome its baseline scope or weaker hiring visibility for a higher tier."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Accreditation and direct blue-team entry-role coverage support associate SOC hiring with a one-year profile. Its open-book exam and limited comparative hiring recognition do not establish professional response responsibility."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded entry SOC role fit and one-year profile support associate security-operations knowledge. Accreditation and training pedigree do not establish professional incident ownership from the open-book examination alone."
       }
     }
   },

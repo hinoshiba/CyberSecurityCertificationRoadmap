@@ -72,21 +72,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded two-year policy, VPN and NAT scope supports an associate implementer despite the Specialist title; production relevance does not establish broader design ownership outside Junos."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Recorded SRX policy, NAT, VPN and security-services coverage with two years of experience fits associate platform engineering. The Specialist title does not require a separate advanced specialty tier for this normal vendor progression."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded SRX policies, NAT, VPN and security services fit focused two-year operational competence. Specialist branding does not make this an unordered niche or a higher career tier."
       }
     }
   },

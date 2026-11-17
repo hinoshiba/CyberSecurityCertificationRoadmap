@@ -69,22 +69,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "professional",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded 48-hour practical across network, disk and memory forensics provides substantial professional response evidence despite the one-year profile; recent release and limited independent recognition restrain a higher placement."
       },
       "maria-okonkwo": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "A manually evaluated 48-hour practical spanning disk, memory, network forensics and response is a strong professional SOC hiring filter. Limited uptake and recognition temper confidence, and framework mapping is not the same as recorded DoD approval."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded 48-hour manually evaluated practical spans network, disk and memory forensics, hunting and response. That delivery evidence warrants professional placement despite the one-year profile and limited independent recognition."
       }
     }
   },

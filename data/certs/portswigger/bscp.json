@@ -82,22 +82,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "professional",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "expert",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded four-hour practical on an industry-standard tool supports associate web-assessment competence at one year; product dependence and limited external recognition constrain wider professional scope."
       },
       "maria-okonkwo": {
-        "tier": "expert",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "A four-hour practical against web applications using an industry-standard tool provides strong professional web-testing evidence. The one-year profile and limited third-party recognition temper seniority, while the required Burp license adds an access limitation."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded four-hour practical requires exploitation of web targets using an industry-standard consulting tool. That execution evidence supports professional AppSec delivery beyond the one-year profile, while Burp dependence and narrow web scope constrain broader claims."
       }
     }
   },

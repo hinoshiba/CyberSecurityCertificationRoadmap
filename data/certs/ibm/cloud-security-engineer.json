@@ -69,22 +69,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 2, professional: 1. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded IAM, hybrid connectivity and workload-hardening coverage supports professional cloud-control decisions; the two-year profile and IBM-specific scope limit claims of senior cross-cloud architecture."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Recorded hybrid, IAM and hardening coverage supports associate implementation knowledge on IBM Cloud with a two-year profile. The professional hint is noted, but no senior-scope or practical-assessment factor establishes independent professional delivery."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded hybrid, Kubernetes, IAM and compliance configuration scope is modern and operationally relevant. Its two-year profile and lack of an explicit practical exam support associate platform knowledge rather than the professional source hint."
       }
     }
   },

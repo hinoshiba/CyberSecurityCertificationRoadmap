@@ -117,21 +117,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Vendor-neutral baseline; JA exam available; entry credential rather than depth signal."
+        "rationale": "The recorded two-year profile, accreditation and practical questions support associate security fundamentals, with Japanese delivery useful locally; broad baseline coverage limits professional design or response claims."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "DoD 8140 baseline IAT-II; the most common hiring filter for SOC L1; PBQs add some hands-on credibility."
+        "rationale": "Recorded DoD baseline recognition, accreditation and performance questions create a strong associate entry-security hiring signal for an MSSP. Its broad fundamentals and two-year profile do not establish independent specialist delivery."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Multiple-choice with PBQs; baseline only."
+        "rationale": "The recorded two-year profile and performance-based questions add applied knowledge to a broad security baseline. Accreditation and DoD recognition strengthen that associate signal, but fundamentals-only breadth prevents professional placement."
       }
     }
   },

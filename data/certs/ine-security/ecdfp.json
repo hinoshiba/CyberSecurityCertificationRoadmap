@@ -76,21 +76,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Practical disk, memory and network evidence analysis with a three-year profile supports professional forensic delivery; recorded NICCS recognition corroborates relevance without establishing expert investigative leadership."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded hands-on disk, memory and network forensics with a three-year profile supports professional DFIR delivery. The NICCS hint adds context, while no detailed reporting or experience-verification evidence supports expert case leadership."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded fully hands-on assessment spans disk, memory and network artifacts at a three-year level. That practical forensic scope directly supports professional investigation work."
       }
     }
   },

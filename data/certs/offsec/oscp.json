@@ -146,21 +146,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'professional' supported by hiroshi-tanaka, maria-okonkwo; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Hands-on respected globally; JP recognition lower than CREST or CISSP equivalents."
+        "rationale": "The recorded 24-hour practical and report, peer reputation and CREST pathway substantiate professional engagement delivery despite a one-year profile; limited red-team breadth prevents treating it as expert direction."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "DoD 8140 listing; strong hiring signal; falls short of expert because scope is still network/AD pentest."
+        "rationale": "The 24-hour practical plus report, recorded DoD baseline and strong peer standing make a strong professional pentest hiring filter. The one-year profile and narrower network-pentest scope do not establish expert red-team leadership."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "24-hour practical exam, peer-revered, current PEN-200 covers modern AD - clear expert signal in offensive consulting."
+        "tier": "professional",
+        "rationale": "The recorded 24-hour practical and subsequent report directly demonstrate sustained penetration-testing delivery. Strong peer reputation and the CREST pathway support professional placement despite the one-year profile, while the narrower network-pentest scope limits expert inference."
       }
     }
   },

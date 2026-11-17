@@ -72,22 +72,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "introductory",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 1, introductory: 2. The ordered median is introductory. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded cloud services, pricing and security basics with no experience fit cloud literacy; vendor proctoring and a foundational hint do not demonstrate entry engineering practice."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "rationale": "Recorded Azure services, pricing and security concepts provide foundational cloud knowledge. Zero experience and a limited entry hiring signal leave operations capability unproven."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded services, pricing and security fundamentals are cloud literacy with no experience requirement. Proctoring and modern subject matter do not establish entry engineering execution."
       }
     }
   },

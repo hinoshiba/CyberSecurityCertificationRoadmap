@@ -76,22 +76,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Verified two-year experience and ISO 22301 alignment support associate continuity-audit work; mandatory coursework and a knowledge exam provide limited evidence of independent lead-auditor responsibility."
       },
       "maria-okonkwo": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Recorded verified experience, two years in the field and ISO 22301 alignment support associate continuity-audit capability. A multiple-choice exam and limited recognition provide less assurance of independent lead-auditor work."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Verified two-year experience and ISO 22301 alignment support an associate continuity-auditing signal. The multiple-choice assessment and narrow industry recognition do not demonstrate lead-level assurance responsibility."
       }
     }
   },

@@ -96,21 +96,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "Advanced written scenarios across risk, governance and design after Foundation support professional architecture responsibility at three years; mandatory training and limited regional recognition constrain portability."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "Written scenario application across advanced risk and architecture modules supports professional security-design responsibility. Foundation and training prerequisites add progression, while high cost and no live technical implementation limit the operational signal."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded advanced-module written scenarios require applied risk and architecture reasoning beyond Foundation. A three-year profile supports professional design judgment, while no master-level portfolio or defense is recorded."
       }
     }
   },

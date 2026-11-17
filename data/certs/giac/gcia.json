@@ -107,21 +107,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Deep packet analysis valued in JP MSS work."
+        "rationale": "Deep packet analysis with CyberLive tasks and a three-year profile supports professional intrusion-analysis work; the recorded aging perimeter emphasis limits coverage of the whole modern enterprise."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "DoD 8140 baseline; CyberLive packet tasks."
+        "rationale": "Recorded DoD recognition, accreditation and CyberLive packet-analysis tasks form a strong professional network-analysis screen. The three-year profile and focused traffic-analysis scope do not require an expert architecture placement."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Deep packet analysis is technical depth."
+        "rationale": "CyberLive packet-analysis tasks and a three-year profile support professional intrusion analysis. The recorded aging perimeter emphasis limits currency but does not erase the applied analytical assessment."
       }
     }
   },
