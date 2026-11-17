@@ -1,10 +1,10 @@
 # サイバーセキュリティ資格ロードマップ
 
 > 第三者AIが評価する、独自に編纂したセキュリティ資格ロードマップ。
-> GitHub Pages で公開する静的サイト。資格の事実情報は JSON に保持し、
+> Cloudflare Workers Builds で公開する静的サイト。資格の事実情報は JSON に保持し、
 > 階層 (tier) は AI ペルソナが事実情報から算出します。
 
-[**ロードマップを開く →** https://hinoshiba.github.io/CyberSecurityCertificationRoadmap/](https://hinoshiba.github.io/CyberSecurityCertificationRoadmap/)
+[**ロードマップを開く →** https://www.hinoshiba.com/CyberSecurityCertificationRoadmap/](https://www.hinoshiba.com/CyberSecurityCertificationRoadmap/)
 
 English version: [README.md](./README.md)
 
@@ -96,6 +96,32 @@ make evaluate   # 3 ペルソナ評価スキルを実行
 ```
 
 詳細なマウント設定は `docker-compose.yml` を参照してください。
+
+## デプロイ
+
+このリポジトリの `main` に接続した専用のCloudflare Workerから、
+`www.hinoshiba.com/CyberSecurityCertificationRoadmap/` を配信します。
+HP本体のWorkerはそのままにし、このパスをRouteで振り分けます。
+GitHub Pagesへのデプロイを廃止し、データ検証用のActionsは残しています。
+
+Node.js 22.12.0以上で実行できます。
+
+```sh
+npm ci
+npm run build:cloudflare
+npm run check:cloudflare
+npx wrangler deploy --dry-run
+npm run preview:cloudflare
+```
+
+プレビューは `http://localhost:8787/CyberSecurityCertificationRoadmap/?theme=light&lang=en&jp=1`。
+Dockerでは `make cloudflare-check` でビルド・検証・dry-runを実行できます。
+公開ファイルのみをGit管理対象外の `http_dist/` に生成します。
+通常のビルドでは外部コンテンツの取得や資格データの変更を行いません。
+
+初回のWorker作成・Git連携、ビルド設定、Routeの権限、切り替え確認と
+ロールバックは [Cloudflare公開手順](docs/cloudflare.md) を参照してください。
+PRをマージするだけでは、Cloudflare側のGit連携は作成されません。
 
 ---
 

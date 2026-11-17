@@ -1,5 +1,5 @@
 /**
- * Build / dataset version. Populated by .github/workflows/pages.yml at deploy
+ * Build / dataset version. Populated by scripts/build-cloudflare.mjs at build
  * time; in local dev the file holds {"commit":"dev",...}. UI shows it in the
  * About footer and PNG/PDF exports bake it into their captured footer line so
  * anyone receiving an export knows when it was generated and from which commit.

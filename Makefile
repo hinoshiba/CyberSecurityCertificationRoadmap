@@ -1,4 +1,4 @@
-.PHONY: shell serve serve-stop validate evaluate manifest check-eval infer-relationships build help
+.PHONY: shell serve serve-stop validate evaluate manifest check-eval infer-relationships build help cloudflare-check
 
 DC  := docker compose
 SVC := roadmap
@@ -14,9 +14,13 @@ help:
 	@echo "  make check-eval   Verify every cert has a fresh evaluation block"
 	@echo "  make evaluate     Open Claude inside the container to run the 3-persona skill"
 	@echo "  make infer-relationships  Propose prereq edges (use --dry-run by default)"
+	@echo "  make cloudflare-check    Build and verify the Cloudflare site in Docker (no deployment)"
 
 build:
 	$(DC) build
+
+cloudflare-check: build
+	$(DC) run --rm $(SVC) bash -lc 'npm ci && npm run build:cloudflare && npm run check:cloudflare && npx wrangler deploy --dry-run'
 
 shell: build
 	$(DC) run --rm $(SVC) bash

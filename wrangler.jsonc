@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cyber-security-certification-roadmap",
+  "compatibility_date": "2026-11-17",
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "www.hinoshiba.com/CyberSecurityCertificationRoadmap*",
+      "zone_name": "hinoshiba.com"
+    }
+  ],
+  "assets": {
+    "directory": "./http_dist",
+    "base_path": "/CyberSecurityCertificationRoadmap",
+    "html_handling": "none",
+    "not_found_handling": "none"
+  }
+}
