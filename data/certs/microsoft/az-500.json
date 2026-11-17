@@ -103,21 +103,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Vendor-specific Azure security; JA exam."
+        "rationale": "Japanese case studies, recorded hiring demand and a two-year profile support associate security engineering; vendor specificity and the snapshot's announced retirement limit its forward-looking planning signal."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Widely requested Azure-specific operational security cert."
+        "rationale": "Recorded hiring demand and case studies support associate Azure security-engineering knowledge at the two-year profile. The snapshot flags an August 2026 retirement plan, and vendor concentration limits portability and current-availability conclusions."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Vendor-specific multiple-choice."
+        "rationale": "The recorded two-year security-engineering scope and case studies support applied associate Azure knowledge. Vendor dependence and the snapshot's planned-retirement flag limit portability and currency, without proving professional implementation."
       }
     }
   },

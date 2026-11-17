@@ -76,21 +76,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded practical triage, hunting, containment and eradication workflow supports professional response at three years; the evidence does not establish senior cross-domain direction beyond operational delivery."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "A practical sequence of triage, hunting, containment and eradication directly supports professional MSSP incident-response work. The three-year profile fits delivery responsibility, though NICCS listing is not evidence of baseline approval or senior incident command."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded practical assessment covers triage, hunting, containment and eradication. At a three-year profile, this provides delivery evidence suitable for professional incident response."
       }
     }
   },

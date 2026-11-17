@@ -89,21 +89,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "DoD 8140; aligned with NIST RMF widely used in JP enterprise compliance work."
+        "rationale": "Recorded NIST RMF focus and accreditation support professional governance decisions despite a two-year profile; rebranding and framework overlap limit distinct hiring value without establishing expert scope."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "DoD 8140 baseline; NIST RMF focus is hire-relevant for federal-adjacent work."
+        "rationale": "Accreditation, recorded DoD recognition and focused NIST RMF coverage support professional governance and authorization work. The two-year profile and knowledge-based exam do not establish broader expert management or hands-on control implementation."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "RMF-focused; not practical but ANSI-accredited."
+        "tier": "associate",
+        "rationale": "The recorded NIST RMF focus provides useful governance-domain knowledge at a two-year level. Accreditation and DoD listing do not establish professional delivery without stronger applied or experience evidence in this record."
       }
     }
   },

@@ -93,21 +93,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "NICCS-listed 24-hour practical; same hands-on rigor as OSCP, just web-scoped."
+        "rationale": "The recorded day-long black-box assessment and report demonstrate professional web-engagement delivery despite a one-year profile; narrower depth than OSWE limits its suitability as a senior AppSec signal."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Web-pentest peer of OSCP at the same hands-on tier; widely accepted as OSCP-equivalent for web roles."
+        "rationale": "A 24-hour black-box web assessment and report support professional web-pentest delivery despite a one-year profile. The recorded weaker signal than OSWE for senior roles limits expert placement."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Practical 24-hour black-box web exam — same tier as OSCP in the offensive ladder."
+        "rationale": "The recorded 24-hour black-box web practical plus report maps directly to application-assessment delivery. It warrants professional placement despite the one-year profile, while the record places senior web depth in the more advanced track."
       }
     }
   },

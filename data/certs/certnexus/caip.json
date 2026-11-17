@@ -87,21 +87,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "DoD COOL + ANSI; AI literacy is increasingly relevant to JP enterprise governance."
+        "rationale": "Accreditation, ethics and privacy coverage support the recorded associate hint at one year of experience; a changing AI-governance field and English multiple-choice assessment limit a stronger enterprise-security inference."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "DoD COOL + ANSI; first neutral AI cert recognised in DoD."
+        "rationale": "Recorded accreditation and DoD COOL recognition strengthen an associate AI practitioner hiring signal alongside the one-year profile. The multiple-choice format and evolving subject matter do not establish advanced operational AI-security competence."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Multiple-choice; emerging area but credential is foundational."
+        "rationale": "Vendor-neutral AI practice with ethics and privacy coverage is relevant to emerging consulting work, and the recorded hints consistently support associate. Accreditation does not overcome the multiple-choice format or establish production AI-security mastery."
       }
     }
   },

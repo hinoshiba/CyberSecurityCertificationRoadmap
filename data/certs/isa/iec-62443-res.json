@@ -87,21 +87,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "Recorded IACS technical-design coverage across IEC 62443 parts supports professional design responsibility at three years; course-bundled assessment does not independently demonstrate expert implementation practice."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "Recorded deep technical IACS design across several IEC 62443 parts and a three-year profile support professional design knowledge. Training-bundled assessment does not independently demonstrate field implementation, and the price adds no seniority evidence."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "The recorded three-year profile and technical IACS design depth across several IEC 62443 parts support professional design knowledge. The course-bundled exam limits claims of independently demonstrated implementation or expert status."
       }
     }
   },

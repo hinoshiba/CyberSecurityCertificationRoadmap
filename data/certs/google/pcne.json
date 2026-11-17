@@ -74,21 +74,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Hybrid connectivity, segmentation and Cloud Armor design support professional network-security responsibility at three years; GCP dependence bounds the portability of the recorded competence."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Hybrid connectivity, VPCs, segmentation and Cloud Armor with a three-year profile support professional network-security design. The proctored knowledge signal is useful for GCP staffing but does not show expert practical capability across vendors."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded hybrid connectivity, segmentation and Cloud Armor scope supports professional network design and operations. Vendor dependence and no documented extensive lab limit the tier."
       }
     }
   },

@@ -118,21 +118,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The RHCSA prerequisite and four-hour automation practical support professional Linux delivery beyond a two-year profile; Japanese availability aids local use while infrastructure and vendor focus limit security breadth."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "A four-hour live Ansible automation exam building on RHCSA supports professional systems delivery despite the two-year profile. Recorded DoD recognition strengthens hiring value, while general infrastructure scope limits direct incident-response claims."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded four-hour Ansible practical builds on a required current RHCSA and tests real automation delivery. That supports professional infrastructure work despite a two-year profile, with security depth limited by the general systems focus."
       }
     }
   },

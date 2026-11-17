@@ -67,21 +67,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded five-day external/internal assessment and live debrief support professional engagement delivery beyond a two-year profile; the evidence does not establish senior cross-domain organizational direction."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The stored five-day external/internal assessment and live debrief offer strong professional pentest delivery evidence. The two-year profile does not establish expert leadership, but the practical and communication requirements are meaningful hiring filters."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded five-day external and internal pentest, AD compromise and live debrief closely reproduce consulting delivery. This warrants professional placement despite a two-year profile."
       }
     }
   },

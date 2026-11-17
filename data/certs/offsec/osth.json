@@ -86,21 +86,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "The recorded day-long practical hunt and reporting support professional proactive investigation despite a two-year profile; limited market history prevents assuming established senior recognition."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "A 24-hour practical hunt with a report provides direct evidence of professional proactive investigation. Limited hiring history and a two-year profile mean it does not independently establish senior CTI or enterprise-response leadership."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional, professional); pending differentiated human persona review."
+        "rationale": "The recorded 24-hour practical hunt and report provide direct evidence of proactive analytical delivery. That supports professional placement at a two-year profile, without assuming senior recognition from a newer credential."
       }
     }
   },

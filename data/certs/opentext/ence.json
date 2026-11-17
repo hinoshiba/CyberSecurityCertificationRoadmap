@@ -63,21 +63,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded forensic case and written report, longstanding reputation and law-enforcement recognition support professional examination despite a one-year profile; EnCase dependency limits tool-independent inference."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "A practical evidence case and written report after a knowledge exam provide substantial professional forensic-work evidence. Recorded law-enforcement reputation strengthens the signal, while tool lock-in and the one-year profile limit broader seniority conclusions."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded take-home forensic case and written report demonstrate investigative delivery beyond the one-year profile. Longstanding community and law-enforcement recognition support professional placement, while EnCase dependence narrows the signal."
       }
     }
   },

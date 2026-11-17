@@ -80,21 +80,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "SJD-100 is the OffSec 100-level secure software development entry."
+        "rationale": "Entry secure-coding content provides a technical software-security foundation despite introductory external hints; zero experience, recent introduction and limited hiring evidence prevent an associate delivery inference."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "100-level secure-coding fundamentals."
+        "rationale": "Recorded secure-coding and software-development concepts are technical foundations, despite the stored introductory hints. Zero experience, limited hiring signal and a new credential history do not establish associate development responsibility."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "100-level secure software development fundamentals."
+        "rationale": "The recorded secure-coding scope is entry technical development knowledge rather than general IT literacy. Zero experience and limited evidence from a new credential keep it foundational despite the introductory source hints."
       }
     }
   },

@@ -110,21 +110,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "The recorded two-year Purview, DLP and insider-risk focus supports associate information-protection work, with Japanese access useful locally; a successor label does not establish broader governance seniority."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "Purview, DLP and insider-risk coverage with a two-year profile fit associate information-security administration. Case studies improve application relevance, but vendor-specific knowledge assessment does not demonstrate professional privacy engineering."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "The recorded DLP, insider-risk and Purview case-study scope fits a two-year information-security administrator. Vendor specificity and a knowledge-based assessment limit this to associate domain competence."
       }
     }
   },

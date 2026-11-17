@@ -67,21 +67,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Evidence handling and incident-response concentration work with a three-year profile support professional operational responsibility; the recorded Cisco scope limits proof of tool-independent forensic competence."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded concentration in evidence handling, digital forensics and incident response with three years of experience supports professional Cisco response knowledge. Vendor concentration and no explicit lab limit evidence of broader DFIR delivery."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The record describes a single Cisco-focused forensics and response concentration examination. Three years of expected experience are useful context, but without documented practical evidence handling it is an associate signal for consulting work."
       }
     }
   },

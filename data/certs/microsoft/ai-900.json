@@ -72,22 +72,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "introductory",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 1, introductory: 2. The ordered median is introductory. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded AI/ML concepts and zero-experience profile fit pre-professional literacy; limited hiring depth and an announced retirement in the snapshot constrain its longer-term credential signal."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "rationale": "Recorded AI/ML concepts and zero experience fit foundational Azure knowledge. The stored summary flags a June 2026 retirement plan, so this evidence does not establish current availability or an operational security hiring signal."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded exam covers AI and ML concepts without experience prerequisites, which is pre-professional literacy. The snapshot also flags a planned retirement, so the credential does not establish a durable engineering or current-availability claim."
       }
     }
   },

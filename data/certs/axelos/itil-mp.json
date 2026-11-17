@@ -98,21 +98,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "Four modules across service delivery and improvement provide professional management breadth, with Japanese availability useful locally; mandatory training and multiple-choice assessment do not independently establish expert leadership."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "Four modules covering service delivery and improvement support professional service-management breadth. Mandatory training and multiple-choice exams without an experience requirement make this weaker evidence for technical MSSP leadership than a practical credential."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Four service-management modules provide more structured knowledge than Foundation, but all recorded exams are multiple choice and no experience is required. The designation does not itself establish professional security delivery."
       }
     }
   },

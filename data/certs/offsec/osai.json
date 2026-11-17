@@ -93,22 +93,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert, specialty); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded 24-hour practical and report demonstrate focused AI/LLM assessment skills; this emerging niche, very limited hiring history and mixed expert/specialty hints favor unordered specialization over general seniority."
       },
       "maria-okonkwo": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert, specialty); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "A 24-hour practical plus report against AI/LLM systems establishes a focused offensive specialization. Very limited hiring history and the mixed expert/specialty hints make specialty more defensible than assigning general expert seniority to a new attack domain."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert, specialty); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded 24-hour practical and report directly test offensive work against AI and LLM systems. That narrow emerging attack surface fits specialty, while limited hiring data prevents equating novelty with broad expert seniority."
       }
     }
   },

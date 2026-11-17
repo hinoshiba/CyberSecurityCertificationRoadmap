@@ -109,21 +109,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'expert' supported by hiroshi-tanaka, maria-okonkwo; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "ANSI accredited; deep architecture credential, rare in JP."
+        "rationale": "Recorded architecture standing and federation/PAM design depth support expert architecture judgment at five years; the removed CISSP prerequisite and lack of practical testing limit assumptions about prior credentials and execution."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "ANSI accredited; senior architecture hiring signal."
+        "rationale": "Recorded accreditation, architecture standing and federation/PAM design depth support expert security design judgment with a five-year profile. The removed CISSP prerequisite must not be counted as current evidence, and no practical establishes implementation mastery."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Strong neutral architecture cert; no practical component limits the offensive perspective."
+        "rationale": "The recorded architecture, federation and PAM design depth with five years of experience supports professional design judgment. No practical component is documented, so I stop below the expert source hints."
       }
     }
   },

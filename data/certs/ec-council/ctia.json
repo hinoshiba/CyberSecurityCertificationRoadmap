@@ -86,21 +86,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "DoD COOL listing; entry-level CTI."
+        "rationale": "The recorded two-year profile and recognized training references support associate threat-intelligence knowledge; the multiple-choice format lacks direct analytical work sufficient for professional responsibility."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "DoD COOL + NICCS; multiple-choice limits depth."
+        "rationale": "Recorded DoD COOL and NICCS recognition add value to an accessible CTI entry credential. The two-year or training pathway and multiple-choice exam support associate knowledge rather than demonstrated professional analysis."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Multiple-choice CTI entry; overshadowed by GCTI for senior roles."
+        "rationale": "The recorded accessible CTI scope and two-year profile fit an associate intelligence credential. Catalog recognition does not replace a practical analytical work product, which the multiple-choice examination does not provide."
       }
     }
   },

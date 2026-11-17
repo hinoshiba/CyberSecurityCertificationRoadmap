@@ -67,21 +67,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded CQI/IRCA recognition, continuity-audit demand and a three-year profile support professional audit work; the course-and-exam description alone does not establish senior cross-domain authority."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded personnel-scheme accreditation, CQI/IRCA registration and a three-year profile support professional continuity-audit knowledge. The evidence describes a five-day BCMS course and proctored exam, so it does not by itself demonstrate extensive audit leadership."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded CQI/IRCA lead-auditor scope, personnel-scheme accreditation and three-year profile support professional continuity-audit work. The evidence describes a course and proctored exam, not expert technical security execution."
       }
     }
   },

@@ -89,21 +89,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Privacy-technical focus useful in JP under APPI."
+        "rationale": "Recorded accreditation, technical privacy coverage and a three-year profile support professional privacy-engineering decisions; relative novelty and a knowledge exam constrain claims of established expert implementation."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "ANSI accredited; technical privacy engineer focus."
+        "rationale": "Accreditation, technical privacy focus and a three-year profile support professional privacy-solutions judgment. The multiple-choice assessment leaves practical engineering unproven, and the record distinguishes it from stronger legal-focused signals."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Newer credential; technical privacy depth."
+        "tier": "associate",
+        "rationale": "The recorded technical privacy focus is relevant to secure systems, but the examination is multiple choice without documented implementation tasks. I therefore discount the professional hints to associate engineering knowledge despite the three-year profile."
       }
     }
   },

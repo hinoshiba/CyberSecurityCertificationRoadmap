@@ -107,21 +107,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "DoD 8140; NSA-endorsed for systems security engineering."
+        "rationale": "The recorded systems-security engineering endorsement, accreditation and expert hints support senior engineering direction at five years; its niche audience and absence of practical testing constrain broader implementation claims."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "DoD 8140 IASAE baseline; senior systems security engineer hire."
+        "rationale": "Recorded DoD recognition, accreditation and systems-security engineering endorsement support expert engineering responsibility. The five-year profile and lack of a practical temper operational assurance but do not erase the documented senior engineering scope."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Deep, no practical, but ANSI accredited and NSA endorsed."
+        "tier": "professional",
+        "rationale": "The recorded systems-security engineering recognition and five-year profile support professional engineering knowledge. The explicit absence of practical assessment limits the expert inference even with DoD and NSA-related recognition recorded."
       }
     }
   },

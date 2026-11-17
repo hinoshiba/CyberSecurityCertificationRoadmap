@@ -120,21 +120,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "Live-system performance testing, Japanese availability and recorded role recognition support associate administration at one year; general RHEL infrastructure scope does not demonstrate professional security-design responsibility."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "Live RHEL administration and recorded DoD recognition create a strong associate infrastructure hiring filter. The one-year profile and general system scope do not establish professional security engineering or response leadership."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "The recorded three-hour practical on live RHEL systems directly demonstrates administrator tasks at a one-year level. It is a strong associate infrastructure signal without proving professional security specialization."
       }
     }
   },

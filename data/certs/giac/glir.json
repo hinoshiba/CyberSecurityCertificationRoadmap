@@ -103,22 +103,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 2, specialty: 1. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "CyberLive Linux triage across kernel, processes, filesystems and containers supports professional incident delivery at three years; recent introduction and limited uptake restrain claims of established senior recognition."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Live Linux triage across kernels, processes, filesystems and containers plus accreditation makes a strong professional DFIR filter. Limited uptake and high training cost temper its hiring accessibility without negating the recorded practical depth."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded Linux kernel, process, filesystem and container forensics practical provides substantial specialist depth. Its explicit extension from general DFIR makes specialty the clearest placement, even with limited market uptake."
       }
     }
   },

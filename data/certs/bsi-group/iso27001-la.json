@@ -67,21 +67,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded accredited ISMS audit framework and three-year profile support professional audit responsibilities; completing the five-day course is not evidence of expert governance leadership or an audit portfolio."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded personnel-scheme accreditation, CQI/IRCA registration and three-year profile support professional ISMS audit knowledge. The evidence describes a five-day course and exam, so it should not be read as proof of extensive audit leadership or practical SOC skills."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "ISMS lead-auditor responsibilities and the recorded CQI/IRCA and personnel-accreditation factors support professional assurance work. I do not infer offensive competence or an expert level from the five-day course or price."
       }
     }
   },

@@ -74,21 +74,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded one-year deployment and operations profile supports an associate cloud practitioner; proctored vendor assessment does not establish broad security architecture or cross-cloud portability."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "Recorded deployment and operations coverage with a one-year profile fits associate GCP engineering. Proctoring helps knowledge assurance, but the stored hands-on description lacks explicit practical-exam logistics and remains vendor-specific."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded deployment and operations scope fits a one-year GCP practitioner. This is a useful associate platform signal, while vendor dependence and limited assessment details constrain broader security conclusions."
       }
     }
   },

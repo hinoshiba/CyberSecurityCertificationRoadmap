@@ -96,22 +96,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "professional",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "Longstanding audit recognition, verified experience and Japanese availability support professional assurance responsibility across the three-part exam; broad audit scope does not establish technical-security expertise."
       },
       "maria-okonkwo": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "Three exam parts, verified experience and established internal-audit recognition support professional audit responsibility. Security is only part of its broader scope, and the multiple-choice format does not demonstrate technical assessment execution."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded three-part audit coverage, verified experience and established internal-audit recognition support professional assurance work. Its multiple-choice and largely nonsecurity scope do not demonstrate expert technical assessment."
       }
     }
   },

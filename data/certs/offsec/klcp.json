@@ -80,22 +80,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 2, foundational: 1. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "PEN-103 is the OffSec 100-level Kali Linux fundamentals exam."
+        "tier": "associate",
+        "rationale": "The recorded one-year Kali operating-system focus and associate hints support a toolchain practitioner placement; multiple-choice testing and narrow OS scope do not demonstrate penetration-testing delivery."
       },
       "maria-okonkwo": {
-        "tier": "foundational",
-        "rationale": "OffSec 100-level OS-fundamentals credential."
+        "tier": "associate",
+        "rationale": "Kali operating-system knowledge and a one-year profile support an associate toolchain signal. The multiple-choice exam and narrow OS focus do not demonstrate penetration-testing delivery despite the OffSec association."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "100-level Kali Linux fundamentals — narrow but foundational."
+        "rationale": "The recorded examination covers Kali operating-system fundamentals entirely through multiple choice. Its narrow OS scope supports foundational tool-environment knowledge rather than the Professional label or independent pentesting ability."
       }
     }
   },

@@ -87,21 +87,21 @@
   ],
   "evaluation": {
     "computed_tier": "specialty",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "specialty",
-        "rationale": "Reverse engineering is a narrow specialty track."
+        "rationale": "Malware reverse engineering and CyberLive analysis provide substantial specialized depth, supported by peer recognition; the explicit narrow-use limitation and specialty hints make linear rank inappropriate."
       },
       "maria-okonkwo": {
         "tier": "specialty",
-        "rationale": "Specialty cert; not a linear progression step."
+        "rationale": "CyberLive malware-analysis tasks, accreditation and technical depth make GREM a strong reverse-engineering specialty. The record explicitly identifies its narrow use case, so it should not imply a universal promotion above general DFIR credentials."
       },
       "alex-novak": {
         "tier": "specialty",
-        "rationale": "Narrow but high-respect specialty."
+        "rationale": "The recorded CyberLive analysis tasks, reverse-engineering depth and strong peer reputation support a substantive malware-analysis specialty. The record explicitly identifies this as a narrow branch rather than a linear promotion."
       }
     }
   },

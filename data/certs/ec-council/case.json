@@ -85,21 +85,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "DHS/CISA NICCS listed; useful developer-facing credential but multiple-choice format."
+        "rationale": "Recorded developer alignment and language-specific application security fit an associate practitioner at two years; the absence of coding assessment limits evidence of professional secure-development delivery."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "NICCS recognition; multiple-choice limits hiring signal vs CSSLP."
+        "rationale": "Language-specific application-security coverage and the training-or-two-years entry path fit associate developer knowledge. The recorded NICCS hint helps context, but no practical coding assessment demonstrates professional delivery."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Language-specific is helpful; multiple-choice format is a minus."
+        "rationale": "The recorded .NET and Java application-security focus is relevant to developer-facing consulting and fits a two-year profile. Multiple-choice testing without practical coding prevents professional AppSec placement."
       }
     }
   },

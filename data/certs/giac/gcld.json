@@ -96,21 +96,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "A one-year cloud-security profile, accreditation and consistent associate hints support an associate baseline; open-book testing and high relative cost do not justify professional delivery claims."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "Recorded DoD recognition and accreditation strengthen this one-year cloud-security essentials signal to associate level. The open-book exam and foundational scope do not establish professional cloud engineering, regardless of its price."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate, associate); pending differentiated human persona review."
+        "rationale": "The recorded cloud-security essentials scope and one-year profile support associate domain knowledge. Accreditation and DoD alignment do not turn the open-book knowledge exam into demonstrated professional cloud delivery."
       }
     }
   },

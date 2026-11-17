@@ -93,21 +93,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "CyberLive web-assessment tasks and accreditation support professional testing delivery despite the two-year profile; weaker recorded peer recognition than OSWE limits an expert interpretation."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "CyberLive web-testing tasks and accreditation provide meaningful professional application-testing evidence despite the two-year profile. The recorded weaker peer standing than OSWE and high bundle cost limit its differentiation for senior specialist hires."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded CyberLive web-testing tasks provide relevant execution evidence beyond the two-year profile. They support professional AppSec assessment, while the record does not show expert source-review or exploitation depth."
       }
     }
   },

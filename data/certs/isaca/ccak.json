@@ -65,21 +65,21 @@
   ],
   "evaluation": {
     "computed_tier": "specialty",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "Joint ISACA/CSA recognition supports a focused cloud-audit specialization layered onto assurance work; the explicit narrow use case makes general seniority less informative than the recorded specialty hint."
       },
       "maria-okonkwo": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "Joint ISACA/CSA cloud-auditing coverage is a focused assurance specialty built beside cloud or audit practice. Proctoring and a two-year profile help, but the narrow use case does not establish general security seniority."
       },
       "alex-novak": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "The recorded joint ISACA and CSA cloud-audit credential addresses a specific assurance branch. Its explicitly narrow use case fits specialty rather than implying higher general cloud-engineering seniority."
       }
     }
   },

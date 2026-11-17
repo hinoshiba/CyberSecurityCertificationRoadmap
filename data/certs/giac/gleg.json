@@ -73,21 +73,21 @@
   ],
   "evaluation": {
     "computed_tier": "specialty",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "Legal and evidence-handling coverage is a narrow advisory specialization supported by recorded accreditation; no experience requirement and a very specific use case do not map to general incident-response rank."
       },
       "maria-okonkwo": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "Legal requirements for response, e-discovery and evidence handling form a narrow adjunct to operational security practice. Recorded accreditation and COOL recognition help assurance, but zero listed experience and a knowledge exam do not establish general practitioner seniority."
       },
       "alex-novak": {
         "tier": "specialty",
-        "rationale": "Auto-derived from third-party evaluations (specialty); pending differentiated human persona review."
+        "rationale": "Legal issues in incident response, e-discovery and evidence handling form the recorded narrow supporting discipline. The specialty hint is appropriate without treating legal knowledge as a higher general technical rank."
       }
     }
   },

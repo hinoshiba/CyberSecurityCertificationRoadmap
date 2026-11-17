@@ -114,21 +114,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "DoD 8140 baseline; strong DFIR signal."
+        "rationale": "A three-year response profile, accreditation and recorded DFIR reputation support professional incident handling; the open-book format and cost do not independently establish expert investigation capability."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "DoD 8140 CSSP-Incident-Responder; widely required for IR roles."
+        "rationale": "Recorded DoD recognition, accreditation and strong DFIR reputation support professional incident-handler hiring with a three-year profile. The supplied logistics describe an open-book proctored exam, so I do not infer an unrecorded practical component."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "CyberLive partial; strong peer reputation in DFIR."
+        "rationale": "The recorded three-year incident-handling profile, peer reputation and consistent professional hints support practitioner-level response responsibility. I do not infer a lab component from the open-book proctored format recorded here."
       }
     }
   },

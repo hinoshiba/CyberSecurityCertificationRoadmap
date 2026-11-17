@@ -105,22 +105,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "expert",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'professional' supported by hiroshi-tanaka, alex-novak; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 3. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Multi-domain architecture coverage; PBQ-heavy."
+        "tier": "expert",
+        "rationale": "The recorded ten-year profile, architecture scenarios and extensive performance questions support expert technical direction, reinforced by Japanese availability and accreditation; rebranding and breadth limit recognition and specialization."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "DoD 8140 IAT-III and IASAE; extensive PBQs; recent SecurityX rebrand."
+        "rationale": "Recorded DoD baseline recognition, accreditation and extensive performance-based architecture scenarios support expert technical judgment alongside the ten-year profile. Breadth limits and the rebrand remain caveats rather than reasons to disregard the assessment depth."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Heavy PBQs but multiple-choice base; rebrand creates short-term recognition risk."
+        "tier": "expert",
+        "rationale": "The recorded ten-year practitioner profile, architecture scenarios and extensive performance-based tasks support expert technical judgment. Breadth limits and the rebrand reduce precision of the signal without negating the senior assessment scope."
       }
     }
   },

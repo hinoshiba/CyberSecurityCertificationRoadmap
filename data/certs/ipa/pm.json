@@ -86,22 +86,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "professional",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "associate",
-        "rationale": "PM depth, not security-focused."
+        "tier": "professional",
+        "rationale": "The recorded five-year profile and enterprise project-management depth support professional delivery leadership in Japan; national recognition does not establish technical-security expertise beyond project governance."
       },
       "maria-okonkwo": {
-        "tier": "associate",
-        "rationale": "Project management; not security."
+        "tier": "professional",
+        "rationale": "Enterprise project-management depth with a five-year profile supports professional delivery leadership. Its national exam does not establish technical security skills, and local recognition limits its direct use in US screening."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "PM, not security."
+        "tier": "professional",
+        "rationale": "The recorded five-year enterprise-project profile supports professional planning and delivery management. The nonsecurity emphasis and paper assessment prevent inferring expert cybersecurity responsibility."
       }
     }
   },

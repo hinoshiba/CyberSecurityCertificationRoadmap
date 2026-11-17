@@ -71,21 +71,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 3. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "Recorded hands-on source review and advanced exploitation, together with explicit senior rigor, support expert web-testing depth; the four-year profile and absent local recognition limit broader enterprise-seniority claims."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "Recorded practical source review and advanced white- and black-box exploitation support expert web-testing depth. The four-year profile and limited logistics detail temper confidence, but the senior-rigor factors justify more than routine professional placement."
       },
       "alex-novak": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "The recorded fully practical source review and advanced white- and black-box exploitation establish senior AppSec depth. Combined with the senior-rigor factor, this supports expert placement despite a four-year typical profile."
       }
     }
   },

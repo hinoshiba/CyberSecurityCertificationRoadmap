@@ -62,22 +62,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 2, specialty: 1. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "Performance-based application of ATT&CK to intelligence is a focused framework specialization; recorded recognition supports credibility, while the two-year profile does not establish wider intelligence leadership."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The stored performance-based application of ATT&CK to intelligence workflows supports professional CTI delivery despite a two-year profile. NICCS listing and independent recognition help context but do not establish broader senior intelligence leadership."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded performance-based application of ATT&CK to intelligence workflows provides applied evidence beyond the two-year profile. This supports professional analytical delivery within the stated framework scope."
       }
     }
   },

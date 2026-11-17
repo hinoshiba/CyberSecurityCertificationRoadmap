@@ -78,21 +78,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "UK NCSC partner-recognised; respected for assured intel work."
+        "rationale": "Written intelligence analysis and a three-year profile support professional analytical responsibility; the recorded UK recognition is credible, although English delivery and regional concentration reduce local portability."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "UK NCSC recognition; written-analysis component lifts it above pure MCQ."
+        "rationale": "Written intelligence analysis and a three-year profile provide useful evidence of professional CTI work beyond recognition-only questions. Recorded regulator recognition strengthens assurance, though its regional reach limits US hiring familiarity."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "EU/UK regulator-recognised CTI pathway; strong written component."
+        "rationale": "Written intelligence analysis adds applied evidence beyond multiple-choice recall, and the recorded three-year profile fits professional analytical work. UK and EU recognition is relevant to this persona, while it does not establish expert technical offensive ability."
       }
     }
   },

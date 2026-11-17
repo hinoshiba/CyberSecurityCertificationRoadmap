@@ -82,21 +82,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 2, foundational: 1. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The recorded one-year project-management baseline and Japanese availability support associate coordination skills; incidental security coverage and a multiple-choice-heavy exam do not establish security-program ownership."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "rationale": "The one-year profile and project-management coverage support associate coordination skills, with some performance questions. Its incidental security content and weaker PM hiring recognition limit its usefulness for security delivery leadership."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "Auto-derived from third-party evaluations (associate); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "The recorded vendor-neutral project-management baseline can help organize security work. Its multiple-choice-heavy format and incidental security relevance support foundational supporting knowledge rather than a professional security rank."
       }
     }
   },

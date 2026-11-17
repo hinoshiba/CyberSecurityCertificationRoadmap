@@ -102,21 +102,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "DoD COOL; default ICS workforce credential, valued in JP energy and manufacturing."
+        "rationale": "The recorded industrial workforce relevance, accreditation and three-year profile support professional ICS security responsibility, particularly valuable in manufacturing; the open-book format does not establish expert operational delivery."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "DoD COOL + ANSI; default ICS hire."
+        "rationale": "Recorded DoD recognition, accreditation and industrial workforce demand support professional OT security responsibility. The three-year profile fits domain delivery, while the open-book exam alone does not prove practical plant-side response."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Default ICS workforce credential."
+        "rationale": "The recorded three-year industrial security profile and established ICS workforce role support professional knowledge across operational security concerns. This is a core industrial practitioner track, rather than a narrow specialty solely because it concerns OT."
       }
     }
   },

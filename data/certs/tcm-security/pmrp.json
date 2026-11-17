@@ -71,22 +71,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "Practical static/dynamic analysis and a reverse-engineering report establish a focused malware specialization; three-year experience and catalog recognition do not imply general incident-response seniority."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "Practical static and dynamic malware analysis with a reverse-engineering report establishes a focused DFIR specialty. The three-year profile and NICCS context do not make this a general incident-response seniority step."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded practical static and dynamic analysis with a reverse-engineering report validates a distinct malware-analysis branch. Specialty reflects that focused technical depth better than a general professional-career promotion."
       }
     }
   },

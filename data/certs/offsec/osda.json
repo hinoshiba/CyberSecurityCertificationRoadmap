@@ -90,21 +90,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Per OffSec course-code convention 200=professional. Hands-on blue-team practical with NICCS recognition."
+        "tier": "associate",
+        "rationale": "The lengthy practical and report substantiate associate detection and analysis skills, consistent with recorded hints; the one-year analyst scope and limited market history do not establish response leadership."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "SOC-200 sits at the same OffSec professional tier as OSCP/OSWA; 24-hour hands-on; NICCS-listed."
+        "rationale": "A 24-hour detection-and-analysis practical plus report provides substantial professional SOC execution evidence despite the one-year profile and associate hints. Limited hiring history reduces familiarity, but the work sample is more informative than an entry knowledge exam."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Defensive 200-level peer of OSCP — same hands-on practical caliber, blue-team scope."
+        "rationale": "The recorded 24-hour detection and analysis practical plus report provides substantial delivery evidence beyond entry analyst knowledge. That supports professional placement above the associate hints, while newer market recognition limits broader senior claims."
       }
     }
   },

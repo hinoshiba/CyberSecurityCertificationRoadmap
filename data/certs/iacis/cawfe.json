@@ -66,22 +66,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The CFCE prerequisite and advanced Windows-artifact practical work establish a focused forensic specialization; training gates and limited independent recognition constrain portability beyond that investigative niche."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "Advanced Windows artifacts and internals built on CFCE form a focused forensic specialization. The recorded hands-on component and law-enforcement recognition are strong signals, while training access and limited outside recognition constrain portability."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded Windows-internals and artifact depth builds explicitly on CFCE and includes practical assessment. That advanced forensic branch fits specialty, with limited wider recognition constraining broader claims."
       }
     }
   },

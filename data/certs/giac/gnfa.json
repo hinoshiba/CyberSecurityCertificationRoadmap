@@ -90,21 +90,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded packet, flow and encrypted-traffic analysis scope supports professional network-forensics responsibility at three years; accreditation adds confidence without establishing wider expert incident leadership."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "PCAP, encrypted traffic, NetFlow and wireless evidence analysis support professional network-forensics responsibility. Accreditation and recorded COOL recognition strengthen the signal, while the exam record lacks direct lab evidence."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded traffic, NetFlow and capture-analysis scope supports professional network investigation at a three-year level. It builds a coherent forensic role, but the evidence does not establish expert execution or leadership."
       }
     }
   },

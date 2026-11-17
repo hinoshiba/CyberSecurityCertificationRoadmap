@@ -75,21 +75,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "SRE, delivery pipelines and observability at three years support professional cloud operations; the recorded proctored assessment does not independently establish expert hands-on security architecture."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded SRE, CI/CD and observability implementation with three years of experience fits professional cloud operations delivery. Vendor concentration and the absence of a stated practical limit evidence of independent incident command."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded SRE, CI/CD and observability scope supports delivery decisions at a three-year practitioner level. I credit modern operational relevance while withholding expert credit because practical assessment is unspecified."
       }
     }
   },

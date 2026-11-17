@@ -83,22 +83,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "professional",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'associate' supported by maria-okonkwo, alex-novak; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Senior network design national exam in JP."
+        "rationale": "Deep network design and consistent recorded IPA/METI professional hints support professional infrastructure judgment; open eligibility and non-security coverage do not demonstrate an experienced expert practitioner."
       },
       "maria-okonkwo": {
-        "tier": "associate",
-        "rationale": "JP-only; networking focus rather than pure security."
+        "tier": "professional",
+        "rationale": "Recorded deep network-design coverage and the IPA/METI professional hints support professional design knowledge despite open entry. The paper exam and local recognition leave practical implementation and US hiring familiarity unproven."
       },
       "alex-novak": {
-        "tier": "associate",
-        "rationale": "Network design focus; not a security credential proper."
+        "tier": "professional",
+        "rationale": "The recorded deep network-design focus and consistent professional authority hints support design-level knowledge despite open entry. Its paper format does not establish expert practical delivery or dedicated security depth."
       }
     }
   },

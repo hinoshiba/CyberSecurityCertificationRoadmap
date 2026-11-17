@@ -71,21 +71,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Pearson VUE proctored vendor exam; PAM market leader."
+        "rationale": "The recorded one-year PAM administration profile and hiring relevance support associate implementation knowledge; a product-specific multiple-choice exam does not establish broader IAM architecture ownership."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Most-requested vendor cert for PAM operators in US enterprise."
+        "rationale": "Recorded PAM hiring demand and a proctored platform exam support associate CyberArk administration. The one-year profile and multiple-choice vendor scope do not establish broader identity architecture or practical integration mastery."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Vendor-specific operator credential."
+        "rationale": "The recorded one-year PAM administration profile and deployment demand support associate product knowledge. A multiple-choice CyberArk-only exam does not demonstrate broader identity-security design or offensive capability."
       }
     }
   },

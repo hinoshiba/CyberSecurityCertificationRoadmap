@@ -61,21 +61,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "Hands-on network defense and a two-year profile support associate operational skill; the recorded vendor-training focus and limited independent recognition do not demonstrate ownership of broader defensive design."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The hands-on network-defense exam demonstrates associate implementation ability with a two-year profile. Sparse scope detail and limited independent recognition do not yet establish professional ownership of complex defense delivery."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "rationale": "The recorded live network-defense tasks demonstrate more than theoretical recall at a two-year level. With limited detail about breadth or reporting and limited outside recognition, associate is the supported delivery signal."
       }
     }
   },

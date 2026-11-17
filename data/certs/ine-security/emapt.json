@@ -70,22 +70,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "Practical Android and iOS testing constitutes a focused mobile-application specialization; recorded peer recognition supports its usefulness, while auto-grading and limited independent recognition constrain broader seniority claims."
       },
       "maria-okonkwo": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "Practical Android and iOS testing forms a focused mobile-application specialization. The two-year profile and real targets are useful, while auto-grading and provider-focused training limit evidence of broader pentest seniority."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded Android and iOS practical extends a prior offensive track into mobile application testing. That distinct attack surface and community reputation support specialty placement despite limited independent recognition."
       }
     }
   },

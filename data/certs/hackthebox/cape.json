@@ -75,22 +75,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 1, specialty: 2. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded hands-on depth across AD trust and authentication attacks establishes a focused directory-security specialization; the four-year profile and domain concentration do not equate to broad expert direction."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "Recorded fully practical assessment of ADCS, trust abuse, Kerberos and related enterprise attacks supports expert offensive depth. The four-year profile is below the usual expert range, but senior rigor and the stored advanced scope outweigh that limitation."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "specialty",
+        "rationale": "The recorded fully practical AD assessment reaches Kerberos, ADCS, Exchange and trust abuse in substantial depth. This is an advanced directory-specific branch of pentesting, so specialty conveys its scope better than a universal expert rank."
       }
     }
   },

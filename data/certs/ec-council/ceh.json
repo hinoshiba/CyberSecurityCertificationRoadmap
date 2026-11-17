@@ -97,21 +97,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "DoD 8140 baseline; JA exam; familiar in JP procurement."
+        "rationale": "Japanese availability, accreditation and broad tool coverage support associate offensive knowledge; the base exam is multiple-choice and the optional practical cannot substantiate every holder's hands-on competence."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "DoD 8140 baseline CSSP-Analyst; multiple-choice format limits the hiring signal."
+        "rationale": "Recorded DoD recognition and accreditation make CEH a useful associate screening credential for contract hiring. The base exam is multiple-choice, so its optional practical cannot be credited as mandatory evidence of pentest execution."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Multiple-choice base, optional Practical add-on; mixed peer reputation in offensive circles."
+        "rationale": "The recorded broad offensive tool coverage supports associate knowledge, with accreditation adding exam credibility. The practical exam is optional, so it cannot be credited to base CEH; mixed peer reputation and multiple-choice assessment limit the tier."
       }
     }
   },

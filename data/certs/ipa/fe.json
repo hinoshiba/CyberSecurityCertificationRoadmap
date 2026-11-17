@@ -95,21 +95,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "Gateway to higher IPA exams; broad IT fundamentals."
+        "rationale": "National recognition, programming and infrastructure fundamentals make this a strong Japanese technical foundation; zero experience and broad IT coverage do not establish applied security-domain ownership."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "JP-only IT fundamentals."
+        "rationale": "Programming and infrastructure fundamentals under a national technical exam fit foundational IT practitioner knowledge. Open entry, broad IT scope and local recognition limit stronger security-delivery claims."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "Broad IT not security-specific."
+        "rationale": "The recorded programming and infrastructure foundations clearly serve an entry engineering track. Zero experience and broad IT coverage support foundational placement rather than a specialized security rank."
       }
     }
   },

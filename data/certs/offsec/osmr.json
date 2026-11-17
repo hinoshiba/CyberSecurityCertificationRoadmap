@@ -91,22 +91,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "expert",
-        "rationale": "Per OffSec course-code convention 300=expert. EXP-312 follows OSED in the exploit-dev ladder."
+        "tier": "specialty",
+        "rationale": "The recorded 48-hour macOS research practical demonstrates rare platform-specific depth; explicit narrow use and consistent specialty hints make this a specialization rather than a general progression step."
       },
       "maria-okonkwo": {
-        "tier": "expert",
-        "rationale": "300-level OffSec exploit-research; same band as OSED/OSEP."
+        "tier": "specialty",
+        "rationale": "A 48-hour macOS exploit-research practical plus report establishes rare platform-specific research depth. Its very narrow use case and cost favor specialty placement rather than general offensive seniority."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "EXP-312 is expert-tier hands-on exploit research; macOS focus is the specialization, not a tier-down."
+        "tier": "specialty",
+        "rationale": "The recorded 48-hour macOS exploit-research practical builds on exploit-development knowledge. Its explicitly narrow platform focus makes specialty the appropriate classification despite considerable technical rigor."
       }
     }
   },

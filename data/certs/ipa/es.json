@@ -85,21 +85,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Embedded depth aligns with JP manufacturing OT relevance."
+        "rationale": "Recorded embedded and IoT depth plus national recognition support professional engineering responsibility valuable in manufacturing; security is only part of the scope, so expert cyber standing is not established."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Embedded/IoT depth; OT relevance growing."
+        "rationale": "Recorded embedded and IoT depth with three years of experience supports professional engineering knowledge. The paper exam and partial security focus do not demonstrate practical OT incident response or cross-domain security leadership."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Embedded depth; partial security coverage."
+        "rationale": "The recorded embedded and IoT depth supports professional systems work at a three-year level. Security is only part of the scope, and the supplied evidence does not demonstrate advanced practical offensive assessment."
       }
     }
   },

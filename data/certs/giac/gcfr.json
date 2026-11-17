@@ -101,21 +101,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Cloud-log and control-plane investigation at three years supports professional response responsibility, reinforced by accreditation; open-book testing gives less evidence of live execution than a practical assessment."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Cloud log and control-plane forensics, accreditation and a three-year profile align well with professional MSSP response work. The open-book exam record does not specify a practical component, limiting confidence in independent live-cloud execution."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded cloud-log and control-plane investigations address a modern response surface at a three-year level. Accreditation and professional hints support delivery knowledge, while the record does not document a practical exam sufficient for a higher tier."
       }
     }
   },

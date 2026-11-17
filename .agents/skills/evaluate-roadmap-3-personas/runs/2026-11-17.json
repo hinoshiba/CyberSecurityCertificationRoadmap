@@ -1,0 +1,563 @@
+{
+  "evaluated_at": "2026-11-17T13:00:49Z",
+  "base_commit": "ed801e25764599aa0939c8b73b2d13aea5679f0c",
+  "scope": "Independent AI tier reassessment of stored evidence; no claim of newly verified exam facts or source freshness.",
+  "input_sha256_excluding_evaluations": "dfbeff855968172e70fe293609d719218eb13b34061ab1ed66d79185e521ac5d",
+  "rubric_files_sha256": {
+    "data/tiers.json": "07a048944adc5a2010e4eb38b16bd287b261ee42b037633985eaa336a0d02338",
+    "data/domains.json": "fa827d3ff904839ddb1c7f76a3a6a4a83ec7f2af237bda80571c58872b8d783c",
+    "data/sources/agencies.json": "ab65e12c5ceae3204451f19491594d82c128d99efc138dee01cdd314fe36a93b",
+    ".agents/skills/evaluate-roadmap-3-personas/SKILL.md": "00133cd6f1ee51f977badab6fdf67469d8bb4909819b95fc6752e59a527d01f9"
+  },
+  "review_sha256": {
+    "hiroshi-tanaka": "fb261e357b2f39fe088567166172773c839c48121ac1c679a6647ae1b3cb4df6",
+    "maria-okonkwo": "6eb5b54b56feaf34d13b0de37e743bdcc8a4318c3c0e7b5e7023a4cd24e30d26",
+    "alex-novak": "817b0d39dda5bf18a5b54bfa35770284f7d00dbf745e4b3b4b8676fc36406757"
+  },
+  "reviewer_cert_counts": {
+    "hiroshi-tanaka": 317,
+    "maria-okonkwo": 317,
+    "alex-novak": 317
+  },
+  "cert_count": 317,
+  "aggregation": "Ordered median; any specialty vote selects unordered specialty, preserving scripts/run_3_persona_eval.py median_tier. Seed/fallback evaluator was not executed.",
+  "gate": {
+    "max_distance": 1,
+    "max_share": 0.1,
+    "observed_share": 0.0,
+    "passed": true,
+    "method": "Distance between remaining ordered votes, excluding specialty votes; denominator is all 317 certificates. This also checks the ordered pair in mixed-specialty records.",
+    "exceeding_records": []
+  },
+  "mixed_specialty_records": [
+    {
+      "id": "asis.pci",
+      "tiers": {
+        "hiroshi-tanaka": "specialty",
+        "maria-okonkwo": "professional",
+        "alex-novak": "specialty"
+      }
+    },
+    {
+      "id": "giac.gcip",
+      "tiers": {
+        "hiroshi-tanaka": "specialty",
+        "maria-okonkwo": "professional",
+        "alex-novak": "specialty"
+      }
+    },
+    {
+      "id": "giac.glir",
+      "tiers": {
+        "hiroshi-tanaka": "professional",
+        "maria-okonkwo": "professional",
+        "alex-novak": "specialty"
+      }
+    },
+    {
+      "id": "giac.grid",
+      "tiers": {
+        "hiroshi-tanaka": "specialty",
+        "maria-okonkwo": "professional",
+        "alex-novak": "specialty"
+      }
+    },
+    {
+      "id": "hackthebox.cape",
+      "tiers": {
+        "hiroshi-tanaka": "specialty",
+        "maria-okonkwo": "expert",
+        "alex-novak": "specialty"
+      }
+    },
+    {
+      "id": "jipdec.pmark-auditor",
+      "tiers": {
+        "hiroshi-tanaka": "professional",
+        "maria-okonkwo": "professional",
+        "alex-novak": "specialty"
+      }
+    },
+    {
+      "id": "mad20.mad-cti",
+      "tiers": {
+        "hiroshi-tanaka": "specialty",
+        "maria-okonkwo": "professional",
+        "alex-novak": "professional"
+      }
+    },
+    {
+      "id": "offsec.osee",
+      "tiers": {
+        "hiroshi-tanaka": "specialty",
+        "maria-okonkwo": "specialty",
+        "alex-novak": "expert"
+      }
+    }
+  ],
+  "previous_tier_counts": {
+    "associate": 79,
+    "expert": 48,
+    "foundational": 42,
+    "introductory": 8,
+    "professional": 130,
+    "specialty": 10
+  },
+  "current_tier_counts": {
+    "associate": 81,
+    "expert": 42,
+    "foundational": 34,
+    "introductory": 12,
+    "professional": 117,
+    "specialty": 31
+  },
+  "changed_tier_count": 89,
+  "changed_tiers": [
+    {
+      "id": "apple.acsp",
+      "previous": "associate",
+      "current": "foundational"
+    },
+    {
+      "id": "asis.app",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "asis.pci",
+      "previous": "associate",
+      "current": "specialty"
+    },
+    {
+      "id": "aws.aif-c01",
+      "previous": "foundational",
+      "current": "introductory"
+    },
+    {
+      "id": "aws.clf-c02",
+      "previous": "foundational",
+      "current": "introductory"
+    },
+    {
+      "id": "axelos.itil-foundation",
+      "previous": "foundational",
+      "current": "introductory"
+    },
+    {
+      "id": "axelos.itil-sl",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "axelos.mor-practitioner",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "cisco.cct",
+      "previous": "introductory",
+      "current": "foundational"
+    },
+    {
+      "id": "cncf.cka",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "cncf.ckad",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "comptia.a-plus",
+      "previous": "associate",
+      "current": "foundational"
+    },
+    {
+      "id": "comptia.casp-plus",
+      "previous": "professional",
+      "current": "expert"
+    },
+    {
+      "id": "comptia.cysa-plus",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "cwnp.cwsp",
+      "previous": "associate",
+      "current": "specialty"
+    },
+    {
+      "id": "cyberdefenders.ccd",
+      "previous": "foundational",
+      "current": "professional"
+    },
+    {
+      "id": "drii.dacrp",
+      "previous": "associate",
+      "current": "foundational"
+    },
+    {
+      "id": "drii.dcbca",
+      "previous": "foundational",
+      "current": "associate"
+    },
+    {
+      "id": "drii.dcbcla",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "f5.ca",
+      "previous": "foundational",
+      "current": "associate"
+    },
+    {
+      "id": "giac.gasf",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "giac.gcip",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "giac.geir",
+      "previous": "associate",
+      "current": "expert"
+    },
+    {
+      "id": "giac.gfact",
+      "previous": "associate",
+      "current": "foundational"
+    },
+    {
+      "id": "giac.glir",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "giac.gmle",
+      "previous": "associate",
+      "current": "specialty"
+    },
+    {
+      "id": "giac.gmob",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "giac.grid",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "giac.gxpn",
+      "previous": "expert",
+      "current": "specialty"
+    },
+    {
+      "id": "google.cdl",
+      "previous": "foundational",
+      "current": "introductory"
+    },
+    {
+      "id": "google.gen-ai-leader",
+      "previous": "foundational",
+      "current": "introductory"
+    },
+    {
+      "id": "hackthebox.cape",
+      "previous": "expert",
+      "current": "specialty"
+    },
+    {
+      "id": "iacis.cawfe",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "ibm.cloud-security-engineer",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "idpro.cidpro",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "iia.cia",
+      "previous": "foundational",
+      "current": "professional"
+    },
+    {
+      "id": "ine-security.ecthp",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "ine-security.emapt",
+      "previous": "foundational",
+      "current": "specialty"
+    },
+    {
+      "id": "ipa.db",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "ipa.nw",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "ipa.pm",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "ipa.sg",
+      "previous": "associate",
+      "current": "foundational"
+    },
+    {
+      "id": "ipa.st",
+      "previous": "professional",
+      "current": "expert"
+    },
+    {
+      "id": "isa.iec-62443-rds",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "isa.iec-62443-rse",
+      "previous": "expert",
+      "current": "professional"
+    },
+    {
+      "id": "isc2.cc",
+      "previous": "introductory",
+      "current": "foundational"
+    },
+    {
+      "id": "isc2.hcispp",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "jipdec.pmark-auditor",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "lpi.security-essentials",
+      "previous": "introductory",
+      "current": "foundational"
+    },
+    {
+      "id": "mad20.mad-cti",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "microsoft.ai-900",
+      "previous": "foundational",
+      "current": "introductory"
+    },
+    {
+      "id": "microsoft.az-305",
+      "previous": "expert",
+      "current": "professional"
+    },
+    {
+      "id": "microsoft.az-900",
+      "previous": "foundational",
+      "current": "introductory"
+    },
+    {
+      "id": "microsoft.ms-102",
+      "previous": "expert",
+      "current": "professional"
+    },
+    {
+      "id": "mirantis.dca",
+      "previous": "foundational",
+      "current": "associate"
+    },
+    {
+      "id": "offsec.klcp",
+      "previous": "foundational",
+      "current": "associate"
+    },
+    {
+      "id": "offsec.osai",
+      "previous": "expert",
+      "current": "specialty"
+    },
+    {
+      "id": "offsec.osed",
+      "previous": "expert",
+      "current": "specialty"
+    },
+    {
+      "id": "offsec.osmr",
+      "previous": "expert",
+      "current": "specialty"
+    },
+    {
+      "id": "offsec.oswp",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "open-group.togaf",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "opentext.cfsr",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "oracle.oci-security-pro",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "paloalto.security-operations-analyst",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "pmi.capm",
+      "previous": "associate",
+      "current": "foundational"
+    },
+    {
+      "id": "pmi.pgmp",
+      "previous": "professional",
+      "current": "expert"
+    },
+    {
+      "id": "pmi.pmi-acp",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "pmi.pmp",
+      "previous": "expert",
+      "current": "professional"
+    },
+    {
+      "id": "portswigger.bscp",
+      "previous": "expert",
+      "current": "professional"
+    },
+    {
+      "id": "practical-devsecops.cdp",
+      "previous": "associate",
+      "current": "professional"
+    },
+    {
+      "id": "red-hat.rhca",
+      "previous": "associate",
+      "current": "expert"
+    },
+    {
+      "id": "sailpoint.identityiq-engineer",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "scrum-org.pal",
+      "previous": "professional",
+      "current": "foundational"
+    },
+    {
+      "id": "scrum-org.psd",
+      "previous": "professional",
+      "current": "foundational"
+    },
+    {
+      "id": "scrum-org.psm-i",
+      "previous": "expert",
+      "current": "foundational"
+    },
+    {
+      "id": "scrum-org.psm-ii",
+      "previous": "expert",
+      "current": "associate"
+    },
+    {
+      "id": "scrum-org.psm-iii",
+      "previous": "expert",
+      "current": "professional"
+    },
+    {
+      "id": "scrum-org.sps",
+      "previous": "professional",
+      "current": "associate"
+    },
+    {
+      "id": "security-blue-team.btl1",
+      "previous": "foundational",
+      "current": "associate"
+    },
+    {
+      "id": "security-blue-team.btl2",
+      "previous": "foundational",
+      "current": "professional"
+    },
+    {
+      "id": "suse.sca",
+      "previous": "foundational",
+      "current": "associate"
+    },
+    {
+      "id": "suse.sce",
+      "previous": "foundational",
+      "current": "professional"
+    },
+    {
+      "id": "tcm-security.pjpt",
+      "previous": "foundational",
+      "current": "associate"
+    },
+    {
+      "id": "tcm-security.pmrp",
+      "previous": "professional",
+      "current": "specialty"
+    },
+    {
+      "id": "vmware.vcdx-dcv",
+      "previous": "professional",
+      "current": "expert"
+    },
+    {
+      "id": "vmware.vcix-dcv",
+      "previous": "professional",
+      "current": "expert"
+    },
+    {
+      "id": "vmware.vcix-nv",
+      "previous": "professional",
+      "current": "expert"
+    },
+    {
+      "id": "wcna.wcna",
+      "previous": "foundational",
+      "current": "associate"
+    },
+    {
+      "id": "zero2automated.zar",
+      "previous": "expert",
+      "current": "specialty"
+    }
+  ],
+  "source_facts_changed": false
+}

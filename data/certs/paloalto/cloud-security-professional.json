@@ -67,21 +67,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded CSPM, workload, infrastructure-as-code and runtime scope supports professional cloud-defense responsibility at three years; Prisma Cloud focus does not establish vendor-neutral architecture breadth."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded CSPM, workload protection, IaC and runtime-defense coverage with a three-year profile supports professional CNAPP responsibility. The vendor-specific proctored exam does not demonstrate practical cross-platform cloud response."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded CNAPP scope spans posture, workload, IaC and runtime defense at a three-year level. That supports professional cloud-security knowledge, while product dependence and unspecified practical assessment limit the ceiling."
       }
     }
   },

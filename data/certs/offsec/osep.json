@@ -89,21 +89,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 3. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Advanced AV bypass / AD content is at the senior offensive level."
+        "rationale": "The recorded 48-hour practical, advanced defense evasion and AD operations support expert offensive execution despite a three-year profile; tooling concentration limits transfer beyond the assessed approach."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Strong red-team hiring signal; long practical exam."
+        "rationale": "A 48-hour practical plus report covering advanced AV bypass and AD operations supports expert offensive execution. Strong recorded peer respect and expert hints outweigh the shorter three-year profile, while tooling focus limits universal portability."
       },
       "alex-novak": {
         "tier": "expert",
-        "rationale": "48-hour practical, AV bypass, modern - peer-respected expert."
+        "rationale": "The recorded 48-hour practical and report combine advanced evasion and AD work with strong red-team peer respect. This supports expert offensive delivery despite the three-year profile, while the tooling focus remains a portability limitation."
       }
     }
   },

@@ -72,22 +72,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "introductory",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 1, introductory: 2. The ordered median is introductory. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded scope is cloud literacy and shared-responsibility basics without experience requirements; vendor proctoring and a foundational hint do not establish an engineering practitioner baseline."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "rationale": "Recorded shared responsibility, IAM and compliance basics provide a foundational cloud-security vocabulary. Zero experience and the limited entry hiring signal do not demonstrate cloud operations or leadership."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded cloud literacy, shared-responsibility and compliance basics require no experience. Proctoring does not turn this business-oriented foundation into an engineering credential."
       }
     }
   },

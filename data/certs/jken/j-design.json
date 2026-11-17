@@ -79,21 +79,21 @@
   ],
   "evaluation": {
     "computed_tier": "introductory",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced introductory: 3. The ordered median is introductory. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "introductory",
-        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+        "rationale": "Recorded MEXT sponsorship adds local educational credibility, but open-entry information-design content and limited security relevance fit introductory literacy rather than a technical security practitioner tier."
       },
       "maria-okonkwo": {
         "tier": "introductory",
-        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+        "rationale": "The recorded information-design scope, zero-experience entry and introductory hint fit pre-professional literacy. MEXT sponsorship does not establish technical application-security capability where the record explicitly limits security relevance."
       },
       "alex-novak": {
         "tier": "introductory",
-        "rationale": "Auto-derived from third-party evaluations (introductory); pending differentiated human persona review."
+        "rationale": "The recorded entry information-design scope has limited security relevance and no experience requirement. Ministry sponsorship supports the educational context, not a security-engineering rank."
       }
     }
   },

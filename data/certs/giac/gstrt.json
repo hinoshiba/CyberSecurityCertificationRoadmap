@@ -100,21 +100,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "The seven-year profile, executive policy authorship and explicit senior rigor support expert governance direction; recorded accreditation adds confidence, though the exam description does not demonstrate hands-on technical breadth."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "Recorded executive policy and strategy scope, senior rigor and seven years of experience support expert security direction. Accreditation and COOL recognition reinforce the signal, while a proctored knowledge exam is not proof of successful organizational leadership."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "Seven years and the recorded strategic planning and policy scope indicate senior advisory relevance. Without a portfolio, endorsement or applied leadership assessment in the supplied record, I retain professional below the expert hint."
       }
     }
   },

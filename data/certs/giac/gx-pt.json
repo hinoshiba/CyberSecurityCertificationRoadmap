@@ -105,21 +105,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 3. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "The recorded four-hour practical spanning eleven assessment-course areas and experienced GPEN audience support expert testing breadth; recent uptake and high cost constrain market accessibility rather than assessed rigor."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "A fully practical four-hour assessment drawing across multiple penetration-testing disciplines supports expert technical breadth. Accreditation and a five-year profile strengthen that signal despite limited market uptake and expensive preparation."
       },
       "alex-novak": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "The recorded all-practical examination spans an unusually broad set of penetration-testing topics and targets experienced GPEN holders. That applied depth supports expert offensive assessment even though the series has limited hiring uptake."
       }
     }
   },

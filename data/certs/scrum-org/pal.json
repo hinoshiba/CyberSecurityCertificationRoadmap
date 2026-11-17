@@ -73,22 +73,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "foundational",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 2, introductory: 1. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "The recorded agile-leadership framework offers entry management knowledge, but open entry and a short multiple-choice assessment do not substantiate executive responsibility despite the recognition factor."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "foundational",
+        "rationale": "The accessible agile-leadership assessment provides foundational management vocabulary. Zero experience and a one-hour open-book objective exam do not demonstrate executive leadership or technical security capability."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "introductory",
+        "rationale": "The recorded leadership assessment requires no experience and is entirely objective, with explicitly limited depth. Its nontechnical scope supplies introductory delivery-method literacy rather than security leadership evidence."
       }
     }
   },

@@ -78,21 +78,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "The recorded CCSM-plus-specializations pathway and explicit senior scope support expert responsibility within the Check Point estate; vendor dependence limits transfer to broader enterprise architecture."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "The stored requirement for CCSM plus advanced specializations and senior-scope factors supports expert depth within Check Point. The record does not specify a practical exam, so I would still validate hands-on skills before a senior MSSP hire."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "Advanced specializations and the recorded senior-scope factor indicate substantial Check Point expertise. With five years and only an unspecified proctored assessment documented, I retain professional rather than infer cross-domain expert capability."
       }
     }
   },

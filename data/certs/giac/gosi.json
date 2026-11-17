@@ -72,21 +72,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Collection, verification, operational security and reporting form an end-to-end intelligence workflow supporting the recorded professional hint; the two-year profile and lack of described practical assessment limit a higher inference."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Recorded collection, verification, OPSEC and reporting coverage supports professional OSINT delivery despite the two-year profile. Accreditation and COOL recognition add confidence, but no practical investigation or written-report assessment is specified."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded collection, verification, OPSEC and reporting methods are useful OSINT practitioner knowledge. With a two-year profile and no documented practical collection report, I place it below the professional source hint."
       }
     }
   },

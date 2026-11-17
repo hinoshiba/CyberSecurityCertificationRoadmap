@@ -94,22 +94,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "expert",
-        "rationale": "EXP-301 is OffSec 300-level expert exploit-dev."
+        "tier": "specialty",
+        "rationale": "The recorded 48-hour practical and report show substantial Windows user-mode exploit-development depth; explicit platform and exploitation limits favor a technical specialty over general security seniority."
       },
       "maria-okonkwo": {
-        "tier": "expert",
-        "rationale": "300-level OffSec hands-on expert tier."
+        "tier": "specialty",
+        "rationale": "A 48-hour Windows user-mode exploit-development practical plus report demonstrates a distinct technical specialization. Its narrow platform and exploit scope should not imply broad expert red-team leadership, notwithstanding the expert hints."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "48-hour practical exploit-dev exam at the 300-level expert band."
+        "tier": "specialty",
+        "rationale": "The recorded 48-hour practical and report validate substantial Windows user-mode exploit-development depth. Its explicit platform and technique limitation makes specialty more informative than a general expert-career rank."
       }
     }
   },

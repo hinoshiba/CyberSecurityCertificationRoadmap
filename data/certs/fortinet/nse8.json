@@ -73,21 +73,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "The recorded end-to-end fabric design, scenario assessment and explicit senior rigor support expert responsibility within Fortinet deployments; a five-year profile and vendor dependence limit broader interpretations."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "Recorded end-to-end Security Fabric design, scenario assessment and senior-scope factors support expert platform architecture. The five-year profile and abbreviated logistics leave uncertainty about practical breadth, which I would investigate during hiring."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded end-to-end design scope and five-year profile indicate senior product knowledge. I discount the Expert label because the supplied evidence describes theory and scenarios rather than an extensive practical delivery assessment."
       }
     }
   },

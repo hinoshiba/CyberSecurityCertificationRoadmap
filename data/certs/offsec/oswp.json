@@ -92,22 +92,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "specialty",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced specialty: 3. The existing unordered-specialty rule applies when at least one reviewer identifies a specialty track. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Per OffSec course-code convention 200=professional. Narrow wireless scope but hands-on practical."
+        "tier": "specialty",
+        "rationale": "Hands-on wireless assessment provides a focused technical specialization; its explicit narrow use and limited demand make linear seniority less useful than describing the specific capability assessed."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "200-level OffSec hands-on; aligns with the OSCP/OSDA professional tier band."
+        "tier": "specialty",
+        "rationale": "A four-hour wireless practical offers useful focused offensive evidence at relatively accessible cost. The explicitly narrow use case and limited demand make specialty more useful than treating it as a universal practitioner promotion."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "PEN-210 is at the OffSec 200 professional band, just narrowly scoped to wireless."
+        "tier": "specialty",
+        "rationale": "The recorded four-hour wireless-target practical validates a specific offensive branch. Its narrow use case and limited wireless demand make specialty clearer than treating the Professional title as general seniority."
       }
     }
   },

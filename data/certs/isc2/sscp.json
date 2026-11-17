@@ -92,21 +92,21 @@
   ],
   "evaluation": {
     "computed_tier": "associate",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "associate",
-        "rationale": "Useful associate-level credential but overshadowed by Sec+ in JP hiring."
+        "rationale": "The recorded one-year practitioner profile and accreditation support associate security administration knowledge; no practical component and weaker hiring visibility limit evidence for independent professional delivery."
       },
       "maria-okonkwo": {
         "tier": "associate",
-        "rationale": "DoD 8140 baseline at associate level; ANSI accredited; lower hiring demand than Sec+."
+        "rationale": "Recorded DoD approval, accreditation and one year of experience support a credible associate security practitioner screen. The explicit lack of a practical and lower recorded recognition than Security+ limit stronger operational inferences."
       },
       "alex-novak": {
         "tier": "associate",
-        "rationale": "Multiple-choice; basic operations focus."
+        "rationale": "The recorded one-year practitioner profile and recognized-body endorsement support associate systems-security knowledge. No practical component is recorded, preventing professional delivery credit."
       }
     }
   },

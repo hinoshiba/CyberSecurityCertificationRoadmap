@@ -108,22 +108,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "expert",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 3. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "The recorded seven-year profile, submitted real design and panel defense substantiate expert architecture decisions; virtualization focus and English-only assessment limit its direct security-specific and local accessibility signals."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "A submitted design, panel defense and live design/troubleshooting scenarios with seven years of experience strongly support expert infrastructure architecture. Vendor concentration and general infrastructure scope limit direct claims about cybersecurity execution."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "expert",
+        "rationale": "The recorded real design submission, panel defense and live design and troubleshooting scenarios demonstrate architecture judgment at seven years. This supports expert infrastructure design while remaining VMware-specific rather than a general security credential."
       }
     }
   },

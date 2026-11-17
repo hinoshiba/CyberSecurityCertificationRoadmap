@@ -72,21 +72,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced professional: 3. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded three-day advanced web assessment, chained vulnerabilities and three-year profile support professional delivery; practical depth does not alone establish expert enterprise-wide security direction."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "A three-day practical with chained flaws, business logic, deserialization and SSRF supports professional web-pentest delivery. The three-year profile fits domain ownership, while no evidence establishes expert direction across offensive disciplines."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "The recorded three-day practical addresses chained vulnerabilities, business logic, deserialization and SSRF. That applied complexity supports professional web-assessment delivery at a three-year level."
       }
     }
   },

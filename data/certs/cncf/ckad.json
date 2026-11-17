@@ -85,22 +85,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Hands-on workload deployment and Japanese availability support associate implementation skills, reinforced by container prerequisites; general infrastructure coverage does not demonstrate ownership of application-security strategy."
       },
       "maria-okonkwo": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "Deploying and configuring real Kubernetes workloads demonstrates useful associate implementation ability. Container prerequisites and a practical exam improve confidence, while general infrastructure scope limits its direct security signal."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The two-hour workload-deployment practical tests real Kubernetes application tasks, with container knowledge expected. This is a strong associate toolchain signal, but its general infrastructure scope does not establish professional application-security delivery."
       }
     }
   },

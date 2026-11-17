@@ -73,22 +73,22 @@
     }
   ],
   "evaluation": {
-    "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_tier": "associate",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 3. The ordered median is associate. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded day-long practical across core SOC workflows supports associate operations despite zero experience; auto-grading, training focus and limited independent recognition restrain professional leadership claims."
       },
       "maria-okonkwo": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The 24-hour practical across phishing, forensics, SIEM and response provides strong associate SOC evidence even with zero experience. Auto-grading and limited external recognition temper confidence in independent professional investigation and reporting."
       },
       "alex-novak": {
-        "tier": "foundational",
-        "rationale": "Auto-derived from cert name + scoring_factors heuristic (no third-party level hints available); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded 24-hour practical covers several entry SOC tasks and is supported by community reputation. Open entry and auto-graded lab assessment support associate execution without implying independent professional investigation reporting."
       }
     }
   },

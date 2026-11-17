@@ -102,21 +102,21 @@
   ],
   "evaluation": {
     "computed_tier": "professional",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced associate: 1, professional: 2. The ordered median is professional. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "CIS Controls alignment and accredited assessment support professional control-selection and assurance responsibility, consistent with the recorded hint; framework-specific demand limits transfer to organizations centered on other standards."
       },
       "maria-okonkwo": {
         "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "rationale": "Accreditation and direct CIS Controls coverage support professional control-assessment work despite a two-year profile. Its open-book exam and framework-specific demand limit evidence of broader security architecture or practical SOC delivery."
       },
       "alex-novak": {
-        "tier": "professional",
-        "rationale": "Auto-derived from third-party evaluations (professional); pending differentiated human persona review."
+        "tier": "associate",
+        "rationale": "The recorded CIS Controls focus and two-year profile support applied controls knowledge. An open-book examination without documented implementation work does not by itself establish professional assurance delivery despite the source hint."
       }
     }
   },

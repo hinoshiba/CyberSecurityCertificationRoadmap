@@ -99,21 +99,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "Consensus tier 'expert' supported by hiroshi-tanaka, maria-okonkwo; see persona_scores for the dissenting view.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "De-facto audit standard at JP enterprises; 5yr verified experience requirement."
+        "rationale": "Recorded verified experience, established audit standing and Japanese availability support expert assurance judgment consistent with both external hints; knowledge-only testing limits interpretation as technical execution capability."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "DoD 8140 baseline; widely required for IT-audit hires."
+        "rationale": "Recorded DoD recognition, accreditation, established audit standing and verified five-year experience form a strong senior assurance filter. The non-practical audit exam does not demonstrate SOC execution, but it supports expert audit responsibility."
       },
       "alex-novak": {
         "tier": "professional",
-        "rationale": "Audit focus is broad but not technical depth at the offensive level."
+        "rationale": "The recorded verified five-year requirement and established audit role support professional assurance responsibility. Its multiple-choice and non-hands-on format limit the expert inference suggested by the external hints."
       }
     }
   },

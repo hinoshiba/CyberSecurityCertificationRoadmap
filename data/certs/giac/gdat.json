@@ -134,21 +134,21 @@
   ],
   "evaluation": {
     "computed_tier": "expert",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced expert: 2, professional: 1. The ordered median is expert. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "Recorded senior rigor and layered detection design informed by advanced threats support expert defensive direction at five years; accreditation helps credibility, although the evidence does not describe a hands-on exam."
       },
       "maria-okonkwo": {
         "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "rationale": "The recorded senior rigor and advanced-TTP-driven layered detection design support expert defensive direction. Accreditation and the expert COOL hint reinforce that judgment, although the five-year profile and absent lab detail call for practical validation in hiring."
       },
       "alex-novak": {
-        "tier": "expert",
-        "rationale": "Auto-derived from third-party evaluations (expert); pending differentiated human persona review."
+        "tier": "professional",
+        "rationale": "The recorded advanced-TTP and layered-detection design scope supports senior professional purple-team work. With a five-year profile and no explicit practical examination, I stop below the expert source hint."
       }
     }
   },

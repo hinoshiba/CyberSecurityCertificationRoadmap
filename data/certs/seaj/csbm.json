@@ -92,21 +92,21 @@
   ],
   "evaluation": {
     "computed_tier": "foundational",
-    "computed_at": "2026-05-02T14:04:04Z",
+    "computed_at": "2026-11-17T13:00:49Z",
     "computed_by_skill": "evaluate-roadmap-3-personas@1",
-    "rationale": "All three personas agree at this tier; rationale reflects consensus.",
+    "rationale": "Independent reviews of the stored evidence produced foundational: 3. The ordered median is foundational. See each persona rationale for the supporting factors and limitations.",
     "persona_scores": {
       "hiroshi-tanaka": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+        "rationale": "Japanese industry backing and proctoring make a useful local security-management foundation; open entry and the recorded limited hiring signal do not establish applied professional responsibility."
       },
       "maria-okonkwo": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+        "rationale": "Industry backing and a proctored basic security exam provide foundational security knowledge. Zero experience, local recognition and the limited entry hiring signal do not establish applied MSSP capability."
       },
       "alex-novak": {
         "tier": "foundational",
-        "rationale": "Auto-derived from third-party evaluations (foundational, foundational); pending differentiated human persona review."
+        "rationale": "The recorded basic security-management scope and proctored exam fit a zero-experience security baseline. Domestic industry backing supports credibility but does not overcome the limited practical hiring signal."
       }
     }
   },
